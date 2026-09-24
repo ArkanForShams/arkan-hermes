@@ -1,0 +1,1965 @@
+{
+  "skill": {
+    "name": "unknown",
+    "source": "/home/shams/memory-os/icarus",
+    "scanned_at": "2026-09-24T16:06:53.116237+00:00"
+  },
+  "risk_assessment": {
+    "score": 100,
+    "severity": "CRITICAL",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "CRITICAL"
+  },
+  "components": [
+    {
+      "path": "LICENSE",
+      "type": "other",
+      "lines": 21,
+      "executable": false,
+      "size_bytes": 1065,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "README.md",
+      "type": "markdown",
+      "lines": 356,
+      "executable": false,
+      "size_bytes": 12447,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "__init__.py",
+      "type": "python",
+      "lines": 89,
+      "executable": true,
+      "size_bytes": 4452,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "collapse.py",
+      "type": "python",
+      "lines": 329,
+      "executable": true,
+      "size_bytes": 14854,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "export-training.py",
+      "type": "python",
+      "lines": 514,
+      "executable": true,
+      "size_bytes": 19914,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "fabric-retrieve.py",
+      "type": "python",
+      "lines": 460,
+      "executable": true,
+      "size_bytes": 16011,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "hooks.py",
+      "type": "python",
+      "lines": 1109,
+      "executable": true,
+      "size_bytes": 43271,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "obsidian.py",
+      "type": "python",
+      "lines": 179,
+      "executable": true,
+      "size_bytes": 5451,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "parsing.py",
+      "type": "python",
+      "lines": 81,
+      "executable": true,
+      "size_bytes": 2826,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "plugin.yaml",
+      "type": "yaml",
+      "lines": 26,
+      "executable": false,
+      "size_bytes": 577,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "schemas.py",
+      "type": "python",
+      "lines": 420,
+      "executable": true,
+      "size_bytes": 15772,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/eval-replacement.py",
+      "type": "python",
+      "lines": 215,
+      "executable": true,
+      "size_bytes": 7225,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/smoke-handoff.sh",
+      "type": "shell",
+      "lines": 165,
+      "executable": true,
+      "size_bytes": 5609,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/test-plugin.sh",
+      "type": "shell",
+      "lines": 1090,
+      "executable": true,
+      "size_bytes": 43872,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "state.py",
+      "type": "python",
+      "lines": 1215,
+      "executable": true,
+      "size_bytes": 42727,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "tools.py",
+      "type": "python",
+      "lines": 236,
+      "executable": true,
+      "size_bytes": 8245,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "TT3",
+      "finding_id": "finding-c9d2ab78a91545069172d3eb72b4cfc5",
+      "category": "Data Flow",
+      "pattern": "Tainted flow: 'req' from os.environ.get (line 973, credential/environment) \u2192 urllib.request.urlopen (network output)",
+      "severity": "CRITICAL",
+      "confidence": 0.9,
+      "location": {
+        "file": "hooks.py",
+        "start_line": 978,
+        "end_line": 978,
+        "start_column": 15,
+        "end_column": 54
+      },
+      "finding": "urllib.request.urlopen(req, timeout=45)",
+      "explanation": "Credentials or environment variables flow to a network sink. This is a high-confidence indicator of credential exfiltration.",
+      "remediation": "Never send credentials or environment variables over the network. Use secure credential stores and avoid transmitting secrets in request bodies or URLs.",
+      "code_snippet": "            data=payload,\n            headers=_resolve_llm_headers(api_key)\n        )\n        resp = urllib.request.urlopen(req, timeout=45)\n        body = json.loads(resp.read().decode(\"utf-8\"))\n        raw = body[\"choices\"][0][\"message\"][\"content\"]\n",
+      "intent": null,
+      "tags": [
+        "Data Flow"
+      ],
+      "evidence": {},
+      "match_fingerprint": "fdaf6ce255731b43764742536f0a40f96fd23215af456dd70dc46c016824c261",
+      "occurrences": [
+        {
+          "file": "hooks.py",
+          "start_line": 978,
+          "end_line": 978,
+          "start_column": 15,
+          "end_column": 54
+        }
+      ]
+    },
+    {
+      "id": "TT3",
+      "finding_id": "finding-c4b5b1d16c4d44f088b322f718feb4b3",
+      "category": "Data Flow",
+      "pattern": "Tainted flow: 'req' from os.environ.get (line 733, credential/environment) \u2192 urllib.request.urlopen (network output)",
+      "severity": "CRITICAL",
+      "confidence": 0.9,
+      "location": {
+        "file": "state.py",
+        "start_line": 625,
+        "end_line": 625,
+        "start_column": 11,
+        "end_column": 50
+      },
+      "finding": "urllib.request.urlopen(req, timeout=30)",
+      "explanation": "Credentials or environment variables flow to a network sink. This is a high-confidence indicator of credential exfiltration.",
+      "remediation": "Never send credentials or environment variables over the network. Use secure credential stores and avoid transmitting secrets in request bodies or URLs.",
+      "code_snippet": "        body = json.dumps(data).encode()\n        headers[\"Content-Type\"] = \"application/json\"\n    req = urllib.request.Request(url, data=body, headers=headers, method=method)\n    resp = urllib.request.urlopen(req, timeout=30)\n    return json.loads(resp.read())\n\n",
+      "intent": null,
+      "tags": [
+        "Data Flow"
+      ],
+      "evidence": {},
+      "match_fingerprint": "ed03e5371048cc42e689f66b85a00604a53054cecc17c2bfd9eb027ea516dc6f",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 625,
+          "end_line": 625,
+          "start_column": 11,
+          "end_column": 50
+        }
+      ]
+    },
+    {
+      "id": "TT3",
+      "finding_id": "finding-90d9731d9d714f0ba824e7ae881652bd",
+      "category": "Data Flow",
+      "pattern": "Tainted flow: 'req' from os.environ.get (line 733, credential/environment) \u2192 urllib.request.urlopen (network output)",
+      "severity": "CRITICAL",
+      "confidence": 0.9,
+      "location": {
+        "file": "state.py",
+        "start_line": 743,
+        "end_line": 743,
+        "start_column": 15,
+        "end_column": 54
+      },
+      "finding": "urllib.request.urlopen(req, timeout=60)",
+      "explanation": "Credentials or environment variables flow to a network sink. This is a high-confidence indicator of credential exfiltration.",
+      "remediation": "Never send credentials or environment variables over the network. Use secure credential stores and avoid transmitting secrets in request bodies or URLs.",
+      "code_snippet": "        method=\"POST\",\n    )\n    try:\n        resp = urllib.request.urlopen(req, timeout=60)\n        upload_data = json.loads(resp.read())\n    except Exception as exc:\n        return {\"error\": f\"upload failed: {exc}\"}",
+      "intent": null,
+      "tags": [
+        "Data Flow"
+      ],
+      "evidence": {},
+      "match_fingerprint": "368ce9aa1c14d843fb75bf9c94bef60aa2dff525b2e999770f85737f57de7958",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 743,
+          "end_line": 743,
+          "start_column": 15,
+          "end_column": 54
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2456c1afd8ed4a91a3fe24d4b8821592",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "schemas.py",
+        "start_line": 322,
+        "end_line": null,
+        "start_column": 60
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    \"name\": \"fabric_switch_model\",\n    \"description\": (\n        \"Switch this agent to use a replacement model. Only switches if the \"\n        \"model has eval scores above the threshold. Updates .env with the new \"\n        \"model config and creates a backup of the current .env.\"\n    ),\n    \"parameters\": {",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "schemas.py",
+          "start_line": 322,
+          "end_line": null,
+          "start_column": 60
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2456c1afd8ed4a91a3fe24d4b8821592",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "schemas.py",
+        "start_line": 344,
+        "end_line": null,
+        "start_column": 54
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    \"name\": \"fabric_switch_model\",\n    \"description\": (\n        \"Switch this agent to use a replacement model. Only switches if the \"\n        \"model has eval scores above the threshold. Updates .env with the new \"\n        \"model config and creates a backup of the current .env.\"\n    ),\n    \"parameters\": {",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "schemas.py",
+          "start_line": 344,
+          "end_line": null,
+          "start_column": 54
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2456c1afd8ed4a91a3fe24d4b8821592",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "schemas.py",
+        "start_line": 398,
+        "end_line": null,
+        "start_column": 34
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    \"name\": \"fabric_switch_model\",\n    \"description\": (\n        \"Switch this agent to use a replacement model. Only switches if the \"\n        \"model has eval scores above the threshold. Updates .env with the new \"\n        \"model config and creates a backup of the current .env.\"\n    ),\n    \"parameters\": {",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "schemas.py",
+          "start_line": 398,
+          "end_line": null,
+          "start_column": 34
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2456c1afd8ed4a91a3fe24d4b8821592",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/test-plugin.sh",
+        "start_line": 334,
+        "end_line": null,
+        "start_column": 16
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    \"name\": \"fabric_switch_model\",\n    \"description\": (\n        \"Switch this agent to use a replacement model. Only switches if the \"\n        \"model has eval scores above the threshold. Updates .env with the new \"\n        \"model config and creates a backup of the current .env.\"\n    ),\n    \"parameters\": {",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "scripts/test-plugin.sh",
+          "start_line": 334,
+          "end_line": null,
+          "start_column": 16
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2456c1afd8ed4a91a3fe24d4b8821592",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/test-plugin.sh",
+        "start_line": 359,
+        "end_line": null,
+        "start_column": 9
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    \"name\": \"fabric_switch_model\",\n    \"description\": (\n        \"Switch this agent to use a replacement model. Only switches if the \"\n        \"model has eval scores above the threshold. Updates .env with the new \"\n        \"model config and creates a backup of the current .env.\"\n    ),\n    \"parameters\": {",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "scripts/test-plugin.sh",
+          "start_line": 359,
+          "end_line": null,
+          "start_column": 9
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2456c1afd8ed4a91a3fe24d4b8821592",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/test-plugin.sh",
+        "start_line": 401,
+        "end_line": null,
+        "start_column": 9
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    \"name\": \"fabric_switch_model\",\n    \"description\": (\n        \"Switch this agent to use a replacement model. Only switches if the \"\n        \"model has eval scores above the threshold. Updates .env with the new \"\n        \"model config and creates a backup of the current .env.\"\n    ),\n    \"parameters\": {",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "scripts/test-plugin.sh",
+          "start_line": 401,
+          "end_line": null,
+          "start_column": 9
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2456c1afd8ed4a91a3fe24d4b8821592",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 319,
+        "end_line": null,
+        "start_column": 45
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    \"name\": \"fabric_switch_model\",\n    \"description\": (\n        \"Switch this agent to use a replacement model. Only switches if the \"\n        \"model has eval scores above the threshold. Updates .env with the new \"\n        \"model config and creates a backup of the current .env.\"\n    ),\n    \"parameters\": {",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 319,
+          "end_line": null,
+          "start_column": 45
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2456c1afd8ed4a91a3fe24d4b8821592",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 902,
+        "end_line": null,
+        "start_column": 27
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    \"name\": \"fabric_switch_model\",\n    \"description\": (\n        \"Switch this agent to use a replacement model. Only switches if the \"\n        \"model has eval scores above the threshold. Updates .env with the new \"\n        \"model config and creates a backup of the current .env.\"\n    ),\n    \"parameters\": {",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 902,
+          "end_line": null,
+          "start_column": 27
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2456c1afd8ed4a91a3fe24d4b8821592",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 937,
+        "end_line": null,
+        "start_column": 13
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    \"name\": \"fabric_switch_model\",\n    \"description\": (\n        \"Switch this agent to use a replacement model. Only switches if the \"\n        \"model has eval scores above the threshold. Updates .env with the new \"\n        \"model config and creates a backup of the current .env.\"\n    ),\n    \"parameters\": {",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 937,
+          "end_line": null,
+          "start_column": 13
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2456c1afd8ed4a91a3fe24d4b8821592",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 981,
+        "end_line": null,
+        "start_column": 15
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    \"name\": \"fabric_switch_model\",\n    \"description\": (\n        \"Switch this agent to use a replacement model. Only switches if the \"\n        \"model has eval scores above the threshold. Updates .env with the new \"\n        \"model config and creates a backup of the current .env.\"\n    ),\n    \"parameters\": {",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 981,
+          "end_line": null,
+          "start_column": 15
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f1f2fcebc07e42578067878f59bb9bd5",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/test-plugin.sh",
+        "start_line": 335,
+        "end_line": null,
+        "start_column": 23
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "reset_agent(\"testbot\")\n\n# create a fake .env\nenv_file = home_dir / \".env\"\nenv_file.write_text(\"ANTHROPIC_API_KEY=sk-ant-fake\\nLLM_MODEL=claude-sonnet-4\\nHERMES_AGENT_NAME=testbot\\nTOGETHER_API_KEY=tok-fake-test\\n\", \"utf-8\")\n\n# create a fake model in the registry",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "scripts/test-plugin.sh",
+          "start_line": 335,
+          "end_line": null,
+          "start_column": 23
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f1f2fcebc07e42578067878f59bb9bd5",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/test-plugin.sh",
+        "start_line": 362,
+        "end_line": null,
+        "start_column": 29
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "reset_agent(\"testbot\")\n\n# create a fake .env\nenv_file = home_dir / \".env\"\nenv_file.write_text(\"ANTHROPIC_API_KEY=sk-ant-fake\\nLLM_MODEL=claude-sonnet-4\\nHERMES_AGENT_NAME=testbot\\nTOGETHER_API_KEY=tok-fake-test\\n\", \"utf-8\")\n\n# create a fake model in the registry",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "scripts/test-plugin.sh",
+          "start_line": 362,
+          "end_line": null,
+          "start_column": 29
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f1f2fcebc07e42578067878f59bb9bd5",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/test-plugin.sh",
+        "start_line": 770,
+        "end_line": null,
+        "start_column": 13
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "reset_agent(\"testbot\")\n\n# create a fake .env\nenv_file = home_dir / \".env\"\nenv_file.write_text(\"ANTHROPIC_API_KEY=sk-ant-fake\\nLLM_MODEL=claude-sonnet-4\\nHERMES_AGENT_NAME=testbot\\nTOGETHER_API_KEY=tok-fake-test\\n\", \"utf-8\")\n\n# create a fake model in the registry",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "scripts/test-plugin.sh",
+          "start_line": 770,
+          "end_line": null,
+          "start_column": 13
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f1f2fcebc07e42578067878f59bb9bd5",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 607,
+        "end_line": null,
+        "start_column": 39
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "reset_agent(\"testbot\")\n\n# create a fake .env\nenv_file = home_dir / \".env\"\nenv_file.write_text(\"ANTHROPIC_API_KEY=sk-ant-fake\\nLLM_MODEL=claude-sonnet-4\\nHERMES_AGENT_NAME=testbot\\nTOGETHER_API_KEY=tok-fake-test\\n\", \"utf-8\")\n\n# create a fake model in the registry",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 607,
+          "end_line": null,
+          "start_column": 39
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f1f2fcebc07e42578067878f59bb9bd5",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 608,
+        "end_line": null,
+        "start_column": 36
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "reset_agent(\"testbot\")\n\n# create a fake .env\nenv_file = home_dir / \".env\"\nenv_file.write_text(\"ANTHROPIC_API_KEY=sk-ant-fake\\nLLM_MODEL=claude-sonnet-4\\nHERMES_AGENT_NAME=testbot\\nTOGETHER_API_KEY=tok-fake-test\\n\", \"utf-8\")\n\n# create a fake model in the registry",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 608,
+          "end_line": null,
+          "start_column": 36
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f1f2fcebc07e42578067878f59bb9bd5",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 701,
+        "end_line": null,
+        "start_column": 54
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "reset_agent(\"testbot\")\n\n# create a fake .env\nenv_file = home_dir / \".env\"\nenv_file.write_text(\"ANTHROPIC_API_KEY=sk-ant-fake\\nLLM_MODEL=claude-sonnet-4\\nHERMES_AGENT_NAME=testbot\\nTOGETHER_API_KEY=tok-fake-test\\n\", \"utf-8\")\n\n# create a fake model in the registry",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 701,
+          "end_line": null,
+          "start_column": 54
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f1f2fcebc07e42578067878f59bb9bd5",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 900,
+        "end_line": null,
+        "start_column": 30
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "reset_agent(\"testbot\")\n\n# create a fake .env\nenv_file = home_dir / \".env\"\nenv_file.write_text(\"ANTHROPIC_API_KEY=sk-ant-fake\\nLLM_MODEL=claude-sonnet-4\\nHERMES_AGENT_NAME=testbot\\nTOGETHER_API_KEY=tok-fake-test\\n\", \"utf-8\")\n\n# create a fake model in the registry",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 900,
+          "end_line": null,
+          "start_column": 30
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f1f2fcebc07e42578067878f59bb9bd5",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 943,
+        "end_line": null,
+        "start_column": 54
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "reset_agent(\"testbot\")\n\n# create a fake .env\nenv_file = home_dir / \".env\"\nenv_file.write_text(\"ANTHROPIC_API_KEY=sk-ant-fake\\nLLM_MODEL=claude-sonnet-4\\nHERMES_AGENT_NAME=testbot\\nTOGETHER_API_KEY=tok-fake-test\\n\", \"utf-8\")\n\n# create a fake model in the registry",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 943,
+          "end_line": null,
+          "start_column": 54
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f1f2fcebc07e42578067878f59bb9bd5",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 986,
+        "end_line": null,
+        "start_column": 30
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "reset_agent(\"testbot\")\n\n# create a fake .env\nenv_file = home_dir / \".env\"\nenv_file.write_text(\"ANTHROPIC_API_KEY=sk-ant-fake\\nLLM_MODEL=claude-sonnet-4\\nHERMES_AGENT_NAME=testbot\\nTOGETHER_API_KEY=tok-fake-test\\n\", \"utf-8\")\n\n# create a fake model in the registry",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 986,
+          "end_line": null,
+          "start_column": 30
+        }
+      ]
+    },
+    {
+      "id": "E2",
+      "finding_id": "finding-dfad814c355b4e22a6d938196c689072",
+      "category": "Data Exfiltration",
+      "pattern": "Env Variable Harvesting",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 869,
+        "end_line": 869,
+        "start_column": 10
+      },
+      "finding": "os.environ.copy()",
+      "explanation": "Code enumerates, copies, or searches environment variables for secrets. Bulk environment access can collect credentials unrelated to the skill's stated purpose.",
+      "remediation": "Read only explicitly required environment variables by name. Avoid enumerating or copying the full environment, and never log or transmit credentials to untrusted destinations.",
+      "code_snippet": "        \"--sample-count\", str(sample_count),\n        \"--fabric-dir\", str(FABRIC_DIR),\n    ]\n    env = os.environ.copy()\n    env[\"TOGETHER_API_KEY\"] = key\n    try:\n        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300, env=env)",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "23b3d476caf63d859a2a3bade37548b7986b00b138b45df1b6a49782c4e2984b",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 869,
+          "end_line": 869,
+          "start_column": 10
+        }
+      ]
+    },
+    {
+      "id": "RA2",
+      "finding_id": "finding-980f19a3c21d49fc8da72f551b45d9eb",
+      "category": "Rogue Agent",
+      "pattern": "Session Persistence",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "README.md",
+        "start_line": 75,
+        "end_line": null,
+        "start_column": 0
+      },
+      "finding": "mkdir -p ~/.hermes/plugins/icarus\ncp -r icarus-plugin/* ~/.hermes/plugins/icarus/\n```\n\n### 2. Set environment variables\n\nAdd to your Hermes profile `.env` (e.g. `~/.hermes",
+      "explanation": "Skill establishes unauthorized persistence across sessions via cron jobs, startup scripts, or state files. Session persistence allows an attacker to maintain access beyond the current interaction.",
+      "remediation": "Remove any persistence mechanisms (cron jobs, startup scripts, state files). Skills should not maintain state across sessions without explicit user consent.",
+      "code_snippet": "\n```bash\ngit clone https://github.com/esaradev/icarus-plugin.git\nmkdir -p ~/.hermes/plugins/icarus\ncp -r icarus-plugin/* ~/.hermes/plugins/icarus/\n```\n",
+      "intent": null,
+      "tags": [
+        "Rogue Agent"
+      ],
+      "evidence": {},
+      "match_fingerprint": "db18af53053058a141608f9a1e72903f17fbc1365bc0b520b6d64e6a3853286a",
+      "occurrences": [
+        {
+          "file": "README.md",
+          "start_line": 75,
+          "end_line": null,
+          "start_column": 0
+        }
+      ]
+    },
+    {
+      "id": "RA2",
+      "finding_id": "finding-5188a9e0e5524bcebdb5d43b027ff8c2",
+      "category": "Rogue Agent",
+      "pattern": "Session Persistence",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "README.md",
+        "start_line": 262,
+        "end_line": null,
+        "start_column": 15
+      },
+      "finding": "create coder\nhermes profile create reviewer --clone\nmkdir -p ~/.hermes-coder/plugins/icarus ~/.hermes-reviewer/plugins/icarus\ncp -r icarus-plugin/* ~/.hermes-coder/plugins/icarus/\ncp -r icarus-plugin/",
+      "explanation": "Skill establishes unauthorized persistence across sessions via cron jobs, startup scripts, or state files. Session persistence allows an attacker to maintain access beyond the current interaction.",
+      "remediation": "Remove any persistence mechanisms (cron jobs, startup scripts, state files). Skills should not maintain state across sessions without explicit user consent.",
+      "code_snippet": "## Profiles (Hermes v0.6.0)\n\n```bash\nhermes profile create coder\nhermes profile create reviewer --clone\nmkdir -p ~/.hermes-coder/plugins/icarus ~/.hermes-reviewer/plugins/icarus\ncp -r icarus-plugin/* ~/.hermes-coder/plugins/icarus/",
+      "intent": null,
+      "tags": [
+        "Rogue Agent"
+      ],
+      "evidence": {},
+      "match_fingerprint": "765e99d7e70ad842cca46fed347fedf4969aa03e8afef2b469d39d15318a8ff2",
+      "occurrences": [
+        {
+          "file": "README.md",
+          "start_line": 262,
+          "end_line": null,
+          "start_column": 15
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-12c197dbd46a40b7b7cd5aba76e39b75",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "hooks.py",
+        "start_line": 47,
+        "end_line": null,
+        "start_column": 16
+      },
+      "finding": "https://api.deepseek.com/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "    if _ICARUS_ENDPOINT:\n        return _ICARUS_ENDPOINT\n    if _DEEPSEEK_KEY:\n        return \"https://api.deepseek.com/v1/chat/completions\"\n    return \"https://openrouter.ai/api/v1/chat/completions\"\n\n",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "134b6c8c26797709768f4fa347eceda007b21f648930a6b098487af8a41ac4a9",
+      "occurrences": [
+        {
+          "file": "hooks.py",
+          "start_line": 47,
+          "end_line": null,
+          "start_column": 16
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-0bdb60e911904b74a3753f2d5f912337",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/eval-replacement.py",
+        "start_line": 84,
+        "end_line": null,
+        "start_column": 9
+      },
+      "finding": "https://api.together.xyz/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "    }).encode()\n\n    req = urllib.request.Request(\n        \"https://api.together.xyz/v1/chat/completions\",\n        data=data,\n        headers={\n            \"Authorization\": f\"Bearer {api_key}\",",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "296141e077f925e1ca907e5c1836ff9b33422695e7a56ee4f7838763d25e9f01",
+      "occurrences": [
+        {
+          "file": "scripts/eval-replacement.py",
+          "start_line": 84,
+          "end_line": null,
+          "start_column": 9
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-0bdb60e911904b74a3753f2d5f912337",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 734,
+        "end_line": null,
+        "start_column": 9
+      },
+      "finding": "https://api.together.xyz/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "    }).encode()\n\n    req = urllib.request.Request(\n        \"https://api.together.xyz/v1/chat/completions\",\n        data=data,\n        headers={\n            \"Authorization\": f\"Bearer {api_key}\",",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "296141e077f925e1ca907e5c1836ff9b33422695e7a56ee4f7838763d25e9f01",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 734,
+          "end_line": null,
+          "start_column": 9
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-0bdb60e911904b74a3753f2d5f912337",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 767,
+        "end_line": null,
+        "start_column": 45
+      },
+      "finding": "https://api.together.xyz/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "    }).encode()\n\n    req = urllib.request.Request(\n        \"https://api.together.xyz/v1/chat/completions\",\n        data=data,\n        headers={\n            \"Authorization\": f\"Bearer {api_key}\",",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "296141e077f925e1ca907e5c1836ff9b33422695e7a56ee4f7838763d25e9f01",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 767,
+          "end_line": null,
+          "start_column": 45
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-0bdb60e911904b74a3753f2d5f912337",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 825,
+        "end_line": null,
+        "start_column": 42
+      },
+      "finding": "https://api.together.xyz/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "    }).encode()\n\n    req = urllib.request.Request(\n        \"https://api.together.xyz/v1/chat/completions\",\n        data=data,\n        headers={\n            \"Authorization\": f\"Bearer {api_key}\",",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "296141e077f925e1ca907e5c1836ff9b33422695e7a56ee4f7838763d25e9f01",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 825,
+          "end_line": null,
+          "start_column": 42
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-0bdb60e911904b74a3753f2d5f912337",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "state.py",
+        "start_line": 953,
+        "end_line": null,
+        "start_column": 37
+      },
+      "finding": "https://api.together.xyz/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "    }).encode()\n\n    req = urllib.request.Request(\n        \"https://api.together.xyz/v1/chat/completions\",\n        data=data,\n        headers={\n            \"Authorization\": f\"Bearer {api_key}\",",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "296141e077f925e1ca907e5c1836ff9b33422695e7a56ee4f7838763d25e9f01",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 953,
+          "end_line": null,
+          "start_column": 37
+        }
+      ]
+    },
+    {
+      "id": "TT2",
+      "finding_id": "finding-51bdeb96e035489d973471242ec76786",
+      "category": "Data Flow",
+      "pattern": "Tainted flow: '_TELEMETRY_FILE' from os.environ.get (line 81, credential/environment) \u2192 open (file write)",
+      "severity": "MEDIUM",
+      "confidence": 0.65,
+      "location": {
+        "file": "state.py",
+        "start_line": 122,
+        "end_line": 122,
+        "start_column": 13,
+        "end_column": 57
+      },
+      "finding": "open(_TELEMETRY_FILE, \"a\", encoding=\"utf-8\")",
+      "explanation": "Data from a source is assigned to a variable that is later passed to a sink, creating a variable-mediated taint flow.",
+      "remediation": "Validate tainted variables before passing them to sinks. Use allowlists, type checks, or sanitization functions on data from external sources.",
+      "code_snippet": "    }\n    _recall_log.append(entry)\n    try:\n        with open(_TELEMETRY_FILE, \"a\", encoding=\"utf-8\") as f:\n            f.write(json.dumps(entry) + \"\\n\")\n    except Exception:\n        pass",
+      "intent": null,
+      "tags": [
+        "Data Flow"
+      ],
+      "evidence": {},
+      "match_fingerprint": "3b368acdcdd70acb4847858941b8462e4f183e9ac3e47ed0ca7f12de4a5f16f2",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 122,
+          "end_line": 122,
+          "start_column": 13,
+          "end_column": 57
+        }
+      ]
+    },
+    {
+      "id": "TT2",
+      "finding_id": "finding-51bdeb96e035489d973471242ec76786",
+      "category": "Data Flow",
+      "pattern": "Tainted flow: '_TELEMETRY_FILE' from os.environ.get (line 81, credential/environment) \u2192 open (file write)",
+      "severity": "MEDIUM",
+      "confidence": 0.65,
+      "location": {
+        "file": "state.py",
+        "start_line": 155,
+        "end_line": 155,
+        "start_column": 13,
+        "end_column": 57
+      },
+      "finding": "open(_TELEMETRY_FILE, \"a\", encoding=\"utf-8\")",
+      "explanation": "Data from a source is assigned to a variable that is later passed to a sink, creating a variable-mediated taint flow.",
+      "remediation": "Validate tainted variables before passing them to sinks. Use allowlists, type checks, or sanitization functions on data from external sources.",
+      "code_snippet": "    }\n    _recall_log.append(entry)\n    try:\n        with open(_TELEMETRY_FILE, \"a\", encoding=\"utf-8\") as f:\n            f.write(json.dumps(entry) + \"\\n\")\n    except Exception:\n        pass",
+      "intent": null,
+      "tags": [
+        "Data Flow"
+      ],
+      "evidence": {},
+      "match_fingerprint": "3b368acdcdd70acb4847858941b8462e4f183e9ac3e47ed0ca7f12de4a5f16f2",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 155,
+          "end_line": 155,
+          "start_column": 13,
+          "end_column": 57
+        }
+      ]
+    },
+    {
+      "id": "AST4",
+      "finding_id": "finding-59745c2ae61541bd8d55fe3e18c9c7d1",
+      "category": "Dangerous Code Execution",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "state.py",
+        "start_line": 639,
+        "end_line": 639,
+        "start_column": 17,
+        "end_column": 80
+      },
+      "finding": "subprocess.run(cmd, capture_output=True, text=True, timeout=60)",
+      "explanation": "subprocess module calls execute external commands. Without careful input validation, this enables command injection.",
+      "remediation": "Use subprocess.run() with shell=False and an explicit argument list. Validate all inputs and avoid passing user-controlled data to commands.",
+      "code_snippet": "        cmd = [\"python3\", str(export_script), \"--output\", tmpdir]\n        if mode != \"normal\":\n            cmd.extend([\"--mode\", mode])\n        result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)\n        if result.returncode != 0:\n            return {\"error\": result.stderr or \"export failed\"}\n",
+      "intent": null,
+      "tags": [
+        "Dangerous Code Execution"
+      ],
+      "evidence": {},
+      "match_fingerprint": "553074ca1f23a92e8605f045cdc4483b37edd0353f3b2b8d03b13da4c8cd5489",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 639,
+          "end_line": 639,
+          "start_column": 17,
+          "end_column": 80
+        }
+      ]
+    },
+    {
+      "id": "TT2",
+      "finding_id": "finding-aec9e09444694b91a2db2797eddab91d",
+      "category": "Data Flow",
+      "pattern": "Tainted flow: 'cmd' from os.environ.get (line 862, credential/environment) \u2192 subprocess.run (code execution)",
+      "severity": "MEDIUM",
+      "confidence": 0.65,
+      "location": {
+        "file": "state.py",
+        "start_line": 639,
+        "end_line": 639,
+        "start_column": 17,
+        "end_column": 80
+      },
+      "finding": "subprocess.run(cmd, capture_output=True, text=True, timeout=60)",
+      "explanation": "Data from a source is assigned to a variable that is later passed to a sink, creating a variable-mediated taint flow.",
+      "remediation": "Validate tainted variables before passing them to sinks. Use allowlists, type checks, or sanitization functions on data from external sources.",
+      "code_snippet": "        cmd = [\"python3\", str(export_script), \"--output\", tmpdir]\n        if mode != \"normal\":\n            cmd.extend([\"--mode\", mode])\n        result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)\n        if result.returncode != 0:\n            return {\"error\": result.stderr or \"export failed\"}\n",
+      "intent": null,
+      "tags": [
+        "Data Flow"
+      ],
+      "evidence": {},
+      "match_fingerprint": "454f350524bf8b39a617c091413306337dd27bae19112fbe6725628bdb35342f",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 639,
+          "end_line": 639,
+          "start_column": 17,
+          "end_column": 80
+        }
+      ]
+    },
+    {
+      "id": "AST4",
+      "finding_id": "finding-5230ca90b53e4e1cb383660cc296ffac",
+      "category": "Dangerous Code Execution",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "state.py",
+        "start_line": 872,
+        "end_line": 872,
+        "start_column": 17,
+        "end_column": 90
+      },
+      "finding": "subprocess.run(cmd, capture_output=True, text=True, timeout=300, env=env)",
+      "explanation": "subprocess module calls execute external commands. Without careful input validation, this enables command injection.",
+      "remediation": "Use subprocess.run() with shell=False and an explicit argument list. Validate all inputs and avoid passing user-controlled data to commands.",
+      "code_snippet": "    env = os.environ.copy()\n    env[\"TOGETHER_API_KEY\"] = key\n    try:\n        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300, env=env)\n    except subprocess.TimeoutExpired:\n        return {\"error\": \"eval timed out (5 min limit)\"}\n",
+      "intent": null,
+      "tags": [
+        "Dangerous Code Execution"
+      ],
+      "evidence": {},
+      "match_fingerprint": "8406414e19fbbb547b4be69d60eed19e131d1de597a902fc7e56983b04ee38a1",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 872,
+          "end_line": 872,
+          "start_column": 17,
+          "end_column": 90
+        }
+      ]
+    },
+    {
+      "id": "TT2",
+      "finding_id": "finding-da22e3fc13be47ed85fb7fe18c696b28",
+      "category": "Data Flow",
+      "pattern": "Tainted flow: 'cmd' from os.environ.get (line 862, credential/environment) \u2192 subprocess.run (code execution)",
+      "severity": "MEDIUM",
+      "confidence": 0.65,
+      "location": {
+        "file": "state.py",
+        "start_line": 872,
+        "end_line": 872,
+        "start_column": 17,
+        "end_column": 90
+      },
+      "finding": "subprocess.run(cmd, capture_output=True, text=True, timeout=300, env=env)",
+      "explanation": "Data from a source is assigned to a variable that is later passed to a sink, creating a variable-mediated taint flow.",
+      "remediation": "Validate tainted variables before passing them to sinks. Use allowlists, type checks, or sanitization functions on data from external sources.",
+      "code_snippet": "    env = os.environ.copy()\n    env[\"TOGETHER_API_KEY\"] = key\n    try:\n        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300, env=env)\n    except subprocess.TimeoutExpired:\n        return {\"error\": \"eval timed out (5 min limit)\"}\n",
+      "intent": null,
+      "tags": [
+        "Data Flow"
+      ],
+      "evidence": {},
+      "match_fingerprint": "808be1e88f0d5bf976d74baba3d56b28d382f5e1daef10c971245035118aeee0",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 872,
+          "end_line": 872,
+          "start_column": 17,
+          "end_column": 90
+        }
+      ]
+    },
+    {
+      "id": "TT2",
+      "finding_id": "finding-a1142ddae5d145dbacdd0d8ff396bc1b",
+      "category": "Data Flow",
+      "pattern": "Tainted flow: 'env_file' from os.environ.get (line 986, credential/environment) \u2192 shutil.copy2 (file write)",
+      "severity": "MEDIUM",
+      "confidence": 0.65,
+      "location": {
+        "file": "state.py",
+        "start_line": 939,
+        "end_line": 939,
+        "start_column": 4,
+        "end_column": 34
+      },
+      "finding": "shutil.copy2(env_file, backup)",
+      "explanation": "Data from a source is assigned to a variable that is later passed to a sink, creating a variable-mediated taint flow.",
+      "remediation": "Validate tainted variables before passing them to sinks. Use allowlists, type checks, or sanitization functions on data from external sources.",
+      "code_snippet": "\n    # backup .env\n    backup = HERMES_HOME / \".env.backup\"\n    shutil.copy2(env_file, backup)\n\n    key = _together_key()\n    if not key:",
+      "intent": null,
+      "tags": [
+        "Data Flow"
+      ],
+      "evidence": {},
+      "match_fingerprint": "913dc4e20190a10da775718859c9d6fffd00ce44a118f4739dac39831627af61",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 939,
+          "end_line": 939,
+          "start_column": 4,
+          "end_column": 34
+        }
+      ]
+    },
+    {
+      "id": "TT2",
+      "finding_id": "finding-35c5483230c1437781f88c2d7b4698f5",
+      "category": "Data Flow",
+      "pattern": "Tainted flow: 'backup' from os.environ.get (line 985, credential/environment) \u2192 shutil.copy2 (file write)",
+      "severity": "MEDIUM",
+      "confidence": 0.65,
+      "location": {
+        "file": "state.py",
+        "start_line": 998,
+        "end_line": 998,
+        "start_column": 4,
+        "end_column": 34
+      },
+      "finding": "shutil.copy2(backup, env_file)",
+      "explanation": "Data from a source is assigned to a variable that is later passed to a sink, creating a variable-mediated taint flow.",
+      "remediation": "Validate tainted variables before passing them to sinks. Use allowlists, type checks, or sanitization functions on data from external sources.",
+      "code_snippet": "            if l.startswith(\"LLM_MODEL=\"):\n                current_model = l.split(\"=\", 1)[1].strip()\n\n    shutil.copy2(backup, env_file)\n\n    # read what we rolled back to\n    restored_model = None",
+      "intent": null,
+      "tags": [
+        "Data Flow"
+      ],
+      "evidence": {},
+      "match_fingerprint": "fe1ec4ff62dae382b19003e9f581036329fd301c139e4e7e534ed635482e9b69",
+      "occurrences": [
+        {
+          "file": "state.py",
+          "start_line": 998,
+          "end_line": 998,
+          "start_column": 4,
+          "end_column": 34
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": true,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "nv_build",
+        "resolved_adapter": "nv_build",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "not_applicable",
+          "api_version": null,
+          "api_version_source": "not_applicable"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 16,
+    "scanned_components": 13,
+    "coverage_percent": 81.2,
+    "is_complete": false,
+    "status": "partial",
+    "execution_successful": true,
+    "fully_inspected_files": 13,
+    "partially_inspected_files": 3,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "obfuscated_instruction_text",
+        "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+        "path": "hooks.py",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_agent_snooping",
+          "static_patterns_anti_refusal",
+          "static_patterns_deserialization",
+          "static_patterns_excessive_agency",
+          "static_patterns_harmful_content",
+          "static_patterns_memory_poisoning",
+          "static_patterns_privilege_escalation",
+          "static_patterns_prompt_injection",
+          "static_patterns_rogue_agent",
+          "static_patterns_ssrf",
+          "static_patterns_supply_chain",
+          "static_patterns_system_prompt_leakage"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "hooks.py",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "scripts/smoke-handoff.sh",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "obfuscated_instruction_text",
+        "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+        "path": "state.py",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_agent_snooping",
+          "static_patterns_anti_refusal",
+          "static_patterns_deserialization",
+          "static_patterns_excessive_agency",
+          "static_patterns_harmful_content",
+          "static_patterns_memory_poisoning",
+          "static_patterns_privilege_escalation",
+          "static_patterns_prompt_injection",
+          "static_patterns_rogue_agent",
+          "static_patterns_ssrf",
+          "static_patterns_supply_chain",
+          "static_patterns_system_prompt_leakage",
+          "static_patterns_tool_misuse"
+        ]
+      }
+    ],
+    "scope_exclusions": [],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 16,
+        "completed": 16,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "manifest_absent",
+        "message": "No compatible manifest was present for this analyzer."
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 16,
+        "completed": 16,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "manifest_absent",
+        "message": "No compatible manifest was present for this analyzer."
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 16,
+        "completed": 16,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 16,
+        "completed": 16,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 14,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "degraded",
+        "planned_work": 16,
+        "completed": 13,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 16,
+        "completed": 16,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [],
+    "limitations": [
+      "Analyzer static_patterns_agent_snooping status: degraded.",
+      "Analyzer static_patterns_anti_refusal status: degraded.",
+      "Analyzer static_patterns_deserialization status: degraded.",
+      "Analyzer static_patterns_excessive_agency status: degraded.",
+      "Analyzer static_patterns_harmful_content status: degraded.",
+      "Analyzer static_patterns_memory_poisoning status: degraded.",
+      "Analyzer static_patterns_privilege_escalation status: degraded.",
+      "Analyzer static_patterns_prompt_injection status: degraded.",
+      "Analyzer static_patterns_rogue_agent status: degraded.",
+      "Analyzer static_patterns_ssrf status: degraded.",
+      "Analyzer static_patterns_supply_chain status: degraded.",
+      "Analyzer static_patterns_system_prompt_leakage status: degraded.",
+      "Analyzer static_patterns_tool_misuse status: degraded."
+    ],
+    "findings_before_filtering": 39,
+    "findings_after_filtering": 39
+  }
+}
