@@ -1,0 +1,701 @@
+{
+  "skill": {
+    "name": "github-backup",
+    "source": "/home/shams/.hermes/skills/github-backup",
+    "scanned_at": "2026-09-24T14:29:46.730280+00:00"
+  },
+  "risk_assessment": {
+    "score": 51,
+    "severity": "HIGH",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "HIGH"
+  },
+  "components": [
+    {
+      "path": "SKILL.md",
+      "type": "markdown",
+      "lines": 39,
+      "executable": false,
+      "size_bytes": 2150,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "PE3",
+      "finding_id": "finding-1565a7f7053144fb8c106aa33d87238b",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.9,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 21,
+        "end_line": null,
+        "start_column": 25
+      },
+      "finding": "~/.git-credentials",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "   (timeout \u2265 120s). It rsyncs SOUL.md, skills/, config.yaml, cron snapshots into `~/hermes-workspace`, commits, and pushes \u2014 and is a no-op when nothing changed.\n2. Verify from output: a pushed commit hash, or \"No changes since last backup\".\n3. If push failed:\n   - Check credentials: `~/.git-credentials` must contain the GitHub HTTPS line (chmod 600).\n   - Check token: `curl -s -H \"Authorization: token $GITHUB_TOKEN\" https://api.github.com/user` \u2014 `GITHUB_TOKEN` lives in `~/.hermes/.env`.\n   - Retry once after fixing; report exact errors if still failing.\n4. Report to the user: what changed, commit hash, repo link, and confirm repo is still private (API field `\"private\": true`) whenever you touched repo settings.",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9b6d02170f21bfdc908c13173eb1d1db042856a7449715c672212b3d5b9fb254",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 21,
+          "end_line": null,
+          "start_column": 25
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-1565a7f7053144fb8c106aa33d87238b",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.9,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 28,
+        "end_line": null,
+        "start_column": 128
+      },
+      "finding": "~/.git-credentials",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "   (timeout \u2265 120s). It rsyncs SOUL.md, skills/, config.yaml, cron snapshots into `~/hermes-workspace`, commits, and pushes \u2014 and is a no-op when nothing changed.\n2. Verify from output: a pushed commit hash, or \"No changes since last backup\".\n3. If push failed:\n   - Check credentials: `~/.git-credentials` must contain the GitHub HTTPS line (chmod 600).\n   - Check token: `curl -s -H \"Authorization: token $GITHUB_TOKEN\" https://api.github.com/user` \u2014 `GITHUB_TOKEN` lives in `~/.hermes/.env`.\n   - Retry once after fixing; report exact errors if still failing.\n4. Report to the user: what changed, commit hash, repo link, and confirm repo is still private (API field `\"private\": true`) whenever you touched repo settings.",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9b6d02170f21bfdc908c13173eb1d1db042856a7449715c672212b3d5b9fb254",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 28,
+          "end_line": null,
+          "start_column": 128
+        }
+      ]
+    },
+    {
+      "id": "PE2",
+      "finding_id": "finding-abcd2063093844d9a0e2d4bcb843de37",
+      "category": "Privilege Escalation",
+      "pattern": "Sudo/Root Execution",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 21,
+        "end_line": null,
+        "start_column": 81
+      },
+      "finding": "chmod 600",
+      "explanation": "Commands invoke sudo or root privileges. Verify this elevated access is necessary and justified.",
+      "remediation": "Avoid sudo/root unless strictly required. Prefer least-privilege patterns. If elevation is needed, document the justification and scope.",
+      "code_snippet": "   (timeout \u2265 120s). It rsyncs SOUL.md, skills/, config.yaml, cron snapshots into `~/hermes-workspace`, commits, and pushes \u2014 and is a no-op when nothing changed.\n2. Verify from output: a pushed commit hash, or \"No changes since last backup\".\n3. If push failed:\n   - Check credentials: `~/.git-credentials` must contain the GitHub HTTPS line (chmod 600).\n   - Check token: `curl -s -H \"Authorization: token $GITHUB_TOKEN\" https://api.github.com/user` \u2014 `GITHUB_TOKEN` lives in `~/.hermes/.env`.\n   - Retry once after fixing; report exact errors if still failing.\n4. Report to the user: what changed, commit hash, repo link, and confirm repo is still private (API field `\"private\": true`) whenever you touched repo settings.",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "fac387638fbcbc4ed94acb702b3cf68cbc839ee694afdddde6d97a39a3523b73",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 21,
+          "end_line": null,
+          "start_column": 81
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-3e69fff208e24252960a397b87b206dd",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 22,
+        "end_line": null,
+        "start_column": 19
+      },
+      "finding": "curl -s -H \"Authorization: token $GITHUB_TOKEN\" https://api.github.com/user` \u2014 `GITHUB_TOKEN` lives in `~/.hermes/.env`.\n   - Retry once after fixing; report exact errors if still failing.\n4. Report t",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "2. Verify from output: a pushed commit hash, or \"No changes since last backup\".\n3. If push failed:\n   - Check credentials: `~/.git-credentials` must contain the GitHub HTTPS line (chmod 600).\n   - Check token: `curl -s -H \"Authorization: token $GITHUB_TOKEN\" https://api.github.com/user` \u2014 `GITHUB_TOKEN` lives in `~/.hermes/.env`.\n   - Retry once after fixing; report exact errors if still failing.\n4. Report to the user: what changed, commit hash, repo link, and confirm repo is still private (API field `\"private\": true`) whenever you touched repo settings.\n",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "eed919eac5a4c0d7c987a4ab0dcbf467171c331fedd398a4845b7f3c538605cd",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 22,
+          "end_line": null,
+          "start_column": 19
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-18f7d2c21201466a9d43b45438a4c621",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.5,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 22,
+        "end_line": null,
+        "start_column": 67
+      },
+      "finding": "https://api.github.com/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "2. Verify from output: a pushed commit hash, or \"No changes since last backup\".\n3. If push failed:\n   - Check credentials: `~/.git-credentials` must contain the GitHub HTTPS line (chmod 600).\n   - Check token: `curl -s -H \"Authorization: token $GITHUB_TOKEN\" https://api.github.com/user` \u2014 `GITHUB_TOKEN` lives in `~/.hermes/.env`.\n   - Retry once after fixing; report exact errors if still failing.\n4. Report to the user: what changed, commit hash, repo link, and confirm repo is still private (API field `\"private\": true`) whenever you touched repo settings.\n",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "061abab0022b7a79cdf98b2721e4ad6d47cd4ad12584ecf052130ef51f05d966",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 22,
+          "end_line": null,
+          "start_column": 67
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-18f7d2c21201466a9d43b45438a4c621",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.5,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 30,
+        "end_line": null,
+        "start_column": 57
+      },
+      "finding": "https://api.github.com/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "2. Verify from output: a pushed commit hash, or \"No changes since last backup\".\n3. If push failed:\n   - Check credentials: `~/.git-credentials` must contain the GitHub HTTPS line (chmod 600).\n   - Check token: `curl -s -H \"Authorization: token $GITHUB_TOKEN\" https://api.github.com/user` \u2014 `GITHUB_TOKEN` lives in `~/.hermes/.env`.\n   - Retry once after fixing; report exact errors if still failing.\n4. Report to the user: what changed, commit hash, repo link, and confirm repo is still private (API field `\"private\": true`) whenever you touched repo settings.\n",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "061abab0022b7a79cdf98b2721e4ad6d47cd4ad12584ecf052130ef51f05d966",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 30,
+          "end_line": null,
+          "start_column": 57
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": false,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "nv_build",
+        "resolved_adapter": "nv_build",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "not_applicable",
+          "api_version": null,
+          "api_version_source": "not_applicable"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 1,
+    "scanned_components": 1,
+    "coverage_percent": 100.0,
+    "is_complete": false,
+    "status": "partial",
+    "execution_successful": true,
+    "fully_inspected_files": 1,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 28,
+        "end_line": 28,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 35,
+        "end_line": 35,
+        "fatal": false
+      }
+    ],
+    "scope_exclusions": [],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [
+      {
+        "source_path": "SKILL.md",
+        "line": 28,
+        "column": 51,
+        "evidence": "- NEVER commit secrets: no tokens, no `.env`, no `auth.json` (`.gitignore` guards these). The GitHub token lives only in local `~/.git-credentials` and `~/.herm",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 35,
+        "column": 11,
+        "evidence": "Point at `docs/RESTORE.md` in the repo and `scripts/restore.sh`. One-command revival on any machine: install Hermes, clone repo, run restore script, re-add secr",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 35,
+        "column": 45,
+        "evidence": "Point at `docs/RESTORE.md` in the repo and `scripts/restore.sh`. One-command revival on any machine: install Hermes, clone repo, run restore script, re-add secr",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      }
+    ],
+    "limitations": [],
+    "findings_before_filtering": 6,
+    "findings_after_filtering": 6
+  }
+}
