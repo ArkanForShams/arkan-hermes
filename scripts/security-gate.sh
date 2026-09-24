@@ -17,13 +17,16 @@ case "$CMD" in
   repo)
     [ -z "$TARGET" ] && { echo "usage: security-gate.sh repo <url|path>"; exit 2; }
     echo "== MEDUSA repo vet: $TARGET =="
-    # medusa needs a PTY and a 'yes' answer for missing optional tools;
-    # run via script(1) so the TUI renderer never self-terminates headless.
+    # MEDUSA headless pattern (root causes learned the hard way):
+    # 1. stdout must NOT be a TTY -> disables the Rich Live renderer that
+    #    self-terminates headless (medusa/core/parallel.py:1232).
+    # 2. cap workers (--workers 2) -> 22 default workers OOM-kill in cgroups.
+    # 3. answer the optional-tools prompt: printf 'yes\n' | ...
     STAMP_DIR=$(mktemp -d /tmp/medusa-out.XXXXXX)
     if [[ "$TARGET" == http* ]]; then
-      printf 'yes\n' | script -qec "medusa scan --git '$TARGET' --fail-on high --format json -o '$STAMP_DIR'" /tmp/medusa-gate.log > /dev/null 2>&1
+      printf 'yes\n' | medusa scan --git "$TARGET" --fail-on high --workers 2 --format json -o "$STAMP_DIR" > /tmp/medusa-gate.log 2>&1
     else
-      printf 'yes\n' | script -qec "medusa scan '$TARGET' --fail-on high --format json -o '$STAMP_DIR'" /tmp/medusa-gate.log > /dev/null 2>&1
+      printf 'yes\n' | medusa scan "$TARGET" --fail-on high --workers 2 --format json -o "$STAMP_DIR" > /tmp/medusa-gate.log 2>&1
     fi
     RC=$?
     tail -5 /tmp/medusa-gate.log | tr -d '\r'

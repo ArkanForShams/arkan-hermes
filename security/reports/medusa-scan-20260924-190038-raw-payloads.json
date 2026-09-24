@@ -1,0 +1,139 @@
+{
+  "warning": "RAW PAYLOADS - Contains unobfuscated attack content. For human review only.",
+  "generated": "2026-09-24T19:00:38.678590",
+  "payloads": {
+    "e999ac5e2f7c": {
+      "original_code": "",
+      "original_issue": "JUMP/JUMP++ universal multi-prompt jailbreak framework code detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 488,
+      "category": "Jailbreak Attempt"
+    },
+    "2cfda1a7745f": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 149,
+      "category": "Jailbreak Attempt"
+    },
+    "6e98ebe70a3c": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 192,
+      "category": "Jailbreak Attempt"
+    },
+    "a7e19e0314a3": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 198,
+      "category": "Jailbreak Attempt"
+    },
+    "39791e340929": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 228,
+      "category": "Jailbreak Attempt"
+    },
+    "1ad929bbe15c": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 233,
+      "category": "Jailbreak Attempt"
+    },
+    "ae75b6ef12e3": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 237,
+      "category": "Jailbreak Attempt"
+    },
+    "4ac6e84d7efa": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 241,
+      "category": "Jailbreak Attempt"
+    },
+    "0a38e73deb12": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 249,
+      "category": "Jailbreak Attempt"
+    },
+    "81de42c5ae4d": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 257,
+      "category": "Jailbreak Attempt"
+    },
+    "f4ba38933a8c": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 261,
+      "category": "Jailbreak Attempt"
+    },
+    "2556779eb7c2": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 265,
+      "category": "Jailbreak Attempt"
+    },
+    "8e94289eaab8": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 306,
+      "category": "Jailbreak Attempt"
+    },
+    "884ef57e3693": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 327,
+      "category": "Jailbreak Attempt"
+    },
+    "36e1cafc2b0a": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 342,
+      "category": "Jailbreak Attempt"
+    },
+    "647ddb037cf4": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/export-training.py",
+      "line": 360,
+      "category": "Jailbreak Attempt"
+    },
+    "2df45f12dee5": {
+      "original_code": "",
+      "original_issue": "JUMP/JUMP++ universal multi-prompt jailbreak framework code detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/scripts/eval-replacement.py",
+      "line": 160,
+      "category": "Jailbreak Attempt"
+    },
+    "433a01c69064": {
+      "original_code": "",
+      "original_issue": "JUMP/JUMP++ universal multi-prompt jailbreak framework code detected",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/icarus/scripts/eval-replacement.py",
+      "line": 211,
+      "category": "Jailbreak Attempt"
+    },
+    "7d63c5553062": {
+      "original_code": "",
+      "original_issue": "SUDO mode jailbreak trigger",
+      "file": "/home/shams/hermes-workspace/security/quarantine/memory-os/scripts/pre_validator.py",
+      "line": 72,
+      "category": "Jailbreak Attempt"
+    }
+  }
+}
