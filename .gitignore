@@ -1,0 +1,11 @@
+# Never commit secrets or local-only state
+*.env
+.env
+.git-credentials
+*_token*
+*secret*
+vault/
+auth.json
+__pycache__/
+*.pyc
+.DS_Store
