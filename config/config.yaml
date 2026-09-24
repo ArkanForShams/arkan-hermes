@@ -23,7 +23,7 @@ terminal:
   container_disk: 51200
   container_persistent: true
   docker_mount_cwd_to_workspace: false
-  lifetime_seconds: 300
+  lifetime_seconds: 3600
 browser:
   inactivity_timeout: 120
   extension_control:
@@ -97,6 +97,10 @@ delegation:
   max_iterations: 250
 skills:
   creation_nudge_interval: 15
+plugins:
+  enabled:
+    - icarus
+  disabled: []
 auth:
   adopt_external_logins: true
   codex_login_flow: device_code
@@ -149,6 +153,9 @@ gateway:
     history_tool_output_max_chars: 0
 streaming:
   enabled: false
+onboarding:
+  seen:
+    busy_input_prompt: true
 telemetry:
   shared_metrics:
     enabled: false
@@ -286,6 +293,3 @@ known_builtin_toolsets:
     - web
     - x_search
     - yuanbao
-onboarding:
-  seen:
-    busy_input_prompt: true
