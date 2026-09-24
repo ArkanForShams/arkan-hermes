@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-09-24T18:43:35.283696",
+  "medusa_version": "2026.7.0",
+  "scanner": {
+    "name": "MEDUSA",
+    "version": "2026.7.0",
+    "analyzers": 79,
+    "rules": "40,000+",
+    "url": "https://medusa-security.dev"
+  },
+  "scan_summary": {
+    "total_issues": 1,
+    "files_scanned": 1,
+    "lines_scanned": 2,
+    "security_score": 95,
+    "risk_level": "EXCELLENT",
+    "false_positives_filtered": 0,
+    "missing_linters": []
+  },
+  "severity_breakdown": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "UNDEFINED": 0
+  },
+  "findings": [
+    {
+      "scanner": "GitLeaksScanner",
+      "file": "/tmp/canary/token.txt",
+      "line": 1,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Uncovered a GitHub Personal Access Token, potentially leading to unauthorized repository access and sensitive content exposure.: github-pat",
+      "rule_id": "GL-github-pat",
+      "cwe": null,
+      "code": "...ghp_IYphbWd8O54PfqM9CHvEMVAglbks6uWIuspS...",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    }
+  ],
+  "aggregations": {
+    "by_severity": {
+      "HIGH": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/tmp/canary/token.txt",
+          "line": 1,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Uncovered a GitHub Personal Access Token, potentially leading to unauthorized repository access and sensitive content exposure.: github-pat",
+          "rule_id": "GL-github-pat",
+          "cwe": null,
+          "code": "...ghp_IYphbWd8O54PfqM9CHvEMVAglbks6uWIuspS...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ]
+    },
+    "by_file": {
+      "/tmp/canary/token.txt": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/tmp/canary/token.txt",
+          "line": 1,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Uncovered a GitHub Personal Access Token, potentially leading to unauthorized repository access and sensitive content exposure.: github-pat",
+          "rule_id": "GL-github-pat",
+          "cwe": null,
+          "code": "...ghp_IYphbWd8O54PfqM9CHvEMVAglbks6uWIuspS...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ]
+    },
+    "by_scanner": {
+      "GitLeaksScanner": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/tmp/canary/token.txt",
+          "line": 1,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Uncovered a GitHub Personal Access Token, potentially leading to unauthorized repository access and sensitive content exposure.: github-pat",
+          "rule_id": "GL-github-pat",
+          "cwe": null,
+          "code": "...ghp_IYphbWd8O54PfqM9CHvEMVAglbks6uWIuspS...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ]
+    }
+  },
+  "fp_stats": {
+    "total_findings": 1,
+    "likely_fps": 0,
+    "retained": 1,
+    "fp_rate": 0.0
+  },
+  "ai_safe_mode": true
+}

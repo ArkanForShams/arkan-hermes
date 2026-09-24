@@ -17,11 +17,18 @@ case "$CMD" in
   repo)
     [ -z "$TARGET" ] && { echo "usage: security-gate.sh repo <url|path>"; exit 2; }
     echo "== MEDUSA repo vet: $TARGET =="
+    # medusa needs a PTY and a 'yes' answer for missing optional tools;
+    # run via script(1) so the TUI renderer never self-terminates headless.
+    STAMP_DIR=$(mktemp -d /tmp/medusa-out.XXXXXX)
     if [[ "$TARGET" == http* ]]; then
-      medusa scan --git "$TARGET" --fail-on high
+      printf 'yes\n' | script -qec "medusa scan --git '$TARGET' --fail-on high --format json -o '$STAMP_DIR'" /tmp/medusa-gate.log > /dev/null 2>&1
     else
-      medusa scan "$TARGET" --fail-on high
+      printf 'yes\n' | script -qec "medusa scan '$TARGET' --fail-on high --format json -o '$STAMP_DIR'" /tmp/medusa-gate.log > /dev/null 2>&1
     fi
+    RC=$?
+    tail -5 /tmp/medusa-gate.log | tr -d '\r'
+    [ -d "$STAMP_DIR" ] && cp "$STAMP_DIR"/*.json "$REPORT_DIR"/ 2>/dev/null && echo "reports: $REPORT_DIR"
+    exit $RC
     ;;
   skill)
     [ -z "$TARGET" ] && { echo "usage: security-gate.sh skill <path|url|zip>"; exit 2; }

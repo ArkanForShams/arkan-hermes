@@ -1,0 +1,1223 @@
+{
+  "skill": {
+    "name": "unknown",
+    "source": "/home/shams/.hermes/cache/scratch/skillspector_ofzzpdbt/extracted/OpenClaw Marketing Team Skills",
+    "scanned_at": "2026-09-24T15:22:49.323101+00:00"
+  },
+  "risk_assessment": {
+    "score": 84,
+    "severity": "CRITICAL",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "HIGH"
+  },
+  "components": [
+    {
+      "path": "openclaw-marketing-team-main/.env.example",
+      "type": "other",
+      "lines": 16,
+      "executable": false,
+      "size_bytes": 664,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/.gitignore",
+      "type": "other",
+      "lines": 17,
+      "executable": false,
+      "size_bytes": 155,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/README.md",
+      "type": "markdown",
+      "lines": 255,
+      "executable": false,
+      "size_bytes": 8539,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/TOOLS.md",
+      "type": "markdown",
+      "lines": 134,
+      "executable": false,
+      "size_bytes": 3534,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/assets/brand/fonts/.gitkeep",
+      "type": "other",
+      "lines": 10,
+      "executable": false,
+      "size_bytes": 272,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/assets/brand/logo.svg",
+      "type": "other",
+      "lines": 7,
+      "executable": true,
+      "size_bytes": 345,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/README.md",
+      "type": "markdown",
+      "lines": 132,
+      "executable": false,
+      "size_bytes": 8267,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/ad-creative-analysis/SKILL.md",
+      "type": "markdown",
+      "lines": 90,
+      "executable": false,
+      "size_bytes": 3852,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/ad-creative-analysis/references/prompts.md",
+      "type": "markdown",
+      "lines": 51,
+      "executable": false,
+      "size_bytes": 3438,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/ad-designer/SKILL.md",
+      "type": "markdown",
+      "lines": 249,
+      "executable": false,
+      "size_bytes": 6637,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/ads-analyst/SKILL.md",
+      "type": "markdown",
+      "lines": 268,
+      "executable": false,
+      "size_bytes": 7579,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/campaign-planner/SKILL.md",
+      "type": "markdown",
+      "lines": 278,
+      "executable": false,
+      "size_bytes": 7711,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/campaign-planner/templates/proposal-template.html",
+      "type": "other",
+      "lines": 392,
+      "executable": false,
+      "size_bytes": 8910,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/creative-director/SKILL.md",
+      "type": "markdown",
+      "lines": 190,
+      "executable": false,
+      "size_bytes": 6445,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/frontend-design/LICENSE.txt",
+      "type": "text",
+      "lines": 177,
+      "executable": false,
+      "size_bytes": 10174,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/frontend-design/SKILL.md",
+      "type": "markdown",
+      "lines": 42,
+      "executable": false,
+      "size_bytes": 4440,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/head-of-marketing/SKILL.md",
+      "type": "markdown",
+      "lines": 296,
+      "executable": false,
+      "size_bytes": 10140,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/landing-page-analysis/SKILL.md",
+      "type": "markdown",
+      "lines": 61,
+      "executable": false,
+      "size_bytes": 2723,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/landing-page-analysis/references/prompts.md",
+      "type": "markdown",
+      "lines": 70,
+      "executable": false,
+      "size_bytes": 2866,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/meta-ads-analyser/SKILL.md",
+      "type": "markdown",
+      "lines": 177,
+      "executable": false,
+      "size_bytes": 5267,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/meta-ads-analyser/templates/report-template.html",
+      "type": "other",
+      "lines": 334,
+      "executable": false,
+      "size_bytes": 9089,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/meta-ads-extractor/SKILL.md",
+      "type": "markdown",
+      "lines": 155,
+      "executable": false,
+      "size_bytes": 5657,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/meta-ads-extractor/references/dom-selectors.md",
+      "type": "markdown",
+      "lines": 173,
+      "executable": false,
+      "size_bytes": 5333,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/meta-ads-extractor/scripts/extract-and-download.sh",
+      "type": "shell",
+      "lines": 51,
+      "executable": true,
+      "size_bytes": 1575,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/meta-ads-publisher/SKILL.md",
+      "type": "markdown",
+      "lines": 240,
+      "executable": false,
+      "size_bytes": 7877,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/page-designer/SKILL.md",
+      "type": "markdown",
+      "lines": 160,
+      "executable": false,
+      "size_bytes": 4381,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/page-designer/assets/example-design-system.css",
+      "type": "other",
+      "lines": 248,
+      "executable": false,
+      "size_bytes": 5735,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/performance-marketer/SKILL.md",
+      "type": "markdown",
+      "lines": 239,
+      "executable": false,
+      "size_bytes": 6603,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/scriptwriter/SKILL.md",
+      "type": "markdown",
+      "lines": 342,
+      "executable": false,
+      "size_bytes": 7161,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/scriptwriter/templates/script-template.md",
+      "type": "markdown",
+      "lines": 192,
+      "executable": false,
+      "size_bytes": 3487,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "openclaw-marketing-team-main/skills/website-brand-analysis/SKILL.md",
+      "type": "markdown",
+      "lines": 526,
+      "executable": false,
+      "size_bytes": 12504,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "PE3",
+      "finding_id": "finding-f8b829b6db38496da0f66f52aa70d40f",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "openclaw-marketing-team-main/.env.example",
+        "start_line": 2,
+        "end_line": null,
+        "start_column": 20
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "# Marketing Team Template - Environment Variables\n# Copy this file to .env and fill in your values\n\n# ============================================\n# GEMINI API (Required for image generation + video analysis)",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/.env.example",
+          "start_line": 2,
+          "end_line": null,
+          "start_column": 20
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f8b829b6db38496da0f66f52aa70d40f",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "openclaw-marketing-team-main/.gitignore",
+        "start_line": 2,
+        "end_line": null,
+        "start_column": 0
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "# Marketing Team Template - Environment Variables\n# Copy this file to .env and fill in your values\n\n# ============================================\n# GEMINI API (Required for image generation + video analysis)",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/.gitignore",
+          "start_line": 2,
+          "end_line": null,
+          "start_column": 0
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-89184a90eb04451b922e02f23bdb1d5e",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "openclaw-marketing-team-main/README.md",
+        "start_line": 124,
+        "end_line": null,
+        "start_column": 16
+      },
+      "finding": ".env\n",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "Copy the example environment file and add your API keys:\n\n```bash\ncp .env.example .env\n```\n\nEdit `.env` with your actual values:",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation",
+        "contextual-triage",
+        "likely-benign-context"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/README.md",
+          "start_line": 124,
+          "end_line": null,
+          "start_column": 16
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-f57c1def94494594b8e8ed140860aa83",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "openclaw-marketing-team-main/TOOLS.md",
+        "start_line": 70,
+        "end_line": null,
+        "start_column": 17
+      },
+      "finding": "Access Token",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "3. Or use: `https://www.facebook.com/YOUR_PAGE/about`\n4. Page ID is in the URL or transparency section\n\n#### 4. Generate Access Token\n\n**For testing (short-lived):**\n1. Go to [Graph API Explorer](https://developers.facebook.com/tools/explorer/)",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "d791fddf2b521316d721148b0ff375b4cd22146833b76e12a6a85aae7e9ea3f2",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/TOOLS.md",
+          "start_line": 70,
+          "end_line": null,
+          "start_column": 17
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-95dd77dece6b4a359935738afff22b88",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "openclaw-marketing-team-main/TOOLS.md",
+        "start_line": 119,
+        "end_line": null,
+        "start_column": 19
+      },
+      "finding": "access token",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "\n## Troubleshooting\n\n### \"Invalid OAuth access token\"\n- Token expired \u2192 Generate a new one\n- Wrong permissions \u2192 Check token has `ads_management`\n",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "903a9f18e7222d4c1e39fcf76dec31bef3fd46b6332f4bc5bc823999d287548b",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/TOOLS.md",
+          "start_line": 119,
+          "end_line": null,
+          "start_column": 19
+        }
+      ]
+    },
+    {
+      "id": "RA1",
+      "finding_id": "finding-c1cd31dd7ce947e38c3baa24fef99208",
+      "category": "Rogue Agent",
+      "pattern": "Self-Modification",
+      "severity": "HIGH",
+      "confidence": 0.85,
+      "location": {
+        "file": "openclaw-marketing-team-main/assets/brand/fonts/.gitkeep",
+        "start_line": 9,
+        "end_line": null,
+        "start_column": 7
+      },
+      "finding": "update skill",
+      "explanation": "Skill modifies its own code, configuration, or behavior at runtime. Self-modification enables an agent to escalate privileges, disable safety constraints, or install persistent backdoors.",
+      "remediation": "Prevent the skill from modifying its own code, SKILL.md, or configuration files. Treat skill files as read-only at runtime.",
+      "code_snippet": "# - YourFont-Medium.otf\n# - YourFont-Bold.otf\n#\n# Then update skills/page-designer/assets/example-design-system.css\n# to reference your font files.",
+      "intent": null,
+      "tags": [
+        "Rogue Agent"
+      ],
+      "evidence": {},
+      "match_fingerprint": "ddff085d74589b81d2837424a54bc4aae34bbc754235d46e40aa14249ff29212",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/assets/brand/fonts/.gitkeep",
+          "start_line": 9,
+          "end_line": null,
+          "start_column": 7
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-7ac5f4be0bca45468e9155fd69ec4e51",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "openclaw-marketing-team-main/skills/campaign-planner/templates/proposal-template.html",
+        "start_line": 249,
+        "end_line": 300,
+        "start_column": 0,
+        "end_column": 25
+      },
+      "finding": "<!-- EXECUTIVE SUMMARY -->\n<div class=\"summary-box\">\n  <h3>Executive Summary</h3>\n  <p>{{EXECUTIVE_SUMMARY}}</p>\n  \n  <table>\n    <tr>\n      <td><strong>Landing Pages</strong></td>\n      <td>{{NUM_LAN",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "  <span class=\"status\">\u23f3 DRAFT \u2014 Awaiting Review</span>\n</div>\n\n<!-- EXECUTIVE SUMMARY -->\n<div class=\"summary-box\">\n  <h3>Executive Summary</h3>\n  <p>{{EXECUTIVE_SUMMARY}}</p>",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "b2f8869131e1fefed97098ea9af73e79744d031bfd1a1f071be779b4a88debdd",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/skills/campaign-planner/templates/proposal-template.html",
+          "start_line": 249,
+          "end_line": 300,
+          "start_column": 0,
+          "end_column": 25
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-8608167d6ba547bdae8ac42a5c75f91e",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "openclaw-marketing-team-main/skills/campaign-planner/templates/proposal-template.html",
+        "start_line": 304,
+        "end_line": 304,
+        "start_column": 0,
+        "end_column": 15
+      },
+      "finding": "<!-- BUDGET -->",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "<h2>\ud83d\udcca Creative Summary</h2>\n{{CREATIVE_SUMMARY_TABLE}}\n\n<!-- BUDGET -->\n<h2>\ud83d\udcb0 Budget Allocation</h2>\n<table class=\"budget-table\">\n  <thead>",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "85f2f23531cd9535b6b8683e444bbc65fba772534e3ad03aa09457ee0e3bd834",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/skills/campaign-planner/templates/proposal-template.html",
+          "start_line": 304,
+          "end_line": 304,
+          "start_column": 0,
+          "end_column": 15
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-0aa3c8b2c3a14221a278fbf128d50bff",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "openclaw-marketing-team-main/skills/ad-creative-analysis/SKILL.md",
+        "start_line": 20,
+        "end_line": null,
+        "start_column": 13
+      },
+      "finding": "curl -s -i -X POST \\\n  \"https://generativelanguage.googleapis.com/upload/v1beta/files?key=%2A%2A%2A\" \\\n  -H \"X-Goog-Upload-Protocol: resumable\" \\\n  -H \"X-Goog-Upload-Command: start\" \\\n  -H \"X-Go",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "FILE_SIZE=$(wc -c < \"$VIDEO_PATH\" | tr -d ' ')\n\n# Start resumable upload\nUPLOAD_URL=$(curl -s -i -X POST \\\n  \"https://generativelanguage.googleapis.com/upload/v1beta/files?key=%2A%2A%2A\" \\\n  -H \"X-Goog-Upload-Protocol: resumable\" \\\n  -H \"X-Goog-Upload-Command: start\" \\",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "b0b555feabf013f09f6daedd34ea4b1105b8af1fedbb55fdb1b0f3101083f1ce",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/skills/ad-creative-analysis/SKILL.md",
+          "start_line": 20,
+          "end_line": null,
+          "start_column": 13
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-ad5ef8dab2e347a3af64becd8977f97b",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "openclaw-marketing-team-main/skills/ad-creative-analysis/SKILL.md",
+        "start_line": 31,
+        "end_line": null,
+        "start_column": 9
+      },
+      "finding": "curl -s -X POST \"$UPLOAD_URL\" \\\n  -H \"X-Goog-Upload-Command: upload, finalize\" \\\n  -H \"X-Goog-Upload-Offset: 0\" \\\n  -H \"Content-Length: $FILE_SIZE\" \\\n  --data-binary ",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "  | grep -i 'x-goog-upload-url' | tr -d '\\r' | cut -d' ' -f2)\n\n# Upload file\nRESULT=$(curl -s -X POST \"$UPLOAD_URL\" \\\n  -H \"X-Goog-Upload-Command: upload, finalize\" \\\n  -H \"X-Goog-Upload-Offset: 0\" \\\n  -H \"Content-Length: $FILE_SIZE\" \\",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "1a455df6b887a5cda19035a5b8f916eab4341879e0e2f50885fcf63585dbbec0",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/skills/ad-creative-analysis/SKILL.md",
+          "start_line": 31,
+          "end_line": null,
+          "start_column": 9
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-d36dceca8935440491e0669829be864a",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "openclaw-marketing-team-main/skills/ad-creative-analysis/SKILL.md",
+        "start_line": 45,
+        "end_line": null,
+        "start_column": 0
+      },
+      "finding": "curl -s -X POST \\\n  \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=%2A%2A%2A\" \\\n  -H \"Content-Type: application/json\" \\\n  -d ",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "### Step 2: Analyze with Gemini\n\n```bash\ncurl -s -X POST \\\n  \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=%2A%2A%2A\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "a5f3d16d714b529fe3eed7ca78636b6cd743e092bce257a91f3d686cad46a75c",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/skills/ad-creative-analysis/SKILL.md",
+          "start_line": 45,
+          "end_line": null,
+          "start_column": 0
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-b2cb5318a6f54c0a8b2e1c6329ef2fb4",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "openclaw-marketing-team-main/skills/ad-designer/SKILL.md",
+        "start_line": 121,
+        "end_line": null,
+        "start_column": 0
+      },
+      "finding": "curl -s \"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent?key=%2A%2A%2A\" \\\n  -H \"Content-Type: application/json\" \\\n  -d ",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "## API Usage\n\n```bash\ncurl -s \"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent?key=%2A%2A%2A\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"contents\": [{",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "a4ac9c0a9a6257ea2a6fca81f4e4bbac14ee7b8bb652718a5f6fe1d0f684963a",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/skills/ad-designer/SKILL.md",
+          "start_line": 121,
+          "end_line": null,
+          "start_column": 0
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-906e3b809b584896b8bb5c74eea0051c",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "openclaw-marketing-team-main/skills/meta-ads-publisher/SKILL.md",
+        "start_line": 92,
+        "end_line": null,
+        "start_column": 0
+      },
+      "finding": "curl -X POST \"https://graph.facebook.com/v21.0/act_{AD_ACCOUNT}/campaigns\" \\\n  -d \"name=Campaign Name\" \\\n  -d \"objective=OUTCOME_TRAFFIC\" \\\n  -d \"status=PAUSED\" \\\n  -d \"special_ad_categories=[]\" \\\n  -",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "### 3. Create Campaign\n\n```bash\ncurl -X POST \"https://graph.facebook.com/v21.0/act_{AD_ACCOUNT}/campaigns\" \\\n  -d \"name=Campaign Name\" \\\n  -d \"objective=OUTCOME_TRAFFIC\" \\\n  -d \"status=PAUSED\" \\",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "418a803cf912c9a8f7b07568cbcc7e5ed4ae5d15974fed5ae9960ca612544516",
+      "occurrences": [
+        {
+          "file": "openclaw-marketing-team-main/skills/meta-ads-publisher/SKILL.md",
+          "start_line": 92,
+          "end_line": null,
+          "start_column": 0
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": true,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "nv_build",
+        "resolved_adapter": "nv_build",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "not_applicable",
+          "api_version": null,
+          "api_version_source": "not_applicable"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 31,
+    "scanned_components": 28,
+    "coverage_percent": 90.3,
+    "is_complete": false,
+    "status": "partial",
+    "execution_successful": true,
+    "fully_inspected_files": 28,
+    "partially_inspected_files": 3,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "openclaw-marketing-team-main/skills/ad-creative-analysis/SKILL.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "openclaw-marketing-team-main/skills/meta-ads-extractor/references/dom-selectors.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "openclaw-marketing-team-main/skills/meta-ads-extractor/scripts/extract-and-download.sh",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      }
+    ],
+    "scope_exclusions": [],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "manifest_absent",
+        "message": "No compatible manifest was present for this analyzer."
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "manifest_absent",
+        "message": "No compatible manifest was present for this analyzer."
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "degraded",
+        "planned_work": 31,
+        "completed": 28,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 31,
+        "completed": 31,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [],
+    "limitations": [
+      "Analyzer static_patterns_tool_misuse status: degraded."
+    ],
+    "findings_before_filtering": 13,
+    "findings_after_filtering": 13
+  }
+}
