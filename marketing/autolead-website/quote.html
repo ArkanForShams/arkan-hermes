@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Quote — AutoLead.sa</title>
+<meta name="description" content="Request a lease quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-al-page="quote">
+<header data-al-header></header>
+
+<section class="hero" style="padding:64px 0 56px"><div class="wrap">
+  <span class="eyebrow">Get started</span>
+  <h1>Request your <em>quote</em></h1>
+  <p class="lead">Individuals: instant indicative pricing. Corporates: full proposal within 48 hours.
+  This form is a prototype — submissions are not yet wired to a backend.</p>
+</div></section>
+<section><div class="wrap"><div class="calc">
+  <div class="row">
+    <div><label>I am leasing as</label><select id="qType"><option>Individual (B2C)</option><option>Company (B2B)</option></select></div>
+    <div><label>Full name</label><input type="text" placeholder="Your name"></div>
+  </div>
+  <div class="row">
+    <div><label>Mobile</label><input type="tel" placeholder="+966 5X XXX XXXX"></div>
+    <div><label>Email</label><input type="email" placeholder="you@example.com"></div>
+  </div>
+  <div class="row">
+    <div><label>Preferred model / class</label><select>
+      <option>Compact class</option><option>Mid-size / SUV class</option>
+      <option>Luxury class</option><option>Fleet — mixed</option></select></div>
+    <div><label>Term</label><select><option>12 months</option><option>15 months</option><option>24 months</option><option>36+ months / custom</option></select></div>
+  </div>
+  <div class="row" style="grid-template-columns:1fr">
+    <div><label>Notes (fleet size, cities, special requirements)</label>
+    <input type="text" placeholder="e.g. 25 vehicles for field engineers in Riyadh & Dammam, telematics required"></div>
+  </div>
+  <div class="calc-result">
+    <span style="font-size:13px;color:var(--muted)">By submitting you agree to be contacted about this request. No payment details are collected on this site.</span>
+    <button class="btn btn-gold" onclick="alert('Prototype: form backend not yet connected. In production this posts to the leasing CRM.')">Submit request</button>
+  </div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="band">
+  <div><h3>Talk to the leasing desk</h3><p>Individual quotes in minutes. Corporate proposals within 48 hours.</p></div>
+  <div class="actions"><a class="btn btn-gold" href="quote.html">Get my quote</a>
+  <a class="btn btn-ghost" href="mailto:hello@autolead.sa">hello@autolead.sa</a></div>
+</div></div></section>
+<footer data-al-footer></footer>
+<script src="site.js"></script>
+</body>
+</html>
