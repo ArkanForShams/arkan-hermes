@@ -1,0 +1,117 @@
+/* Shams Tabrez — Design System ("Ink & Brass")
+ * Authored by ARKAN via website-brand-analysis (adapted: person-brand, tokens authored not scraped)
+ * Use with page-designer / frontend-design. Date: 2026-09-24
+ */
+
+/* ========== COLORS ========== */
+:root {
+  --ink: #0B1524;            /* deep midnight — hero, signature sections, footer */
+  --ink-2: #101E32;          /* elevated dark surface / cards on dark */
+  --ink-3: #16273E;          /* hover surface on dark */
+  --paper: #F7F2E9;          /* warm cream — main light background */
+  --paper-2: #EFE7D8;        /* deeper cream — alternate light section */
+  --brass: #C39A45;          /* primary accent — CTAs, key lines, pillars */
+  --brass-bright: #E3B95C;   /* hover accent */
+  --brass-deep: #9A7830;     /* accent on light backgrounds (AA-safe) */
+  --lapis: #2E5E8C;          /* secondary accent — links on light */
+  --text-dark: #17263B;      /* body text on light */
+  --text-muted-light: #5A6B80; /* muted text on light */
+  --text-light: #EDE6D6;     /* body text on dark */
+  --text-muted-dark: rgba(237, 230, 214, 0.66); /* muted on dark */
+  --hairline-dark: rgba(237, 230, 214, 0.14);   /* borders on dark */
+  --hairline-light: rgba(23, 38, 59, 0.14);     /* borders on light */
+}
+
+/* ========== TYPOGRAPHY ========== */
+:root {
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  --text-xs: 0.75rem;   /* 12 */
+  --text-sm: 0.875rem;  /* 14 */
+  --text-base: 1rem;    /* 16 */
+  --text-lg: 1.125rem;  /* 18 */
+  --text-xl: 1.375rem;  /* 22 */
+  --text-2xl: 1.75rem;  /* 28 */
+  --text-3xl: clamp(1.9rem, 4vw, 2.75rem);
+  --text-4xl: clamp(2.4rem, 6vw, 3.9rem);
+  --text-hero: clamp(2.6rem, 7vw, 4.6rem);
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  --leading-tight: 1.12;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+  --tracking-label: 0.18em;
+}
+
+/* ========== SPACING & LAYOUT ========== */
+:root {
+  --space-2: 8px;  --space-3: 12px; --space-4: 16px; --space-5: 20px;
+  --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px;
+  --space-16: 64px; --space-20: 80px; --space-24: 96px; --space-28: 112px;
+
+  --container: 1100px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 8px rgba(11, 21, 36, 0.08);
+  --shadow-md: 0 8px 24px rgba(11, 21, 36, 0.10);
+  --shadow-lg: 0 16px 48px rgba(11, 21, 36, 0.14);
+  --glow-brass: 0 6px 24px rgba(195, 154, 69, 0.35);
+}
+
+/* ========== COMPONENTS ========== */
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--brass-deep);
+}
+.on-dark .label-mono, .label-mono.on-dark { color: var(--brass); }
+
+.btn-primary {
+  font-family: var(--font-body); font-weight: var(--font-semibold);
+  padding: 14px 30px; border-radius: var(--radius-pill);
+  background: var(--brass); color: var(--ink);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn-primary:hover { background: var(--brass-bright); transform: translateY(-2px); box-shadow: var(--glow-brass); }
+
+.btn-ghost-dark {
+  font-family: var(--font-body); font-weight: var(--font-medium);
+  padding: 13px 28px; border-radius: var(--radius-pill);
+  border: 1px solid var(--hairline-dark); color: var(--text-light);
+  transition: border-color .2s ease, color .2s ease, transform .2s ease;
+}
+.btn-ghost-dark:hover { border-color: var(--brass); color: var(--brass-bright); transform: translateY(-2px); }
+
+.card-light {
+  background: #FFFDF8; border: 1px solid var(--hairline-light);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card-light:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.card-dark {
+  background: var(--ink-2); border: 1px solid var(--hairline-dark);
+  border-radius: var(--radius-md);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+.card-dark:hover { transform: translateY(-4px); background: var(--ink-3); border-color: rgba(195,154,69,.45); }
+
+.section { padding: var(--space-24) 0; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--space-6); }
+
+/* Pillar motif: vertical hairline with brass cap */
+.pillar-rule { position: relative; height: 1px; background: var(--hairline-light); }
+.pillar-rule::before {
+  content: ''; position: absolute; top: -3px; left: 0; width: 1px; height: 7px; background: var(--brass);
+}
