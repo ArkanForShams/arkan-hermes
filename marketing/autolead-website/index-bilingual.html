@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoLead.sa — Vehicle Leasing for Individuals & Fleets in KSA</title>
+<meta name="description" content="Fixed monthly vehicle leasing for individuals and corporate fleets across Saudi Arabia. Insurance, maintenance, registration and roadside assistance included.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   AUTOLEAD.SA — bilingual (EN/AR) leasing site prototype v2
+   Theme DNA from live autolead.sa: #111111 bg, #fff ink, Open Sans
+   Extended with a single premium gold accent.
+   NOTE: all prices/claims are DRAFT placeholders pending approval.
+   ============================================================ */
+:root{
+  --bg:#111111;
+  --surface:#1a1a1c;
+  --surface-2:#202024;
+  --ink:#ffffff;
+  --muted:#a3a3a8;
+  --line:rgba(255,255,255,.09);
+  --gold:#e0b457;
+  --gold-deep:#c6953c;
+  --gold-soft:rgba(224,180,87,.12);
+  --radius:16px;
+  --radius-sm:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Open Sans','Segoe UI',Tahoma,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.lang-block[hidden]{display:none}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(17,17,17,.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;gap:32px;height:68px}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.logo .mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--gold-deep));display:grid;place-items:center;font-size:15px;color:#111;font-weight:800;flex:none}
+.logo span em{font-style:normal;color:var(--gold)}
+.nav .links{display:flex;gap:26px;margin-inline-start:auto;font-size:14.5px;color:var(--muted)}
+.nav .links a:hover{color:var(--ink)}
+.lang-chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang-chip button{
+  background:transparent;border:none;color:var(--muted);cursor:pointer;
+  font-family:inherit;font-size:12.5px;padding:5px 14px;transition:.15s;
+}
+.lang-chip button.on{background:var(--gold);color:#141414;font-weight:700}
+.lang-chip button:hover:not(.on){color:var(--ink)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border-radius:999px;font-weight:700;font-size:14.5px;
+  padding:12px 26px;cursor:pointer;border:1px solid transparent;
+  transition:.2s;white-space:nowrap;
+}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#141414}
+.btn-gold:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn-ghost{border-color:rgba(255,255,255,.22);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-sm{padding:9px 20px;font-size:13.5px}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  padding:96px 0 84px;
+  border-bottom:1px solid var(--line);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(900px 420px at 85% 20%, rgba(224,180,87,.10), transparent 60%),
+    radial-gradient(700px 500px at 8% 85%, rgba(224,180,87,.05), transparent 60%);
+  pointer-events:none;
+}
+[dir="rtl"] .hero::before{
+  background:
+    radial-gradient(900px 420px at 15% 20%, rgba(224,180,87,.10), transparent 60%),
+    radial-gradient(700px 500px at 92% 85%, rgba(224,180,87,.05), transparent 60%);
+}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:20px;
+}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--gold)}
+h1{font-size:clamp(38px,5vw,58px);font-weight:800;line-height:1.12;letter-spacing:-.03em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--gold)}
+[dir="rtl"] h1{letter-spacing:0;line-height:1.28}
+[dir="rtl"] .eyebrow,[dir="rtl"] .sec-head .kicker{letter-spacing:0;text-transform:none;font-size:14px}
+[dir="rtl"] .car-stage .tag{letter-spacing:0;text-transform:none;font-size:13px}
+[dir="rtl"] .plan .tier{letter-spacing:0;text-transform:none;font-size:14px}
+[dir="rtl"] .fleet-table thead th{letter-spacing:0;text-transform:none;font-size:13px}
+[dir="rtl"] .plan .badge{letter-spacing:0;font-size:12.5px}
+.hero p.lead{margin:22px 0 34px;color:var(--muted);font-size:18px;max-width:520px;text-wrap:pretty}
+[dir="rtl"] .hero p.lead{font-size:17px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;gap:22px;margin-top:38px;flex-wrap:wrap}
+.trust .t{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.trust .t b{color:var(--ink);font-weight:700}
+.trust .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+
+.car-stage{
+  position:relative;border:1px solid var(--line);border-radius:20px;
+  background:
+    radial-gradient(420px 240px at 70% 18%, rgba(224,180,87,.14), transparent 65%),
+    linear-gradient(180deg,#191919,#131313);
+  padding:36px 32px 28px;
+}
+.car-stage .tag{
+  display:inline-flex;border:1px solid rgba(224,180,87,.4);color:var(--gold);
+  border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;padding:5px 14px;margin-bottom:20px;
+}
+.car-stage svg{width:100%;height:auto}
+.car-stage .meta{display:flex;justify-content:space-between;align-items:center;margin-top:18px;border-top:1px solid var(--line);padding-top:16px;gap:14px;flex-wrap:wrap}
+.car-stage .meta .m b{display:block;font-size:15px}
+.car-stage .meta .m span{font-size:12.5px;color:var(--muted)}
+.car-stage .meta .price{font-size:20px;font-weight:800;color:var(--gold)}
+.car-stage .meta .price small{font-size:12px;color:var(--muted);font-weight:400}
+
+/* ---------- sections ---------- */
+section{padding:88px 0}
+.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head .kicker{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.sec-head h2{font-size:clamp(28px,3.4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wrap:balance}
+[dir="rtl"] .sec-head h2{letter-spacing:0;line-height:1.3}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:16.5px;text-wrap:pretty}
+
+.values{border-bottom:1px solid var(--line)}
+.values .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.values .cell{background:var(--surface);padding:28px 26px}
+.values .cell b{display:block;font-size:16px;margin-bottom:6px}
+.values .cell span{font-size:13.5px;color:var(--muted)}
+
+/* ---------- plans ---------- */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.plan{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 28px;display:flex;flex-direction:column;position:relative;
+  transition:.25s;
+}
+.plan:hover{transform:translateY(-4px);border-color:rgba(224,180,87,.45)}
+.plan.hot{border-color:var(--gold);background:linear-gradient(180deg,rgba(224,180,87,.07),var(--surface) 42%)}
+.plan .badge{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#141414;
+  font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  border-radius:999px;padding:5px 16px;white-space:nowrap;
+}
+.plan .tier{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.plan .cls{font-size:19px;font-weight:800;margin:8px 0 4px}
+.plan .example{font-size:13px;color:var(--muted);margin-bottom:22px}
+.plan .price{display:flex;align-items:baseline;gap:6px;margin-bottom:2px}
+.plan .price .sar{font-size:15px;color:var(--gold);font-weight:700}
+.plan .price .amt{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1}
+[dir="rtl"] .plan .price .amt{letter-spacing:0}
+.plan .price .per{font-size:13px;color:var(--muted)}
+.plan .term{font-size:12.5px;color:var(--muted);margin-bottom:22px}
+.plan ul{list-style:none;display:grid;gap:11px;margin-bottom:26px}
+.plan li{display:flex;gap:10px;font-size:14px;color:#d6d6d9}
+.plan li svg{flex:none;margin-top:3px}
+.plan .btn{margin-top:auto;width:100%}
+.plans-note{margin-top:22px;font-size:12.5px;color:var(--muted);text-align:center}
+
+/* ---------- corporate ---------- */
+.corporate{border-top:1px solid var(--line)}
+.corp-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+.corp-points{display:grid;gap:16px;margin-top:30px}
+.corp-points .p{display:flex;gap:14px;align-items:flex-start}
+.corp-points .p .tick{width:26px;height:26px;flex:none;border-radius:8px;background:var(--gold-soft);display:grid;place-items:center;margin-top:2px}
+.corp-points .p b{display:block;font-size:15px}
+.corp-points .p span{font-size:13.5px;color:var(--muted)}
+.fleet-table{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+.fleet-table table{width:100%;border-collapse:collapse;font-size:14px}
+.fleet-table th,.fleet-table td{padding:16px 18px;text-align:start;border-bottom:1px solid var(--line);vertical-align:top}
+.fleet-table thead th{
+  background:var(--surface-2);font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;
+}
+.fleet-table thead th.hl{color:var(--gold)}
+.fleet-table td .tier-name{font-weight:800;font-size:15px}
+.fleet-table td .seg{font-size:12px;color:var(--muted);display:block;margin-top:2px}
+.fleet-table td .pr{font-weight:800;color:var(--gold);white-space:nowrap}
+.fleet-table td .pr small{color:var(--muted);font-weight:400;font-size:11.5px}
+.fleet-table tr:last-child td{border-bottom:none}
+.fleet-cta{
+  padding:22px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between;
+  background:var(--surface-2);border-top:1px solid var(--line);flex-wrap:wrap;
+}
+.fleet-cta span{font-size:13.5px;color:var(--muted)}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;position:relative}
+.step::before{
+  counter-increment:step;content:"0" counter(step);
+  font-size:30px;font-weight:800;color:var(--gold);opacity:.9;letter-spacing:-.02em;
+  display:block;margin-bottom:12px;
+}
+.step b{display:block;font-size:15.5px;margin-bottom:6px}
+.step span{font-size:13.5px;color:var(--muted)}
+
+/* ---------- band / footer ---------- */
+.band{
+  border:1px solid rgba(224,180,87,.35);border-radius:22px;
+  background:
+    radial-gradient(600px 240px at 80% 0%, rgba(224,180,87,.13), transparent 60%),
+    var(--surface);
+  padding:52px 48px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;
+}
+.band h3{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+[dir="rtl"] .band h3{letter-spacing:0}
+.band p{color:var(--muted);margin-top:8px;font-size:15px}
+.band .actions{display:flex;gap:14px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:44px 0;color:var(--muted);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer .f-links{display:flex;gap:22px}
+footer .f-links a:hover{color:var(--ink)}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .values .grid{grid-template-columns:1fr 1fr}
+  .plans{grid-template-columns:1fr;max-width:460px;margin:0 auto}
+  .corp-grid{grid-template-columns:1fr;gap:36px}
+  .steps{grid-template-columns:1fr 1fr}
+  .nav .links{display:none}
+}
+@media (max-width:560px){
+  .values .grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .band{padding:36px 26px}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     ENGLISH TREE
+     ============================================================ -->
+<div class="lang-block" id="lang-en">
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top-en"><span class="mark">A</span><span>Auto<em>Lead</em>.sa</span></a>
+    <nav class="links">
+      <a href="#plans-en">Individual</a>
+      <a href="#corporate-en">Corporate</a>
+      <a href="#how-en">How it works</a>
+      <a href="#contact-en">Contact</a>
+    </nav>
+    <span class="lang-chip">
+      <button class="on" data-lang="en">EN</button>
+      <button data-lang="ar">عربي</button>
+    </span>
+    <a class="btn btn-gold btn-sm" href="#plans-en">Get a quote</a>
+  </div>
+</header>
+
+<section class="hero" id="top-en">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Vehicle leasing · Saudi Arabia</span>
+      <h1>One monthly payment.<br><em>Everything</em> included.</h1>
+      <p class="lead">
+        Lease the car — skip the hassle. AutoLead bundles insurance, maintenance,
+        registration and 24/7 roadside assistance into one fixed monthly subscription
+        for individuals and corporate fleets.
+      </p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#plans-en">See individual plans</a>
+        <a class="btn btn-ghost" href="#corporate-en">Corporate fleet solutions</a>
+      </div>
+      <div class="trust">
+        <span class="t"><span class="dot"></span><span><b>Zero</b> down payment</span></span>
+        <span class="t"><span class="dot"></span><span><b>Fixed</b> monthly cost</span></span>
+        <span class="t"><span class="dot"></span><span><b>Free</b> vehicle swap</span></span>
+      </div>
+    </div>
+    <div class="car-stage">
+      <span class="tag">Available on lease</span>
+      <!-- abstract vehicle silhouette placeholder (replace with real fleet photography) -->
+      <svg viewBox="0 0 520 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bodyGrad-en" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2b2b30"/><stop offset="1" stop-color="#151517"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="260" cy="208" rx="240" ry="10" fill="rgba(224,180,87,.10)"/>
+        <path d="M60 168 C70 150 90 142 120 140 L165 138 C185 118 215 108 250 108 L305 108 C345 108 375 120 400 140 L430 144 C462 148 476 158 478 170 L478 186 C478 194 472 198 464 198 L64 198 C54 198 48 192 48 182 Z" fill="url(#bodyGrad-en)" stroke="rgba(224,180,87,.55)" stroke-width="2"/>
+        <path d="M180 138 L216 116 L300 116 L330 138 Z" fill="#0d0d0f" stroke="rgba(224,180,87,.35)" stroke-width="1.5"/>
+        <circle cx="140" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
+        <circle cx="140" cy="198" r="9" fill="#e0b457"/>
+        <circle cx="396" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
+        <circle cx="396" cy="198" r="9" fill="#e0b457"/>
+        <rect x="60" y="168" width="30" height="8" rx="4" fill="#e0b457" opacity=".85"/>
+        <rect x="452" y="164" width="18" height="6" rx="3" fill="#e0b457" opacity=".5"/>
+      </svg>
+      <div class="meta">
+        <div class="m"><b>Mid-size SUV · Plus plan</b><span>Insurance & maintenance included</span></div>
+        <div class="price">SAR 2,890 <small>/ month</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="wrap">
+    <div class="grid">
+      <div class="cell"><b>Fixed monthly cost</b><span>One predictable payment — no depreciation surprises, no resale risk.</span></div>
+      <div class="cell"><b>Fully covered</b><span>Comprehensive insurance, periodic maintenance and registration included.</span></div>
+      <div class="cell"><b>Drive a new car</b><span>Latest models with a fresh vehicle at the end of every term.</span></div>
+      <div class="cell"><b>Swap &amp; upgrade</b><span>Life changes? Move to a different class after your eligible period.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="plans-en">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">For individuals</div>
+      <h2>Monthly subscriptions, built around your drive</h2>
+      <p>Pick the class that fits your life. Every plan includes insurance, maintenance,
+      registration renewal and roadside assistance — the monthly price is all-inclusive.</p>
+    </div>
+    <div class="plans">
+      <!-- DRAFT pricing — pending management approval -->
+      <article class="plan">
+        <div class="tier">Essential</div>
+        <div class="cls">Compact Class</div>
+        <div class="example">e.g. Nissan Sunny / Hyundai Accent category</div>
+        <div class="price"><span class="sar">SAR</span><span class="amt">1,690</span><span class="per">/mo</span></div>
+        <div class="term">12-month term · 2,500 km included / month</div>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Comprehensive insurance</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Periodic maintenance &amp; service</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Registration &amp; renewal handled</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>24/7 roadside assistance</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact-en">Start lease</a>
+      </article>
+      <article class="plan hot">
+        <span class="badge">Most popular</span>
+        <div class="tier">Plus</div>
+        <div class="cls">Mid-size &amp; SUV Class</div>
+        <div class="example">e.g. Toyota Camry / Hyundai Tucson category</div>
+        <div class="price"><span class="sar">SAR</span><span class="amt">2,890</span><span class="per">/mo</span></div>
+        <div class="term">15-month term · 3,500 km included / month</div>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Everything in Essential</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Higher mileage allowance</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Free vehicle swap after 9 months</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Second driver included</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Doorstep delivery &amp; collection</li>
+        </ul>
+        <a class="btn btn-gold" href="#contact-en">Reserve your car</a>
+      </article>
+      <article class="plan">
+        <div class="tier">Premium</div>
+        <div class="cls">Luxury Class</div>
+        <div class="example">e.g. Lexus ES / BMW 3-series category</div>
+        <div class="price"><span class="sar">SAR</span><span class="amt">5,490</span><span class="per">/mo</span></div>
+        <div class="term">24-month term · 5,000 km included / month</div>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Everything in Plus</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Luxury &amp; performance models</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Concierge maintenance pickup</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Guaranteed replacement vehicle</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Priority 24/7 support line</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact-en">Start lease</a>
+      </article>
+    </div>
+    <p class="plans-note">Prices shown are indicative draft tariffs — final offers, model availability and terms are confirmed at reservation.</p>
+  </div>
+</section>
+
+<section class="corporate" id="corporate-en">
+  <div class="wrap">
+    <div class="corp-grid">
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <div class="kicker">For business</div>
+          <h2>Fleet leasing that runs itself</h2>
+          <p>Outsource your company vehicles end-to-end. One contract, one consolidated
+          invoice, and a fleet that refreshes on schedule — so your team stays on the road
+          and your finance team stays sane.</p>
+        </div>
+        <div class="corp-points">
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Consolidated billing</b><span>One VAT-compliant invoice per month for the entire fleet — zero receipt chasing.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Dedicated account manager</b><span>A named relationship manager and SLA-backed response times from Fleet Pro upward.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>48-hour replacement</b><span>Off-road vehicle? A replacement is arranged within 48 hours, nationwide.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Telematics &amp; fuel-card ready</b><span>Integrate usage data and fuel spend into your existing systems and reporting.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Scheduled refresh cycle</b><span>Vehicles rotate on plan so no fleet member drives an aging, high-maintenance car.</span></div></div>
+        </div>
+      </div>
+      <div class="fleet-table">
+        <table>
+          <thead>
+            <tr><th>Fleet tier</th><th>Fleet size</th><th class="hl">Per vehicle / mo</th></tr>
+          </thead>
+          <tbody>
+            <!-- DRAFT pricing — pending management approval -->
+            <tr>
+              <td><span class="tier-name">Fleet Starter</span><span class="seg">Essentials for small teams</span></td>
+              <td>5 – 19 vehicles</td>
+              <td><span class="pr">SAR 1,490 <small>/veh</small></span></td>
+            </tr>
+            <tr>
+              <td><span class="tier-name">Fleet Pro</span><span class="seg">+ account manager, telematics-ready, quarterly utilization reports</span></td>
+              <td>20 – 99 vehicles</td>
+              <td><span class="pr">SAR 1,290 <small>/veh</small></span></td>
+            </tr>
+            <tr>
+              <td><span class="tier-name">Enterprise</span><span class="seg">Full fleet outsourcing, custom SLA, HR-system integration, multi-city coverage</span></td>
+              <td>100+ vehicles</td>
+              <td><span class="pr">Custom <small>proposal</small></span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="fleet-cta">
+          <span>All tiers include insurance, maintenance, registration &amp; roadside assistance.</span>
+          <a class="btn btn-gold btn-sm" href="#contact-en">Request a corporate proposal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-en" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">How it works</div>
+      <h2>On the road in four steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><b>Choose your plan</b><span>Select a class and term that matches your monthly driving pattern.</span></div>
+      <div class="step"><b>Submit documents</b><span>Individuals: ID/Iqama, license, salary certificate. Corporates: CR &amp; VAT certificate.</span></div>
+      <div class="step"><b>Sign digitally</b><span>Approval and contract signature online — no branch visit required.</span></div>
+      <div class="step"><b>Delivery to your door</b><span>Your vehicle arrives serviced, insured, registered and detailed.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-en" style="padding-top:0">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h3>Talk to the leasing desk</h3>
+        <p>Individual quotes in minutes. Corporate proposals within 48 hours.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-gold" href="mailto:hello@autolead.sa">Get my quote</a>
+        <a class="btn btn-ghost" href="tel:+966000000000" dir="ltr">+966 0 000 0000</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 AutoLead.sa — Vehicle leasing for individuals &amp; fleets.</span>
+    <nav class="f-links">
+      <a href="#plans-en">Individual</a>
+      <a href="#corporate-en">Corporate</a>
+      <a href="#contact-en">Contact</a>
+      <a href="#top-en">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+</div><!-- /lang-en -->
+
+<!-- ============================================================
+     ARABIC TREE (RTL)
+     ============================================================ -->
+<div class="lang-block" id="lang-ar" dir="rtl" hidden>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top-ar"><span class="mark">A</span><span>Auto<em>Lead</em>.sa</span></a>
+    <nav class="links">
+      <a href="#plans-ar">الأفراد</a>
+      <a href="#corporate-ar">الشركات</a>
+      <a href="#how-ar">كيف نعمل</a>
+      <a href="#contact-ar">تواصل معنا</a>
+    </nav>
+    <span class="lang-chip">
+      <button data-lang="en">EN</button>
+      <button class="on" data-lang="ar">عربي</button>
+    </span>
+    <a class="btn btn-gold btn-sm" href="#plans-ar">احصل على عرض سعر</a>
+  </div>
+</header>
+
+<section class="hero" id="top-ar">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">تأجير السيارات · المملكة العربية السعودية</span>
+      <h1>دفعة شهرية واحدة.<br>وكل شيء <em>مشمول</em>.</h1>
+      <p class="lead">
+        استأجر السيارة — واترك العناء علينا. يجمع «أوتوليد» التأمين والصيانة وتجديد الترخيص
+        والمساعدة على الطريق على مدار الساعة في اشتراك شهري ثابت واحد، للأفراد وأساطيل الشركات على حد سواء.
+      </p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#plans-ar">اطّلع على خطط الأفراد</a>
+        <a class="btn btn-ghost" href="#corporate-ar">حلول أساطيل الشركات</a>
+      </div>
+      <div class="trust">
+        <span class="t"><span class="dot"></span><span><b>بدون</b> دفعة أولى</span></span>
+        <span class="t"><span class="dot"></span><span>تكلفة شهرية <b>ثابتة</b></span></span>
+        <span class="t"><span class="dot"></span><span>تبديل <b>مجاني</b> للسيارة</span></span>
+      </div>
+    </div>
+    <div class="car-stage">
+      <span class="tag">متاحة للتأجير</span>
+      <svg viewBox="0 0 520 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="bodyGrad-ar" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2b2b30"/><stop offset="1" stop-color="#151517"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="260" cy="208" rx="240" ry="10" fill="rgba(224,180,87,.10)"/>
+        <path d="M60 168 C70 150 90 142 120 140 L165 138 C185 118 215 108 250 108 L305 108 C345 108 375 120 400 140 L430 144 C462 148 476 158 478 170 L478 186 C478 194 472 198 464 198 L64 198 C54 198 48 192 48 182 Z" fill="url(#bodyGrad-ar)" stroke="rgba(224,180,87,.55)" stroke-width="2"/>
+        <path d="M180 138 L216 116 L300 116 L330 138 Z" fill="#0d0d0f" stroke="rgba(224,180,87,.35)" stroke-width="1.5"/>
+        <circle cx="140" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
+        <circle cx="140" cy="198" r="9" fill="#e0b457"/>
+        <circle cx="396" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
+        <circle cx="396" cy="198" r="9" fill="#e0b457"/>
+        <rect x="60" y="168" width="30" height="8" rx="4" fill="#e0b457" opacity=".85"/>
+        <rect x="452" y="164" width="18" height="6" rx="3" fill="#e0b457" opacity=".5"/>
+      </svg>
+      <div class="meta">
+        <div class="m"><b>دفع رباعي متوسط · خطة بلس</b><span>التأمين والصيانة مشمولان</span></div>
+        <div class="price">2,890 ريال <small>/ شهرياً</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="wrap">
+    <div class="grid">
+      <div class="cell"><b>تكلفة شهرية ثابتة</b><span>دفعة واحدة قابلة للتوقع — دون مفاجآت انخفاض القيمة أو مخاطر إعادة البيع.</span></div>
+      <div class="cell"><b>تغطية كاملة</b><span>تأمين شامل وصيانة دورية وتجديد الترخيص — كلها مشمولة.</span></div>
+      <div class="cell"><b>قُد سيارة جديدة</b><span>أحدث الطرز، مع سيارة جديدة في نهاية كل مدة تأجير.</span></div>
+      <div class="cell"><b>التبديل والترقية</b><span>تغيّرت ظروفك؟ انتقل إلى فئة أخرى بعد انتهاء فترة التأهيل.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="plans-ar">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">للأفراد</div>
+      <h2>اشتراكات شهرية مصمّمة حول قيادتك</h2>
+      <p>اختر الفئة التي تناسب حياتك. كل خطة تشمل التأمين والصيانة وتجديد الترخيص والمساعدة
+      على الطريق — والسعر الشهري شامل كل شيء.</p>
+    </div>
+    <div class="plans">
+      <!-- DRAFT pricing — pending management approval -->
+      <article class="plan">
+        <div class="tier">الأساسية</div>
+        <div class="cls">فئة السيارات الصغيرة</div>
+        <div class="example">مثل فئة نيسان صني / هيونداي أكسنت</div>
+        <div class="price"><span class="sar">ريال</span><span class="amt">1,690</span><span class="per">/شهرياً</span></div>
+        <div class="term">مدة 12 شهراً · 2,500 كم مشمولة شهرياً</div>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>تأمين شامل</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>صيانة دورية وخدمات مجدولة</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>الترخيص والتجديد على حسابنا</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>مساعدة على الطريق 24/7</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact-ar">ابدأ التأجير</a>
+      </article>
+      <article class="plan hot">
+        <span class="badge">الأكثر طلباً</span>
+        <div class="tier">بلس</div>
+        <div class="cls">فئة المتوسط والدفع الرباعي</div>
+        <div class="example">مثل فئة تويوتا كامري / هيونداي توسان</div>
+        <div class="price"><span class="sar">ريال</span><span class="amt">2,890</span><span class="per">/شهرياً</span></div>
+        <div class="term">مدة 15 شهراً · 3,500 كم مشمولة شهرياً</div>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>كل مزايا الخطة الأساسية</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>حد أعلى للمسافة الشهرية</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>تبديل مجاني للسيارة بعد 9 أشهر</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>سائق إضافي مجاناً</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>التوصيل والاستلام حتى الباب</li>
+        </ul>
+        <a class="btn btn-gold" href="#contact-ar">احجز سيارتك</a>
+      </article>
+      <article class="plan">
+        <div class="tier">بريميوم</div>
+        <div class="cls">فئة الفخامة</div>
+        <div class="example">مثل فئة لكزس ES / بي إم دبليو الفئة الثالثة</div>
+        <div class="price"><span class="sar">ريال</span><span class="amt">5,490</span><span class="per">/شهرياً</span></div>
+        <div class="term">مدة 24 شهراً · 5,000 كم مشمولة شهرياً</div>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>كل مزايا خطة بلس</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>طرز فاخرة وعالية الأداء</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>استلام السيارة للصيانة من عنوانك</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>سيارة بديلة مضمونة</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>خط دعم أولوية على مدار الساعة</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact-ar">ابدأ التأجير</a>
+      </article>
+    </div>
+    <p class="plans-note">الأسعار المعروضة استرشادية من مسودة التعرفة — وتُعتمد العروض النهائية وتوافر الطرز والشروط عند الحجز.</p>
+  </div>
+</section>
+
+<section class="corporate" id="corporate-ar">
+  <div class="wrap">
+    <div class="corp-grid">
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <div class="kicker">للشركات</div>
+          <h2>إدارة أسطولك كاملة — دون عناء</h2>
+          <p>اترك إدارة سيارات شركتنا علينا من البداية للنهاية. عقد واحد، وفاتورة موحدة،
+          وأسطول يتجدد وفق جدول منتظم — ليظل فريقك على الطريق، وقسمك المالي مطمئناً.</p>
+        </div>
+        <div class="corp-points">
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>فاتورة موحدة</b><span>فاتورة ضريبية واحدة شهرياً للأسطول بأكمله — دون مطاردة الإيصالات.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>مدير حساب مخصص</b><span>مدير علاقات باسمه وأزمنة استجابة موثقة بموجب اتفاقية مستوى الخدمة من فئة «فليت برو» فما فوق.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>سيارة بديلة خلال 48 ساعة</b><span>توقفت سيارة عن العمل؟ نوفّر بديلاً خلال 48 ساعة في كل مناطق المملكة.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>جاهزية أنظمة التتبع وبطاقات الوقود</b><span>اربط بيانات الاستخدام ومصروف الوقود بأنظمتك الحالية وتقاريرك.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>دورة تجديد مجدولة</b><span>تتجدد سيارات الأسطول وفق الخطة، فلا يقود أي موظف سيارة متقادمة مرهقة الصيانة.</span></div></div>
+        </div>
+      </div>
+      <div class="fleet-table">
+        <table>
+          <thead>
+            <tr><th>فئة الأسطول</th><th>حجم الأسطول</th><th class="hl">للسيارة شهرياً</th></tr>
+          </thead>
+          <tbody>
+            <!-- DRAFT pricing — pending management approval -->
+            <tr>
+              <td><span class="tier-name">فليت ستارتر</span><span class="seg">الأساسيات للفرق الصغيرة</span></td>
+              <td>5 – 19 سيارة</td>
+              <td><span class="pr">1,490 ريال <small>/سيارة</small></span></td>
+            </tr>
+            <tr>
+              <td><span class="tier-name">فليت برو</span><span class="seg">+ مدير حساب مخصص، وجاهزية التتبع، وتقارير استخدام ربع سنوية</span></td>
+              <td>20 – 99 سيارة</td>
+              <td><span class="pr">1,290 ريال <small>/سيارة</small></span></td>
+            </tr>
+            <tr>
+              <td><span class="tier-name">مؤسسات</span><span class="seg">استعارة كاملة للأسطول، اتفاقية مستوى خدمة مخصصة، وتكامل مع أنظمة الموارد البشرية وتغطية متعددة المدن</span></td>
+              <td>100 سيارة فأكثر</td>
+              <td><span class="pr">عرض مخصص</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="fleet-cta">
+          <span>جميع الفئات تشمل التأمين والصيانة والترخيص والمساعدة على الطريق.</span>
+          <a class="btn btn-gold btn-sm" href="#contact-ar">اطلب عرضاً للشركات</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-ar" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">كيف نعمل</div>
+      <h2>على الطريق في أربع خطوات</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><b>اختر خطتك</b><span>حدّد الفئة والمدة الأنسب لنمط قيادتك الشهري.</span></div>
+      <div class="step"><b>قدّم المستندات</b><span>للأفراد: الهوية / الإقامة والرخصة وشهادة الراتب. وللشركات: السجل التجاري والشهادة الضريبية.</span></div>
+      <div class="step"><b>وقّع رقمياً</b><span>الموافقة وتوقيع العقد عبر الإنترنت — دون الحاجة لزيارة فرع.</span></div>
+      <div class="step"><b>التوصيل حتى بابك</b><span>تصلك السيارة مفحوصة ومؤمّنة ومرخّصة وجاهزة للقيادة.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-ar" style="padding-top:0">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h3>تحدّث مع مكتب التأجير</h3>
+        <p>عروض الأفراد خلال دقائق. وعروض الشركات خلال 48 ساعة.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-gold" href="mailto:hello@autolead.sa">احصل على عرضي</a>
+        <a class="btn btn-ghost" href="tel:+966000000000" dir="ltr">+966 0 000 0000</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 أوتوليد AutoLead.sa — تأجير السيارات للأفراد والشركات.</span>
+    <nav class="f-links">
+      <a href="#plans-ar">الأفراد</a>
+      <a href="#corporate-ar">الشركات</a>
+      <a href="#contact-ar">تواصل معنا</a>
+      <a href="#top-ar">أعلى الصفحة</a>
+    </nav>
+  </div>
+</footer>
+
+</div><!-- /lang-ar -->
+
+<script>
+(function(){
+  var TITLE = {
+    en: "AutoLead.sa — Vehicle Leasing for Individuals & Fleets in KSA",
+    ar: "أوتوليد AutoLead.sa — تأجير السيارات للأفراد والشركات في السعودية"
+  };
+  function setLang(lang){
+    var ar = lang === "ar";
+    document.documentElement.lang = ar ? "ar" : "en";
+    document.documentElement.dir  = ar ? "rtl" : "ltr";
+    document.title = TITLE[lang];
+    document.getElementById("lang-en").hidden = ar;
+    document.getElementById("lang-ar").hidden = !ar;
+    document.querySelectorAll(".lang-chip button").forEach(function(b){
+      b.classList.toggle("on", b.dataset.lang === lang);
+    });
+    try { localStorage.setItem("al-lang", lang); } catch(e){}
+    window.scrollTo({top:0, behavior:"auto"});
+  }
+  document.querySelectorAll("[data-lang]").forEach(function(btn){
+    btn.addEventListener("click", function(){ setLang(btn.dataset.lang); });
+  });
+  var saved = "en";
+  try { saved = localStorage.getItem("al-lang") || "en"; } catch(e){}
+  setLang(saved);
+})();
+</script>
+
+</body>
+</html>
