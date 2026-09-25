@@ -7,7 +7,7 @@
 <meta name="description" content="Fixed monthly vehicle leasing for individuals and corporate fleets across Saudi Arabia. Insurance, maintenance, registration and roadside assistance included.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    AUTOLEAD.SA — bilingual (EN/AR) leasing site prototype v2
@@ -22,8 +22,8 @@
   --ink:#ffffff;
   --muted:#a3a3a8;
   --line:rgba(255,255,255,.09);
-  --gold:#e0b457;
-  --gold-deep:#c6953c;
+  --gold:#e63946;
+  --gold-deep:#c1272d;
   --gold-soft:rgba(224,180,87,.12);
   --radius:16px;
   --radius-sm:10px;
@@ -51,8 +51,8 @@ header{
 }
 .nav{display:flex;align-items:center;gap:32px;height:68px}
 .logo{font-weight:800;font-size:20px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
-.logo .mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--gold-deep));display:grid;place-items:center;font-size:15px;color:#111;font-weight:800;flex:none}
-.logo span em{font-style:normal;color:var(--gold)}
+.logo .mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-deep));display:grid;place-items:center;font-size:15px;color:#111;font-weight:800;flex:none}
+.logo span em{font-style:normal;color:var(--accent)}
 .nav .links{display:flex;gap:26px;margin-inline-start:auto;font-size:14.5px;color:var(--muted)}
 .nav .links a:hover{color:var(--ink)}
 .lang-chip{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
@@ -60,7 +60,7 @@ header{
   background:transparent;border:none;color:var(--muted);cursor:pointer;
   font-family:inherit;font-size:12.5px;padding:5px 14px;transition:.15s;
 }
-.lang-chip button.on{background:var(--gold);color:#141414;font-weight:700}
+.lang-chip button.on{background:var(--accent);color:#141414;font-weight:700}
 .lang-chip button:hover:not(.on){color:var(--ink)}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -68,10 +68,10 @@ header{
   padding:12px 26px;cursor:pointer;border:1px solid transparent;
   transition:.2s;white-space:nowrap;
 }
-.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#141414}
-.btn-gold:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn-accent{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#141414}
+.btn-accent:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .btn-ghost{border-color:rgba(255,255,255,.22);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 .btn-sm{padding:9px 20px;font-size:13.5px}
 
 /* ---------- hero ---------- */
@@ -96,11 +96,11 @@ header{
 .eyebrow{
   display:inline-flex;align-items:center;gap:8px;
   font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:20px;
+  color:var(--accent);margin-bottom:20px;
 }
-.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--gold)}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--accent)}
 h1{font-size:clamp(38px,5vw,58px);font-weight:800;line-height:1.12;letter-spacing:-.03em;text-wrap:balance}
-h1 em{font-style:normal;color:var(--gold)}
+h1 em{font-style:normal;color:var(--accent)}
 [dir="rtl"] h1{letter-spacing:0;line-height:1.28}
 [dir="rtl"] .eyebrow,[dir="rtl"] .sec-head .kicker{letter-spacing:0;text-transform:none;font-size:14px}
 [dir="rtl"] .car-stage .tag{letter-spacing:0;text-transform:none;font-size:13px}
@@ -113,7 +113,7 @@ h1 em{font-style:normal;color:var(--gold)}
 .trust{display:flex;gap:22px;margin-top:38px;flex-wrap:wrap}
 .trust .t{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}
 .trust .t b{color:var(--ink);font-weight:700}
-.trust .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+.trust .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
 
 .car-stage{
   position:relative;border:1px solid var(--line);border-radius:20px;
@@ -123,7 +123,7 @@ h1 em{font-style:normal;color:var(--gold)}
   padding:36px 32px 28px;
 }
 .car-stage .tag{
-  display:inline-flex;border:1px solid rgba(224,180,87,.4);color:var(--gold);
+  display:inline-flex;border:1px solid rgba(224,180,87,.4);color:var(--accent);
   border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.1em;
   text-transform:uppercase;padding:5px 14px;margin-bottom:20px;
 }
@@ -131,13 +131,13 @@ h1 em{font-style:normal;color:var(--gold)}
 .car-stage .meta{display:flex;justify-content:space-between;align-items:center;margin-top:18px;border-top:1px solid var(--line);padding-top:16px;gap:14px;flex-wrap:wrap}
 .car-stage .meta .m b{display:block;font-size:15px}
 .car-stage .meta .m span{font-size:12.5px;color:var(--muted)}
-.car-stage .meta .price{font-size:20px;font-weight:800;color:var(--gold)}
+.car-stage .meta .price{font-size:20px;font-weight:800;color:var(--accent)}
 .car-stage .meta .price small{font-size:12px;color:var(--muted);font-weight:400}
 
 /* ---------- sections ---------- */
 section{padding:88px 0}
 .sec-head{max-width:640px;margin-bottom:52px}
-.sec-head .kicker{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.sec-head .kicker{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
 .sec-head h2{font-size:clamp(28px,3.4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wrap:balance}
 [dir="rtl"] .sec-head h2{letter-spacing:0;line-height:1.3}
 .sec-head p{color:var(--muted);margin-top:14px;font-size:16.5px;text-wrap:pretty}
@@ -156,10 +156,10 @@ section{padding:88px 0}
   transition:.25s;
 }
 .plan:hover{transform:translateY(-4px);border-color:rgba(224,180,87,.45)}
-.plan.hot{border-color:var(--gold);background:linear-gradient(180deg,rgba(224,180,87,.07),var(--surface) 42%)}
+.plan.hot{border-color:var(--accent);background:linear-gradient(180deg,rgba(224,180,87,.07),var(--surface) 42%)}
 .plan .badge{
   position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-  background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#141414;
+  background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#141414;
   font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
   border-radius:999px;padding:5px 16px;white-space:nowrap;
 }
@@ -167,7 +167,7 @@ section{padding:88px 0}
 .plan .cls{font-size:19px;font-weight:800;margin:8px 0 4px}
 .plan .example{font-size:13px;color:var(--muted);margin-bottom:22px}
 .plan .price{display:flex;align-items:baseline;gap:6px;margin-bottom:2px}
-.plan .price .sar{font-size:15px;color:var(--gold);font-weight:700}
+.plan .price .sar{font-size:15px;color:var(--accent);font-weight:700}
 .plan .price .amt{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1}
 [dir="rtl"] .plan .price .amt{letter-spacing:0}
 .plan .price .per{font-size:13px;color:var(--muted)}
@@ -183,7 +183,7 @@ section{padding:88px 0}
 .corp-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
 .corp-points{display:grid;gap:16px;margin-top:30px}
 .corp-points .p{display:flex;gap:14px;align-items:flex-start}
-.corp-points .p .tick{width:26px;height:26px;flex:none;border-radius:8px;background:var(--gold-soft);display:grid;place-items:center;margin-top:2px}
+.corp-points .p .tick{width:26px;height:26px;flex:none;border-radius:8px;background:var(--accent-soft);display:grid;place-items:center;margin-top:2px}
 .corp-points .p b{display:block;font-size:15px}
 .corp-points .p span{font-size:13.5px;color:var(--muted)}
 .fleet-table{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
@@ -193,10 +193,10 @@ section{padding:88px 0}
   background:var(--surface-2);font-size:12px;letter-spacing:.1em;text-transform:uppercase;
   color:var(--muted);font-weight:700;
 }
-.fleet-table thead th.hl{color:var(--gold)}
+.fleet-table thead th.hl{color:var(--accent)}
 .fleet-table td .tier-name{font-weight:800;font-size:15px}
 .fleet-table td .seg{font-size:12px;color:var(--muted);display:block;margin-top:2px}
-.fleet-table td .pr{font-weight:800;color:var(--gold);white-space:nowrap}
+.fleet-table td .pr{font-weight:800;color:var(--accent);white-space:nowrap}
 .fleet-table td .pr small{color:var(--muted);font-weight:400;font-size:11.5px}
 .fleet-table tr:last-child td{border-bottom:none}
 .fleet-cta{
@@ -210,7 +210,7 @@ section{padding:88px 0}
 .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;position:relative}
 .step::before{
   counter-increment:step;content:"0" counter(step);
-  font-size:30px;font-weight:800;color:var(--gold);opacity:.9;letter-spacing:-.02em;
+  font-size:30px;font-weight:800;color:var(--accent);opacity:.9;letter-spacing:-.02em;
   display:block;margin-bottom:12px;
 }
 .step b{display:block;font-size:15.5px;margin-bottom:6px}
@@ -259,7 +259,7 @@ footer .f-links a:hover{color:var(--ink)}
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top-en"><span class="mark">A</span><span>Auto<em>Lead</em>.sa</span></a>
+    <a class="logo" href="#top-en"><img src="assets/logo.jpg" alt="AutoLead.sa — أوت ليد" style="height:38px;width:auto;border-radius:8px"><span class="sr-only">AutoLead.sa</span></a>
     <nav class="links">
       <a href="#plans-en">Individual</a>
       <a href="#corporate-en">Corporate</a>
@@ -270,7 +270,7 @@ footer .f-links a:hover{color:var(--ink)}
       <button class="on" data-lang="en">EN</button>
       <button data-lang="ar">عربي</button>
     </span>
-    <a class="btn btn-gold btn-sm" href="#plans-en">Get a quote</a>
+    <a class="btn btn-accent btn-sm" href="#plans-en">Get a quote</a>
   </div>
 </header>
 
@@ -285,7 +285,7 @@ footer .f-links a:hover{color:var(--ink)}
         for individuals and corporate fleets.
       </p>
       <div class="cta">
-        <a class="btn btn-gold" href="#plans-en">See individual plans</a>
+        <a class="btn btn-accent" href="#plans-en">See individual plans</a>
         <a class="btn btn-ghost" href="#corporate-en">Corporate fleet solutions</a>
       </div>
       <div class="trust">
@@ -307,11 +307,11 @@ footer .f-links a:hover{color:var(--ink)}
         <path d="M60 168 C70 150 90 142 120 140 L165 138 C185 118 215 108 250 108 L305 108 C345 108 375 120 400 140 L430 144 C462 148 476 158 478 170 L478 186 C478 194 472 198 464 198 L64 198 C54 198 48 192 48 182 Z" fill="url(#bodyGrad-en)" stroke="rgba(224,180,87,.55)" stroke-width="2"/>
         <path d="M180 138 L216 116 L300 116 L330 138 Z" fill="#0d0d0f" stroke="rgba(224,180,87,.35)" stroke-width="1.5"/>
         <circle cx="140" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
-        <circle cx="140" cy="198" r="9" fill="#e0b457"/>
+        <circle cx="140" cy="198" r="9" fill="#e63946"/>
         <circle cx="396" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
-        <circle cx="396" cy="198" r="9" fill="#e0b457"/>
-        <rect x="60" y="168" width="30" height="8" rx="4" fill="#e0b457" opacity=".85"/>
-        <rect x="452" y="164" width="18" height="6" rx="3" fill="#e0b457" opacity=".5"/>
+        <circle cx="396" cy="198" r="9" fill="#e63946"/>
+        <rect x="60" y="168" width="30" height="8" rx="4" fill="#e63946" opacity=".85"/>
+        <rect x="452" y="164" width="18" height="6" rx="3" fill="#e63946" opacity=".5"/>
       </svg>
       <div class="meta">
         <div class="m"><b>Mid-size SUV · Plus plan</b><span>Insurance & maintenance included</span></div>
@@ -349,10 +349,10 @@ footer .f-links a:hover{color:var(--ink)}
         <div class="price"><span class="sar">SAR</span><span class="amt">1,690</span><span class="per">/mo</span></div>
         <div class="term">12-month term · 2,500 km included / month</div>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Comprehensive insurance</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Periodic maintenance &amp; service</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Registration &amp; renewal handled</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>24/7 roadside assistance</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Comprehensive insurance</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Periodic maintenance &amp; service</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Registration &amp; renewal handled</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>24/7 roadside assistance</li>
         </ul>
         <a class="btn btn-ghost" href="#contact-en">Start lease</a>
       </article>
@@ -364,13 +364,13 @@ footer .f-links a:hover{color:var(--ink)}
         <div class="price"><span class="sar">SAR</span><span class="amt">2,890</span><span class="per">/mo</span></div>
         <div class="term">15-month term · 3,500 km included / month</div>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Everything in Essential</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Higher mileage allowance</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Free vehicle swap after 9 months</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Second driver included</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Doorstep delivery &amp; collection</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Everything in Essential</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Higher mileage allowance</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Free vehicle swap after 9 months</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Second driver included</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Doorstep delivery &amp; collection</li>
         </ul>
-        <a class="btn btn-gold" href="#contact-en">Reserve your car</a>
+        <a class="btn btn-accent" href="#contact-en">Reserve your car</a>
       </article>
       <article class="plan">
         <div class="tier">Premium</div>
@@ -379,11 +379,11 @@ footer .f-links a:hover{color:var(--ink)}
         <div class="price"><span class="sar">SAR</span><span class="amt">5,490</span><span class="per">/mo</span></div>
         <div class="term">24-month term · 5,000 km included / month</div>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Everything in Plus</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Luxury &amp; performance models</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Concierge maintenance pickup</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Guaranteed replacement vehicle</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>Priority 24/7 support line</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Everything in Plus</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Luxury &amp; performance models</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Concierge maintenance pickup</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Guaranteed replacement vehicle</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>Priority 24/7 support line</li>
         </ul>
         <a class="btn btn-ghost" href="#contact-en">Start lease</a>
       </article>
@@ -404,11 +404,11 @@ footer .f-links a:hover{color:var(--ink)}
           and your finance team stays sane.</p>
         </div>
         <div class="corp-points">
-          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Consolidated billing</b><span>One VAT-compliant invoice per month for the entire fleet — zero receipt chasing.</span></div></div>
-          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Dedicated account manager</b><span>A named relationship manager and SLA-backed response times from Fleet Pro upward.</span></div></div>
-          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>48-hour replacement</b><span>Off-road vehicle? A replacement is arranged within 48 hours, nationwide.</span></div></div>
-          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Telematics &amp; fuel-card ready</b><span>Integrate usage data and fuel spend into your existing systems and reporting.</span></div></div>
-          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Scheduled refresh cycle</b><span>Vehicles rotate on plan so no fleet member drives an aging, high-maintenance car.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Consolidated billing</b><span>One VAT-compliant invoice per month for the entire fleet — zero receipt chasing.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Dedicated account manager</b><span>A named relationship manager and SLA-backed response times from Fleet Pro upward.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>48-hour replacement</b><span>Off-road vehicle? A replacement is arranged within 48 hours, nationwide.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Telematics &amp; fuel-card ready</b><span>Integrate usage data and fuel spend into your existing systems and reporting.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>Scheduled refresh cycle</b><span>Vehicles rotate on plan so no fleet member drives an aging, high-maintenance car.</span></div></div>
         </div>
       </div>
       <div class="fleet-table">
@@ -437,7 +437,7 @@ footer .f-links a:hover{color:var(--ink)}
         </table>
         <div class="fleet-cta">
           <span>All tiers include insurance, maintenance, registration &amp; roadside assistance.</span>
-          <a class="btn btn-gold btn-sm" href="#contact-en">Request a corporate proposal</a>
+          <a class="btn btn-accent btn-sm" href="#contact-en">Request a corporate proposal</a>
         </div>
       </div>
     </div>
@@ -467,7 +467,7 @@ footer .f-links a:hover{color:var(--ink)}
         <p>Individual quotes in minutes. Corporate proposals within 48 hours.</p>
       </div>
       <div class="actions">
-        <a class="btn btn-gold" href="mailto:hello@autolead.sa">Get my quote</a>
+        <a class="btn btn-accent" href="mailto:hello@autolead.sa">Get my quote</a>
         <a class="btn btn-ghost" href="tel:+966000000000" dir="ltr">+966 0 000 0000</a>
       </div>
     </div>
@@ -495,7 +495,7 @@ footer .f-links a:hover{color:var(--ink)}
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top-ar"><span class="mark">A</span><span>Auto<em>Lead</em>.sa</span></a>
+    <a class="logo" href="#top-ar"><img src="assets/logo.jpg" alt="AutoLead.sa — أوت ليد" style="height:38px;width:auto;border-radius:8px"><span class="sr-only">AutoLead.sa</span></a>
     <nav class="links">
       <a href="#plans-ar">الأفراد</a>
       <a href="#corporate-ar">الشركات</a>
@@ -506,7 +506,7 @@ footer .f-links a:hover{color:var(--ink)}
       <button data-lang="en">EN</button>
       <button class="on" data-lang="ar">عربي</button>
     </span>
-    <a class="btn btn-gold btn-sm" href="#plans-ar">احصل على عرض سعر</a>
+    <a class="btn btn-accent btn-sm" href="#plans-ar">احصل على عرض سعر</a>
   </div>
 </header>
 
@@ -520,7 +520,7 @@ footer .f-links a:hover{color:var(--ink)}
         والمساعدة على الطريق على مدار الساعة في اشتراك شهري ثابت واحد، للأفراد وأساطيل الشركات على حد سواء.
       </p>
       <div class="cta">
-        <a class="btn btn-gold" href="#plans-ar">اطّلع على خطط الأفراد</a>
+        <a class="btn btn-accent" href="#plans-ar">اطّلع على خطط الأفراد</a>
         <a class="btn btn-ghost" href="#corporate-ar">حلول أساطيل الشركات</a>
       </div>
       <div class="trust">
@@ -541,11 +541,11 @@ footer .f-links a:hover{color:var(--ink)}
         <path d="M60 168 C70 150 90 142 120 140 L165 138 C185 118 215 108 250 108 L305 108 C345 108 375 120 400 140 L430 144 C462 148 476 158 478 170 L478 186 C478 194 472 198 464 198 L64 198 C54 198 48 192 48 182 Z" fill="url(#bodyGrad-ar)" stroke="rgba(224,180,87,.55)" stroke-width="2"/>
         <path d="M180 138 L216 116 L300 116 L330 138 Z" fill="#0d0d0f" stroke="rgba(224,180,87,.35)" stroke-width="1.5"/>
         <circle cx="140" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
-        <circle cx="140" cy="198" r="9" fill="#e0b457"/>
+        <circle cx="140" cy="198" r="9" fill="#e63946"/>
         <circle cx="396" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
-        <circle cx="396" cy="198" r="9" fill="#e0b457"/>
-        <rect x="60" y="168" width="30" height="8" rx="4" fill="#e0b457" opacity=".85"/>
-        <rect x="452" y="164" width="18" height="6" rx="3" fill="#e0b457" opacity=".5"/>
+        <circle cx="396" cy="198" r="9" fill="#e63946"/>
+        <rect x="60" y="168" width="30" height="8" rx="4" fill="#e63946" opacity=".85"/>
+        <rect x="452" y="164" width="18" height="6" rx="3" fill="#e63946" opacity=".5"/>
       </svg>
       <div class="meta">
         <div class="m"><b>دفع رباعي متوسط · خطة بلس</b><span>التأمين والصيانة مشمولان</span></div>
@@ -583,10 +583,10 @@ footer .f-links a:hover{color:var(--ink)}
         <div class="price"><span class="sar">ريال</span><span class="amt">1,690</span><span class="per">/شهرياً</span></div>
         <div class="term">مدة 12 شهراً · 2,500 كم مشمولة شهرياً</div>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>تأمين شامل</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>صيانة دورية وخدمات مجدولة</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>الترخيص والتجديد على حسابنا</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>مساعدة على الطريق 24/7</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>تأمين شامل</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>صيانة دورية وخدمات مجدولة</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>الترخيص والتجديد على حسابنا</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>مساعدة على الطريق 24/7</li>
         </ul>
         <a class="btn btn-ghost" href="#contact-ar">ابدأ التأجير</a>
       </article>
@@ -598,13 +598,13 @@ footer .f-links a:hover{color:var(--ink)}
         <div class="price"><span class="sar">ريال</span><span class="amt">2,890</span><span class="per">/شهرياً</span></div>
         <div class="term">مدة 15 شهراً · 3,500 كم مشمولة شهرياً</div>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>كل مزايا الخطة الأساسية</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>حد أعلى للمسافة الشهرية</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>تبديل مجاني للسيارة بعد 9 أشهر</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>سائق إضافي مجاناً</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>التوصيل والاستلام حتى الباب</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>كل مزايا الخطة الأساسية</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>حد أعلى للمسافة الشهرية</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>تبديل مجاني للسيارة بعد 9 أشهر</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>سائق إضافي مجاناً</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>التوصيل والاستلام حتى الباب</li>
         </ul>
-        <a class="btn btn-gold" href="#contact-ar">احجز سيارتك</a>
+        <a class="btn btn-accent" href="#contact-ar">احجز سيارتك</a>
       </article>
       <article class="plan">
         <div class="tier">بريميوم</div>
@@ -613,11 +613,11 @@ footer .f-links a:hover{color:var(--ink)}
         <div class="price"><span class="sar">ريال</span><span class="amt">5,490</span><span class="per">/شهرياً</span></div>
         <div class="term">مدة 24 شهراً · 5,000 كم مشمولة شهرياً</div>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>كل مزايا خطة بلس</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>طرز فاخرة وعالية الأداء</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>استلام السيارة للصيانة من عنوانك</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>سيارة بديلة مضمونة</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>خط دعم أولوية على مدار الساعة</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>كل مزايا خطة بلس</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>طرز فاخرة وعالية الأداء</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>استلام السيارة للصيانة من عنوانك</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>سيارة بديلة مضمونة</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>خط دعم أولوية على مدار الساعة</li>
         </ul>
         <a class="btn btn-ghost" href="#contact-ar">ابدأ التأجير</a>
       </article>
@@ -637,11 +637,11 @@ footer .f-links a:hover{color:var(--ink)}
           وأسطول يتجدد وفق جدول منتظم — ليظل فريقك على الطريق، وقسمك المالي مطمئناً.</p>
         </div>
         <div class="corp-points">
-          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>فاتورة موحدة</b><span>فاتورة ضريبية واحدة شهرياً للأسطول بأكمله — دون مطاردة الإيصالات.</span></div></div>
-          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>مدير حساب مخصص</b><span>مدير علاقات باسمه وأزمنة استجابة موثقة بموجب اتفاقية مستوى الخدمة من فئة «فليت برو» فما فوق.</span></div></div>
-          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>سيارة بديلة خلال 48 ساعة</b><span>توقفت سيارة عن العمل؟ نوفّر بديلاً خلال 48 ساعة في كل مناطق المملكة.</span></div></div>
-          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>جاهزية أنظمة التتبع وبطاقات الوقود</b><span>اربط بيانات الاستخدام ومصروف الوقود بأنظمتك الحالية وتقاريرك.</span></div></div>
-          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>دورة تجديد مجدولة</b><span>تتجدد سيارات الأسطول وفق الخطة، فلا يقود أي موظف سيارة متقادمة مرهقة الصيانة.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>فاتورة موحدة</b><span>فاتورة ضريبية واحدة شهرياً للأسطول بأكمله — دون مطاردة الإيصالات.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>مدير حساب مخصص</b><span>مدير علاقات باسمه وأزمنة استجابة موثقة بموجب اتفاقية مستوى الخدمة من فئة «فليت برو» فما فوق.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>سيارة بديلة خلال 48 ساعة</b><span>توقفت سيارة عن العمل؟ نوفّر بديلاً خلال 48 ساعة في كل مناطق المملكة.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>جاهزية أنظمة التتبع وبطاقات الوقود</b><span>اربط بيانات الاستخدام ومصروف الوقود بأنظمتك الحالية وتقاريرك.</span></div></div>
+          <div class="p"><span class="tick"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg></span><div><b>دورة تجديد مجدولة</b><span>تتجدد سيارات الأسطول وفق الخطة، فلا يقود أي موظف سيارة متقادمة مرهقة الصيانة.</span></div></div>
         </div>
       </div>
       <div class="fleet-table">
@@ -670,7 +670,7 @@ footer .f-links a:hover{color:var(--ink)}
         </table>
         <div class="fleet-cta">
           <span>جميع الفئات تشمل التأمين والصيانة والترخيص والمساعدة على الطريق.</span>
-          <a class="btn btn-gold btn-sm" href="#contact-ar">اطلب عرضاً للشركات</a>
+          <a class="btn btn-accent btn-sm" href="#contact-ar">اطلب عرضاً للشركات</a>
         </div>
       </div>
     </div>
@@ -700,7 +700,7 @@ footer .f-links a:hover{color:var(--ink)}
         <p>عروض الأفراد خلال دقائق. وعروض الشركات خلال 48 ساعة.</p>
       </div>
       <div class="actions">
-        <a class="btn btn-gold" href="mailto:hello@autolead.sa">احصل على عرضي</a>
+        <a class="btn btn-accent" href="mailto:hello@autolead.sa">احصل على عرضي</a>
         <a class="btn btn-ghost" href="tel:+966000000000" dir="ltr">+966 0 000 0000</a>
       </div>
     </div>

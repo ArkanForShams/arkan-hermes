@@ -3,7 +3,7 @@
 import os
 BASE = os.path.expanduser("~/hermes-workspace/marketing/autolead-website")
 
-CHECK = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e0b457" stroke-width="2" stroke-linecap="round"/></svg>'
+CHECK = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>'
 
 HEAD = """<!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@ HEAD = """<!DOCTYPE html>
 <meta name="description" content="{desc}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body data-al-page="{page}">
@@ -24,7 +24,7 @@ HEAD = """<!DOCTYPE html>
 FOOT = """
 <section style="padding-top:0"><div class="wrap"><div class="band">
   <div><h3>Talk to the leasing desk</h3><p>Individual quotes in minutes. Corporate proposals within 48 hours.</p></div>
-  <div class="actions"><a class="btn btn-gold" href="quote.html">Get my quote</a>
+  <div class="actions"><a class="btn btn-accent" href="quote.html">Get my quote</a>
   <a class="btn btn-ghost" href="mailto:hello@autolead.sa">hello@autolead.sa</a></div>
 </div></div></section>
 <footer data-al-footer></footer>
@@ -49,7 +49,7 @@ home = """
   <p class="lead">AutoLead bundles insurance, maintenance, registration and 24/7 roadside
   assistance into one fixed monthly subscription — for individuals and corporate fleets
   across the Kingdom.</p>
-  <div class="cta"><a class="btn btn-gold" href="b2c-plans.html">Individual plans</a>
+  <div class="cta"><a class="btn btn-accent" href="b2c-plans.html">Individual plans</a>
   <a class="btn btn-ghost" href="b2b-plans.html">Corporate fleet solutions</a></div>
   <div class="trust">
     <span class="t"><span class="dot"></span><span><b>Zero</b> down payment</span></span>
@@ -73,8 +73,8 @@ home = """
       <div class="kicker">For individuals</div>
       <b style="font-size:22px">Monthly car subscriptions</b>
       <span style="font-size:15px;display:block;margin:10px 0 20px">Three classes, transparent pricing, doorstep delivery.
-      From <b style="color:var(--gold);font-size:18px">SAR 1,349</b>/month.</span>
-      <a class="btn btn-gold btn-sm" href="b2c-plans.html">Explore individual plans</a>
+      From <b style="color:var(--accent);font-size:18px">SAR 1,349</b>/month.</span>
+      <a class="btn btn-accent btn-sm" href="b2c-plans.html">Explore individual plans</a>
     </div>
     <div class="card" style="padding:34px 32px">
       <div class="kicker">For business</div>
@@ -105,7 +105,7 @@ page("index.html", "home", "AutoLead.sa — Vehicle Leasing for Individuals & Fl
 def plan(tier, cls, ex, amt, term, feats, hot=False, btn="Start lease"):
     lis = "".join(f"<li>{CHECK}{f}</li>" for f in feats)
     badge = '<span class="badge">Most popular</span>' if hot else ""
-    btnclass = "btn-gold" if hot else "btn-ghost"
+    btnclass = "btn-accent" if hot else "btn-ghost"
     return f"""<article class="plan{' hot' if hot else ''}">{badge}
     <div class="tier">{tier}</div><div class="cls">{cls}</div><div class="example">{ex}</div>
     <div class="price-row"><span class="sar">SAR</span><span class="amt">{amt}</span><span class="per">/mo</span></div>
@@ -320,7 +320,7 @@ def calc_page():
         <div class="big"><span id="cOut">—</span> <small>SAR / month + VAT</small></div>
         <div class="breakdown" id="cBreak"></div>
       </div>
-      <a class="btn btn-gold" href="quote.html">Lock this price — request contract</a>
+      <a class="btn btn-accent" href="quote.html">Lock this price — request contract</a>
     </div>
   </div>
   <p class="note">Engine logic: base market tariff × term discount (12mo −0% · 15mo −4% · 24mo −8%)
@@ -453,7 +453,7 @@ q = """
   </div>
   <div class="calc-result">
     <span style="font-size:13px;color:var(--muted)">By submitting you agree to be contacted about this request. No payment details are collected on this site.</span>
-    <button class="btn btn-gold" onclick="alert('Prototype: form backend not yet connected. In production this posts to the leasing CRM.')">Submit request</button>
+    <button class="btn btn-accent" onclick="alert('Prototype: form backend not yet connected. In production this posts to the leasing CRM.')">Submit request</button>
   </div>
 </div></div></section>
 """
