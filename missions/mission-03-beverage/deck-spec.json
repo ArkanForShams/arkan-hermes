@@ -1,0 +1,2184 @@
+{
+  "slide_size": "16:9",
+  "slides": [
+    {
+      "layout": "blank",
+      "background": "0E4F52",
+      "notes": "Meridian Beverage Co. — 100% non-alcoholic house of brands. Cover slide. Premium, airy, ocean teal with amber accents.",
+      "images": [
+        {
+          "path": "assets/deck/hero-lineup.jpg",
+          "left": 7.23,
+          "top": 1.72,
+          "width": 6.1,
+          "height": 4.06
+        }
+      ],
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0,
+          "top": 0,
+          "width": 13.34,
+          "height": 7.51,
+          "fill": "0E4F52"
+        },
+        {
+          "type": "oval",
+          "left": -1.6,
+          "top": 4.7,
+          "width": 5.6,
+          "height": 5.6,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "oval",
+          "left": 10.4,
+          "top": -2.2,
+          "width": 4.8,
+          "height": 4.8,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 1.42,
+          "width": 0.62,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 5.02,
+          "width": 4.15,
+          "height": 0.56,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 5.74,
+          "width": 4.15,
+          "height": 0.56,
+          "fill": "0A3A3D"
+        }
+      ],
+      "texts": [
+        {
+          "text": "MERIDIAN BEVERAGE CO.",
+          "left": 1.75,
+          "top": 0.62,
+          "width": 6.0,
+          "height": 0.5,
+          "size": 15,
+          "color": "7FB6B4",
+          "font": "Jost",
+          "spacing": 6
+        },
+        {
+          "text": "Drinks in tune\nwith the planet.",
+          "left": 0.92,
+          "top": 1.72,
+          "width": 6.0,
+          "height": 2.1,
+          "size": 48,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "A 100% non-alcoholic house of brands — spring water, sparkling citrus, botanical sodas, natural energy and cold-brew tea — bottled in 11 hubs across 42 markets.",
+          "left": 0.95,
+          "top": 4.02,
+          "width": 4.75,
+          "height": 0.95,
+          "size": 13.5,
+          "color": "D9EAE8",
+          "font": "Jost"
+        },
+        {
+          "text": "100% NON-ALCOHOLIC  ·  HALAL-CERTIFIED",
+          "left": 1.15,
+          "top": 5.02,
+          "width": 3.85,
+          "height": 0.56,
+          "size": 11.5,
+          "color": "F5A623",
+          "font": "Jost",
+          "anchor": "middle"
+        },
+        {
+          "text": "B-CORP  ·  WATER-POSITIVE 120%",
+          "left": 1.15,
+          "top": 5.74,
+          "width": 3.85,
+          "height": 0.56,
+          "size": 11.5,
+          "color": "CFE6E3",
+          "font": "Jost",
+          "anchor": "middle"
+        },
+        {
+          "text": "Investor Overview · FY2026",
+          "left": 0.95,
+          "top": 6.72,
+          "width": 4.0,
+          "height": 0.4,
+          "size": 12,
+          "color": "7FB6B4",
+          "font": "Jost"
+        },
+        {
+          "text": "Valencia · est. 1987",
+          "left": 10.55,
+          "top": 6.72,
+          "width": 2.3,
+          "height": 0.4,
+          "size": 12,
+          "color": "F5A623",
+          "font": "Jost"
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "FAFCFC",
+      "notes": "38-year story timeline. Five milestones from 1987 spring water to today's five-brand house.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 4.06,
+          "width": 11.2,
+          "height": 0.035,
+          "fill": "CFE0DE"
+        },
+        {
+          "type": "oval",
+          "left": 1.13,
+          "top": 3.945,
+          "width": 0.24,
+          "height": 0.24,
+          "fill": "0E4F52"
+        },
+        {
+          "type": "oval",
+          "left": 3.44,
+          "top": 3.945,
+          "width": 0.24,
+          "height": 0.24,
+          "fill": "F5A623"
+        },
+        {
+          "type": "oval",
+          "left": 5.75,
+          "top": 3.945,
+          "width": 0.24,
+          "height": 0.24,
+          "fill": "0E4F52"
+        },
+        {
+          "type": "oval",
+          "left": 8.06,
+          "top": 3.945,
+          "width": 0.24,
+          "height": 0.24,
+          "fill": "F5A623"
+        },
+        {
+          "type": "oval",
+          "left": 10.37,
+          "top": 3.945,
+          "width": 0.24,
+          "height": 0.24,
+          "fill": "0E4F52"
+        },
+        {
+          "type": "oval",
+          "left": 12.05,
+          "top": 3.945,
+          "width": 0.24,
+          "height": 0.24,
+          "fill": "F5A623"
+        }
+      ],
+      "texts": [
+        {
+          "text": "One spring, thirty-eight years",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 9.5,
+          "height": 0.8,
+          "size": 34,
+          "color": "123234",
+          "font": "Marcellus"
+        },
+        {
+          "text": "A house of brands built entirely without alcohol — by conviction, not by omission.",
+          "left": 0.95,
+          "top": 1.48,
+          "width": 10.5,
+          "height": 0.42,
+          "size": 15,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "1987",
+          "left": 0.95,
+          "top": 2.55,
+          "width": 2.0,
+          "height": 0.7,
+          "size": 32,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "The Costa family bottles a limestone spring in the Sierra Calderona and sells it to Valencia beach cafés from one van.",
+          "left": 0.95,
+          "top": 4.45,
+          "width": 2.32,
+          "height": 1.7,
+          "size": 11.5,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "2004",
+          "left": 3.26,
+          "top": 2.55,
+          "width": 2.0,
+          "height": 0.7,
+          "size": 32,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Solara launches — Valencia oranges pressed within 72 hours of harvest. The citrus house becomes a beverage house.",
+          "left": 3.26,
+          "top": 4.45,
+          "width": 2.32,
+          "height": 1.7,
+          "size": 11.5,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "2016",
+          "left": 5.57,
+          "top": 2.55,
+          "width": 2.0,
+          "height": 0.7,
+          "size": 32,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Verda brings Mediterranean botanicals to fine-dining zero-proof lists. Water-positive pledge work begins.",
+          "left": 5.57,
+          "top": 4.45,
+          "width": 2.32,
+          "height": 1.7,
+          "size": 11.5,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "2019–21",
+          "left": 7.88,
+          "top": 2.55,
+          "width": 2.4,
+          "height": 0.7,
+          "size": 32,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Pulse (2019) and Origen (2021) complete the house. B-Corp certified; water-positive at 120% replenishment.",
+          "left": 7.88,
+          "top": 4.45,
+          "width": 2.32,
+          "height": 1.7,
+          "size": 11.5,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "2023–26",
+          "left": 10.19,
+          "top": 2.55,
+          "width": 2.4,
+          "height": 0.7,
+          "size": 32,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Sharjah and Tangerang hubs open. The 100% non-alcoholic portfolio becomes the growth engine in GCC and ASEAN.",
+          "left": 10.19,
+          "top": 4.45,
+          "width": 2.32,
+          "height": 1.7,
+          "size": 11.5,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "Today: €1.9B revenue · 42 markets · 11 hubs · 4,800 people · five brands, zero alcohol",
+          "left": 0.95,
+          "top": 6.6,
+          "width": 11.2,
+          "height": 0.42,
+          "size": 13.5,
+          "color": "0E4F52",
+          "font": "Jost"
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "FAFCFC",
+      "notes": "House of brands overview. Five brand blocks with sub-palettes and revenue share.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 2.15,
+          "width": 2.23,
+          "height": 3.95,
+          "fill": "0E4F52"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 3.41,
+          "top": 2.15,
+          "width": 2.23,
+          "height": 3.95,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 5.87,
+          "top": 2.15,
+          "width": 2.23,
+          "height": 3.95,
+          "fill": "7FA982"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 8.33,
+          "top": 2.15,
+          "width": 2.23,
+          "height": 3.95,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 10.79,
+          "top": 2.15,
+          "width": 2.23,
+          "height": 3.95,
+          "fill": "B97A2E"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 6.42,
+          "width": 12.07,
+          "height": 0.62,
+          "fill": "E7F2F1"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Our house of brands",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 8.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "123234",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Five brands · one standard · not a drop of alcohol in any of them",
+          "left": 0.95,
+          "top": 1.48,
+          "width": 10.5,
+          "height": 0.42,
+          "size": 15,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "MERIDIAN\nSPRINGS",
+          "left": 1.17,
+          "top": 2.42,
+          "width": 1.8,
+          "height": 0.95,
+          "size": 17,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Premium still water",
+          "left": 1.17,
+          "top": 3.42,
+          "width": 1.8,
+          "height": 0.8,
+          "size": 11,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "31%",
+          "left": 1.17,
+          "top": 4.55,
+          "width": 1.8,
+          "height": 0.65,
+          "size": 28,
+          "color": "F5A623",
+          "font": "Marcellus"
+        },
+        {
+          "text": "of revenue",
+          "left": 1.17,
+          "top": 5.25,
+          "width": 1.8,
+          "height": 0.35,
+          "size": 10.5,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "SOLARA",
+          "left": 3.63,
+          "top": 2.42,
+          "width": 1.8,
+          "height": 0.55,
+          "size": 17,
+          "color": "3A2803",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Sparkling citrus",
+          "left": 3.63,
+          "top": 3.42,
+          "width": 1.8,
+          "height": 0.8,
+          "size": 11,
+          "color": "5B4208",
+          "font": "Jost"
+        },
+        {
+          "text": "27%",
+          "left": 3.63,
+          "top": 4.55,
+          "width": 1.8,
+          "height": 0.65,
+          "size": 28,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "of revenue",
+          "left": 3.63,
+          "top": 5.25,
+          "width": 1.8,
+          "height": 0.35,
+          "size": 10.5,
+          "color": "5B4208",
+          "font": "Jost"
+        },
+        {
+          "text": "VERDA",
+          "left": 6.09,
+          "top": 2.42,
+          "width": 1.8,
+          "height": 0.55,
+          "size": 17,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Botanical sodas",
+          "left": 6.09,
+          "top": 3.42,
+          "width": 1.8,
+          "height": 0.8,
+          "size": 11,
+          "color": "EAF3E8",
+          "font": "Jost"
+        },
+        {
+          "text": "16%",
+          "left": 6.09,
+          "top": 4.55,
+          "width": 1.8,
+          "height": 0.65,
+          "size": 28,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "of revenue",
+          "left": 6.09,
+          "top": 5.25,
+          "width": 1.8,
+          "height": 0.35,
+          "size": 10.5,
+          "color": "EAF3E8",
+          "font": "Jost"
+        },
+        {
+          "text": "PULSE",
+          "left": 8.55,
+          "top": 2.42,
+          "width": 1.8,
+          "height": 0.55,
+          "size": 17,
+          "color": "F5A623",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Natural energy",
+          "left": 8.55,
+          "top": 3.42,
+          "width": 1.8,
+          "height": 0.8,
+          "size": 11,
+          "color": "A9C9C6",
+          "font": "Jost"
+        },
+        {
+          "text": "14%",
+          "left": 8.55,
+          "top": 4.55,
+          "width": 1.8,
+          "height": 0.65,
+          "size": 28,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "of revenue",
+          "left": 8.55,
+          "top": 5.25,
+          "width": 1.8,
+          "height": 0.35,
+          "size": 10.5,
+          "color": "A9C9C6",
+          "font": "Jost"
+        },
+        {
+          "text": "ORIGEN",
+          "left": 11.01,
+          "top": 2.42,
+          "width": 1.8,
+          "height": 0.55,
+          "size": 17,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Cold-brew teas",
+          "left": 11.01,
+          "top": 3.42,
+          "width": 1.8,
+          "height": 0.8,
+          "size": 11,
+          "color": "F4E6CE",
+          "font": "Jost"
+        },
+        {
+          "text": "12%",
+          "left": 11.01,
+          "top": 4.55,
+          "width": 1.8,
+          "height": 0.65,
+          "size": 28,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "of revenue",
+          "left": 11.01,
+          "top": 5.25,
+          "width": 1.8,
+          "height": 0.35,
+          "size": 10.5,
+          "color": "F4E6CE",
+          "font": "Jost"
+        },
+        {
+          "text": "1,240 SKUs · every line alcohol-free by design · every line halal-certified",
+          "left": 1.25,
+          "top": 6.54,
+          "width": 11.5,
+          "height": 0.4,
+          "size": 14,
+          "color": "0E4F52",
+          "font": "Jost"
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "FAFCFC",
+      "notes": "Portfolio deep-dive with imagery. Picture cards for Springs, Solara citrus and Origen market still.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Portfolio deep-dive",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 8.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "123234",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Signature serves from three of the five brands",
+          "left": 0.95,
+          "top": 1.48,
+          "width": 9.0,
+          "height": 0.42,
+          "size": 15,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "MERIDIAN SPRINGS",
+          "left": 0.95,
+          "top": 4.5,
+          "width": 3.6,
+          "height": 0.45,
+          "size": 16,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "TDS 118 mg/L, bottled at source, glass + rPET, sommelier-listed in 3,100 restaurants across Europe and the Gulf.",
+          "left": 0.95,
+          "top": 4.98,
+          "width": 3.62,
+          "height": 1.5,
+          "size": 12,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "SOLARA",
+          "left": 4.85,
+          "top": 4.5,
+          "width": 3.6,
+          "height": 0.45,
+          "size": 16,
+          "color": "8A5A1D",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Pressed within 72 hours of harvest, never from concentrate, 26% less sugar than category — the toast of family tables.",
+          "left": 4.85,
+          "top": 4.98,
+          "width": 3.62,
+          "height": 1.5,
+          "size": 12,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "ORIGEN",
+          "left": 8.75,
+          "top": 4.5,
+          "width": 3.6,
+          "height": 0.45,
+          "size": 16,
+          "color": "3E6B4B",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Single-estate leaves, 16-hour cold brew, unsweetened by default; regenerative estates in Sri Lanka and Kenya.",
+          "left": 8.75,
+          "top": 4.98,
+          "width": 3.62,
+          "height": 1.5,
+          "size": 12,
+          "color": "41605F",
+          "font": "Jost"
+        }
+      ],
+      "images": [
+        {
+          "path": "assets/deck/springs-card.jpg",
+          "left": 0.95,
+          "top": 2.05,
+          "width": 3.62,
+          "height": 2.25
+        },
+        {
+          "path": "assets/deck/citrus-card.jpg",
+          "left": 4.85,
+          "top": 2.05,
+          "width": 3.62,
+          "height": 2.25
+        },
+        {
+          "path": "assets/deck/market-card.jpg",
+          "left": 8.75,
+          "top": 2.05,
+          "width": 3.62,
+          "height": 2.25
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "FAFCFC",
+      "notes": "Global footprint: 11 production hubs table.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Global footprint — 11 production hubs",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 11.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "123234",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Valencia to Tangerang: 1.4 billion units a year across three continents.",
+          "left": 0.95,
+          "top": 1.48,
+          "width": 10.5,
+          "height": 0.42,
+          "size": 15,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "42",
+          "left": 8.85,
+          "top": 2.3,
+          "width": 3.5,
+          "height": 0.9,
+          "size": 48,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "markets served worldwide",
+          "left": 8.88,
+          "top": 3.25,
+          "width": 3.4,
+          "height": 0.4,
+          "size": 13,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "1.4B",
+          "left": 8.85,
+          "top": 3.95,
+          "width": 3.5,
+          "height": 0.9,
+          "size": 48,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "units bottled a year",
+          "left": 8.88,
+          "top": 4.9,
+          "width": 3.4,
+          "height": 0.4,
+          "size": 13,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "3",
+          "left": 8.85,
+          "top": 5.6,
+          "width": 3.5,
+          "height": 0.9,
+          "size": 48,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "continents",
+          "left": 8.88,
+          "top": 6.55,
+          "width": 3.4,
+          "height": 0.4,
+          "size": 13,
+          "color": "41605F",
+          "font": "Jost"
+        }
+      ],
+      "tables": [
+        {
+          "left": 0.95,
+          "top": 2.1,
+          "width": 7.2,
+          "height": 4.7,
+          "rows": [
+            [
+              "Hub",
+              "Region",
+              "Role",
+              "Since"
+            ],
+            [
+              "Valencia (HQ)",
+              "Europe",
+              "Springs, Solara, press",
+              "1987"
+            ],
+            [
+              "Mersin",
+              "Türkiye",
+              "Citrus press",
+              "2011"
+            ],
+            [
+              "Beja",
+              "Portugal",
+              "Solara EU south",
+              "2014"
+            ],
+            [
+              "Agadir",
+              "Morocco",
+              "Citrus + solar bottling",
+              "2016"
+            ],
+            [
+              "Nairobi / Kericho",
+              "Kenya",
+              "Origen tea estates",
+              "2018"
+            ],
+            [
+              "Monterey",
+              "USA",
+              "Verda botanicals",
+              "2021"
+            ],
+            [
+              "São Paulo",
+              "Americas",
+              "Pulse, Verda Americas",
+              "2022"
+            ],
+            [
+              "Sharjah",
+              "UAE",
+              "GCC hub, halal lines",
+              "2023"
+            ],
+            [
+              "Tangerang",
+              "Indonesia",
+              "ASEAN hub, halal lines",
+              "2024"
+            ],
+            [
+              "Rotterdam",
+              "Europe",
+              "Distribution + rPET lab",
+              "2009"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "0E4F52",
+      "notes": "Global footprint continued: regional revenue split with the non-alcoholic GCC/ASEAN growth thesis. Dark slide for rhythm.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 2.3,
+          "width": 3.75,
+          "height": 2.6,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 4.92,
+          "top": 2.3,
+          "width": 3.75,
+          "height": 2.6,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 8.89,
+          "top": 2.3,
+          "width": 3.75,
+          "height": 2.6,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 5.35,
+          "width": 11.69,
+          "height": 1.75,
+          "fill": "0A3A3D"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Where the revenue pours",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 9.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "42 markets across three regions — EMEA anchors the base, APAC carries the growth.",
+          "left": 0.95,
+          "top": 1.48,
+          "width": 10.5,
+          "height": 0.42,
+          "size": 15,
+          "color": "A9C9C6",
+          "font": "Jost"
+        },
+        {
+          "text": "52%",
+          "left": 1.25,
+          "top": 2.6,
+          "width": 2.4,
+          "height": 0.85,
+          "size": 44,
+          "color": "F5A623",
+          "font": "Marcellus"
+        },
+        {
+          "text": "EMEA — 20 markets. Spain, France, Germany, UK, UAE, Saudi Arabia, Morocco, Türkiye.",
+          "left": 1.25,
+          "top": 3.55,
+          "width": 3.2,
+          "height": 1.2,
+          "size": 12,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "29%",
+          "left": 5.22,
+          "top": 2.6,
+          "width": 2.4,
+          "height": 0.85,
+          "size": 44,
+          "color": "F5A623",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Americas — 10 markets. Brazil, Mexico, USA, Canada, Chile, Colombia.",
+          "left": 5.22,
+          "top": 3.55,
+          "width": 3.2,
+          "height": 1.2,
+          "size": 12,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "19%",
+          "left": 9.19,
+          "top": 2.6,
+          "width": 2.4,
+          "height": 0.85,
+          "size": 44,
+          "color": "F5A623",
+          "font": "Marcellus"
+        },
+        {
+          "text": "APAC — 12 markets. Indonesia, Malaysia, Singapore, Japan, South Korea, Australia.",
+          "left": 9.19,
+          "top": 3.55,
+          "width": 3.2,
+          "height": 1.2,
+          "size": 12,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "Strategic growth: GCC + Indonesia/Malaysia",
+          "left": 1.25,
+          "top": 5.55,
+          "width": 10.0,
+          "height": 0.5,
+          "size": 19,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "These markets grew 28% in FY2025 — more than double group average — because Meridian's 100% non-alcoholic, halal-certified portfolio is the default premium choice for family occasions, Ramadan gifting and faith-conscious hospitality. Pipeline: 2,400 new listings confirmed for FY2026.",
+          "left": 1.25,
+          "top": 6.08,
+          "width": 10.9,
+          "height": 0.9,
+          "size": 12.5,
+          "color": "CFE6E3",
+          "font": "Jost"
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "FAFCFC",
+      "notes": "Financials: revenue 2021-2026F line chart plus margin band stats.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 9.35,
+          "top": 2.15,
+          "width": 3.3,
+          "height": 1.45,
+          "fill": "E7F2F1"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 9.35,
+          "top": 3.75,
+          "width": 3.3,
+          "height": 1.45,
+          "fill": "FBE3B8"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 9.35,
+          "top": 5.35,
+          "width": 3.3,
+          "height": 1.45,
+          "fill": "0E4F52"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Financial trajectory",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 8.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "123234",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Nine straight years of growth; €2B in sight for FY2026.",
+          "left": 0.95,
+          "top": 1.48,
+          "width": 8.0,
+          "height": 0.42,
+          "size": 15,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "14.8%",
+          "left": 9.62,
+          "top": 2.32,
+          "width": 2.8,
+          "height": 0.55,
+          "size": 26,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "EBITDA margin FY2025 (up from 11.9% in 2021)",
+          "left": 9.62,
+          "top": 2.92,
+          "width": 2.8,
+          "height": 0.6,
+          "size": 11.5,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "9.2%",
+          "left": 9.62,
+          "top": 3.92,
+          "width": 2.8,
+          "height": 0.55,
+          "size": 26,
+          "color": "8A5A1D",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Organic revenue growth FY2025",
+          "left": 9.62,
+          "top": 4.52,
+          "width": 2.8,
+          "height": 0.6,
+          "size": 11.5,
+          "color": "6B4A17",
+          "font": "Jost"
+        },
+        {
+          "text": "€400M",
+          "left": 9.62,
+          "top": 5.52,
+          "width": 2.8,
+          "height": 0.55,
+          "size": 26,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Sustainability-linked facility tied to rPET, water and solar targets",
+          "left": 9.62,
+          "top": 6.12,
+          "width": 2.8,
+          "height": 0.62,
+          "size": 11.5,
+          "color": "CFE6E3",
+          "font": "Jost"
+        }
+      ],
+      "charts": [
+        {
+          "type": "line",
+          "left": 0.95,
+          "top": 2.15,
+          "width": 8.1,
+          "height": 4.65,
+          "title": "Revenue, € billions (FY2026 forecast)",
+          "categories": [
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026F"
+          ],
+          "series": {
+            "Revenue €B": [
+              1.21,
+              1.34,
+              1.48,
+              1.62,
+              1.78,
+              1.94
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "FAFCFC",
+      "notes": "Category strategy per brand: one line of strategic intent each, with lifecycle stage.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 2.2,
+          "width": 11.69,
+          "height": 0.8,
+          "fill": "E7F2F1"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 3.14,
+          "width": 11.69,
+          "height": 0.8,
+          "fill": "FBE3B8"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 4.08,
+          "width": 11.69,
+          "height": 0.8,
+          "fill": "E3EFE4"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 5.02,
+          "width": 11.69,
+          "height": 0.8,
+          "fill": "0E4F52"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 5.96,
+          "width": 11.69,
+          "height": 0.8,
+          "fill": "F3E4CB"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Category strategy, brand by brand",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 9.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "123234",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Defend the core, ride the growth curves, seed the next decade.",
+          "left": 0.95,
+          "top": 1.48,
+          "width": 9.0,
+          "height": 0.42,
+          "size": 15,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "MERIDIAN SPRINGS · DEFEND — Premiumise: glass return systems in 8 EU cities, sommelier programme to 4,000 doors, Gulf hospitality listings.",
+          "left": 1.25,
+          "top": 2.42,
+          "width": 11.1,
+          "height": 0.4,
+          "size": 12.5,
+          "color": "0E4F52",
+          "font": "Jost"
+        },
+        {
+          "text": "SOLARA · MONETISE — The family-occasion toast: Gulf Ramadan gifting packs, share-packs for Iberia/LatAm retail, zero-sugar line extension 2026.",
+          "left": 1.25,
+          "top": 3.36,
+          "width": 11.1,
+          "height": 0.4,
+          "size": 12.5,
+          "color": "6B4A17",
+          "font": "Jost"
+        },
+        {
+          "text": "VERDA · EXPAND — Fine-dining zero-proof credibility in premium grocery; new botanicals from Alpujarra and Serra da Estrela.",
+          "left": 1.25,
+          "top": 4.3,
+          "width": 11.1,
+          "height": 0.4,
+          "size": 12.5,
+          "color": "3E6B4B",
+          "font": "Jost"
+        },
+        {
+          "text": "PULSE · SCALE — +34% CAGR since 2021: natural caffeine, no taurine; push US Southwest and GCC convenience while staying clean-label.",
+          "left": 1.25,
+          "top": 5.24,
+          "width": 11.1,
+          "height": 0.4,
+          "size": 12.5,
+          "color": "FFFFFF",
+          "font": "Jost"
+        },
+        {
+          "text": "ORIGEN · SEED — Brew culture: single-estate storytelling, tea sommeliers, 16-hour cold-brew bars in Madrid, Dubai and São Paulo.",
+          "left": 1.25,
+          "top": 6.18,
+          "width": 11.1,
+          "height": 0.4,
+          "size": 12.5,
+          "color": "6B4A17",
+          "font": "Jost"
+        },
+        {
+          "text": "Portfolio rule: every strategy must hold at a family table and in a Michelin dining room — without a drop of alcohol.",
+          "left": 0.95,
+          "top": 6.95,
+          "width": 11.69,
+          "height": 0.4,
+          "size": 12.5,
+          "color": "0E4F52",
+          "font": "Jost"
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "FAFCFC",
+      "notes": "Sustainability roadmap: water-positive metrics, rPET %, solar kWh.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 2.2,
+          "width": 3.75,
+          "height": 2.35,
+          "fill": "0E4F52"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 4.92,
+          "top": 2.2,
+          "width": 3.75,
+          "height": 2.35,
+          "fill": "E7F2F1"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 8.89,
+          "top": 2.2,
+          "width": 3.75,
+          "height": 2.35,
+          "fill": "FBE3B8"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 4.95,
+          "width": 11.69,
+          "height": 1.95,
+          "fill": "F2F8F7"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Sustainability, with receipts",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 9.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "123234",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Water-positive since 2021 · B-Corp recertified 2024 · audited and published, gaps included.",
+          "left": 0.95,
+          "top": 1.48,
+          "width": 10.5,
+          "height": 0.42,
+          "size": 15,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "120%",
+          "left": 1.25,
+          "top": 2.5,
+          "width": 2.6,
+          "height": 0.8,
+          "size": 40,
+          "color": "F5A623",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Water replenished vs used — 2.9bn litres returned in FY2025; AWS Gold at 6 hubs.",
+          "left": 1.25,
+          "top": 3.42,
+          "width": 3.2,
+          "height": 1.0,
+          "size": 12,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "87% → 100%",
+          "left": 5.22,
+          "top": 2.56,
+          "width": 3.2,
+          "height": 0.74,
+          "size": 28,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "rPET share of plastic today → 100% by January 2027. No virgin PET in any line from then.",
+          "left": 5.22,
+          "top": 3.42,
+          "width": 3.2,
+          "height": 1.0,
+          "size": 12,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "19.4 GWh",
+          "left": 9.19,
+          "top": 2.56,
+          "width": 3.2,
+          "height": 0.74,
+          "size": 28,
+          "color": "8A5A1D",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Solar generated FY2025 (14.2 MWp installed); 41% of daytime production energy.",
+          "left": 9.19,
+          "top": 3.42,
+          "width": 3.2,
+          "height": 1.0,
+          "size": 12,
+          "color": "6B4A17",
+          "font": "Jost"
+        },
+        {
+          "text": "Roadmap to 2030",
+          "left": 1.25,
+          "top": 5.15,
+          "width": 6.0,
+          "height": 0.45,
+          "size": 19,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "2027 — 100% rPET; 50% glass return in the Americas.    2028 — all 11 hubs AWS Gold.    2029 — regenerative agriculture on 2,000 hectares.    2030 — Scope 1+2 −75% vs 2019; Scope 3 measured at ingredient level (today's honest gap).",
+          "left": 1.25,
+          "top": 5.65,
+          "width": 10.9,
+          "height": 1.1,
+          "size": 12.5,
+          "color": "41605F",
+          "font": "Jost"
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "FAFCFC",
+      "notes": "Innovation pipeline: functional botanicals, regenerative groves, zero-waste press, Gulf zero-proof craft.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 2.2,
+          "width": 5.72,
+          "height": 2.2,
+          "fill": "E3EFE4"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 6.92,
+          "top": 2.2,
+          "width": 5.72,
+          "height": 2.2,
+          "fill": "E7F2F1"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 4.65,
+          "width": 5.72,
+          "height": 2.2,
+          "fill": "FBE3B8"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 6.92,
+          "top": 4.65,
+          "width": 5.72,
+          "height": 2.2,
+          "fill": "0E4F52"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Innovation pipeline",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 8.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "123234",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Four programmes, one filter: would a family pour it?",
+          "left": 0.95,
+          "top": 1.48,
+          "width": 9.0,
+          "height": 0.42,
+          "size": 15,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "Functional botanicals — 2026-27",
+          "left": 1.25,
+          "top": 2.45,
+          "width": 5.2,
+          "height": 0.42,
+          "size": 16,
+          "color": "3E6B4B",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Calm and energy lines under Verda: lemon-verbena L-theanine, saffron citrus. Zero sugar, zero alcohol, zero gimmicks.",
+          "left": 1.25,
+          "top": 2.92,
+          "width": 5.15,
+          "height": 1.3,
+          "size": 12,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "Regenerative groves — 2026-30",
+          "left": 7.22,
+          "top": 2.45,
+          "width": 5.2,
+          "height": 0.42,
+          "size": 16,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "2,000 hectares converted by 2030 with 214 grower partners; a soil-carbon programme that pays growers per hectare, not per promise.",
+          "left": 7.22,
+          "top": 2.92,
+          "width": 5.15,
+          "height": 1.3,
+          "size": 12,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "Zero-waste press — 2027",
+          "left": 1.25,
+          "top": 4.9,
+          "width": 5.2,
+          "height": 0.42,
+          "size": 16,
+          "color": "8A5A1D",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Peel and pulp become essential oils, pectin and cattle feed: 94% of fruit mass valorised today, 100% target 2027.",
+          "left": 1.25,
+          "top": 5.37,
+          "width": 5.15,
+          "height": 1.3,
+          "size": 12,
+          "color": "6B4A17",
+          "font": "Jost"
+        },
+        {
+          "text": "Gulf zero-proof craft — 2027-28",
+          "left": 7.22,
+          "top": 4.9,
+          "width": 5.2,
+          "height": 0.42,
+          "size": 16,
+          "color": "F5A623",
+          "font": "Marcellus"
+        },
+        {
+          "text": "A premium zero-proof sparkling range co-developed with Emirati and Malaysian hospitality groups — grown from our right to exist: 100% non-alcoholic, halal-certified, made for celebration.",
+          "left": 7.22,
+          "top": 5.37,
+          "width": 5.15,
+          "height": 1.3,
+          "size": 12,
+          "color": "CFE6E3",
+          "font": "Jost"
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "FAFCFC",
+      "notes": "Distribution and retail channels: horizontal bar chart with percentages.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 6.0,
+          "width": 11.69,
+          "height": 0.95,
+          "fill": "E7F2F1"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Distribution & retail channels",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 9.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "123234",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Share of FY2025 revenue by route to market",
+          "left": 0.95,
+          "top": 1.48,
+          "width": 9.0,
+          "height": 0.42,
+          "size": 15,
+          "color": "41605F",
+          "font": "Jost"
+        },
+        {
+          "text": "E-commerce is the fastest-growing route (+41% YoY) — subscription water and tea clubs now span 9 markets. Horeca credibility drives premium pricing everywhere else.",
+          "left": 1.25,
+          "top": 6.18,
+          "width": 11.1,
+          "height": 0.6,
+          "size": 12.5,
+          "color": "0E4F52",
+          "font": "Jost"
+        }
+      ],
+      "charts": [
+        {
+          "type": "bar_h",
+          "left": 0.95,
+          "top": 2.1,
+          "width": 11.69,
+          "height": 3.7,
+          "title": "Revenue by channel (%)",
+          "categories": [
+            "Travel retail",
+            "E-commerce",
+            "Horeca",
+            "Supermarkets"
+          ],
+          "series": {
+            "Share %": [
+              6,
+              18,
+              22,
+              54
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "FAFCFC",
+      "notes": "Leadership and governance: four profiles plus governance facts.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "oval",
+          "left": 1.3,
+          "top": 2.3,
+          "width": 0.95,
+          "height": 0.95,
+          "fill": "0E4F52"
+        },
+        {
+          "type": "oval",
+          "left": 4.32,
+          "top": 2.3,
+          "width": 0.95,
+          "height": 0.95,
+          "fill": "F5A623"
+        },
+        {
+          "type": "oval",
+          "left": 7.34,
+          "top": 2.3,
+          "width": 0.95,
+          "height": 0.95,
+          "fill": "7FA982"
+        },
+        {
+          "type": "oval",
+          "left": 10.36,
+          "top": 2.3,
+          "width": 0.95,
+          "height": 0.95,
+          "fill": "B97A2E"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 5.55,
+          "width": 11.69,
+          "height": 1.5,
+          "fill": "E7F2F1"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Leadership & governance",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 9.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "123234",
+          "font": "Marcellus"
+        },
+        {
+          "text": "MC",
+          "left": 1.3,
+          "top": 2.53,
+          "width": 0.95,
+          "height": 0.5,
+          "size": 20,
+          "color": "FFFFFF",
+          "font": "Marcellus",
+          "align": "center"
+        },
+        {
+          "text": "Mateo Costa — CEO",
+          "left": 1.05,
+          "top": 3.5,
+          "width": 1.95,
+          "height": 0.4,
+          "size": 13,
+          "color": "123234",
+          "font": "Jost",
+          "align": "center"
+        },
+        {
+          "text": "Grandson of the founder; led the water-positive pledge.",
+          "left": 1.0,
+          "top": 3.92,
+          "width": 2.05,
+          "height": 1.1,
+          "size": 11,
+          "color": "41605F",
+          "font": "Jost",
+          "align": "center"
+        },
+        {
+          "text": "EC",
+          "left": 4.32,
+          "top": 2.53,
+          "width": 0.95,
+          "height": 0.5,
+          "size": 20,
+          "color": "3A2803",
+          "font": "Marcellus",
+          "align": "center"
+        },
+        {
+          "text": "Elena Costa — Chair",
+          "left": 4.07,
+          "top": 3.5,
+          "width": 1.95,
+          "height": 0.4,
+          "size": 13,
+          "color": "123234",
+          "font": "Jost",
+          "align": "center"
+        },
+        {
+          "text": "Chief Purpose Officer; authored the no-alcohol house rule.",
+          "left": 4.02,
+          "top": 3.92,
+          "width": 2.05,
+          "height": 1.1,
+          "size": 11,
+          "color": "41605F",
+          "font": "Jost",
+          "align": "center"
+        },
+        {
+          "text": "AK",
+          "left": 7.34,
+          "top": 2.53,
+          "width": 0.95,
+          "height": 0.5,
+          "size": 20,
+          "color": "FFFFFF",
+          "font": "Marcellus",
+          "align": "center"
+        },
+        {
+          "text": "Amira Al-Khatib — CFO",
+          "left": 7.09,
+          "top": 3.5,
+          "width": 2.45,
+          "height": 0.4,
+          "size": 13,
+          "color": "123234",
+          "font": "Jost",
+          "align": "center"
+        },
+        {
+          "text": "Ex-Danone MEA; architect of the GCC growth strategy.",
+          "left": 7.09,
+          "top": 3.92,
+          "width": 1.95,
+          "height": 1.1,
+          "size": 11,
+          "color": "41605F",
+          "font": "Jost",
+          "align": "center"
+        },
+        {
+          "text": "JV",
+          "left": 10.36,
+          "top": 2.53,
+          "width": 0.95,
+          "height": 0.5,
+          "size": 20,
+          "color": "FFFFFF",
+          "font": "Marcellus",
+          "align": "center"
+        },
+        {
+          "text": "João Vasques — Supply",
+          "left": 10.11,
+          "top": 3.5,
+          "width": 2.45,
+          "height": 0.4,
+          "size": 13,
+          "color": "123234",
+          "font": "Jost",
+          "align": "center"
+        },
+        {
+          "text": "Runs 11 hubs and the 72-hour grove-to-press guarantee.",
+          "left": 10.11,
+          "top": 3.92,
+          "width": 2.05,
+          "height": 1.1,
+          "size": 11,
+          "color": "41605F",
+          "font": "Jost",
+          "align": "center"
+        },
+        {
+          "text": "Governance",
+          "left": 1.25,
+          "top": 5.75,
+          "width": 3.0,
+          "height": 0.45,
+          "size": 17,
+          "color": "0E4F52",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Family-controlled 62% · employee trust 9% · institutional 29% · independent board majority (7 of 12) · sustainability-linked executive pay since 2022.",
+          "left": 4.3,
+          "top": 5.78,
+          "width": 8.0,
+          "height": 1.05,
+          "size": 12.5,
+          "color": "41605F",
+          "font": "Jost"
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "0E4F52",
+      "notes": "ESG certifications including halal certification and the honest-gaps statement.",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 0.42,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 2.2,
+          "width": 5.72,
+          "height": 1.15,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 6.92,
+          "top": 2.2,
+          "width": 5.72,
+          "height": 1.15,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 3.5,
+          "width": 5.72,
+          "height": 1.15,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 6.92,
+          "top": 3.5,
+          "width": 5.72,
+          "height": 1.15,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 4.95,
+          "width": 11.69,
+          "height": 1.95,
+          "fill": "0A3A3D"
+        }
+      ],
+      "texts": [
+        {
+          "text": "ESG certifications & accountability",
+          "left": 0.92,
+          "top": 0.58,
+          "width": 10.0,
+          "height": 0.8,
+          "size": 34,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "Certified B-Corporation — 98.4/200 (2024), top 5% of beverage B-Corps worldwide",
+          "left": 1.25,
+          "top": 2.42,
+          "width": 5.2,
+          "height": 0.75,
+          "size": 12.5,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "Halal-certified production — every line alcohol-free by design; ESMA/GAC (UAE) and JAKIM-recognised (Malaysia) schemes, renewed annually",
+          "left": 7.22,
+          "top": 2.32,
+          "width": 5.2,
+          "height": 0.95,
+          "size": 12.5,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "ISO 22000 food safety — all 11 hubs; FSSC 22000 at Valencia, Sharjah and Tangerang",
+          "left": 1.25,
+          "top": 3.72,
+          "width": 5.2,
+          "height": 0.75,
+          "size": 12.5,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "Rainforest Alliance citrus — 100% of volume since 2022; AWS water standard, Gold at 6 hubs",
+          "left": 7.22,
+          "top": 3.72,
+          "width": 5.2,
+          "height": 0.75,
+          "size": 12.5,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "Values we report against — including the misses",
+          "left": 1.25,
+          "top": 5.15,
+          "width": 9.0,
+          "height": 0.45,
+          "size": 17,
+          "color": "F5A623",
+          "font": "Marcellus"
+        },
+        {
+          "text": "We are a 100% non-alcoholic company by conviction — it is our identity, our market advantage and our duty of care. We publish an annual water ledger and sustainability letter with our gaps named in plain text: two hubs not yet on certified-renewable grid power, Americas glass returns at 31% vs a 50% target, Scope 3 ingredient logistics unmeasured. Same letter, same place, every year.",
+          "left": 1.25,
+          "top": 5.65,
+          "width": 10.9,
+          "height": 1.15,
+          "size": 12.5,
+          "color": "CFE6E3",
+          "font": "Jost"
+        }
+      ]
+    },
+    {
+      "layout": "blank",
+      "background": "0E4F52",
+      "notes": "Outlook and investor contact. Close with conviction and contact details.",
+      "shapes": [
+        {
+          "type": "oval",
+          "left": -1.7,
+          "top": 4.4,
+          "width": 5.2,
+          "height": 5.2,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "oval",
+          "left": 10.1,
+          "top": -2.1,
+          "width": 4.9,
+          "height": 4.9,
+          "fill": "0A3A3D"
+        },
+        {
+          "type": "rectangle",
+          "left": 0.95,
+          "top": 1.28,
+          "width": 0.55,
+          "height": 0.05,
+          "fill": "F5A623"
+        },
+        {
+          "type": "rounded_rectangle",
+          "left": 0.95,
+          "top": 4.45,
+          "width": 11.69,
+          "height": 1.9,
+          "fill": "0A3A3D"
+        }
+      ],
+      "texts": [
+        {
+          "text": "Outlook: in tune, and ahead",
+          "left": 0.92,
+          "top": 1.45,
+          "width": 11.0,
+          "height": 0.85,
+          "size": 36,
+          "color": "FFFFFF",
+          "font": "Marcellus"
+        },
+        {
+          "text": "€2B revenue in FY2026 · 100% rPET by January 2027 · GCC and ASEAN premium non-alcoholic segment compounding at 28% — the market moving toward what Meridian has always been: a full house of brands with not a drop of alcohol, built for every table.",
+          "left": 0.95,
+          "top": 2.55,
+          "width": 11.2,
+          "height": 1.5,
+          "size": 15,
+          "color": "D9EAE8",
+          "font": "Jost"
+        },
+        {
+          "text": "Investor relations",
+          "left": 1.25,
+          "top": 4.68,
+          "width": 3.0,
+          "height": 0.45,
+          "size": 17,
+          "color": "F5A623",
+          "font": "Marcellus"
+        },
+        {
+          "text": "invest@meridianbeverage.com   ·   +34 961 202 787   ·   Camí de la Foia 14, 46112 Bétera, Valencia, Spain\nFY2025 annual report, sustainability letter and water ledger: meridianbeverage.com/investors",
+          "left": 1.25,
+          "top": 5.2,
+          "width": 10.9,
+          "height": 0.95,
+          "size": 12.5,
+          "color": "CFE6E3",
+          "font": "Jost"
+        },
+        {
+          "text": "MERIDIAN BEVERAGE CO. — 100% non-alcoholic since 1987",
+          "left": 0.95,
+          "top": 6.78,
+          "width": 11.2,
+          "height": 0.4,
+          "size": 12,
+          "color": "7FB6B4",
+          "font": "Jost"
+        }
+      ]
+    }
+  ]
+}

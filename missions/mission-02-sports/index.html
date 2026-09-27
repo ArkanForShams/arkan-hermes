@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KINETIQ — Speed Is a Science</title>
+<meta name="description" content="KINETIQ builds performance sportswear and equipment measured in milliseconds. KineticFoam™, CarbonDrive plates, AeroKnit uppers. Founded in Portland, worn in 34 countries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#050505; --ink:#0A0A0B; --graphite:#141518; --panel:#1A1C20;
+  --line:#26282D; --line-soft:#1E2024;
+  --volt:#D6FF3F; --volt-dim:rgba(214,255,63,.12); --volt-glow:rgba(214,255,63,.35);
+  --bone:#F2F0E9; --white:#FFFFFF; --mute:#9B9E96; --mute-2:#6E7169;
+  --display:'Anton',Impact,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --body:'Archivo',Helvetica,Arial,sans-serif;
+  --max:1240px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--mute);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden}
+::selection{background:var(--volt);color:#0A0A0B}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+/* ---------- grain ---------- */
+.grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:2000;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 9s steps(6) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-2%,1%)}40%{transform:translate(1%,-2%)}60%{transform:translate(-1%,2%)}80%{transform:translate(2%,-1%)}}
+/* ---------- type helpers ---------- */
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--volt);display:flex;align-items:center;gap:14px}
+.kicker::before{content:"";width:34px;height:2px;background:var(--volt)}
+.h-display{font-family:var(--display);color:var(--bone);text-transform:uppercase;line-height:.94;letter-spacing:.005em;font-weight:400}
+.num-giant{font-family:var(--display);color:var(--volt);line-height:.85}
+/* ---------- layout ---------- */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+section{position:relative; scroll-margin-top:84px}
+.sec-pad{padding:110px 0}
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+nav.scrolled{background:rgba(5,5,5,.86);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.nav-in{max-width:var(--max);margin:0 auto;padding:18px 28px;display:flex;align-items:center;gap:36px}
+.logo{font-family:var(--display);font-size:26px;color:var(--bone);letter-spacing:.02em}
+.logo em{font-style:normal;color:var(--volt)}
+.nav-links{display:flex;gap:28px;margin-left:auto}
+.nav-links a{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);transition:color .2s}
+.nav-links a:hover{color:var(--volt)}
+.nav-cta{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;background:var(--volt);color:#0A0A0B;padding:11px 20px;font-weight:700;transition:box-shadow .25s,transform .25s}
+.nav-cta:hover{box-shadow:0 0 24px var(--volt-glow);transform:translateY(-1px)}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);color:var(--bone);font-family:var(--mono);font-size:11px;letter-spacing:.15em;padding:10px 14px;cursor:pointer}
+#navtoggle{display:none}
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:17px 30px;font-weight:700;transition:all .25s;cursor:pointer;border:1px solid transparent}
+.btn-volt{background:var(--volt);color:#0A0A0B}
+.btn-volt:hover{box-shadow:0 0 34px var(--volt-glow);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);color:var(--bone)}
+.btn-ghost:hover{border-color:var(--volt);color:var(--volt);box-shadow:inset 0 0 24px var(--volt-dim)}
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:flex-end;position:relative;overflow:hidden;
+  background:#050505 url("assets/hero-sprinter.jpg") right center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;
+  background:linear-gradient(78deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.88) 34%,rgba(5,5,5,.45) 62%,rgba(5,5,5,.25) 100%),
+  linear-gradient(180deg,rgba(5,5,5,.82) 0%,rgba(5,5,5,.35) 16%,transparent 30%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:180px;
+  background:linear-gradient(180deg,transparent,var(--void))}
+.hero-in{position:relative;z-index:2;width:100%;max-width:var(--max);margin:0 auto;padding:150px 28px 96px}
+.hero h1{font-size:clamp(58px,10.5vw,168px);color:var(--bone)}
+.hero h1 .volt{color:var(--volt)}
+.hero-sub{max-width:560px;margin:30px 0 40px;font-size:17px;color:var(--mute)}
+.hero-sub strong{color:var(--bone);font-weight:600}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.hero-chips{display:flex;gap:14px;flex-wrap:wrap;margin-top:54px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--bone);
+  border:1px solid var(--line);background:rgba(10,10,11,.6);padding:12px 18px;display:flex;gap:10px;align-items:center}
+.chip b{color:var(--volt);font-weight:700}
+.hero-side{position:absolute;right:28px;top:50%;transform:translateY(-50%) ;z-index:2;
+  writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--mute-2)}
+/* ---------- ticker ---------- */
+.ticker{background:var(--volt);color:#0A0A0B;overflow:hidden;position:relative;z-index:3;border-top:1px solid #000;border-bottom:1px solid #000}
+.ticker-track{display:flex;width:max-content;animation:tick 34s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-set{display:flex;align-items:center;white-space:nowrap;padding:13px 0}
+.ticker-set span{font-family:var(--display);font-size:22px;letter-spacing:.04em;text-transform:uppercase;padding:0 18px}
+.ticker-set i{font-style:normal;width:9px;height:9px;background:#0A0A0B;border-radius:50%;display:inline-block}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* ---------- slash divider ---------- */
+.slash{height:3px;background:var(--volt);transform:rotate(-1.6deg) scale(1.04);margin:-1px 0;position:relative;z-index:4;box-shadow:0 0 30px var(--volt-glow)}
+.slash.thin{height:1px;opacity:.5}
+/* ---------- section headers ---------- */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:64px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(42px,6vw,88px);max-width:14ch}
+.sec-head .side{max-width:360px;padding-bottom:10px}
+/* ---------- the lab ---------- */
+.lab{background:var(--ink)}
+.lab-bg{position:absolute;inset:0;background:url("assets/lab-treadmill.jpg") center/cover no-repeat;opacity:.16}
+.lab-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.tech{background:var(--ink);padding:44px 36px 40px;position:relative;transition:background .3s}
+.tech:hover{background:var(--panel)}
+.tech .idx{font-family:var(--mono);font-size:11px;color:var(--volt);letter-spacing:.2em}
+.tech h3{font-family:var(--display);font-size:30px;color:var(--bone);text-transform:uppercase;margin:16px 0 6px}
+.tech .tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute-2)}
+.tech p{margin:20px 0 26px;font-size:14.5px}
+.tech ul{list-style:none;border-top:1px solid var(--line)}
+.tech li{display:flex;justify-content:space-between;gap:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;padding:11px 0;border-bottom:1px solid var(--line-soft);text-transform:uppercase}
+.tech li b{color:var(--volt);font-weight:700;white-space:nowrap}
+/* ---------- products ---------- */
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{position:relative;background:var(--graphite);border:1px solid var(--line);overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-7px);border-color:var(--volt);box-shadow:0 24px 60px rgba(0,0,0,.6),0 0 0 1px var(--volt),0 0 44px var(--volt-dim)}
+.card .ph{position:relative;overflow:hidden;aspect-ratio:1/0.82;background:#000}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.card:hover .ph img{transform:scale(1.06)}
+.card .tagline{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--volt);color:#0A0A0B;padding:5px 10px;font-weight:700}
+.card .body{padding:26px 26px 28px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-family:var(--display);font-size:27px;color:var(--bone);text-transform:uppercase;letter-spacing:.02em}
+.card .spec{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute-2)}
+.card .row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:16px}
+.card .price{font-family:var(--display);font-size:26px;color:var(--volt)}
+.card .buy{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--bone);border:1px solid var(--line);padding:9px 14px;transition:all .25s}
+.card:hover .buy{background:var(--volt);border-color:var(--volt);color:#0A0A0B}
+.card.type{background:var(--panel);justify-content:space-between;min-height:100%}
+.card.type .inner{padding:34px 30px;display:flex;flex-direction:column;gap:14px;flex:1}
+.card.type h3{font-size:30px}
+.card.type .big{font-family:var(--display);font-size:clamp(40px,4vw,58px);color:var(--volt);line-height:.95;margin-top:auto}
+.card.type p{font-size:14px}
+.card.type .foot{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute-2);border-top:1px solid var(--line);padding-top:14px}
+.card.cta-tile{align-items:flex-start;justify-content:flex-end;padding:34px 30px;gap:0;background:linear-gradient(160deg,var(--panel),var(--graphite))}
+.card.cta-tile .arrow{font-family:var(--display);font-size:64px;color:var(--volt);line-height:1;margin-top:18px;transition:transform .3s}
+.card.cta-tile:hover .arrow{transform:translateX(10px)}
+.card.cta-tile p{margin-top:14px;font-size:14px}
+/* ---------- athletes ---------- */
+.team{background:var(--ink)}
+.ath-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.athlete{border:1px solid var(--line);background:var(--graphite);padding:36px 32px;position:relative;overflow:hidden;transition:border-color .3s,box-shadow .3s}
+.athlete:hover{border-color:var(--volt);box-shadow:0 0 40px var(--volt-dim)}
+.athlete .ghost{position:absolute;right:-10px;top:-24px;font-family:var(--display);font-size:150px;color:rgba(255,255,255,.03);line-height:1;pointer-events:none}
+.ava{width:74px;height:74px;background:var(--volt);color:#0A0A0B;font-family:var(--display);font-size:30px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.athlete h3{font-family:var(--display);font-size:26px;color:var(--bone);text-transform:uppercase;margin:22px 0 4px;letter-spacing:.02em}
+.athlete .ev{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute-2)}
+.athlete .pb{margin:26px 0 8px;font-family:var(--display);font-size:clamp(44px,4.4vw,64px);color:var(--volt);line-height:.9}
+.athlete .pb-lab{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute-2)}
+.athlete q{display:block;margin-top:22px;font-size:14.5px;color:var(--mute);border-left:2px solid var(--volt);padding-left:16px;font-style:italic;quotes:"“" "”"}
+/* ---------- campaign ---------- */
+.campaign{min-height:560px;display:flex;align-items:center;background:#050505 url("assets/campaign-still.jpg") center/cover no-repeat;position:relative}
+.campaign::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.93) 0%,rgba(5,5,5,.72) 45%,rgba(5,5,5,.30) 100%)}
+.campaign-in{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:90px 28px;width:100%}
+.campaign h2{font-size:clamp(46px,7vw,104px);max-width:12ch}
+.campaign p{max-width:520px;margin:26px 0 36px;font-size:16px}
+.camp-meta{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute-2);margin-top:26px}
+.camp-meta b{color:var(--volt)}
+/* ---------- stats band ---------- */
+.stats{background:var(--volt);color:#0A0A0B;border-top:1px solid #000;border-bottom:1px solid #000}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding-top:64px;padding-bottom:64px}
+.stat .n{font-family:var(--display);font-size:clamp(52px,5.6vw,92px);line-height:.9;letter-spacing:.01em}
+.stat .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;margin-top:12px;font-weight:700;color:rgba(10,10,11,.75)}
+/* ---------- testimonials ---------- */
+.quotes{background:var(--ink)}
+.q-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.quote{border:1px solid var(--line);background:var(--graphite);padding:36px 32px;display:flex;flex-direction:column;gap:24px;transition:border-color .3s}
+.quote:hover{border-color:var(--volt)}
+.quote .mark{font-family:var(--display);font-size:52px;color:var(--volt);line-height:.6}
+.quote blockquote{font-size:16.5px;color:var(--bone);line-height:1.55;font-weight:500}
+.quote .who{margin-top:auto;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute-2)}
+.quote .who b{color:var(--bone);display:block;margin-bottom:4px;letter-spacing:.14em}
+/* ---------- partners ---------- */
+.partners{background:var(--ink);border-top:1px solid var(--line-soft)}
+.part-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.part{background:var(--ink);padding:30px 26px;display:flex;gap:16px;align-items:flex-start;transition:background .3s}
+.part:hover{background:var(--panel)}
+.part .dot{width:8px;height:8px;background:var(--volt);margin-top:6px;flex:none}
+.part .t{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone);line-height:1.7}
+.part .s{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute-2)}
+/* ---------- sustainability ---------- */
+.sustain{background:var(--graphite)}
+.sus-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
+.sus-big{font-size:clamp(40px,5vw,76px)}
+.sus-big .volt{color:var(--volt)}
+.sus-list{list-style:none;border-top:1px solid var(--line)}
+.sus-list li{display:flex;gap:22px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.sus-list .pct{font-family:var(--display);font-size:34px;color:var(--volt);min-width:96px;line-height:1}
+.sus-list .d{font-size:14.5px}
+/* ---------- signup ---------- */
+.signup{background:var(--ink);border-top:1px solid var(--line)}
+.signup-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.signup h2{font-size:clamp(38px,4.6vw,66px)}
+.form{display:flex;border:1px solid var(--line);background:var(--graphite);transition:border-color .3s,box-shadow .3s}
+.form:focus-within{border-color:var(--volt);box-shadow:0 0 30px var(--volt-dim)}
+.form input{flex:1;background:transparent;border:0;outline:0;color:var(--bone);font-family:var(--mono);font-size:13px;letter-spacing:.06em;padding:20px 22px}
+.form input::placeholder{color:var(--mute-2)}
+.form button{background:var(--volt);border:0;color:#0A0A0B;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:0 30px;cursor:pointer;transition:box-shadow .25s}
+.form button:hover{box-shadow:0 0 28px var(--volt-glow)}
+.fine{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--mute-2);margin-top:16px;line-height:1.9;text-transform:uppercase}
+.fine b{color:var(--mute)}
+/* ---------- footer ---------- */
+footer{background:#030303;border-top:1px solid var(--line);padding:80px 0 40px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:50px}
+.foot-brand .logo{font-size:34px}
+.foot-brand p{margin:18px 0 0;max-width:300px;font-size:14px}
+.foot-addr{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute-2);margin-top:22px;line-height:2}
+.foot-col h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--volt);margin-bottom:20px}
+.foot-col a{display:block;font-size:14px;color:var(--mute);padding:5px 0;transition:color .2s}
+.foot-col a:hover{color:var(--volt)}
+.foot-legal{margin-top:64px;padding-top:26px;border-top:1px solid var(--line-soft);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute-2)}
+.foot-legal a:hover{color:var(--volt)}
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
+  .reveal{opacity:1;transform:none}
+}
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .lab-grid,.prod-grid,.ath-grid,.q-grid{grid-template-columns:repeat(2,1fr)}
+  .part-row{grid-template-columns:repeat(2,1fr)}
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .sus-grid,.signup-grid{grid-template-columns:1fr;gap:44px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero-side{display:none}
+}
+@media (max-width:680px){
+  .wrap{padding:0 20px}
+  .nav-links,.nav-cta{display:none}
+  .burger{display:block}
+  #navtoggle:checked ~ .nav-links{display:flex;position:fixed;top:64px;left:0;right:0;background:rgba(5,5,5,.97);flex-direction:column;padding:28px;border-bottom:1px solid var(--line)}
+  .lab-grid,.prod-grid,.ath-grid,.q-grid,.part-row{grid-template-columns:1fr}
+  .stats .wrap{grid-template-columns:1fr 1fr;gap:38px}
+  .sec-pad{padding:80px 0}
+  .hero-in{padding:130px 20px 80px}
+  .form{flex-direction:column}
+  .form button{padding:16px}
+  .foot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top">KINETIQ<em>.</em></a>
+    <input type="checkbox" id="navtoggle">
+    <div class="nav-links">
+      <a href="#lab">The Lab</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#roster">Athletes</a>
+      <a href="#campaign">Campaign</a>
+      <a href="#sustainability">Sustainability</a>
+    </div>
+    <a class="nav-cta" href="#hardware" style="margin-left:24px">Shop Hardware</a>
+    <label class="burger" for="navtoggle" aria-label="Menu">MENU</label>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-side">EST. 2019 — PORTLAND, OREGON — 45.5231°N</div>
+  <div class="hero-in">
+    <div class="kicker reveal in">KINETIQ LABS — PERFORMANCE SYSTEMS DIVISION</div>
+    <h1 class="h-display" style="margin-top:26px">SPEED IS<br>A <span class="volt">SCIENCE.</span></h1>
+    <p class="hero-sub">Founded by a biomechanics researcher and a sprint coach who were tired of gear that <strong>looked fast but measured slow.</strong> Every KINETIQ product is validated on force plates before it ever touches a starting line.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-volt" href="#hardware">Shop the Hardware</a>
+      <a class="btn btn-ghost" href="#lab">Enter the Lab</a>
+    </div>
+    <div class="hero-chips">
+      <span class="chip"><b>0.01s</b> REACTION DELTA</span>
+      <span class="chip"><b>212g</b> SHOE WEIGHT</span>
+      <span class="chip"><b>34</b> COUNTRIES</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <div class="ticker-set">
+      <span>0.01s Reaction Delta</span><i></i><span>212g Shoe Weight</span><i></i><span>34 Countries</span><i></i><span>87% Energy Return</span><i></i><span>10.89 100m PB</span><i></i><span>−3.4% Contact Time</span><i></i><span>KineticFoam™</span><i></i><span>72% Recycled AeroKnit</span><i></i><span>2:04:51 Marathon</span><i></i><span>27,412 Lab Tests Logged</span><i></i>
+    </div>
+    <div class="ticker-set">
+      <span>0.01s Reaction Delta</span><i></i><span>212g Shoe Weight</span><i></i><span>34 Countries</span><i></i><span>87% Energy Return</span><i></i><span>10.89 100m PB</span><i></i><span>−3.4% Contact Time</span><i></i><span>KineticFoam™</span><i></i><span>72% Recycled AeroKnit</span><i></i><span>2:04:51 Marathon</span><i></i><span>27,412 Lab Tests Logged</span><i></i>
+    </div>
+  </div>
+</div>
+
+<!-- ============ THE LAB ============ -->
+<section class="lab sec-pad" id="lab">
+  <div class="lab-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <div class="kicker">01 — The Lab</div>
+        <h2 class="h-display" style="margin-top:22px">Gear that<br>measures fast.</h2>
+      </div>
+      <p class="side reveal d1">Our Portland lab runs every material decision through a 12-camera motion capture array and a force-plate treadmill before it earns a stitch. If it doesn't beat the control, it doesn't ship.</p>
+    </div>
+    <div class="lab-grid">
+      <article class="tech reveal">
+        <div class="idx">T/01</div>
+        <h3>KineticFoam™</h3>
+        <div class="tag">Supercritical midsole</div>
+        <p>A nitrogen-infused supercritical foam, twin-foamed for rebound without collapse. Tuned in 14 durometers until the return curve matched sprint-stage force data.</p>
+        <ul>
+          <li>Energy return <b>87.2%</b></li>
+          <li>Density <b>0.11 g/cm³</b></li>
+          <li>Contact time delta <b>−3.4%</b></li>
+          <li>Heat breakdown @40°C <b>&lt;2%</b></li>
+        </ul>
+      </article>
+      <article class="tech reveal d1">
+        <div class="idx">T/02</div>
+        <h3>CarbonDrive Plate</h3>
+        <div class="tag">Full-length propulsion</div>
+        <p>One-piece aerospace carbon laid on a variable-stiffness map — stiffest under the metatarsal hinge, compliant at heel strike. Tuned per event, not per marketing calendar.</p>
+        <ul>
+          <li>Stiffness index <b>9.2 N/mm²</b></li>
+          <li>Running economy <b>+4.2%</b></li>
+          <li>Plate mass <b>38g</b></li>
+          <li>Curvature radius <b>R/11</b></li>
+        </ul>
+      </article>
+      <article class="tech reveal d2">
+        <div class="idx">T/03</div>
+        <h3>AeroKnit Upper</h3>
+        <div class="tag">Engineered zonal knit</div>
+        <p>A zonal engineered knit mapped from 27,000+ lab scans: locked where force demands it, ventilated where heat builds. 72% of current-generation yarn is recycled.</p>
+        <ul>
+          <li>Weight (size 42) <b>212g</b></li>
+          <li>Airflow vs. woven <b>+38%</b></li>
+          <li>Recycled content <b>72%</b></li>
+          <li>Stretch recovery <b>96%</b></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="slash thin" aria-hidden="true"></div>
+
+<!-- ============ PRODUCTS ============ -->
+<section class="sec-pad" id="hardware" style="background:var(--void)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <div class="kicker">02 — Hardware</div>
+        <h2 class="h-display" style="margin-top:22px">Built for<br>the clock.</h2>
+      </div>
+      <p class="side reveal d1">Five platforms, one rule: the number on the stopwatch decides. Every product page publishes its lab sheet — force curves, durometers, grams.</p>
+    </div>
+    <div class="prod-grid">
+      <article class="card reveal">
+        <div class="ph"><img src="assets/product-spike.jpg" alt="Volt Sprint racing spike with carbon plate" loading="lazy"><span class="tagline">Track</span></div>
+        <div class="body">
+          <h3>Volt Sprint</h3>
+          <div class="spec">212g · CarbonDrive R/11 · 6-pin traction</div>
+          <div class="row"><span class="price">$240</span><a class="buy" href="#">Add to Cart</a></div>
+        </div>
+      </article>
+      <article class="card reveal d1">
+        <div class="ph"><img src="assets/product-trail.jpg" alt="Trail Apex trail running shoe on wet rock" loading="lazy"><span class="tagline">Trail</span></div>
+        <div class="body">
+          <h3>Trail Apex</h3>
+          <div class="spec">289g · 4.5mm lugs · Rocklock shank</div>
+          <div class="row"><span class="price">$189</span><a class="buy" href="#">Add to Cart</a></div>
+        </div>
+      </article>
+      <article class="card reveal d2">
+        <div class="ph"><img src="assets/product-daily.jpg" alt="Daily Trainer Grid in bone white knit" loading="lazy"><span class="tagline">Daily</span></div>
+        <div class="body">
+          <h3>Daily Trainer Grid</h3>
+          <div class="spec">268g · KineticFoam™ daily-tune · 1,200km rated</div>
+          <div class="row"><span class="price">$129</span><a class="buy" href="#">Add to Cart</a></div>
+        </div>
+      </article>
+      <article class="card type reveal">
+        <div class="inner">
+          <div class="kicker" style="font-size:10px">Compression Line</div>
+          <p>Graduated compression tights, calf sleeves and race socks — millimeter-precise pressure mapping, flat-locked seams, zero bounce.</p>
+          <div class="big">$38–85</div>
+          <div class="foot">20–28 mmHg · 4-way power knit</div>
+        </div>
+      </article>
+      <article class="card type reveal d1">
+        <div class="inner">
+          <div class="kicker" style="font-size:10px">Elite Gloves</div>
+          <p>Field-tested with sprinters and throwers: silicone-mapped palms, 0.8mm sensor-ready fingertips, taped cuff seal.</p>
+          <div class="big">$65</div>
+          <div class="foot">Grip+ silicone map · machine washable</div>
+        </div>
+      </article>
+      <a class="card cta-tile reveal d2" href="#">
+        <div class="kicker" style="font-size:10px">Full Range</div>
+        <div class="h-display" style="font-size:clamp(30px,2.8vw,40px);margin-top:16px">View the<br>lab catalog</div>
+        <div class="arrow">→</div>
+        <p>34 SKUs · 9 event categories · every spec sheet public.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ATHLETES ============ -->
+<section class="team sec-pad" id="roster">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <div class="kicker">03 — The Roster</div>
+        <h2 class="h-display" style="margin-top:22px">Worn by people<br>who count.</h2>
+      </div>
+      <p class="side reveal d1">36 sponsored athletes across 11 nations. Personal bests below are current as of the 2026 season — we publish them because we test against them.</p>
+    </div>
+    <div class="ath-grid">
+      <article class="athlete reveal">
+        <div class="ghost">01</div>
+        <div class="ava">MO</div>
+        <h3>Mariam Okonkwo</h3>
+        <div class="ev">100m — Lagos / Portland</div>
+        <div class="pb">10.89</div>
+        <div class="pb-lab">100m personal best · 0.148s reaction</div>
+        <q>The Volt Sprint is the first spike that came with its own force curve. I signed because the data was honest.</q>
+      </article>
+      <article class="athlete reveal d1">
+        <div class="ghost">02</div>
+        <div class="ava">DS</div>
+        <h3>Diego Salas</h3>
+        <div class="ev">Marathon — Bogotá / Flagstaff</div>
+        <div class="pb">2:04:51</div>
+        <div class="pb-lab">Marathon personal best · Valencia 2026</div>
+        <q>Two minutes off my PR in one carbon cycle. My splits at 35k were faster than my 30k splits the year before.</q>
+      </article>
+      <article class="athlete reveal d2">
+        <div class="ghost">03</div>
+        <div class="ava">YT</div>
+        <h3>Yuki Tanaka</h3>
+        <div class="ev">400m Hurdles — Osaka</div>
+        <div class="pb">48.20</div>
+        <div class="pb-lab">400mH personal best · national record</div>
+        <q>Ten strides between hurdles instead of eleven. The plate stiffness map did that — I felt it in the first session.</q>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAMPAIGN ============ -->
+<section class="campaign" id="campaign">
+  <div class="campaign-in">
+    <div class="kicker reveal">04 — Campaign Film</div>
+    <h2 class="h-display reveal d1" style="margin-top:22px">Measured,<br>not marketed.</h2>
+    <p class="reveal d2">A 4-minute film following three athletes across 14 months of lab sessions, failure tests and starting lines — every claim on screen backed by the telemetry that earned it.</p>
+    <a class="btn btn-volt reveal d2" href="#">Watch the Film</a>
+    <div class="camp-meta reveal d3">Film — <b>04:12</b> · Dir. R. Okafor · Shot on location in Portland, Lagos &amp; Osaka</div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats" aria-label="Company performance">
+  <div class="wrap">
+    <div class="stat reveal"><div class="n"><span class="count" data-to="210" data-prefix="$" data-suffix="M">$0M</span></div><div class="l">Revenue FY2025</div></div>
+    <div class="stat reveal d1"><div class="n"><span class="count" data-to="68" data-suffix="%">0%</span></div><div class="l">Growth YoY</div></div>
+    <div class="stat reveal d2"><div class="n"><span class="count" data-to="34">0</span></div><div class="l">Countries Served</div></div>
+    <div class="stat reveal d3"><div class="n"><span class="count" data-to="27412" data-comma="1">0</span></div><div class="l">Lab Tests Logged</div></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="quotes sec-pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <div class="kicker">05 — Word of Mouth</div>
+        <h2 class="h-display" style="margin-top:22px">From the<br>start line.</h2>
+      </div>
+    </div>
+    <div class="q-grid">
+      <article class="quote reveal">
+        <div class="mark">“</div>
+        <blockquote>The first gear company that sends me the force curves before the marketing deck. My sprint group switched after one testing block.</blockquote>
+        <div class="who"><b>Coach Adaeze Nwosu</b>National Sprint Program, Nigeria</div>
+      </article>
+      <article class="quote reveal d1">
+        <div class="mark">“</div>
+        <blockquote>I swapped plates six weeks out from a final. My 1500m split symmetry improved 2.1% — the lab told me exactly why.</blockquote>
+        <div class="who"><b>Marcus Webb</b>2× Olympian, 1500m</div>
+      </article>
+      <article class="quote reveal d2">
+        <div class="mark">“</div>
+        <blockquote>Their open biometrics dataset is now part of our graduate curriculum. No other manufacturer publishes at this level.</blockquote>
+        <div class="who"><b>Dr. Elena Ruiz</b>Director of Biomechanics, North Pacific University</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="partners sec-pad" style="padding:70px 0">
+  <div class="wrap">
+    <div class="kicker reveal" style="margin-bottom:40px">06 — Partnerships</div>
+    <div class="part-row">
+      <div class="part reveal"><span class="dot"></span><div><div class="t">Athletics Federation of Kenya</div><div class="s">Federation partner — 2024</div></div></div>
+      <div class="part reveal d1"><span class="dot"></span><div><div class="t">Japan Association of Athletics Federations</div><div class="s">Equipment trial — 2025</div></div></div>
+      <div class="part reveal d2"><span class="dot"></span><div><div class="t">Royal Dutch Athletics</div><div class="s">Relay program supplier</div></div></div>
+      <div class="part reveal"><span class="dot"></span><div><div class="t">North Pacific University</div><div class="s">Biomechanics lab residency</div></div></div>
+      <div class="part reveal d1"><span class="dot"></span><div><div class="t">University of Toronto</div><div class="s">Kinesiology research chair</div></div></div>
+      <div class="part reveal d2"><span class="dot"></span><div><div class="t">6 Federations · 4 Labs</div><div class="s">3 more in signature phase</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUSTAINABILITY ============ -->
+<section class="sustain sec-pad" id="sustainability">
+  <div class="wrap sus-grid">
+    <div class="reveal">
+      <div class="kicker">07 — Sustainability</div>
+      <h2 class="h-display sus-big" style="margin-top:22px"><span class="volt">72%</span> recycled AeroKnit by 2027.</h2>
+    </div>
+    <ul class="sus-list reveal d1">
+      <li><span class="pct">72%</span><span class="d">of current-generation AeroKnit yarn is recycled — up from 31% in 2023. The 2027 target is 90%.</span></li>
+      <li><span class="pct">12,000</span><span class="d">pairs returned through our Take-Back program and resurfaced into track surfaces and playground tiles.</span></li>
+      <li><span class="pct">100%</span><span class="d">plastic-free packaging since 2025 — molded fiber trays, soy inks, no poly bags.</span></li>
+      <li><span class="pct">9/9</span><span class="d">factory partners audited annually against our Fair Labor standard, with published results.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SIGNUP ============ -->
+<section class="signup sec-pad" style="padding:90px 0">
+  <div class="wrap signup-grid">
+    <div class="reveal">
+      <div class="kicker">The Lab Notes</div>
+      <h2 class="h-display" style="margin-top:22px">Data, not<br>spam.</h2>
+    </div>
+    <div class="reveal d1">
+      <form class="form" onsubmit="return false">
+        <input type="email" placeholder="YOUR@EMAIL.COM" aria-label="Email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="fine"><b>One email a month.</b> Lab data, release dates, race results. No hype, no daily drip, unsubscribe in one click — we measure opens, never sell the list.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top">KINETIQ<em>.</em></a>
+        <p>Performance sportswear &amp; equipment, measured in milliseconds. Founded 2019, Portland, Oregon.</p>
+        <div class="foot-addr">2141 NW Vaughn St, Ste 300<br>Portland, OR 97210<br>lab@kinetiq.example</div>
+      </div>
+      <div class="foot-col">
+        <h4>Shop</h4>
+        <a href="#hardware">Volt Sprint</a>
+        <a href="#hardware">Trail Apex</a>
+        <a href="#hardware">Daily Trainer Grid</a>
+        <a href="#hardware">Compression Line</a>
+        <a href="#hardware">Elite Gloves</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#lab">The Lab</a>
+        <a href="#roster">Athletes</a>
+        <a href="#campaign">Campaign</a>
+        <a href="#sustainability">Sustainability</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="foot-col">
+        <h4>Support</h4>
+        <a href="#">Sizing &amp; Fit Lab</a>
+        <a href="#">Returns</a>
+        <a href="#">Warranty</a>
+        <a href="#">Press Kit</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 KINETIQ LABS INC. — MEASURED IN MILLISECONDS</span>
+      <span><a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="#">CA Supply Chains Act</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// sticky nav state
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>40);
+onScroll();addEventListener('scroll',onScroll,{passive:true});
+// scroll reveals
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// animated counters
+const fmt=(v,c)=>c?v.toLocaleString('en-US'):String(v);
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,to=+el.dataset.to,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',comma=el.dataset.comma==='1';
+  const t0=performance.now(),dur=1800;
+  const step=t=>{const p=Math.min(1,(t-t0)/dur),e2=1-Math.pow(1-p,3);
+    el.textContent=pre+fmt(Math.round(to*e2),comma)+suf;
+    if(p<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);
+}),{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>

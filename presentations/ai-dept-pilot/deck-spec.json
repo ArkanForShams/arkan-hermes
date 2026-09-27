@@ -1,0 +1,170 @@
+{
+  "slide_size": "16:9",
+  "slides": [
+    {
+      "layout": "title",
+      "title": "The AI-Staffed IT Department",
+      "subtitle": "Readiness & 90-Day Pilot Proposal — Group IT Briefing",
+      "background": "0B1524",
+      "notes": "OPENING (memorize): 'Thank you for the time. In the next fifteen minutes I will show how we turn scattered AI usage into a governed, measurable capability in ninety days - and ask for one decision at the end.' Pause two seconds. Time: 1 min."
+    },
+    {
+      "layout": "title_only",
+      "title": "Scattered AI tools today; one governed capability in 90 days",
+      "bullets": [
+        {"text": "Where we are: strong delivery discipline; AI tools appearing ad-hoc across teams without coordination or measured value", "size": 20, "color": "EDE6D6"},
+        {"text": "What is changing: AI adoption is fragmenting - shadow tools, ungoverned data use, value that no one can prove", "size": 20, "color": "EDE6D6"},
+        {"text": "The answer: stand up an AI-staffed IT department as a 90-day pilot - six functions, gated pilots, measured value", "size": 20, "bold": true, "color": "C39A45"},
+        {"text": "The ask today: approve the 90-day pilot and its governance gates", "size": 20, "bold": true, "color": "C39A45"}
+      ],
+      "background": "101E32",
+      "notes": "MESSAGE: The whole argument in 30 seconds - executives can stop here and decide. Transition: 'Let me show why this is urgent, not just interesting.' Time: 2 min. If the slot shrinks, this slide alone carries the meeting."
+    },
+    {
+      "layout": "two_content",
+      "title": "AI usage is growing faster than our ability to govern it",
+      "subtitle": "Left: where we stand. Right: what it costs to leave it scattered.",
+      "bullets": [
+        {"text": "Where we are", "bold": true, "size": 18, "color": "C39A45"},
+        {"text": "IT delivery is disciplined and trusted", "size": 16, "color": "EDE6D6"},
+        {"text": "Teams already use AI tools ad-hoc (assistants, code helpers, reporting)", "size": 16, "color": "EDE6D6"},
+        {"text": "No common standards: no gate, no owner, no measured value", "size": 16, "color": "EDE6D6"},
+        {"text": " ", "size": 12},
+        {"text": "What scattered adoption costs", "bold": true, "size": 18, "color": "C39A45"},
+        {"text": "Shadow tools: unknown data handling - a governance exposure", "size": 16, "color": "EDE6D6"},
+        {"text": "Duplicated spend on overlapping tools", "size": 16, "color": "EDE6D6"},
+        {"text": "Real value stays anecdotal - cannot be scaled or defended", "size": 16, "color": "EDE6D6"}
+      ],
+      "background": "0B1524",
+      "notes": "MESSAGE: The complication in the room's own language: risk + waste + unprovable value. Transition: 'The opportunity is not more tools - it is organizing the ones that matter.' Time: 2.5 min. Do not name specific tools or teams - keep it systemic, non-accusatory."
+    },
+    {
+      "layout": "title_only",
+      "title": "The opportunity: a scored use-case portfolio, not a tool list",
+      "tables": [{"rows": [
+        ["Lane", "What runs there", "Examples from our work", "Gate to production"],
+        ["Automate", "High value, high confidence, human-final checks", "Status reporting, meeting summaries, ticket triage", "Eval pass + named owner + 90-day review"],
+        ["Assist", "Copilot-style support, human-in-loop", "Code review assist, document drafting, analysis", "Extended review checklist + user feedback loop"],
+        ["Explore", "Timeboxed experiments with kill dates", "Agentic workflows for PMO data, AI ops reports", "Kill or graduate at 90 days - no extensions"]
+      ]}],
+      "background": "F7F2E9",
+      "notes": "MESSAGE: Portfolio discipline replaces tool enthusiasm - every use case has a lane, an owner, and a gate. Transition: 'Here is the team structure that runs this portfolio.' Time: 2.5 min. Every example is drawn from work this department already does daily - nothing speculative."
+    },
+    {
+      "layout": "title_only",
+      "title": "The operating model: six functions staffed by AI agents, led as a real team",
+      "tables": [{"rows": [
+        ["Function", "What the agents do", "How Shams leads it"],
+        ["Business Architecture", "Solution design aligned to business goals", "Sets direction, reviews designs"],
+        ["Business Analysis", "Requirements, process mapping", "Reviews quality of questions asked"],
+        ["Development", "Application build, tests, delivery", "Reviews code and delivery gates"],
+        ["Backend Engineering", "Services, data, integrations", "Reviews reliability and cost"],
+        ["Support", "User support, ticket handling", "Reviews resolution quality"],
+        ["IT Operations", "Infrastructure, monitoring, reporting", "Reviews reports, grants autonomy"]
+      ]}],
+      "background": "F7F2E9",
+      "notes": "MESSAGE: This is a department, not a chatbot collection - the structure mirrors how real IT teams are organized. Transition: 'Autonomy is earned, not granted - here is the ladder.' Time: 2.5 min. This mirrors the six-pillar model already communicated publicly - consistency is deliberate."
+    },
+    {
+      "layout": "title_only",
+      "title": "Autonomy is earned in steps, with gates at every stage",
+      "shapes": [
+        {"shape": "chevron", "left": 0.6, "top": 3.1, "width": 2.9, "height": 1.1, "fill": "2E5E8C", "text": "1. Draft\nfor review"},
+        {"shape": "chevron", "left": 3.7, "top": 3.1, "width": 2.9, "height": 1.1, "fill": "9A7830", "text": "2. Execute\n& report"},
+        {"shape": "chevron", "left": 6.8, "top": 3.1, "width": 2.9, "height": 1.1, "fill": "C39A45", "text": "3. Wider\nautonomy"},
+        {"shape": "rectangle", "left": 9.9, "top": 3.1, "width": 2.6, "height": 1.1, "fill": "0B1524", "text": "Full autonomy\nonly by decision"}
+      ],
+      "bullets": [
+        {"text": "Every irreversible action passes a human gate - always", "size": 18, "bold": true, "color": "17263B"},
+        {"text": "Red lines from day one: no autonomous spend, no autonomous messages on our behalf, no production changes without approval", "size": 16, "color": "5A6B80"},
+        {"text": "Autonomy levels are documented, revocable, and logged", "size": 16, "color": "5A6B80"}
+      ],
+      "background": "F7F2E9",
+      "notes": "MESSAGE: Governance is the enabler, not the brake - this is what makes the pilot safe to approve. Transition: 'And here is the tier model that makes governance proportionate.' Time: 2 min. If asked about data safety: data-flow map exists per system before deployment - nothing enters prompts without classification."
+    },
+    {
+      "layout": "title_only",
+      "title": "Three risk tiers, proportionate controls - aligned with group IT policy",
+      "tables": [{"rows": [
+        ["Tier", "Examples", "Controls before deployment"],
+        ["Tier 1 - Low", "Internal drafts, summaries, no personal data", "Self-serve; monthly spot-audit"],
+        ["Tier 2 - Medium", "Customer-visible text, internal personal data", "Review before launch, eval pass, named owner"],
+        ["Tier 3 - High", "Decisions affecting people/finance, external actions", "Security review, data assessment, human approval gate, incident runbook"]
+      ]}],
+      "bullets": [
+        {"text": "Every system: owner, tier, gate status, review date - auditable in 5 minutes", "size": 16, "color": "5A6B80"}
+      ],
+      "background": "F7F2E9",
+      "notes": "MESSAGE: Nothing ships outside proportionate governance - the audit trail already exists as a working procedure. Transition: 'What we will actually do in the first 90 days.' Time: 2 min. Aligned with existing group IT risk policy - this skill stack was built around it."
+    },
+    {
+      "layout": "title_only",
+      "title": "The 90-day plan: three phases, each ending at a decision gate",
+      "shapes": [
+        {"shape": "chevron", "left": 0.6, "top": 2.9, "width": 4.0, "height": 1.2, "fill": "2E5E8C", "text": "Days 0-30\nFoundation"},
+        {"shape": "chevron", "left": 3.8, "top": 2.9, "width": 4.4, "height": 1.2, "fill": "9A7830", "text": "Days 31-60\nGated pilots"},
+        {"shape": "chevron", "left": 7.4, "top": 2.9, "width": 4.6, "height": 1.2, "fill": "C39A45", "text": "Days 61-90\nReview & decision"}
+      ],
+      "bullets": [
+        {"text": "Foundation (0-30): baseline measurement, use-case scoring, agent setup, governance pack signed", "size": 16, "color": "17263B"},
+        {"text": "Gated pilots (31-60): 2-3 use cases live (status reporting, meeting intelligence, ticket triage) with weekly value tracking", "size": 16, "color": "17263B"},
+        {"text": "Review & decision (61-90): measured results vs baseline; scale/adjust/stop recommendation to leadership", "size": 16, "color": "17263B"}
+      ],
+      "background": "F7F2E9",
+      "notes": "MESSAGE: Timeboxed with kill criteria - leadership gets a real decision point at day 90, not a fait accompli. Transition: 'What it costs - and what it returns, stated honestly.' Time: 2.5 min. Kill criteria are pre-agreed: no measured value by day 90 = stop, with lessons documented."
+    },
+    {
+      "layout": "title_only",
+      "title": "Investment is mostly reallocated time; value is measured, not promised",
+      "tables": [{"rows": [
+        ["Item", "Estimate", "Basis"],
+        ["Agent platform (already in use)", "SAR 0 incremental", "Existing Hermes setup, already owned"],
+        ["AI tooling licenses (pilot scope)", "SAR 2-4k / month", "Market range for team AI tooling - to be confirmed in sourcing"],
+        ["Staff time", "~2 FTE-equivalent, reallocated", "From current reporting/support workload, not new headcount"],
+        ["Expected return", "Target 30-50% time reduction on pilot workflows", "ASSUMPTION - baseline measured in weeks 1-2; ranges, not promises"]
+      ]}],
+      "bullets": [
+        {"text": "All figures are estimates with stated assumptions; the pilot's first act is measuring the real baseline", "size": 15, "italic": true, "color": "5A6B80"}
+      ],
+      "background": "F7F2E9",
+      "notes": "MESSAGE: Honest numbers - small incremental cost, reallocated effort, and value stated as ranges with the baseline measured first. Transition: 'The risks, and who owns each one.' Time: 2.5 min. Do NOT oversell here - this slide's honesty is its persuasiveness. If challenged on ROI: 'That is exactly why the baseline is measured before anything scales.'"
+    },
+    {
+      "layout": "title_only",
+      "title": "Top risks have named owners and mitigations before day one",
+      "tables": [{"rows": [
+        ["Risk", "Mitigation", "Owner"],
+        ["Data exposure via AI tools", "Tier gates + data-flow maps before any deployment", "AI Governance gate owner"],
+        ["Value stays anecdotal", "Baseline measured first; value ledger reviewed weekly", "Pilot lead"],
+        ["Team disruption", "Assist-first adoption; staff time reallocated, not added", "Department lead"],
+        ["Shadow AI continues", "Sanctioned path made easier than workaround; quarterly inventory", "IT security liaison"]
+      ]}],
+      "background": "F7F2E9",
+      "notes": "MESSAGE: We have thought about what can go wrong - and who owns each response. Transition: 'Which brings us to the decision.' Time: 1.5 min."
+    },
+    {
+      "layout": "section",
+      "title": "The ask",
+      "bullets": [
+        {"text": "Approve the 90-day AI department pilot", "size": 24, "bold": true, "color": "EDE6D6"},
+        {"text": "With its three governance gates and the day-90 decision point", "size": 20, "color": "C39A45"},
+        {"text": "Decision requested today: GO / ADJUST / NO-GO", "size": 20, "bold": true, "color": "C39A45"}
+      ],
+      "background": "0B1524",
+      "notes": "CLOSING (memorize): 'We are asking for one decision today: approve the 90-day pilot with its governance gates. If the measured value is not there at day 90, we stop and we will have lost little. If it is there, we scale a capability our competitors are already building.' Then stop talking. Silence after the ask is strength. Time: 1 min + Q&A. Q&A prep: see companion document - layered answers for the 8 anticipated questions."
+    },
+    {
+      "layout": "title_only",
+      "title": "Appendix: assumptions, sources, and measurement plan",
+      "bullets": [
+        {"text": "All financial figures are sourcing-stage estimates; the pilot's first act is baseline measurement", "size": 16, "color": "17263B"},
+        {"text": "Use-case examples drawn from current department workflows (status reporting, meeting summaries, ticket triage, code review assist)", "size": 16, "color": "17263B"},
+        {"text": "Governance model aligned with group IT risk and security policy; audit trail per system", "size": 16, "color": "17263B"},
+        {"text": "Measurement plan: baseline (wk 1-2) -> weekly value tracking -> day-90 review vs baseline", "size": 16, "color": "17263B"},
+        {"text": "Reference: full procedure stack available - maturity model, governance tiers, pilot gate criteria", "size": 16, "color": "17263B"}
+      ],
+      "background": "F7F2E9",
+      "notes": "Do not present unless asked. Maps to anticipated questions 3, 5, 6 in the Q&A document."
+    }
+  ]
+}

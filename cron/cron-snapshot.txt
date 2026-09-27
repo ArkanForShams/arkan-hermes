@@ -1,2 +1,73 @@
-No scheduled jobs.
-Create one with 'hermes cron create ...' or the /cron command in chat.
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         Scheduled Jobs                                  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+  a8b9f2c384f2 [active]
+    Name:      arkan-hermes-weekly-backup
+    Schedule:  every sunday 9am
+    Repeat:    ∞
+    Next run:  2026-10-04T09:00:00+03:00
+    Deliver:   origin
+    Skills:    github-backup, browse-safe, security-gate
+    Last run:  2026-09-27T22:28:09.021814+03:00  error: Blocked: prompt matches threat pattern 'prompt_injection'. Cron prompts must not contain injection or exfiltration payloads.
+    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-09-27T09:00:00+03:00, ran 2026-09-27T22:28:07.322816+03:00 (13h 28m late)
+    Execution: failed  c7fe706267af4fe3a8d1a7f2d2827a8e
+
+  d07076b7354f [active]
+    Name:      memory-wiki-ingest
+    Schedule:  0 * * * *
+    Repeat:    ∞
+    Next run:  2026-09-28T01:00:00+03:00
+    Deliver:   local
+    Script:    memory-wiki-ingest.sh
+    Mode:      no-agent (script stdout delivered directly)
+    Last run:  2026-09-28T00:00:25.565234+03:00  ok
+    Dispatch:  on time (scheduled 2026-09-28T00:00:00+03:00)
+    Execution: completed  626ee5dd55874879a91970970b306236
+
+  0abb28bce30b [active]
+    Name:      memory-reflection-trigger
+    Schedule:  */5 * * * *
+    Repeat:    ∞
+    Next run:  2026-09-28T01:00:00+03:00
+    Deliver:   local
+    Script:    memory-reflection-trigger.sh
+    Mode:      no-agent (script stdout delivered directly)
+    Last run:  2026-09-28T00:55:25.327105+03:00  ok
+    Dispatch:  on time (scheduled 2026-09-28T00:55:00+03:00)
+    Execution: completed  aa1dca2a90d141a08dbe30bf78435a98
+
+  8b2208ea74e5 [active]
+    Name:      memory-dlq-report
+    Schedule:  0 */6 * * *
+    Repeat:    ∞
+    Next run:  2026-09-28T06:00:00+03:00
+    Deliver:   local
+    Script:    memory-dlq-report.sh
+    Mode:      no-agent (script stdout delivered directly)
+    Last run:  2026-09-28T00:00:25.361654+03:00  ok
+    Dispatch:  on time (scheduled 2026-09-28T00:00:00+03:00)
+    Execution: completed  852ffdf1f7814335b6365306a1651893
+
+  4ed13714393e [active]
+    Name:      memory-decay-scan
+    Schedule:  0 3 * * 0
+    Repeat:    ∞
+    Next run:  2026-10-04T03:00:00+03:00
+    Deliver:   local
+    Script:    memory-decay-scan.sh
+    Mode:      no-agent (script stdout delivered directly)
+    Last run:  2026-09-27T22:28:07.993982+03:00  ok
+    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-09-27T03:00:00+03:00, ran 2026-09-27T22:28:07.322816+03:00 (19h 28m late)
+    Execution: completed  9710dcacfeca40cb9cfe483c63eee1f5
+
+  0476e751dcc5 [active]
+    Name:      memory-semantic-dedup
+    Schedule:  0 4 1 * *
+    Repeat:    ∞
+    Next run:  2026-10-01T04:00:00+03:00
+    Deliver:   local
+    Script:    memory-semantic-dedup.sh
+    Mode:      no-agent (script stdout delivered directly)
+
