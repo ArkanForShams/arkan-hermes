@@ -1,0 +1,241 @@
+#!/usr/bin/env python3
+"""Build vehicle-3d.html — 3D showroom + transparent pricing math."""
+import os
+BASE = os.path.expanduser("~/hermes-workspace/marketing/autolead-website")
+
+CHECK = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#e63946" stroke-width="2" stroke-linecap="round"/></svg>'
+
+# ---- vehicle catalog: type for 3D profile, specs, pricing (SAR/mo, DRAFT tariffs) ----
+VEHICLES = [
+ dict(id="i10", name="Hyundai i10", cls="Essential · City Hatch", seg="Compact",
+      ar="هيونداي آي 10", three="hatch", base=1349,
+      specs=dict(engine="1.0L · 67 hp", trans="Automatic", seats="4 adults", bags="2 large + 1 small",
+                 fuel="Petrol · ~5.4 L/100km", tech="Bluetooth · USB-C · Rear sensors",
+                 safety="2 airbags · ABS · ESC", boot="252 L")),
+ dict(id="pegas", name="Kia Pegas", cls="Essential · Compact Sedan", seg="Compact",
+      ar="كيا بيغاس", three="sedan", base=1349,
+      specs=dict(engine="1.4L · 95 hp", trans="Automatic", seats="5 adults", bags="2 large + 2 small",
+                 fuel="Petrol · ~5.8 L/100km", tech="Touchscreen 8\" · CarPlay · Rear camera",
+                 safety="2 airbags · ABS · ESC", boot="460 L")),
+ dict(id="accent", name="Hyundai Accent", cls="Essential · Compact Sedan", seg="Compact",
+      ar="هيونداي أكسنت", three="sedan", base=1449,
+      specs=dict(engine="1.6L · 123 hp", trans="Automatic", seats="5 adults", bags="2 large + 2 small",
+                 fuel="Petrol · ~6.2 L/100km", tech="Touchscreen 8\" · CarPlay · Cruise control",
+                 safety="4 airbags · ABS · ESC", boot="458 L")),
+ dict(id="yaris", name="Toyota Yaris", cls="Essential · Compact Sedan", seg="Compact",
+      ar="تويوتا يارِس", three="sedan", base=1499,
+      specs=dict(engine="1.5L · 105 hp", trans="Automatic", seats="5 adults", bags="2 large + 1 small",
+                 fuel="Petrol · ~5.9 L/100km", tech="Touchscreen 7\" · CarPlay · Keyless entry",
+                 safety="4 airbags · ABS · ESC · Lane alert", boot="452 L")),
+ dict(id="corolla", name="Toyota Corolla", cls="Plus · Mid-size Sedan", seg="Mid-size",
+      ar="تويوتا كورولا", three="sedan", base=2390,
+      specs=dict(engine="1.8L · 139 hp", trans="Automatic CVT", seats="5 adults", bags="3 large",
+                 fuel="Petrol · ~6.4 L/100km", tech="9\" display · CarPlay · Adaptive cruise",
+                 safety="6 airbags · ESC · Lane keep · Pre-collision", boot="471 L")),
+ dict(id="camry", name="Toyota Camry", cls="Plus · Full-size Sedan", seg="Full-size",
+      ar="تويوتا كامري", three="sedan", base=2790,
+      specs=dict(engine="2.5L · 204 hp", trans="Automatic 8-speed", seats="5 adults", bags="3 large",
+                 fuel="Petrol · ~7.1 L/100km", tech="9\" display · CarPlay · Wireless charge",
+                 safety="8 airbags · ESC · Blind-spot · Pre-collision", boot="524 L")),
+ dict(id="tucson", name="Hyundai Tucson", cls="Plus · Compact SUV", seg="SUV",
+      ar="هيونداي توسان", three="suv", base=2890,
+      specs=dict(engine="2.0L · 156 hp", trans="Automatic 6-speed", seats="5 adults", bags="3 large",
+                 fuel="Petrol · ~8.0 L/100km", tech="10.25\" display · CarPlay · Power tailgate",
+                 safety="6 airbags · ESC · Blind-spot · Rear cross alert", boot="616 L")),
+ dict(id="prado", name="Toyota Land Cruiser Prado", cls="Premium · Large SUV 4x4", seg="SUV 4x4",
+      ar="تويوتا لاند كروزر برادو", three="suv", base=5290,
+      specs=dict(engine="4.0L V6 · 275 hp", trans="Automatic 6-speed", seats="7 seats", bags="3 large + roof",
+                 fuel="Petrol · ~11.5 L/100km", tech="Crawl control · Multi-terrain · 360° camera",
+                 safety="8 airbags · ESC · Pre-collision · Radar cruise", boot="620 L (5-seat mode)")),
+ dict(id="es", name="Lexus ES", cls="Premium · Executive Sedan", seg="Luxury",
+      ar="لكسس ES", three="luxury", base=5490,
+      specs=dict(engine="3.5L V6 · 300 hp", trans="Automatic 8-speed", seats="5 adults", bags="3 large",
+                 fuel="Petrol · ~8.5 L/100km", tech="12.3\" display · Mark Levinson audio · HUD",
+                 safety="10 airbags · ESC · Full Lexus Safety System+", boot="454 L")),
+]
+
+COLORS = [("e63946","Signature Red"),("1f2430","Obsidian"),("b9bcc4","Titanium Silver"),("e8e9eb","Pearl White"),("2d4a5e","Steel Blue")]
+
+HEAD = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Vehicle Studio — Explore & Calculate — AutoLead.sa</title>
+<meta name="description" content="Rotate every vehicle in 3D, see full specs, and calculate your exact monthly lease — line by line.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.vstudio{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:stretch}
+.stage{position:relative;border:1px solid var(--line);border-radius:20px;background:radial-gradient(640px 300px at 50% 108%,rgba(230,57,70,.14),transparent 62%),var(--surface);min-height:460px;overflow:hidden}
+.stage canvas{display:block;width:100%;height:100%;position:absolute;inset:0}
+.stage .hint{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:12px;color:var(--muted);letter-spacing:.04em}
+.stage .topbar{position:absolute;top:16px;left:18px;right:18px;display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:2}
+.stage .vname{font-weight:800;font-size:19px;letter-spacing:-.01em}
+.stage .vcls{font-size:12px;color:var(--muted)}
+.swatches{position:absolute;top:64px;left:18px;display:flex;flex-direction:column;gap:9px;z-index:2}
+.swatch{width:26px;height:26px;border-radius:50%;border:2px solid rgba(255,255,255,.25);cursor:pointer;padding:0}
+.swatch.on{border-color:#fff;box-shadow:0 0 0 2px var(--accent)}
+.panel{border:1px solid var(--line);border-radius:20px;background:var(--surface);padding:26px 24px;display:flex;flex-direction:column;gap:18px}
+.panel .pricebig{font-size:42px;font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.panel .pricebig small{font-size:14px;color:var(--muted);font-weight:400}
+.specgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.specgrid .sp{font-size:13.5px;color:var(--muted)}
+.specgrid .sp b{display:block;color:var(--ink);font-weight:700;font-size:13.5px;margin-top:1px}
+.calcrows{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:9px;font-size:14px}
+.calcrows .r{display:flex;justify-content:space-between;gap:10px}
+.calcrows .r span{color:var(--muted)}
+.calcrows .r b{font-weight:700}
+.calcrows .r.tot{border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
+.calcrows .r.tot b{color:var(--accent);font-size:17px}
+.pick{display:flex;gap:8px;flex-wrap:wrap}
+.pick button{background:var(--surface-2);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:8px 15px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.pick .on{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+@media (max-width:980px){.vstudio{grid-template-columns:1fr}.stage{min-height:380px}}
+</style>
+</head>
+<body data-al-page="models">
+<header data-al-header></header>
+"""
+
+BODY = """
+<section class="hero" style="padding:60px 0 48px"><div class="wrap">
+  <span class="eyebrow">3D Vehicle Studio</span>
+  <h1>Walk around it. <em>Calculate it.</em></h1>
+  <p class="lead">Drag to rotate, scroll to zoom, tap a color to repaint. Every vehicle shows its
+  complete specification and the exact math behind its monthly price — nothing hidden.</p>
+</div></section>
+
+<section style="padding-top:10px"><div class="wrap">
+  <div class="pick" id="vPick" style="margin-bottom:22px"></div>
+  <div class="vstudio">
+    <div class="stage" id="stage">
+      <div class="topbar"><div><div class="vname" id="sName">—</div><div class="vcls" id="sCls">—</div></div>
+      <a class="btn btn-accent btn-sm" href="quote.html">Lease this car</a></div>
+      <div class="swatches" id="swatches"></div>
+      <div class="hint">drag to rotate · scroll to zoom · swatches to repaint · turns by itself when idle</div>
+    </div>
+    <div class="panel">
+      <div>
+        <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:8px">All-inclusive monthly — 15 mo term</div>
+        <div class="pricebig"><span id="pMain">—</span> <small>SAR / mo</small></div>
+        <div style="font-size:12px;color:var(--muted);margin-top:6px"><span class="draft">DRAFT TARIFF</span> · final price confirmed at reservation</div>
+      </div>
+      <div class="specgrid" id="specs"></div>
+      <div class="calcrows" id="calc"></div>
+      <div class="calcrows" id="totals" style="border-top:none;padding-top:0"></div>
+    </div>
+  </div>
+  <p class="note">3D models are illustrative body shapes per segment — final colors and trims may vary by availability.</p>
+</div></section>
+
+<section style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head"><div class="kicker">Full price list</div><h2>Every model, detailed</h2></div>
+  <div class="tbl"><table>
+  <thead><tr><th>Vehicle</th><th>Segment</th><th>Engine / seats</th><th class="hl">12 mo</th><th>15 mo</th><th>24 mo</th></tr></thead>
+  <tbody id="allRows"></tbody></table></div>
+  <p class="note">How prices derive: market base × term factor (12: ×1.00 · 15: ×0.96 · 24: ×0.92) · all-inclusive (insurance, maintenance, registration, roadside) · VAT 15% at invoice · <span class="draft">DRAFT TARIFFS</span></p>
+</div></section>
+"""
+
+SCRIPT_BODY = r"""
+(function(){
+  var VEHICLES = ALDATA.VEHICLES, COLORS = ALDATA.COLORS, CHECK = ALDATA.CHECK;
+  var $ = function(id){return document.getElementById(id);};
+  var fmt = function(n){return n.toLocaleString("en-US");};
+  var cur = 0, curColor = COLORS[0][0], show3d = null;
+
+  // price math — same factors as dynamic-pricing engine
+  function price(v, term){
+    var f = term==12?1.00:(term==15?0.96:0.92);
+    return Math.round(v.base*f/10)*10;
+  }
+  function calc(v){
+    var m15 = price(v,15);
+    var ins = Math.round(v.base*0.16), mnt = Math.round(v.base*0.11),
+        reg = 90, rsa = 45, net = m15-ins-mnt-reg-rsa;
+    var dep = m15>4000?3500:(m15>2000?2000:1500);
+    var vat = Math.round(m15*0.15);
+    $("pMain").textContent = fmt(m15);
+    $("calc").innerHTML =
+      '<div class="r"><span>Vehicle net lease (what the car itself costs)</span><b>SAR '+fmt(net)+'</b></div>'
+     +'<div class="r"><span>+ Comprehensive insurance</span><b>SAR '+fmt(ins)+'</b></div>'
+     +'<div class="r"><span>+ Maintenance &amp; service plan</span><b>SAR '+fmt(mnt)+'</b></div>'
+     +'<div class="r"><span>+ Registration &amp; renewal</span><b>SAR '+fmt(reg)+'</b></div>'
+     +'<div class="r"><span>+ 24/7 roadside assistance</span><b>SAR '+fmt(rsa)+'</b></div>';
+    $("totals").innerHTML =
+      '<div class="r tot"><span>Monthly total (before VAT)</span><b>SAR '+fmt(m15)+'</b></div>'
+     +'<div class="r"><span>VAT 15% (added at invoice)</span><b>SAR '+fmt(vat)+'</b></div>'
+     +'<div class="r"><span>Refundable deposit (one-off)</span><b>SAR '+fmt(dep)+'</b></div>'
+     +'<div class="r"><span>Included mileage</span><b>3,500 km/mo</b></div>';
+  }
+  function specs(v){
+    var s = v.specs;
+    $("specs").innerHTML =
+      '<div class="sp">Engine<b>'+s.engine+'</b></div><div class="sp">Transmission<b>'+s.trans+'</b></div>'
+     +'<div class="sp">Seats<b>'+s.seats+'</b></div><div class="sp">Luggage<b>'+s.bags+'</b></div>'
+     +'<div class="sp">Fuel<b>'+s.fuel+'</b></div><div class="sp">Boot space<b>'+s.boot+'</b></div>'
+     +'<div class="sp" style="grid-column:1/-1">Technology<b>'+s.tech+'</b></div>'
+     +'<div class="sp" style="grid-column:1/-1">Safety<b>'+s.safety+'</b></div>';
+  }
+  function pick(i){
+    cur = i;
+    var v = VEHICLES[i];
+    $("sName").textContent = v.name + " · " + v.ar;
+    $("sCls").textContent = v.cls;
+    if (show3d) show3d.setCar(v.three, parseInt(curColor,16));
+    calc(v); specs(v);
+    document.querySelectorAll("#vPick button").forEach(function(b,j){
+      b.classList.toggle("on", j===i);
+    });
+  }
+  // picker buttons
+  VEHICLES.forEach(function(v,i){
+    var b = document.createElement("button");
+    b.textContent = v.name;
+    b.onclick = function(){ pick(i); };
+    $("vPick").appendChild(b);
+  });
+  // swatches
+  COLORS.forEach(function(c,i){
+    var s = document.createElement("button");
+    s.className = "swatch"+(i===0?" on":"");
+    s.style.background = "#"+c[0];
+    s.title = c[1];
+    s.onclick = function(){
+      curColor = c[0];
+      document.querySelectorAll(".swatch").forEach(function(x){x.classList.remove("on");});
+      s.classList.add("on");
+      if (show3d) show3d.setCar(VEHICLES[cur].three, parseInt(curColor,16));
+    };
+    $("swatches").appendChild(s);
+  });
+  // full price table
+  $("allRows").innerHTML = VEHICLES.map(function(v){
+    var p12=price(v,12), p15=price(v,15), p24=price(v,24);
+    var seg = '<span class="seg">'+v.seg+'</span>';
+    var eng = v.specs.engine+'<span class="seg">'+v.specs.seats+'</span>';
+    var pr = function(x){return '<span class="pr">SAR '+fmt(x)+'</span>';};
+    return '<tr><td><b>'+v.name+'</b>'+seg+'</td><td>'+v.cls+'</td><td>'+eng+'</td>'
+          +'<td>'+pr(p12)+'</td><td>'+pr(p15)+'</td><td>'+pr(p24)+'</td></tr>';
+  }).join("");
+
+  // init 3D if three.js loaded
+  function init3d(){
+    if (window.AL3D){ show3d = window.AL3D.makeShowroom($("stage")); }
+    else { $("stage").innerHTML = '<div style="position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px">3D preview needs internet (three.js CDN). Specs &amp; calculations below still work offline.</div>'; }
+    pick(0);
+  }
+  if (document.readyState==="loading") document.addEventListener("DOMContentLoaded", init3d); else init3d();
+})();
+"""
+
+import json
+
+html = HEAD + BODY + '<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>\n<script src="site.js"></script>\n<script>var ALDATA={VEHICLES:' + json.dumps(VEHICLES, ensure_ascii=False) + ',COLORS:' + json.dumps(COLORS) + ',CHECK:' + json.dumps(CHECK) + '};\n' + SCRIPT_BODY + "</script>\n</body>\n</html>"
+
+with open(os.path.join(BASE, "vehicle-3d.html"), "w") as f:
+    f.write(html)
+print("built vehicle-3d.html", len(html), "bytes")
