@@ -11,20 +11,20 @@
 <style>
 /* ============================================================
    AUTOLEAD.SA — bilingual (EN/AR) leasing site prototype v2
-   Theme DNA from live autolead.sa: #111111 bg, #fff ink, Open Sans
-   Extended with a single premium gold accent.
+   Theme: light elegant professional — ivory #f6f5f2, ink #171a1d, AutoLead red accent
+   Single AutoLead red accent (#e63946).
    NOTE: all prices/claims are DRAFT placeholders pending approval.
    ============================================================ */
 :root{
-  --bg:#111111;
-  --surface:#1a1a1c;
-  --surface-2:#202024;
-  --ink:#ffffff;
-  --muted:#a3a3a8;
-  --line:rgba(255,255,255,.09);
-  --gold:#e63946;
-  --gold-deep:#c1272d;
-  --gold-soft:rgba(224,180,87,.12);
+  --bg:#f6f5f2;
+  --surface:#ffffff;
+  --surface-2:#efede8;
+  --ink:#171a1d;
+  --muted:#666c76;
+  --line:rgba(23,26,32,.10);
+  --accent:#e63946;
+  --accent-deep:#c1272d;
+  --accent-soft:rgba(230,57,70,.10);
   --radius:16px;
   --radius-sm:10px;
 }
@@ -60,7 +60,7 @@ header{
   background:transparent;border:none;color:var(--muted);cursor:pointer;
   font-family:inherit;font-size:12.5px;padding:5px 14px;transition:.15s;
 }
-.lang-chip button.on{background:var(--accent);color:#141414;font-weight:700}
+.lang-chip button.on{background:var(--accent);color:#ffffff;font-weight:700}
 .lang-chip button:hover:not(.on){color:var(--ink)}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -68,9 +68,9 @@ header{
   padding:12px 26px;cursor:pointer;border:1px solid transparent;
   transition:.2s;white-space:nowrap;
 }
-.btn-accent{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#141414}
+.btn-accent{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#ffffff}
 .btn-accent:hover{filter:brightness(1.08);transform:translateY(-1px)}
-.btn-ghost{border-color:rgba(255,255,255,.22);color:var(--ink)}
+.btn-ghost{border-color:rgba(23,26,32,.22);color:var(--ink)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 .btn-sm{padding:9px 20px;font-size:13.5px}
 
@@ -83,14 +83,14 @@ header{
 .hero::before{
   content:"";position:absolute;inset:0;
   background:
-    radial-gradient(900px 420px at 85% 20%, rgba(224,180,87,.10), transparent 60%),
-    radial-gradient(700px 500px at 8% 85%, rgba(224,180,87,.05), transparent 60%);
+    radial-gradient(900px 420px at 85% 20%, rgba(230,57,70,.08), transparent 60%),
+    radial-gradient(700px 500px at 8% 85%, rgba(23,26,32,.05), transparent 60%);
   pointer-events:none;
 }
 [dir="rtl"] .hero::before{
   background:
-    radial-gradient(900px 420px at 15% 20%, rgba(224,180,87,.10), transparent 60%),
-    radial-gradient(700px 500px at 92% 85%, rgba(224,180,87,.05), transparent 60%);
+    radial-gradient(900px 420px at 15% 20%, rgba(230,57,70,.08), transparent 60%),
+    radial-gradient(700px 500px at 92% 85%, rgba(23,26,32,.05), transparent 60%);
 }
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative}
 .eyebrow{
@@ -118,12 +118,12 @@ h1 em{font-style:normal;color:var(--accent)}
 .car-stage{
   position:relative;border:1px solid var(--line);border-radius:20px;
   background:
-    radial-gradient(420px 240px at 70% 18%, rgba(224,180,87,.14), transparent 65%),
+    radial-gradient(420px 240px at 70% 18%, rgba(230,57,70,.14), transparent 65%),
     linear-gradient(180deg,#191919,#131313);
   padding:36px 32px 28px;
 }
 .car-stage .tag{
-  display:inline-flex;border:1px solid rgba(224,180,87,.4);color:var(--accent);
+  display:inline-flex;border:1px solid rgba(230,57,70,.4);color:var(--accent);
   border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.1em;
   text-transform:uppercase;padding:5px 14px;margin-bottom:20px;
 }
@@ -155,11 +155,11 @@ section{padding:88px 0}
   padding:30px 28px;display:flex;flex-direction:column;position:relative;
   transition:.25s;
 }
-.plan:hover{transform:translateY(-4px);border-color:rgba(224,180,87,.45)}
-.plan.hot{border-color:var(--accent);background:linear-gradient(180deg,rgba(224,180,87,.07),var(--surface) 42%)}
+.plan:hover{transform:translateY(-4px);border-color:rgba(230,57,70,.45)}
+.plan.hot{border-color:var(--accent);background:linear-gradient(180deg,rgba(230,57,70,.07),var(--surface) 42%)}
 .plan .badge{
   position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-  background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#141414;
+  background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#ffffff;
   font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
   border-radius:999px;padding:5px 16px;white-space:nowrap;
 }
@@ -173,7 +173,7 @@ section{padding:88px 0}
 .plan .price .per{font-size:13px;color:var(--muted)}
 .plan .term{font-size:12.5px;color:var(--muted);margin-bottom:22px}
 .plan ul{list-style:none;display:grid;gap:11px;margin-bottom:26px}
-.plan li{display:flex;gap:10px;font-size:14px;color:#d6d6d9}
+.plan li{display:flex;gap:10px;font-size:14px;color:#3a3f46}
 .plan li svg{flex:none;margin-top:3px}
 .plan .btn{margin-top:auto;width:100%}
 .plans-note{margin-top:22px;font-size:12.5px;color:var(--muted);text-align:center}
@@ -218,9 +218,9 @@ section{padding:88px 0}
 
 /* ---------- band / footer ---------- */
 .band{
-  border:1px solid rgba(224,180,87,.35);border-radius:22px;
+  border:1px solid rgba(230,57,70,.35);border-radius:22px;
   background:
-    radial-gradient(600px 240px at 80% 0%, rgba(224,180,87,.13), transparent 60%),
+    radial-gradient(600px 240px at 80% 0%, rgba(230,57,70,.13), transparent 60%),
     var(--surface);
   padding:52px 48px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;
 }
@@ -303,9 +303,9 @@ footer .f-links a:hover{color:var(--ink)}
             <stop offset="0" stop-color="#2b2b30"/><stop offset="1" stop-color="#151517"/>
           </linearGradient>
         </defs>
-        <ellipse cx="260" cy="208" rx="240" ry="10" fill="rgba(224,180,87,.10)"/>
-        <path d="M60 168 C70 150 90 142 120 140 L165 138 C185 118 215 108 250 108 L305 108 C345 108 375 120 400 140 L430 144 C462 148 476 158 478 170 L478 186 C478 194 472 198 464 198 L64 198 C54 198 48 192 48 182 Z" fill="url(#bodyGrad-en)" stroke="rgba(224,180,87,.55)" stroke-width="2"/>
-        <path d="M180 138 L216 116 L300 116 L330 138 Z" fill="#0d0d0f" stroke="rgba(224,180,87,.35)" stroke-width="1.5"/>
+        <ellipse cx="260" cy="208" rx="240" ry="10" fill="rgba(230,57,70,.08)"/>
+        <path d="M60 168 C70 150 90 142 120 140 L165 138 C185 118 215 108 250 108 L305 108 C345 108 375 120 400 140 L430 144 C462 148 476 158 478 170 L478 186 C478 194 472 198 464 198 L64 198 C54 198 48 192 48 182 Z" fill="url(#bodyGrad-en)" stroke="rgba(230,57,70,.55)" stroke-width="2"/>
+        <path d="M180 138 L216 116 L300 116 L330 138 Z" fill="#0d0d0f" stroke="rgba(230,57,70,.35)" stroke-width="1.5"/>
         <circle cx="140" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
         <circle cx="140" cy="198" r="9" fill="#e63946"/>
         <circle cx="396" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
@@ -537,9 +537,9 @@ footer .f-links a:hover{color:var(--ink)}
             <stop offset="0" stop-color="#2b2b30"/><stop offset="1" stop-color="#151517"/>
           </linearGradient>
         </defs>
-        <ellipse cx="260" cy="208" rx="240" ry="10" fill="rgba(224,180,87,.10)"/>
-        <path d="M60 168 C70 150 90 142 120 140 L165 138 C185 118 215 108 250 108 L305 108 C345 108 375 120 400 140 L430 144 C462 148 476 158 478 170 L478 186 C478 194 472 198 464 198 L64 198 C54 198 48 192 48 182 Z" fill="url(#bodyGrad-ar)" stroke="rgba(224,180,87,.55)" stroke-width="2"/>
-        <path d="M180 138 L216 116 L300 116 L330 138 Z" fill="#0d0d0f" stroke="rgba(224,180,87,.35)" stroke-width="1.5"/>
+        <ellipse cx="260" cy="208" rx="240" ry="10" fill="rgba(230,57,70,.08)"/>
+        <path d="M60 168 C70 150 90 142 120 140 L165 138 C185 118 215 108 250 108 L305 108 C345 108 375 120 400 140 L430 144 C462 148 476 158 478 170 L478 186 C478 194 472 198 464 198 L64 198 C54 198 48 192 48 182 Z" fill="url(#bodyGrad-ar)" stroke="rgba(230,57,70,.55)" stroke-width="2"/>
+        <path d="M180 138 L216 116 L300 116 L330 138 Z" fill="#0d0d0f" stroke="rgba(230,57,70,.35)" stroke-width="1.5"/>
         <circle cx="140" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>
         <circle cx="140" cy="198" r="9" fill="#e63946"/>
         <circle cx="396" cy="198" r="26" fill="#0a0a0b" stroke="#3a3a40" stroke-width="6"/>

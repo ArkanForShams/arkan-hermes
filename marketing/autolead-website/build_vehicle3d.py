@@ -234,7 +234,7 @@ SCRIPT_BODY = r"""
 
 import json
 
-html = HEAD + BODY + '<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>\n<script src="site.js"></script>\n<script>var ALDATA={VEHICLES:' + json.dumps(VEHICLES, ensure_ascii=False) + ',COLORS:' + json.dumps(COLORS) + ',CHECK:' + json.dumps(CHECK) + '};\n' + SCRIPT_BODY + "</script>\n</body>\n</html>"
+html = HEAD + BODY + '<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>\n<script src="three-scene.js"></script>\n<script src="site.js"></script>\n<script>var ALDATA={VEHICLES:' + json.dumps(VEHICLES, ensure_ascii=False) + ',COLORS:' + json.dumps(COLORS) + ',CHECK:' + json.dumps(CHECK) + '};\n' + SCRIPT_BODY + "</script>\n</body>\n</html>"
 
 with open(os.path.join(BASE, "vehicle-3d.html"), "w") as f:
     f.write(html)

@@ -98,7 +98,12 @@
     var cam = new THREE.PerspectiveCamera(38, W/H, .1, 100);
     cam.position.set(6.2, 2.6, 6.2);
 
-    var ren = new THREE.WebGLRenderer({antialias:true, alpha:true});
+    var ren;
+    try { ren = new THREE.WebGLRenderer({antialias:true, alpha:true}); }
+    catch(err){
+      container.innerHTML = '<div style="position:absolute;inset:0;display:grid;place-items:center;color:#a3a3a8;font-size:14px;padding:24px;text-align:center">3D view needs WebGL — enable hardware acceleration in your browser settings, or view the specs &amp; calculations beside this panel.</div>';
+      return { setCar: function(){}, camera: null };
+    }
     ren.setPixelRatio(Math.min(window.devicePixelRatio||1, 2));
     ren.setSize(W, H);
     ren.shadowMap.enabled = true;
