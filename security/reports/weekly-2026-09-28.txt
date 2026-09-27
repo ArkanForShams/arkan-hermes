@@ -1,3 +1,21 @@
 === ARKAN weekly maintenance — 2026-09-28 00:58 ===
 
 --- 1. GitHub archive sync ---
+To https://github.com/ArkanForShams/arkan-hermes.git
+   c65d57a..8126497  main -> main
+Pushed to github.com/ArkanForShams/arkan-hermes (private).
+
+--- 2. Archive integrity (gitleaks on working tree) ---
+
+[90m12:58AM[0m [31mFTL[0m [1mUnknown report format: [0m
+gitleaks flagged findings — review!
+
+--- 3. Gate baseline (skill/repo posture) ---
+== BUMBLEBEE baseline inventory (read-only) ==
+records: 87 -> {'pypi': 86, '?': 1}
+saved: /home/shams/hermes-workspace/security/reports/inventory-20260928-005856.ndjson
+
+--- 4. Machine snapshot ---
+disk: 947G free
+mem:  4.4Gi available
+date: 2026-09-27 21:58 UTC
