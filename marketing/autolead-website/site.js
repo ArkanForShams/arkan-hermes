@@ -8,7 +8,7 @@
     {href:"b2c-plans.html",   en:"Individual",  id:"b2c"},
     {href:"b2b-plans.html",   en:"Corporate",   id:"b2b"},
     {href:"fleet-models.html",en:"Models & Prices", id:"models"},
-    {href:"vehicle-3d.html",  en:"3D Studio",   id:"studio"},
+    {href:"vehicle-studio.html", en:"Vehicles", id:"studio"},
     {href:"dynamic-pricing.html", en:"Dynamic Pricing", id:"pricing"},
     {href:"contracts-billing.html", en:"Contracts & Billing", id:"contracts"},
     {href:"faq.html",         en:"FAQ",         id:"faq"}
