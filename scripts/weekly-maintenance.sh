@@ -15,7 +15,7 @@ mkdir -p "$WS/security/reports"
   echo ""
   echo "--- 2. Archive integrity (gitleaks on working tree) ---"
   if command -v gitleaks >/dev/null; then
-    (cd "$WS" && gitleaks detect --no-git --report-path /dev/null 2>&1 | tail -2) || echo "gitleaks flagged findings — review!"
+    (cd "$WS" && gitleaks detect --no-git --report-path /dev/null --report-format json 2>&1 | tail -2) || echo "gitleaks flagged findings — review!"
   else
     echo "gitleaks binary missing!"
   fi
