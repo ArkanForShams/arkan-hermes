@@ -1,14 +1,14 @@
 [
   {
-    "timestamp": "2026-09-24T19:00:38.668746",
+    "timestamp": "2026-09-30T18:26:28.385360",
     "security_score": 0,
     "risk_level": "CRITICAL",
-    "total_issues": 275,
+    "total_issues": 304,
     "severity_breakdown": {
-      "CRITICAL": 63,
-      "HIGH": 130,
-      "MEDIUM": 47,
-      "LOW": 35,
+      "CRITICAL": 102,
+      "HIGH": 53,
+      "MEDIUM": 125,
+      "LOW": 24,
       "UNDEFINED": 0
     }
   }

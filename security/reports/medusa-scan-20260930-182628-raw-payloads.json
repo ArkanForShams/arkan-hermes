@@ -1,0 +1,27 @@
+{
+  "warning": "RAW PAYLOADS - Contains unobfuscated attack content. For human review only.",
+  "generated": "2026-09-30T18:26:28.396739",
+  "payloads": {
+    "341cc7a9f54d": {
+      "original_code": "",
+      "original_issue": "Payload Splitting: cross-context prompt injection assembly detected",
+      "file": "/tmp/agent-reach/CLAUDE.md",
+      "line": 5,
+      "category": "Prompt Injection"
+    },
+    "eb930615576c": {
+      "original_code": "",
+      "original_issue": "Prompt Injection: User input interpolated in prompt string - sanitize input, use semantic filters",
+      "file": "/tmp/agent-reach/agent_reach/cli.py",
+      "line": 1472,
+      "category": "Prompt Injection"
+    },
+    "330f5b40907c": {
+      "original_code": "",
+      "original_issue": "JUMP/JUMP++ universal multi-prompt jailbreak framework code detected",
+      "file": "/tmp/agent-reach/agent_reach/config.py",
+      "line": 64,
+      "category": "Jailbreak Attempt"
+    }
+  }
+}

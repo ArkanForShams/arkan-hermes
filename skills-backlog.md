@@ -125,3 +125,15 @@ REGULATORY DISCIPLINE: all governance skills encode procedures + verify-current 
 - Vision2030Advisor -> saudi-caio-advisor (alignment-map procedure, step 2)
 
 ## Status: ALL SIX KNOWLEDGE BASES RESOLVED
+
+## agent-reach (upstream: Panniantong/agent-reach, MIT) — installed 2026-09-30
+- Source: cloned to /tmp/agent-reach (depth 1). MEDUSA repo scan: 425 HIGH+ / 304 findings triaged
+  individually (66x PLA-copyright = known LLM-heavy FP class; loopback SSRF = intended local daemon/CDP URLs;
+  metadata endpoint = blocklist STRING; "SSH-key exfiltration" = configure-key help text; SHA1 = RFC6455 WS handshake).
+- SkillSpector on skill dir: DO_NOT_INSTALL auto-verdict, 8 findings, ALL hand-verified false positives
+  (cookie-handling prose tripping YARA/info-stealer keywords; "never judge login state from URL" flagged as anti-refusal;
+  reusable Chrome profile flagged as session persistence; Jina reader fallback flagged as rug-pull; bilibili curl = the doc itself).
+  Per security-gate protocol: prose mentions = FP; executable scripts or literal secrets = hard stop — none found.
+- INSTALLED in adapted form (knowledge only): ~/.hermes/skills/research/agent-reach/ — SKILL.md (EN) + 7 references
+  (search/social/career/dev/web/video/finance). The Python CLI/daemon is NOT installed.
+- ARKAN safety overlay added: read-only default; no setup scripts, no cookies, no login automation without approval.
