@@ -12,7 +12,7 @@
     Skills:    github-backup, browse-safe, security-gate
     Last run:  2026-09-30T16:30:23.614482+03:00  error: Blocked: prompt matches threat pattern 'prompt_injection'. Cron prompts must not contain injection or exfiltration payloads.  (2 failures in a row)
     Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-09-27T09:00:00+03:00, ran 2026-09-27T22:28:07.322816+03:00 (13h 28m late)
-    Execution: running  6b8e27ce76954da0b22a113094b4a8ee
+    Execution: running  2ae52d3c937e439d82767e6996191fc9
     ⚠ The result was not delivered: delivery error: Telegram send failed: httpx.ConnectError: [Errno -2] Name or service not known (target telegram:-513437…. Check the target with `hermes cron status` or change it with `hermes cron edit a8b9f2c384f2 --deliver <target>`.
 
   d07076b7354f [active]
@@ -31,13 +31,13 @@
     Name:      memory-reflection-trigger
     Schedule:  */5 * * * *
     Repeat:    ∞
-    Next run:  2026-09-30T16:35:00+03:00
+    Next run:  2026-09-30T16:40:00+03:00
     Deliver:   local
     Script:    memory-reflection-trigger.sh
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-09-30T16:30:20.122034+03:00  ok
-    Dispatch:  on time (scheduled 2026-09-30T16:30:00+03:00)
-    Execution: completed  310f44cf425f4047974b0f87cca5f132
+    Last run:  2026-09-30T16:35:20.255123+03:00  ok
+    Dispatch:  on time (scheduled 2026-09-30T16:35:00+03:00)
+    Execution: completed  49e7c2eda0874eb7b292af2a0fe30732
 
   8b2208ea74e5 [active]
     Name:      memory-dlq-report
