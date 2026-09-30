@@ -1,0 +1,24 @@
+# Gitleaks config for ~/.hermes scans (arkan-hermes weekly backup job).
+#
+# Why: the vendored Hermes source tree (~/.hermes/hermes-agent/) contains ~850
+# test fixtures and bundled docs that trip gitleaks rules (unsloth llms-*.md
+# reference files alone trigger >600 generic-api-key FPs). Those files are
+# upstream project code, never Shams's data. This allowlist hides them so the
+# finding count reflects REAL exposure in Shams's own files (.env, auth.json,
+# profiles/, mcp-tokens/, sessions/, logs/, workspace).
+#
+# Usage: gitleaks detect --source ~/.hermes --no-git --redact \
+#          --config ~/hermes-workspace/security/gitleaks.config.toml ...
+#
+# Note: secrets in the vendored tree WOULD still be caught by the repo's own
+# upstream security processes; anything Shams drops into ~/.hermes outside
+# hermes-agent/ is still fully scanned.
+
+title = "arkan-hermes hermes-scan profile"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Vendored Hermes source tree: test fixtures and bundled docs, not user data"
+paths = '''(^|/)hermes-agent/'''

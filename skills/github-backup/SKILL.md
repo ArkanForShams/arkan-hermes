@@ -21,13 +21,36 @@ Keep `github.com/ArkanForShams/arkan-hermes` (PRIVATE) in sync with live Hermes 
    - Check credentials: `~/.git-credentials` must contain the GitHub HTTPS line (chmod 600).
    - Check token: `curl -s -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/user` — `GITHUB_TOKEN` lives in `~/.hermes/.env`.
    - Retry once after fixing; report exact errors if still failing.
-4. Report to the user: what changed, commit hash, repo link, and confirm repo is still private (API field `"private": true`) whenever you touched repo settings.
+4. Report to the user: what changed, commit hash, repo link, and the repo visibility posture (public by design — see below) whenever you touched repo settings.
+
+## Repo visibility posture (updated 2026-09-30)
+
+The repo is **PUBLIC by design** — it hosts Shams's live personal site via GitHub
+Pages (`pages.yml` deploys `website/site-live/` as artifact root; site URL is the
+repo root `https://arkanforshams.github.io/arkan-hermes/`). Do NOT flip it private
+without Shams's explicit decision — that takes his live site offline. Safety holds
+because: secrets are gitignored (.env, auth.json, .git-credentials), gitleaks
+(pre-commit + weekly) scans clean, and secret-bearing files have never been pushed
+(verified across all 32 commits on 2026-09-30).
+
+## Secret scan (weekly)
+
+- Vendored Hermes source tree (`~/.hermes/hermes-agent/`) generates ~850 gitleaks
+  FPs (test fixtures, unsloth reference docs). Use the filtered config instead:
+  ```bash
+  /home/shams/.local/bin/gitleaks detect --source ~/.hermes --no-git --redact \
+    --config ~/hermes-workspace/security/gitleaks.config.toml \
+    --report-format json --report-path /tmp/gitleaks.json
+  ```
+  Expected: ~13 findings, ALL expected (`.env` files + `auth.json` + `supabase.client.json`
+  credential stores + 1 vendored-header FP). Report anything OUTSIDE those files.
+- Also run weekly: `gitleaks detect --source ~/hermes-workspace` (git mode, all
+  commits) — must stay "no leaks found" (exit 0).
 
 ## Hard rules
 
 - NEVER commit secrets: no tokens, no `.env`, no `auth.json` (`.gitignore` guards these). The GitHub token lives only in local `~/.git-credentials` and `~/.hermes/.env`.
-- The repo must stay PRIVATE. If it ever shows public, flip it back immediately:
-  `curl -X PATCH -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/ArkanForShams/arkan-hermes -d '{"private":true}'`
+- Don't flip the repo private unilaterally (kills the live site; see posture above).
 - Weekly cadence is the minimum; big milestones get an immediate manual run.
 
 ## Restore (for inheriting this setup)

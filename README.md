@@ -3,7 +3,7 @@
 This repository is the complete, restorable backup of **Shams Tabrez's Hermes Agent** — his soul, memory, skills, configuration, and automation. It exists so that Shams's Hermes can be revived anywhere on Earth with a single command, and so his family, friends, and future generations can inherit a working, evolving AI agent.
 
 **Owner:** Shams Tabrez (GitHub: `ArkanForShams`)
-**Repo visibility:** PRIVATE
+**Repo visibility:** PUBLIC (deliberate: it hosts this live personal site via GitHub Pages — `https://arkanforshams.github.io/arkan-hermes/`). Public by design, secrets-free by policy: `.gitignore` + `security-gate.sh secrets` keep tokens out; `docs/RESTORE.md` explains re-adding secrets via `hermes setup` after restore. Original archive copy also held as a private backup — flip with the PATCH API only if the Pages site moves first.
 **Update cadence:** Weekly (automated Hermes cron job) + on-demand
 
 ---
