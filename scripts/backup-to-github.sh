@@ -32,5 +32,5 @@ if git diff --cached --quiet; then
 else
   git commit -m "Hermes backup: $(date -u '+%Y-%m-%d %H:%M UTC') [auto]"
   git push origin main
-  echo "Pushed to github.com/ArkanForShams/arkan-hermes (private)."
+  echo "Pushed to github.com/ArkanForShams/arkan-hermes (public, secrets-free)."
 fi
