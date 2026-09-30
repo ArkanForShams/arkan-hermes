@@ -25,6 +25,18 @@ How to give the user working preview links for a static site from this WSL2 mach
    - Honest limits to state to the user: random unshareable name, no uptime guarantee, dies with the process or PC. Permanent options: named Cloudflare tunnel (free account, stable name, auto-restart) or Netlify/Vercel hosting.
    - GitHub Pages needs a PUBLIC repo on the free plan (private repo → 422 'plan does not support Pages'); the private archive repo can't host.
 
+### Permanent public hosting — GitHub Pages (preferred whenever content is public-safe)
+
+When the user asks for public, permanent, shareable links, publish to GitHub Pages under ArkanForShams. Full working chain, in order:
+
+1. **Token, never echoed**: `TOKEN=$(printf 'protocol=https\nhost=github.com\n' | git credential fill | grep '^password=' | cut -d= -f2)` — the store already holds the credential; no gh CLI needed.
+2. **Create public repos**: `POST /user/repos` with `{"name", "description", "public": true, "auto_init": false}` → 201. `auto_init: false` so the first push is not rejected as non-fast-forward.
+3. **Minimal publish tree** — `index.html` plus ONLY referenced files (`assets/`, `fonts/`); exclude build logs, QA renders, venvs. Grep the HTML for every `assets/`- and `fonts/`-prefixed ref and confirm each exists in the tree — a referenced-but-missing file ships as a broken image live.
+4. **Push before enabling Pages**: `git -c user.name=ArkanForShams -c user.email=<email> init/add/commit/branch -M main/remote add/push`. Pages enablement 422s with "main branch must exist" if run before the push — re-run the enable call after the push lands.
+5. **Enable Pages**: `POST /repos/{owner}/{repo}/pages` with `{"source":{"branch":"main","path":"/"}}` → 201 returns the `https://<owner>.github.io/<repo>/` URL.
+6. **Poll then verify LIVE**: GET `/pages` until `status: built` (~1–2 min), then curl each page URL AND each asset URL through the edge for HTTP 200 — 'built' with a missing asset still ships broken.
+7. **Public-safe gate**: person-brand privacy guardrails (SKILL.md) apply to anything pushed public; invented brand-world builds are safe, person-brand pages follow the USER.md rules.
+
 ## Verify every page (no browser stack needed)
 
 ```python

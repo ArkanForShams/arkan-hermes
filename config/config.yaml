@@ -156,6 +156,8 @@ streaming:
 onboarding:
   seen:
     busy_input_prompt: true
+    tool_progress_prompt: true
+    profile_build_offered: true
 telemetry:
   shared_metrics:
     enabled: false
@@ -293,3 +295,12 @@ known_builtin_toolsets:
     - web
     - x_search
     - yuanbao
+mcp_servers:
+  supabase:
+    url: https://mcp.supabase.com/mcp
+    auth: oauth
+    enabled: true
+  vercel:
+    url: https://mcp.vercel.com
+    auth: oauth
+    enabled: true

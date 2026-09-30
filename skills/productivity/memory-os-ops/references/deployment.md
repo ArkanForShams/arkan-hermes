@@ -20,13 +20,15 @@ Machine-specific state for the Memory OS install (keep current when topology cha
 
 ## Compose `.env` (`~/memory-os/docker/.env`, chmod 600)
 
-REDIS_PASSWORD (generated), QDRANT_API_KEY (empty; its env line removed from compose — see pitfall), EMBEDDING_DIMS=768, COLLECTION_NAME=knowledge_base, MEMORY_OS_WIKI_PATH / MEMORY_OS_HERMES_HOME / MEMORY_OS_FABRIC_DIR, WORKER_LLM_MODEL=glm-5.3-flash, WORKER_LLM_API_KEY (ollama key). Never print this file's values.
+REDIS_PASSWORD (generated), QDRANT_API_KEY (empty; its env line removed from compose — see pitfall), EMBEDDING_DIMS=768, COLLECTION_NAME=knowledge_base, MEMORY_OS_WIKI_PATH=C:/docker-shares/wiki, MEMORY_OS_HERMES_HOME=C:/docker-shares/hermes, MEMORY_OS_FABRIC_DIR=C:/docker-shares/fabric (Windows paths — WSL binds get silently dropped by Docker Desktop), WORKER_LLM_MODEL=glm-5.3-flash, WORKER_LLM_API_KEY (ollama key). Never print this file's values.
 
 ## Compose topology
 
 - Base: `docker/docker-compose.yml` (redis 7-alpine, qdrant v1.17.1, worker from `docker/worker/Dockerfile`).
 - Override: `docker/docker-compose.override.yml` (ARKAN) adds the `ollama` service + worker env wiring (embedding → local ollama, LLM → ollama cloud, STATE_DB_PATH).
-- Worker mounts: `~/vault/wiki` (ro), `~/.hermes` (rw — reflection writes state.db), `~/vault/fabric` (rw).
+- Worker mounts: `C:/docker-shares/wiki` (ro) → `/wiki`, `C:/docker-shares/hermes` (rw, holds a copy of state.db + WAL/SHM) → `/hermes`, `C:/docker-shares/fabric` (rw) → `/fabric` — paths set in compose `.env` (`MEMORY_OS_*`).
+- **Bind mounts MUST use Windows paths (`C:/docker-shares/...`), never `/home/shams/...`** — Docker Desktop silently skips WSL-path binds after host restarts (mounts resolve to empty overlays; see the devops/memory-os-troubleshooting skill for diagnosis). Ubuntu-side `~/vault/wiki` and `~/vault/fabric` are archives; live content lives at `/mnt/c/docker-shares/`. The ingest script wrapper (`~/.hermes/scripts/memory-wiki-ingest.sh`) sets `WIKI_ROOT=/mnt/c/docker-shares/wiki`.
+- The `/hermes` state.db copy is a snapshot for the worker's reflection budget — budget checks read it, not the live DB.
 - All ports bound to 127.0.0.1 only.
 
 ## Maintenance cronjobs (Hermes scheduler, deliver=local, no_agent)
@@ -47,4 +49,6 @@ Worker-internal ARQ cron also runs full reflection every 2 h.
 - **Collection rebuild:** delete `knowledge_base` in Qdrant → restart worker (auto-creates at current EMBEDDING_DIMS) → bulk ingest.
 - **DLQ:** failures land in `~/.hermes/wiki_ingest_failures.json`; inspect via `scripts/dlq_manager.py`.
 - **Docker access from stale sessions:** `/mnt/c/Windows/System32/wsl.exe -e bash -lc '<cmd>'` (fresh credentials; the docker group was added 2026-09-24).
+- **WSL→Windows localhost ports reset after containers recreate:** `docker compose down && docker compose up -d` fixes the forwarding (symptom: TCP connect succeeds but reads hang/reset).
+- **Launch Docker Desktop from WSL:** `cd /mnt/c/Windows && cmd.exe /c start "" "C:\Users\SHAMS\AppData\Local\Programs\DockerDesktop\Docker Desktop.exe"` (must cd off UNC paths first or cmd errors).
 - **Security posture:** redis password-protected + localhost; qdrant keyless but localhost-only; the only API keys are the pre-existing ollama key in Hermes `.env` and the generated redis password in compose `.env`.

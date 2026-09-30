@@ -66,3 +66,9 @@ state; agent self-reports are claims, not facts.**
   previous session's memory of them — schedules change and stale ETAs read as
   false precision. When the user asks "what's pending / in progress", lead
   with the cron schedule table plus a short "waiting on user" list.
+- For a mid-flight long task ("why is it taking long / show me elapsed"):
+  decompose elapsed time into agent-execution time vs blocked-on-external
+  time, name the exact blocked step and its owner (e.g. a hosting platform's
+  build queue), cite the evidence checked (API status fields, not guesses),
+  and state the retrigger/fallback plan and next check-in — never reply with
+  a bare "still running".

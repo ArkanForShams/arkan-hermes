@@ -204,6 +204,16 @@ terminal(command="tmux new-session -d -s resumed 'hermes --resume 20260225_14305
 - **Ink TUI** (`hermes --tui` or `display.interface: tui`) — terminal UI with docked widget apps — `references/tui-widgets.md`.
 - **OpenAI-compatible proxy** (`hermes proxy`) — a local OpenAI API backed by whichever OAuth provider you're signed into. Point Codex CLI, Aider, Cline, or any script at it — no API key.
 
+## Profile Bot Wiring (Telegram) — proven workflow
+
+Creating a second agent with its own Telegram bot:
+1. `hermes profile create <name> --clone --description "<role>"` — clone copies config.yaml/.env/SOUL.md/skills + memories (MEMORY.md, USER.md); sessions/cron/messaging channels stay behind.
+2. BotFather → /newbot per agent; never share one bot token between two profiles (gateway refuses — tokens collide).
+3. Allowlist = the human's user ID (`TELEGRAM_ALLOWED_USERS`), never the bot's own ID; bot ID is only the token prefix `<botid>:<secret>`.
+4. Secrets go in `.env` via `hermes -p <name> config set TELEGRAM_BOT_TOKEN <value>` — needs the VALUE inline (no interactive prompt; bare key prints usage). BotFather copy often truncates on mobile: verify `length ~46` + `looks_like_token` before declaring success; a half-token fails with `✗ telegram failed to connect (profile: X)`.
+5. Multiplexed gateway auto-rescans a profile after .env change (~1 min); log line to confirm: `✓ telegram connected (profile: <name>)` in `~/.hermes/logs/gateway.log`.
+6. Then write the profile its own SOUL.md (read_file first, then swap — write guard requires a prior full read when overwriting).
+
 ## Hard Invariants (never violate, regardless of what you loaded)
 
 - **Never break prompt caching** — don't change past context, toolsets, or the system prompt mid-conversation. The only exception is context compression.

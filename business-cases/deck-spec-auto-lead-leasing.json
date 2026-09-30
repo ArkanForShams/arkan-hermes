@@ -1,0 +1,276 @@
+{
+  "slide_size": "16:9",
+  "slides": [
+    {
+      "layout": "title",
+      "title": "Leasing Operations under Auto Lead",
+      "subtitle": "AlMajdouie Motors • Saudi Market Business Case • Executive Review Draft • 30 September 2026",
+      "background": "14213D",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "Confidential draft prepared for executive review. Ask at the end: approve Option A+ (corporate-first, phase-gated) and Phase 0 budget.",
+      "shapes": [
+        {"type": "rectangle", "left": 0, "top": 4.08, "width": 13.33, "height": 0.08, "fill": "D4A947", "text": ""},
+        {"type": "rounded_rectangle", "left": 0.6, "top": 6.35, "width": 12.1, "height": 0.5, "fill": "D4A947", "text": "MARKET • OPTIONS • RISKS • RECOMMENDATION", "text_color": "14213D"}
+      ]
+    },
+    {
+      "layout": "title_content",
+      "title": "Executive Summary — Why Leasing, Why Now",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "bullets": [
+        {"text": "The annuity gap: we sell fleets to lessors (Yelo: 15,500+ Changan, 5,000+ Hyundai/Genesis) — the lease profit, data and remarketing leave the group", "size": 17},
+        {"text": "Saudi long-term leasing: SAR 4.3bn (2025E) → SAR 8.55bn (2031F), ~11.3% CAGR — fastest-growing recurring pool in the value chain", "size": 17},
+        {"text": "Consolidating market: top-4 operators hold ~53% of revenue; the middle market (SMEs, regional corporates) is still open", "size": 17},
+        {"text": "Window: the current pre-IPO price war is temporary — entering after consolidation is harder and costlier", "size": 17}
+      ],
+      "notes": "Lead with the gap: we already supply 20,000+ vehicles to a single lessor. The recommendation is corporate-first, consumer delayed behind gates.",
+      "shapes": [
+        {"type": "rounded_rectangle", "left": 0.6, "top": 5.55, "width": 12.1, "height": 1.15, "fill": "D4A947", "text": "RECOMMENDATION — Option A+: corporate-first operating lease in 2027 (Auto Lease + Used Lead); consumer Quick/Fix Lead behind a KPI gate; full-stack + financing deferred to 2029+", "text_color": "14213D"}
+      ]
+    },
+    {
+      "layout": "blank",
+      "title": "Market Size — Two Pools, One Direction",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "charts": [
+        {"type": "bar_h", "left": 0.5, "top": 1.35, "width": 6.7, "height": 4.6, "title": "Market pools (SAR bn)",
+         "categories": ["Leasing '25E", "Leasing '31F", "Rental '24", "Rental '29F"],
+         "series": {"SAR bn": [4.3, 8.55, 4.0, 5.3]}}
+      ],
+      "bullets": [],
+      "notes": "Sources: AlJazira Capital Feb-2026; MarqStats fleet leasing 2026; Ken Research 2026. All accessed 30 Sep 2026.",
+      "shapes": [
+        {"type": "rounded_rectangle", "left": 7.6, "top": 1.35, "width": 5.3, "height": 1.35, "fill": "14213D", "text": "Long-term leasing ~11.3% CAGR to 2031 — fastest-growing recurring pool in the auto value chain", "text_color": "FFFFFF"},
+        {"type": "rounded_rectangle", "left": 7.6, "top": 2.95, "width": 5.3, "height": 1.35, "fill": "D4A947", "text": "Institutional demand = ~76% of forecast fleet growth to 2031 (government, corporates, contractors)", "text_color": "14213D"},
+        {"type": "rounded_rectangle", "left": 7.6, "top": 4.55, "width": 5.3, "height": 1.4, "fill": "355070", "text": "Digital channel: 36% → 72% of transactions by 2032 — product design must be app-first", "text_color": "FFFFFF"}
+      ]
+    },
+    {
+      "layout": "blank",
+      "title": "Competitive Landscape — Scale Players, Open Middle",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "Top-4 hold ~58% of lease fleet and ~53% of total industry revenue. Entry logic: middle market, not head-on.",
+      "tables": [
+        {"left": 0.6, "top": 1.35, "width": 12.1, "height": 3.9,
+         "rows": [
+           ["Operator", "Lease fleet share (2025E)", "Fleet (veh)", "Position"],
+           ["Budget Saudi", "23.2%", "~43,700", "Scale leader; post-AutoWorld consolidation"],
+           ["Theeb", "14.1%", "~26,500", "Margin discipline; 6.5% LT-lease share in 5 yrs"],
+           ["Lumi", "12.5%", "~23,500", "Digital-first exposure"],
+           ["Cherry", "8.3%", "~15,600", "Leasing-heavy earnings"],
+           ["Top-4 combined", "58.1%", "~109,300", "~53% of total industry revenue"],
+           ["Auto Lead (proposed)", "~0.7% by Y2 (est.)", "1,000–1,500", "Corporate-first entry into underserved middle market"]
+         ]}
+      ],
+      "shapes": [
+        {"type": "rounded_rectangle", "left": 0.6, "top": 5.75, "width": 12.1, "height": 1.0, "fill": "F5E9D0", "text": "Pre-IPO price war = temporary margin pressure (AlJazira, Feb 2026). Ride-hailing + Riyadh Metro pressure short-term rental — multi-year corporate contracts are structurally insulated (ANB Capital).", "text_color": "14213D"}
+      ]
+    },
+    {
+      "layout": "section",
+      "title": "The Opportunity — Product Architecture & Value Chain",
+      "background": "14213D",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "Transition slide: from market to the four Auto Lead lines and the annuity logic."
+    },
+    {
+      "layout": "blank",
+      "title": "Auto Lead — Four Lines Mapped to Demand Pools",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "Auto Lease is the Phase-1 core; Used Lead supports from day one; Quick/Fix monetize after the fleet exists.",
+      "shapes": [
+        {"type": "rounded_rectangle", "left": 0.6, "top": 1.5, "width": 2.9, "height": 1.5, "fill": "D4A947", "text": "AUTO LEASE — Corporate operating lease, full service (PHASE 1 CORE)", "text_color": "14213D"},
+        {"type": "rounded_rectangle", "left": 3.75, "top": 1.5, "width": 2.9, "height": 1.5, "fill": "14213D", "text": "QUICK LEAD — Monthly consumer subscription (PHASE 2)", "text_color": "FFFFFF"},
+        {"type": "rounded_rectangle", "left": 6.9, "top": 1.5, "width": 2.9, "height": 1.5, "fill": "14213D", "text": "FIX LEAD — Service & maintenance plans (PHASE 2 ADD-ON)", "text_color": "FFFFFF"},
+        {"type": "rounded_rectangle", "left": 10.05, "top": 1.5, "width": 2.9, "height": 1.5, "fill": "355070", "text": "USED LEAD — Certified pre-owned for lease returns (DAY-ONE SUPPORT)", "text_color": "FFFFFF"},
+        {"type": "right_arrow", "left": 1.7, "top": 3.15, "width": 0.7, "height": 0.55, "fill": "D4A947", "text": ""},
+        {"type": "right_arrow", "left": 4.85, "top": 3.15, "width": 0.7, "height": 0.55, "fill": "14213D", "text": ""},
+        {"type": "right_arrow", "left": 8.0, "top": 3.15, "width": 0.7, "height": 0.55, "fill": "14213D", "text": ""},
+        {"type": "right_arrow", "left": 11.15, "top": 3.15, "width": 0.7, "height": 0.55, "fill": "355070", "text": ""},
+        {"type": "rounded_rectangle", "left": 0.6, "top": 3.85, "width": 2.9, "height": 1.6, "fill": "F5E9D0", "text": "Corporates, government, giga-project contractors — 87% of leased-fleet demand", "text_color": "14213D"},
+        {"type": "rounded_rectangle", "left": 3.75, "top": 3.85, "width": 2.9, "height": 1.6, "fill": "F5E9D0", "text": "Individuals, SMEs, new arrivals — digital app-first delivery", "text_color": "14213D"},
+        {"type": "rounded_rectangle", "left": 6.9, "top": 3.85, "width": 2.9, "height": 1.6, "fill": "F5E9D0", "text": "Existing service-loyalty base — Hyundai/Changan workshops already in-network", "text_color": "14213D"},
+        {"type": "rounded_rectangle", "left": 10.05, "top": 3.85, "width": 2.9, "height": 1.6, "fill": "F5E9D0", "text": "Lease-return remarketing — end of a USD 24.5bn used market (1.6M txns/yr)", "text_color": "14213D"},
+        {"type": "rounded_rectangle", "left": 0.6, "top": 5.9, "width": 12.35, "height": 0.8, "fill": "FFFFFF", "text": "Regulatory path: TGA licenses rental/leasing activity • SAMA review triggered only if any product embeds consumer credit (Fix Lead payment plans — legal opinion first)", "text_color": "14213D"}
+      ]
+    },
+    {
+      "layout": "blank",
+      "title": "From One Margin to Five — The Annuity Logic",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "Today layer 1 is the whole P&L. A leasing arm layers 2–5 on vehicles we already sell and service. GIB via Ken Research: long-term contracts ≈45% of listed lessors' revenue mix.",
+      "shapes": [
+        {"type": "chevron", "left": 0.6, "top": 2.0, "width": 2.45, "height": 1.3, "fill": "D4A947", "text": "1. Vehicle Sale — TODAY", "text_color": "14213D"},
+        {"type": "chevron", "left": 3.02, "top": 2.0, "width": 2.45, "height": 1.3, "fill": "14213D", "text": "2. Lease Yield", "text_color": "FFFFFF"},
+        {"type": "chevron", "left": 5.44, "top": 2.0, "width": 2.45, "height": 1.3, "fill": "14213D", "text": "3. Service & Maintenance", "text_color": "FFFFFF"},
+        {"type": "chevron", "left": 7.86, "top": 2.0, "width": 2.45, "height": 1.3, "fill": "14213D", "text": "4. Remarketing (Used)", "text_color": "FFFFFF"},
+        {"type": "chevron", "left": 10.28, "top": 2.0, "width": 2.45, "height": 1.3, "fill": "355070", "text": "5. Fleet Data & Telematics", "text_color": "FFFFFF"},
+        {"type": "rounded_rectangle", "left": 0.6, "top": 4.0, "width": 5.95, "height": 1.15, "fill": "B23A48", "text": "TODAY: one-time margin — layers 2–5 accrue to lessors (e.g., Yelo) buying our vehicles", "text_color": "FFFFFF"},
+        {"type": "rounded_rectangle", "left": 6.8, "top": 4.0, "width": 5.93, "height": 1.15, "fill": "2A9D8F", "text": "TARGET: full five-layer annuity on vehicles we already sell, service and remarket", "text_color": "FFFFFF"},
+        {"type": "rounded_rectangle", "left": 0.6, "top": 5.75, "width": 12.13, "height": 0.8, "fill": "F5E9D0", "text": "Long-term contracts ≈ 45% of listed lessors' 2025–26 revenue mix (GIB Capital via Ken Research) — recurring revenue is where the sector's margin is moving", "text_color": "14213D"}
+      ]
+    },
+    {
+      "layout": "title_content",
+      "title": "Strategic Fit — Why AlMajdouie Can Win This",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "bullets": [
+        {"text": "Annuity stacking — converts episodic vehicle sales into 1–5 year contracted revenue on our own brands", "size": 18},
+        {"text": "Demand we control — AlMajdouie group companies (logistics, industrial, real estate) are anchor operating-lease customers competitors must win through tenders", "size": 18},
+        {"text": "Full-margin loop — lease → in-network maintenance (100k+ vehicles/yr serviced today) → remarketing via Used Lead", "size": 18},
+        {"text": "Vision 2030 alignment — mobility-as-a-service, EV fleet transition (Deepal + alfanar charging), Saudization of service talent", "size": 18},
+        {"text": "Defensive timing — middle market remains open; top-4 consolidation is closing it", "size": 18}
+      ],
+      "notes": "Anchor each point to an existing asset — this is a repositioning, not a greenfield."
+    },
+    {
+      "layout": "blank",
+      "title": "Three Options — Side by Side",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "All financials are analyst estimates built on cited benchmarks (SAR ~90k avg vehicle, ~35% equity share, ~SAR 27k/vehicle blended revenue).",
+      "tables": [
+        {"left": 0.6, "top": 1.35, "width": 12.1, "height": 4.0,
+         "rows": [
+           ["Metric", "A — Corporate-first", "B — Consumer-first", "C — Full-stack + finance"],
+           ["Scope", "Auto Lease + Used Lead", "Quick + Fix subscriptions", "All lines + captive financing"],
+           ["Capital required", "SAR 60–65M", "SAR 50M", "SAR 180–200M"],
+           ["Y2 run-rate revenue", "~SAR 40M", "~SAR 16M", "~SAR 81M"],
+           ["Regulatory risk", "Low (TGA only)", "Medium", "High — SAMA finance license"],
+           ["Use of existing assets", "High — workshops, brands, OEM terms", "Medium", "Highest"],
+           ["Phase-1 verdict", "RECOMMENDED", "Weakest first move", "Defer to 2029+ board gate"]
+         ]}
+      ],
+      "shapes": [
+        {"type": "rounded_rectangle", "left": 0.6, "top": 5.85, "width": 12.1, "height": 0.95, "fill": "D4A947", "text": "Recommended path (A+): Phase 1 corporate lease 2027 → KPI gate → Quick/Fix consumer 2028–29 → KPI gate → full stack & financing decision 2029+", "text_color": "14213D"}
+      ]
+    },
+    {
+      "layout": "blank",
+      "title": "Investment vs Y2 Run-Rate Revenue",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "Chart: SAR millions, analyst estimates. Option C capital is step-change and regulator-dependent.",
+      "charts": [
+        {"type": "bar", "left": 0.5, "top": 1.35, "width": 7.4, "height": 4.9, "title": "SAR millions (estimates)",
+         "categories": ["Option A", "Option B", "Option C"],
+         "series": {"Capital required": [62, 50, 190], "Y2 run-rate revenue": [40, 16, 81]}}
+      ],
+      "shapes": [
+        {"type": "rounded_rectangle", "left": 8.3, "top": 1.35, "width": 4.55, "height": 1.5, "fill": "14213D", "text": "A: ~SAR 60–65M → ~SAR 40M/yr run-rate by Y2 — fastest breakeven", "text_color": "FFFFFF"},
+        {"type": "rounded_rectangle", "left": 8.3, "top": 3.1, "width": 4.55, "height": 1.5, "fill": "B23A48", "text": "C: ~SAR 180–200M AND a SAMA license — highest risk of value destruction if rushed", "text_color": "FFFFFF"},
+        {"type": "rounded_rectangle", "left": 8.3, "top": 4.85, "width": 4.55, "height": 1.55, "fill": "D4A947", "text": "Path: fund A now; C only if Phase-2 gates pass", "text_color": "14213D"}
+      ]
+    },
+    {
+      "layout": "blank",
+      "title": "Phase-Gated Roadmap (2026–2029)",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "Gates are hard stops: no gate, no next phase. G4 returns capital decision to this room.",
+      "shapes": [
+        {"type": "rounded_rectangle", "left": 0.6, "top": 1.7, "width": 2.75, "height": 1.35, "fill": "14213D", "text": "PHASE 0 — Q4 2026: Governance & feasibility, SAMA/TGA checks, anchor LOIs", "text_color": "FFFFFF"},
+        {"type": "rounded_rectangle", "left": 3.6, "top": 1.7, "width": 2.75, "height": 1.35, "fill": "D4A947", "text": "PHASE 1 — H1 2027: Entity + license + 250-vehicle corporate pilot", "text_color": "14213D"},
+        {"type": "rounded_rectangle", "left": 6.6, "top": 1.7, "width": 2.75, "height": 1.35, "fill": "14213D", "text": "PHASE 2 — H2 27–28: Scale to 1,500 + Quick/Fix pilots", "text_color": "FFFFFF"},
+        {"type": "rounded_rectangle", "left": 9.6, "top": 1.7, "width": 2.75, "height": 1.35, "fill": "355070", "text": "PHASE 3 — 2029+: Financing layer & regional scale", "text_color": "FFFFFF"},
+        {"type": "right_arrow", "left": 3.0, "top": 2.15, "width": 0.65, "height": 0.45, "fill": "D4A947", "text": ""},
+        {"type": "right_arrow", "left": 6.0, "top": 2.15, "width": 0.65, "height": 0.45, "fill": "D4A947", "text": ""},
+        {"type": "right_arrow", "left": 9.0, "top": 2.15, "width": 0.65, "height": 0.45, "fill": "D4A947", "text": ""},
+        {"type": "diamond", "left": 2.95, "top": 3.45, "width": 1.05, "height": 1.05, "fill": "B23A48", "text": "G1", "text_color": "FFFFFF"},
+        {"type": "diamond", "left": 5.95, "top": 3.45, "width": 1.05, "height": 1.05, "fill": "B23A48", "text": "G2", "text_color": "FFFFFF"},
+        {"type": "diamond", "left": 8.95, "top": 3.45, "width": 1.05, "height": 1.05, "fill": "B23A48", "text": "G3", "text_color": "FFFFFF"},
+        {"type": "diamond", "left": 11.95, "top": 3.45, "width": 1.05, "height": 1.05, "fill": "B23A48", "text": "G4", "text_color": "FFFFFF"}
+      ],
+      "tables": [
+        {"left": 0.6, "top": 4.75, "width": 12.1, "height": 2.2,
+         "rows": [
+           ["Gate", "Pass condition", "Timing"],
+           ["G1", "Anchor LOIs ≥ 500 vehicles", "Phase 0 → Phase 1 funding"],
+           ["G2", "Utilization ≥ 75%; unit gap < SAR 4k/vehicle/yr", "Pilot → corporate scale"],
+           ["G3", "Consumer churn < 4%/mo; remarketing recovery ≥ 60%", "Quick/Fix go-no-go"],
+           ["G4", "SAMA license vs partner decision", "Board vote — capital step-change"]
+         ]}
+      ]
+    },
+    {
+      "layout": "blank",
+      "title": "Risks & Mitigations",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "Two risks deserve emphasis: residual values (we are on the buy side — structural advantage) and SAMA scope creep on Fix Lead.",
+      "tables": [
+        {"left": 0.6, "top": 1.35, "width": 12.1, "height": 5.4,
+         "rows": [
+           ["Risk", "Mitigation"],
+           ["Pre-IPO price war squeezing margins", "Segment discipline: SMEs, second-tier corporates, regional cities; price on service bundles, not day-rates"],
+           ["Residual-value exposure in a deflating used market", "Used Lead exit channel; shorter cycles for volatile segments; OEM residual risk-sharing (we sit on the buy side)"],
+           ["Channel conflict with Yelo and fleet customers", "Formal product segmentation charter: corporate full-service only, never short-term rental"],
+           ["Fix Lead drifting into SAMA consumer-finance scope", "Written SAMA scoping opinion before any payment-plan launch; Compliance/Legal owns the verdict"],
+           ["Financing-cost sensitivity", "Islamic (ijara-based) facilities line secured with group bank before launch"],
+           ["EV residual uncertainty (30% Riyadh EV target 2030)", "Cap EV share of Phase-1 fleet; Deepal + alfanar charging as controlled experiments"]
+         ]}
+      ]
+    },
+    {
+      "layout": "title_content",
+      "title": "CEO Vision — Prediction & Verification",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "bullets": [
+        {"text": "Prediction (inference, labeled as such): the group is converting from vehicle distributor to mobility company — recurring revenue, in-house vehicle data, halal-structured financing, an investable asset comparable to Budget/Theeb", "size": 17},
+        {"text": "Evidence pointing there: 2024–26 brand launches; Auto Lead facility build-out; automotive-finance function in place; alfanar EV-charging partnership; used-car exchange footprint", "size": 17},
+        {"text": "What would confirm it: a stated mobility-services ambition or finance-license plan", "size": 17},
+        {"text": "What would challenge it: capex austerity or near-term dividend priority", "size": 17},
+        {"text": "Action: verify in Phase 0 executive review before aligning the pitch — direction is sound; the debate is sequence and capital discipline", "size": 17}
+      ],
+      "notes": "Frame respectfully: the vision's direction is sound; the recommendation is about gating capital, not about doubting the ambition."
+    },
+    {
+      "layout": "blank",
+      "title": "Business Excellence Scoreboard",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "Benchmarks from sector data (MarqStats 2025; ANB Capital 2024 recovery range). Internal targets marked as internal.",
+      "tables": [
+        {"left": 0.6, "top": 1.35, "width": 12.1, "height": 4.4,
+         "rows": [
+           ["KPI", "Target", "Benchmark basis"],
+           ["Fleet utilization", "≥ 80%", "Sector 74% → 79% by 2032"],
+           ["Revenue per vehicle", "≥ SAR 23k/yr", "National avg SAR 22.9k (2025)"],
+           ["Remarketing price recovery", "≥ 60–65%", "Listed peers 56–70% (2024)"],
+           ["Days to remarket", "≤ 45 days", "Internal target"],
+           ["Corporate NPS", "≥ 60", "Internal target"],
+           ["Telematics data coverage", "100% of fleet", "Management prerequisite for Phase 3"],
+           ["Consumer churn (Phase 2 pilot)", "< 4% monthly", "Gate to Quick/Fix scale-up"]
+         ]}
+      ],
+      "shapes": [
+        {"type": "rounded_rectangle", "left": 0.6, "top": 6.05, "width": 12.1, "height": 0.75, "fill": "F5E9D0", "text": "Reported quarterly to the steering committee; gates G2–G3 read directly off this scoreboard", "text_color": "14213D"}
+      ]
+    },
+    {
+      "layout": "title_only",
+      "title": "The Decision Requested",
+      "footer": "Auto Lead Leasing — Business Case | Confidential",
+      "slide_number": true,
+      "notes": "Close on the three approvals. If challenged on capital: the gates cap exposure — Phase 0 is the only money at risk today.",
+      "bullets": [
+        {"text": "1. Approve Option A+ — corporate-first operating lease, phase-gated", "size": 19, "bold": true},
+        {"text": "2. Release Phase 0 budget — demand study, TGA pre-check, SAMA scoping memo, anchor LOIs", "size": 19},
+        {"text": "3. Mandate the fleet-services MD search", "size": 19},
+        {"text": "4. Direct treasury to structure an ijara-based fleet financing line with the group bank", "size": 19}
+      ],
+      "shapes": [
+        {"type": "rounded_rectangle", "left": 0.6, "top": 5.55, "width": 12.1, "height": 1.25, "fill": "D4A947", "text": "NEXT STEP — Phase 0 executive review in Q4 2026; Phase 1 funding decision targeted Q1 2027. Only money at risk today is Phase 0 (feasibility) — fleet capital is committed only after gate G1.", "text_color": "14213D"}
+      ]
+    }
+  ]
+}
