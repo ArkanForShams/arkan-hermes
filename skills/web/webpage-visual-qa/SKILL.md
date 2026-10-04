@@ -1,7 +1,7 @@
 ---
 name: webpage-visual-qa
 description: "Use when verifying web pages render correctly, browserless."
-version: 0.1.0
+version: 0.2.0
 author: ARKAN (for Shams Tabrez), Hermes Agent
 license: MIT
 platforms: [linux]
@@ -44,6 +44,14 @@ Verify a built web page actually renders correctly — layout, readability, resp
 - **Self-host webfonts when the CDN is unreliable in the environment**: download the woff2 unicode-range splits, write a local `@font-face` CSS, link it before the CDN link. Paths inside a CSS file resolve relative to the CSS file, not the page — `url('fonts/x.woff2')` inside `fonts/amiri.css` 404s; use `url('x.woff2')`.
 - **A screenshot of a stale build is worse than no screenshot.** Before trusting any capture or probe, verify the server serves the build on disk: fetch the exact CSS/chunk URL the served HTML references and compare with what's in the build directory. A zombie dev/preview server serves stale in-memory manifests (CSS 400/404, unstyled pages) and every QA pass then 're-fixes' bugs that were already fixed — kill listeners by PID from `ss -tlnp` and re-serve first.
 - **Test stateful behavior through the real user path, not synthetic DOM changes.** Injecting `class="light"` into served HTML duplicates the class attribute and races hydration, producing phantom half-applied themes; click the actual control with playwright-core and let the app apply its own state. Even a `.click()` dispatched from inside `page.evaluate` can no-op a React handler that the driver's real input path works on — click by aria-label with `page.click`, and settle any 'did it apply' dispute with computed-style probes (section backgroundColor, root custom properties), not screenshots alone.
+- **`destination-out` erases ALL pixels in its band, not just the shape you just painted** — run self-erasing/feathering composites on an offscreen canvas and `drawImage` the result onto the main one; on the main canvas the op deletes other layers' linework inside the region.
+- **A path under construction belongs to one context — a mid-fill path call consumes it.** Calling a path-builder that works on the main context while a clip is active replaced the clip path, so `fill()` painted the clip rectangle as a block. Extract reusable geometry into ctx-parameterized functions (e.g. `function carPath(g2, c, y, s)`) and rebuild the path per context before every fill/stroke.
+- **Canvas arc direction is mathematical, not visual** — 0→π with anticlockwise=false sweeps the canvas's bottom half (canvas y points down); upward-bulging arches need π→0 false (or 0→π true). Probe one frame via console before animating.
+- **After editing inline `<script>` inside an HTML file, node --check the extracted JS** — the HTML lint pass does not parse JS, so a brace slip ships silently; symptom = page renders, canvas stays empty, HUD state frozen (the whole script is dead).
+- **Spend the cheap state-math probe before the vision pass** — when a frame is conditional (opacity windows, act ranges), compute the seg()/ease() windows against the actual scroll t, or read computed opacity via browser_console, before calling vision; a frame that technically shows nothing is not a defect, and the pass may just be aimed at the wrong t.
+- **Scroll-window animations clip content in captures long after the reveal itself is CSS-only.** A scroll-driven animation whose `animation-range` ends at (say) `entry 55%` renders content near a section's TOP at full opacity only from its entry — band captures and screenshots taken far into the section can still show a mid/late animation state (e.g. a type-on attribution half-typed, reading as clipped text). Fix at the source for the QA copy: extend the range (entry 20% → 85%) or force `.typeon { width: auto !important }` in qa.html, not at capture time.
+- **Motion that hides content (`width: 0` type-on) must keep the hiding rule INSIDE the `@supports (animation-timeline: view())` + `prefers-reduced-motion: no-preference` gates.** A top-level `width: 0` vanishes the content in any renderer without scroll-driven animation — browsers lacking support and reduced-motion users see nothing at all. Gate the hide exactly where the animation exists.
+- **Name expected procedural stand-in primitives inside the QA question** — canvas placeholder art (dash frames, guide boxes, wireframe blocks) reads to vision as defects unless the question states what is by-design; separate design from defect in the prompt.
 
 ## Verification
 - Desktop + mobile + every full-page band inspected; all defects fixed and re-verified with fresh captures.

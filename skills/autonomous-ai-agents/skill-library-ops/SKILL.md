@@ -27,6 +27,14 @@ Workflow for growing Shams's user-local skill library (~/.hermes/skills/): inges
 - Any finance/investment skill must carry Shariah-compliant framing (riba-free screening, no speculative instruments) before any advisory logic is written.
 - After a build wave, update the backlog file (BUILT + PARKED sections) and the memory pointer in ONE consolidated memory operations batch; consolidate stale memory entries in that same batch when usage approaches the cap.
 
+## Exporting the library (clone to a sibling agent, e.g. a second Hermes instance)
+
+1. **Stage with junk ignores, never a plain copy:** copytree/cp -r of `~/.hermes/skills` excluding `__pycache__`, `.git`, `node_modules`, `*.pyc`, `.DS_Store` — a dirty stage ships runtime junk and bloats the package.
+2. **Dependency-closure scan for referenced helper scripts:** grep the staged SKILL.md tree for `.hermes/scripts/<name>` refs, copy every hit that exists from `~/.hermes/scripts/`, and list misses in the inventory. **Extract wildcard references too** — a skill may say `scripts/memory-*.sh`; a literal-name regex reports it "missing" while the real fix is copying the whole wildcard family. Completion criterion: inventory lists bundled scripts + every resolved miss.
+3. **Ship four manifests:** INVENTORY.md (per-category counts, custom-vs-stock, bundled scripts, environment-dependent notes), INSTALL.md (unzip → rsync → verify → give the clone its OWN soul — never ship the original agent's identity), SHA256SUMS.txt (per-file + zip hash), GATE-REPORT.md (security-gate EXPORT pattern).
+4. **Rebuild the zip AFTER the last manifest fix** and always append the zip's own sha256 as the final manifest line — a package hash computed before an inventory edit certifies a file that no longer exists.
+5. **Run the security-gate EXPORT pattern before zipping** (see security-gate: gitleaks --no-git + per-category recursive scans + verdict-in-package).
+
 ## Procedure
 1. **Load the format rules first.** skill_view hermes-agent-skill-authoring: frontmatter shape, description hardline (60 chars, trigger-first, one sentence, ends with a period), body section order. Completion criterion: format rules in context before any file is written.
 2. **Classify every requested skill.** For each entry in the KB: BUILT (new, covers a stated priority), FOLD (add a section to the existing owning skill), or PARK (backlog with fold-in guidance). Completion criterion: classification list exists before creation starts.

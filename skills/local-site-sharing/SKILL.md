@@ -50,6 +50,7 @@ network makes naive answers wrong. Get the topology right the first time.
   when it stops. Never present yesterday's URL as live; re-test or re-create.
 - Foreground shell `&`/nohup wrappers are blocked — always use terminal(background=true)
   and verify readiness in a separate foreground call.
+- `$_.Exception.Message` dies when the -Command payload rides in double-quoted bash — bash interpolates `$_` (last-arg, empty) before PowerShell sees it and the bare `+` is a parse error. Escape as `\$_.Exception.Message` in bash-double-quoted strings, or single-quote the whole bash side.
 - netsh portproxy bridges need Windows UAC elevation and a firewall rule; the UAC prompt
   can time out silently. The Windows-side server approach avoids both — prefer it.
 - Verify BOTH protocols of a tunnel: URL issuance in logs ≠ reachable. curl the public

@@ -1,0 +1,454 @@
+{
+  "warning": "RAW PAYLOADS - Contains unobfuscated attack content. For human review only.",
+  "generated": "2026-10-03T02:54:04.391224",
+  "payloads": {
+    "b439bc567a07": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-code-generation-trigger-keywords",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 268,
+      "category": "Prompt Injection"
+    },
+    "216f7d6a384c": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 52,
+      "category": "Prompt Injection"
+    },
+    "1fa4b10a64a7": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 53,
+      "category": "Prompt Injection"
+    },
+    "0f7e03e8eb4f": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 54,
+      "category": "Prompt Injection"
+    },
+    "da2cab82d067": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 55,
+      "category": "Prompt Injection"
+    },
+    "3cd865840bdf": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 56,
+      "category": "Prompt Injection"
+    },
+    "cbfe4ae671a5": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 58,
+      "category": "Prompt Injection"
+    },
+    "30eedcf6a9c6": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 60,
+      "category": "Prompt Injection"
+    },
+    "770d0cf3973f": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 61,
+      "category": "Prompt Injection"
+    },
+    "b6c2dbec0e77": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 62,
+      "category": "Prompt Injection"
+    },
+    "d5e7f605533e": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 64,
+      "category": "Prompt Injection"
+    },
+    "634483d99c66": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 65,
+      "category": "Prompt Injection"
+    },
+    "fc8123182fe8": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 66,
+      "category": "Prompt Injection"
+    },
+    "764f3fe9b44b": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 67,
+      "category": "Prompt Injection"
+    },
+    "ce841bd3bc78": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 68,
+      "category": "Prompt Injection"
+    },
+    "22da9cdeacc9": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 69,
+      "category": "Prompt Injection"
+    },
+    "b476cab85c2c": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 70,
+      "category": "Prompt Injection"
+    },
+    "932b1a724b17": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 71,
+      "category": "Prompt Injection"
+    },
+    "57ddba496b9d": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 73,
+      "category": "Prompt Injection"
+    },
+    "7bc4b5eb8115": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 74,
+      "category": "Prompt Injection"
+    },
+    "43ec526a0d48": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 75,
+      "category": "Prompt Injection"
+    },
+    "bd5e3debd451": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 77,
+      "category": "Prompt Injection"
+    },
+    "ac1c45f19c11": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 78,
+      "category": "Prompt Injection"
+    },
+    "f0a0d749da1e": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 79,
+      "category": "Prompt Injection"
+    },
+    "011f88bfd07c": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 80,
+      "category": "Prompt Injection"
+    },
+    "d413869d4504": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 81,
+      "category": "Prompt Injection"
+    },
+    "889738318e1e": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 83,
+      "category": "Prompt Injection"
+    },
+    "7f9d9d31b69f": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 84,
+      "category": "Prompt Injection"
+    },
+    "75e0d9e0f08d": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 85,
+      "category": "Prompt Injection"
+    },
+    "a17b483d6639": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 86,
+      "category": "Prompt Injection"
+    },
+    "dc48341b8cfb": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 87,
+      "category": "Prompt Injection"
+    },
+    "130fe7d1a2c6": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 88,
+      "category": "Prompt Injection"
+    },
+    "7bfd2cff56f4": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 89,
+      "category": "Prompt Injection"
+    },
+    "0e9493586cd0": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 90,
+      "category": "Prompt Injection"
+    },
+    "a7bb4b22af62": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 91,
+      "category": "Prompt Injection"
+    },
+    "f98db21ccd2e": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 92,
+      "category": "Prompt Injection"
+    },
+    "02abb3a7deeb": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 93,
+      "category": "Prompt Injection"
+    },
+    "1ac8edee0f8c": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 95,
+      "category": "Prompt Injection"
+    },
+    "06eafc093b98": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 96,
+      "category": "Prompt Injection"
+    },
+    "d5b76cdd6cf4": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 97,
+      "category": "Prompt Injection"
+    },
+    "e2e057e5c1bc": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 98,
+      "category": "Prompt Injection"
+    },
+    "1763192af2fc": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 100,
+      "category": "Prompt Injection"
+    },
+    "428714b58f84": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 101,
+      "category": "Prompt Injection"
+    },
+    "841b6aeee2b3": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 103,
+      "category": "Prompt Injection"
+    },
+    "fc92ca60e2c6": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 104,
+      "category": "Prompt Injection"
+    },
+    "57fc796d27a7": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 105,
+      "category": "Prompt Injection"
+    },
+    "d55d77e66743": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 106,
+      "category": "Prompt Injection"
+    },
+    "ac0cdfd8eb88": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 107,
+      "category": "Prompt Injection"
+    },
+    "a7db1db8942c": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 117,
+      "category": "Prompt Injection"
+    },
+    "6d11be4c1c73": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 219,
+      "category": "Prompt Injection"
+    },
+    "d5467f392949": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 226,
+      "category": "Prompt Injection"
+    },
+    "b93eb2b7d174": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/CLAUDE.md",
+      "line": 347,
+      "category": "Prompt Injection"
+    },
+    "1b8601c3ee63": {
+      "original_code": "",
+      "original_issue": "JUMP/JUMP++ universal multi-prompt jailbreak framework code detected",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/benchmarks/run.py",
+      "line": 263,
+      "category": "Jailbreak Attempt"
+    },
+    "7ab3508bf0d6": {
+      "original_code": "",
+      "original_issue": "Detected: single-token-repetition-jailbreak-loop",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/benchmarks/run.py",
+      "line": 87,
+      "category": "Jailbreak Attempt"
+    },
+    "2f318800e332": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/plugins/caveman/skills/caveman-compress/scripts/benchmark.py",
+      "line": 25,
+      "category": "Jailbreak Attempt"
+    },
+    "4f41499132e9": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/plugins/caveman/skills/caveman-compress/scripts/benchmark.py",
+      "line": 55,
+      "category": "Jailbreak Attempt"
+    },
+    "9bdb29b4ccf1": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/plugins/caveman/skills/caveman-compress/scripts/benchmark.py",
+      "line": 70,
+      "category": "Jailbreak Attempt"
+    },
+    "2791686a9e5f": {
+      "original_code": "",
+      "original_issue": "Detected: single-token-repetition-jailbreak-loop",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/plugins/caveman/skills/caveman-compress/scripts/compress.py",
+      "line": 421,
+      "category": "Jailbreak Attempt"
+    },
+    "4abf8ce9a404": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-compress/scripts/benchmark.py",
+      "line": 25,
+      "category": "Jailbreak Attempt"
+    },
+    "2cf9c2165c89": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-compress/scripts/benchmark.py",
+      "line": 55,
+      "category": "Jailbreak Attempt"
+    },
+    "b725f775beb1": {
+      "original_code": "",
+      "original_issue": "PAIR (Prompt Automatic Iterative Refinement) jailbreak framework detected",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-compress/scripts/benchmark.py",
+      "line": 70,
+      "category": "Jailbreak Attempt"
+    },
+    "fe9f1af4aaa7": {
+      "original_code": "",
+      "original_issue": "Detected: single-token-repetition-jailbreak-loop",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-compress/scripts/compress.py",
+      "line": 421,
+      "category": "Jailbreak Attempt"
+    },
+    "da1ffda9eb48": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-code-generation-trigger-keywords",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/tests/caveman-compress/claude-md-project.md",
+      "line": 109,
+      "category": "Prompt Injection"
+    },
+    "722160e41cf1": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-code-generation-trigger-keywords",
+      "file": "/home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/tests/caveman-compress/claude-md-project.original.md",
+      "line": 69,
+      "category": "Prompt Injection"
+    }
+  }
+}

@@ -7,92 +7,95 @@
     Name:      arkan-hermes-weekly-backup
     Schedule:  every sunday 9am
     Repeat:    ∞
-    Next run:  2026-10-04T09:00:00+03:00
-    Deliver:   origin
+    Next run:  2026-10-11T09:00:00+03:00
+    Deliver:   telegram:-1003857885081
     Skills:    github-backup, browse-safe, security-gate
-    Last run:  2026-09-30T16:30:23.614482+03:00  error: Blocked: prompt matches threat pattern 'prompt_injection'. Cron prompts must not contain injection or exfiltration payloads.  (2 failures in a row)
-    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-09-27T09:00:00+03:00, ran 2026-09-27T22:28:07.322816+03:00 (13h 28m late)
-    Execution: running  2ae52d3c937e439d82767e6996191fc9
+    Last run:  2026-09-30T16:44:24.981144+03:00  ran, but the result was not delivered (delivery error: Telegram send failed: httpx.ConnectError: [Errno -2] Name or service not known (target telegram:-513437…). Check the target with `hermes cron status` or change it with `hermes cron edit a8b9f2c384f2 --deliver <target>`.
+    Dispatch:  on time (scheduled 2026-10-04T09:00:00+03:00)
+    Execution: running  46c9e7e78b3c45e49267ad30f1f284c5
     ⚠ The result was not delivered: delivery error: Telegram send failed: httpx.ConnectError: [Errno -2] Name or service not known (target telegram:-513437…. Check the target with `hermes cron status` or change it with `hermes cron edit a8b9f2c384f2 --deliver <target>`.
 
   d07076b7354f [active]
     Name:      memory-wiki-ingest
     Schedule:  0 * * * *
     Repeat:    ∞
-    Next run:  2026-09-30T17:00:00+03:00
+    Next run:  2026-10-04T10:00:00+03:00
     Deliver:   local
     Script:    memory-wiki-ingest.sh
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-09-30T16:24:20.382914+03:00  ok
-    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-09-30T02:00:00+03:00, ran 2026-09-30T16:24:19.670541+03:00 (14h 24m late)
-    Execution: completed  a9c47da651f44658a33108aaede45d38
+    Last run:  2026-10-04T09:00:34.798620+03:00  ok
+    Dispatch:  on time (scheduled 2026-10-04T09:00:00+03:00)
+    Execution: completed  f052daed12514228978183dab8b62493
 
   0abb28bce30b [active]
     Name:      memory-reflection-trigger
     Schedule:  */5 * * * *
     Repeat:    ∞
-    Next run:  2026-09-30T16:45:00+03:00
+    Next run:  2026-10-04T09:05:00+03:00
     Deliver:   local
     Script:    memory-reflection-trigger.sh
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-09-30T16:40:20.137130+03:00  ok
-    Dispatch:  on time (scheduled 2026-09-30T16:40:00+03:00)
-    Execution: completed  b1bd26adcd6547fd9962aaa96b15178d
+    Last run:  2026-10-04T09:00:34.659086+03:00  ok
+    Dispatch:  on time (scheduled 2026-10-04T09:00:00+03:00)
+    Execution: completed  cf5e2b332ff645148bb44a5c3fbec25f
 
   8b2208ea74e5 [active]
     Name:      memory-dlq-report
     Schedule:  0 */6 * * *
     Repeat:    ∞
-    Next run:  2026-09-30T18:00:00+03:00
+    Next run:  2026-10-04T12:00:00+03:00
     Deliver:   local
     Script:    memory-dlq-report.sh
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-09-30T16:24:20.178862+03:00  ok
-    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-09-30T06:00:00+03:00, ran 2026-09-30T16:24:19.670541+03:00 (10h 24m late)
-    Execution: completed  fbb3e3cd93ad4e6dac3c2f5b0b4fefb7
+    Last run:  2026-10-04T08:33:34.816701+03:00  ok
+    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-10-04T06:00:00+03:00, ran 2026-10-04T08:33:34.291398+03:00 (2h 33m late)
+    Execution: completed  0bb41a721a544541902bdce7b416a00f
 
   4ed13714393e [active]
     Name:      memory-decay-scan
     Schedule:  0 3 * * 0
     Repeat:    ∞
-    Next run:  2026-10-04T03:00:00+03:00
+    Next run:  2026-10-11T03:00:00+03:00
     Deliver:   local
     Script:    memory-decay-scan.sh
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-09-27T22:28:07.993982+03:00  ok
-    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-09-27T03:00:00+03:00, ran 2026-09-27T22:28:07.322816+03:00 (19h 28m late)
-    Execution: completed  9710dcacfeca40cb9cfe483c63eee1f5
+    Last run:  2026-10-04T08:33:35.171977+03:00  ok
+    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-10-04T03:00:00+03:00, ran 2026-10-04T08:33:34.291398+03:00 (5h 33m late)
+    Execution: completed  965707fc23164a8795a2e3da55dcdab6
 
   0476e751dcc5 [active]
     Name:      memory-semantic-dedup
     Schedule:  0 4 1 * *
     Repeat:    ∞
-    Next run:  2026-10-01T04:00:00+03:00
+    Next run:  2026-11-01T04:00:00+03:00
     Deliver:   local
     Script:    memory-semantic-dedup.sh
     Mode:      no-agent (script stdout delivered directly)
+    Last run:  2026-10-01T09:12:07.382873+03:00  ok
+    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-10-01T04:00:00+03:00, ran 2026-10-01T09:12:05.663001+03:00 (5h 12m late)
+    Execution: completed  e4b925727cd547d8a5bc6b3aaf6526aa
 
   374ea1676583 [active]
     Name:      shariah-basket-watch
     Schedule:  30 9,12,15 * * 1-5
     Repeat:    ∞
-    Next run:  2026-10-01T09:30:00+03:00
+    Next run:  2026-10-05T09:30:00+03:00
     Deliver:   telegram
     Script:    basket_price_watch.py
     Mode:      no-agent (script stdout delivered directly)
-    Last run:  2026-09-30T16:24:24.905128+03:00  ok
-    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-09-30T09:30:00+03:00, ran 2026-09-30T16:24:19.670541+03:00 (6h 54m late)
-    Execution: completed  d5b86cf6157b44b298a275e58881dbf7
+    Last run:  2026-10-03T00:13:41.245688+03:00  ok
+    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-10-02T09:30:00+03:00, ran 2026-10-03T00:13:37.430761+03:00 (14h 43m late)
+    Execution: completed  0f643fb022fc4011a9195597e9f16d6c
 
   e6b72655589b [active]
     Name:      daily-system-review
     Schedule:  30 5 * * *
     Repeat:    ∞
-    Next run:  2026-10-01T05:30:00+03:00
+    Next run:  2026-10-05T05:30:00+03:00
     Deliver:   telegram
-    Last run:  2026-09-29T08:38:22.304960+03:00  ok
-    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-09-30T05:30:00+03:00, ran 2026-09-30T16:24:19.670541+03:00 (10h 54m late)
-    Execution: running  72941a173dbd432e895f38e5083de2ba
+    Last run:  2026-10-04T08:35:10.878232+03:00  ok
+    Dispatch:  ⚠ catch-up after missed fire: scheduled 2026-10-04T05:30:00+03:00, ran 2026-10-04T08:33:34.291398+03:00 (3h 3m late)
+    Execution: completed  ecc82ba0b63f4a8db947df2214f8e947
 
   3a6dfc1924f0 [active]
     Name:      sunday-standup
@@ -100,4 +103,16 @@
     Repeat:    ∞
     Next run:  2026-10-04T15:00:00+03:00
     Deliver:   telegram
+
+  f6113a320ea1 [active]
+    Name:      tg-topic-watch
+    Schedule:  every 10m
+    Repeat:    ∞
+    Next run:  2026-10-04T09:05:35.216489+03:00
+    Deliver:   local
+    Script:    tg_topic_watch.sh
+    Mode:      no-agent (script stdout delivered directly)
+    Last run:  2026-10-04T08:55:35.216489+03:00  ok
+    Dispatch:  on time (scheduled 2026-10-04T08:54:35.505076+03:00)
+    Execution: completed  c0e94807568d4cdc87e82184459bb199
 

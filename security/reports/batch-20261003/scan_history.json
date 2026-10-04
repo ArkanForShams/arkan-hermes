@@ -1,0 +1,41 @@
+[
+  {
+    "timestamp": "2026-10-03T02:40:02.556014",
+    "security_score": 100.0,
+    "risk_level": "EXCELLENT",
+    "total_issues": 0,
+    "severity_breakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0,
+      "UNDEFINED": 0
+    }
+  },
+  {
+    "timestamp": "2026-10-03T02:54:04.378397",
+    "security_score": 0,
+    "risk_level": "CRITICAL",
+    "total_issues": 384,
+    "severity_breakdown": {
+      "CRITICAL": 72,
+      "HIGH": 131,
+      "MEDIUM": 96,
+      "LOW": 81,
+      "UNDEFINED": 0
+    }
+  },
+  {
+    "timestamp": "2026-10-03T03:01:16.132678",
+    "security_score": 0,
+    "risk_level": "CRITICAL",
+    "total_issues": 389,
+    "severity_breakdown": {
+      "CRITICAL": 48,
+      "HIGH": 88,
+      "MEDIUM": 151,
+      "LOW": 102,
+      "UNDEFINED": 0
+    }
+  }
+]

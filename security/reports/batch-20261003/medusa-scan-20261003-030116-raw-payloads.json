@@ -1,0 +1,13 @@
+{
+  "warning": "RAW PAYLOADS - Contains unobfuscated attack content. For human review only.",
+  "generated": "2026-10-03T03:01:16.145632",
+  "payloads": {
+    "3334666bcb6b": {
+      "original_code": "",
+      "original_issue": "Automated jailbreak or policy bypass framework usage detected.",
+      "file": "/home/shams/hermes-workspace/security/clones/DeusData-codebase-memory-mcp/scripts/ci/select-release-candidates.py",
+      "line": 526,
+      "category": "Jailbreak Attempt"
+    }
+  }
+}

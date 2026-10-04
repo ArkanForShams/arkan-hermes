@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shams Tabrez — IT Application Manager &amp; Doctoral Researcher</title>
+<meta name="description" content="Shams Tabrez — IT Application Manager at AutoLead, Riyadh. Eighteen years across LFCD, ESS, Theeb Rent a Car and AJAR | Enterprise Rent a Car; doctoral researcher in electronics & communication engineering, developing algorithms that enhance low-resolution medical images.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shams Tabrez",
+  "jobTitle": "IT Application Manager",
+  "email": "mailto:shamstabrez@live.in",
+  "url": "https://aboutme.ideaorbit.cloud",
+  "sameAs": ["https://www.linkedin.com/in/shams2tabrez"],
+  "worksFor": { "@type": "Organization", "name": "AutoLead" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Jawaharlal Nehru Technological University, Hyderabad" },
+    { "@type": "CollegeOrUniversity", "name": "Sri Satya Sai University of Technology & Medical Sciences, Sehore" }
+  ],
+  "knowsAbout": ["Enterprise car rental platforms","Microsoft Dynamics 365","Power BI","SSRS","SQL Server","ASP.NET MVC","Middleware integration","Medical image super-resolution"]
+}
+</script>
+<style>
+  :root{
+    --ivory:#faf7f1; --paper:#fffdf9; --ink:#1c1a17; --ink-soft:#5c564d;
+    --line:#e4ddd0; --accent:#9a5b33; --accent-deep:#7c4526; --sage:#6f7d63;
+    --serif:"Fraunces",Georgia,serif; --sans:"Inter",-apple-system,Segoe UI,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--ivory);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  ::selection{background:#e8d9c8}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 6vw}
+  h1,h2,h3,.display{font-family:var(--serif);font-weight:600;letter-spacing:-.01em}
+  .kicker{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  a{color:var(--accent-deep)}
+
+  /* ---- header ---- */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,247,241,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:var(--serif);font-weight:600;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+  .brand span{color:var(--accent)}
+  nav.links{display:flex;gap:1.6rem}
+  nav.links a{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft)}
+  nav.links a:hover{color:var(--accent-deep)}
+  @media(max-width:760px){nav.links{display:none}}
+
+  /* ---- hero ---- */
+  .hero{padding:160px 0 90px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.04;margin:.4rem 0 1.2rem}
+  .hero h1 em{font-style:italic;color:var(--accent-deep)}
+  .hero p.lede{font-size:1.12rem;color:var(--ink-soft);max-width:34rem}
+  .hero .meta{margin-top:1.6rem;display:flex;gap:1rem;flex-wrap:wrap}
+  .chip{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:.45rem 1rem;font-size:.8rem;color:var(--ink-soft)}
+  .chip b{color:var(--ink);font-weight:600}
+  .portrait-frame{position:relative}
+  .portrait-frame img{width:100%;border-radius:6px;box-shadow:0 30px 70px -30px rgba(28,26,23,.45);display:block}
+  .portrait-frame::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--line);border-radius:6px;z-index:-1}
+  @media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:120px}.portrait-frame{max-width:420px}}
+
+  /* ---- chapters ---- */
+  .chapter{padding:76px 0;border-top:1px solid var(--line)}
+  .chapter-head{display:flex;align-items:baseline;gap:1.4rem;margin-bottom:1.2rem}
+  .chapter-no{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1rem;white-space:nowrap}
+  .chapter h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+  .chapter .period{font-size:.85rem;color:var(--ink-soft);letter-spacing:.06em;text-transform:uppercase}
+  .chapter p.body{color:var(--ink-soft);max-width:44rem;margin-bottom:1.4rem}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  @media(max-width:860px){.two-col{grid-template-columns:1fr}}
+  ul.pts{list-style:none;margin-top:.6rem}
+  ul.pts li{padding:.55rem 0 .55rem 1.5rem;position:relative;color:var(--ink-soft);border-bottom:1px dashed var(--line)}
+  ul.pts li:last-child{border-bottom:none}
+  ul.pts li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+
+  /* degree cards */
+  .edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:1.6rem}
+  @media(max-width:860px){.edu-grid{grid-template-columns:1fr}}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:1.6rem;transition:transform .35s ease,box-shadow .35s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(28,26,23,.3)}
+  .seal{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent-deep);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.68rem;font-weight:600;letter-spacing:.05em;text-align:center;line-height:1.15;margin-bottom:1rem;background:#fbf3ea}
+  .card h3{font-size:1.18rem;margin-bottom:.35rem}
+  .card .inst{font-size:.92rem;color:var(--ink-soft)}
+  .card .yr{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-top:.7rem}
+  .logo-note{font-size:.78rem;color:var(--ink-soft);margin-top:.9rem;font-style:italic}
+
+  /* publications */
+  .pub{display:grid;grid-template-columns:120px 1fr;gap:1.4rem;padding:1.3rem 0;border-bottom:1px solid var(--line)}
+  .pub:last-child{border-bottom:none}
+  .pub .when{font-family:var(--serif);font-style:italic;color:var(--accent-deep);font-size:1.02rem}
+  .pub h3{font-size:1.12rem;margin-bottom:.25rem}
+  .pub .venue{font-size:.88rem;color:var(--ink-soft);margin-bottom:.4rem}
+  .pub .venue i{color:var(--sage)}
+  .tag{display:inline-block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:.2rem .7rem;color:var(--ink-soft);margin-right:.4rem;margin-top:.2rem}
+
+  /* illustration slots */
+  .scene{margin:2rem 0;border-radius:8px;border:1.5px dashed #cdbfa9;background:repeating-linear-gradient(45deg,#fbf6ec,#fbf6ec 12px,#f7f0e2 12px,#f7f0e2 24px);min-height:190px;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.4rem}
+  .scene .lab{font-size:.85rem;color:var(--ink-soft);max-width:32rem}
+  .scene .lab b{color:var(--ink)}
+  figcaption,.caption{font-size:.78rem;color:var(--ink-soft);margin-top:.5rem;font-style:italic}
+
+  /* skills */
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:1.4rem}
+  .skill{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:1rem 1.2rem}
+  .skill b{display:block;font-size:.95rem;margin-bottom:.15rem}
+  .skill span{font-size:.82rem;color:var(--ink-soft)}
+
+  /* contact + footer */
+  .contact{padding:90px 0 60px;border-top:1px solid var(--line);text-align:center}
+  .contact h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:.8rem}
+  .contact .row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem}
+  .btn{display:inline-block;text-decoration:none;padding:.8rem 1.7rem;border-radius:999px;font-size:.9rem;letter-spacing:.03em;border:1px solid var(--ink);color:var(--ink);transition:all .25s}
+  .btn:hover{background:var(--ink);color:var(--ivory)}
+  .btn.solid{background:var(--accent-deep);border-color:var(--accent-deep);color:#fff}
+  .btn.solid:hover{background:var(--accent)}
+  footer{padding:1.8rem 0 3rem;font-size:.8rem;color:var(--ink-soft);text-align:center;border-top:1px solid var(--line)}
+
+  /* motion */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.chapter,.pub,.card{transition:none}}
+
+  /* present day */
+  .present{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+  @media(max-width:860px){.present{grid-template-columns:1fr}}
+  blockquote{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.5;color:var(--ink);border-left:3px solid var(--accent);padding-left:1.4rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Shams <span>Tabrez</span></a>
+    <nav class="links">
+      <a href="#education">Education</a><a href="#journey">Journey</a><a href="#research">Research</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="wrap hero">
+    <div>
+      <span class="kicker">Riyadh, Kingdom of Saudi Arabia</span>
+      <h1>Building reliable systems. <em>Sharpening images that save sight.</em></h1>
+      <p class="lede">Eighteen years of enterprise application leadership in the car-rental industry — and, in parallel, doctoral research developing algorithms that enhance low-resolution medical images.</p>
+      <div class="meta">
+        <span class="chip"><b>IT Application Manager</b> · AutoLead</span>
+        <span class="chip"><b>PhD researcher</b> · ECE (since 2020)</span>
+        <span class="chip"><b>18 yrs</b> · enterprise delivery</span>
+      </div>
+    </div>
+    <figure class="portrait-frame reveal">
+      <img src="assets/photos/portrait-blue-suit.jpg" alt="Portrait of Shams Tabrez">
+      <figcaption class="caption">Shams Tabrez</figcaption>
+    </figure>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="chapter" id="education">
+    <div class="wrap">
+      <div class="chapter-head reveal"><span class="chapter-no">Chapter I</span><h2>Education — the foundation</h2></div>
+      <p class="body reveal">Electronics &amp; Communication Engineering shaped the way I think: signals, systems, and the discipline of making imperfect data usable. Each degree below is earned and verified from original documents.</p>
+      <div class="edu-grid">
+        <div class="card reveal">
+          <div class="seal">JNTUH</div>
+          <h3>B.Tech — ECE</h3>
+          <p class="inst">Jawaharlal Nehru Technological University, Hyderabad</p>
+          <p class="yr">Bachelor of Technology</p>
+          <p class="logo-note">Official university logo replaces this mark on publication.</p>
+        </div>
+        <div class="card reveal">
+          <div class="seal">JNTUH</div>
+          <h3>M.Tech — ECE</h3>
+          <p class="inst">Jawaharlal Nehru Technological University, Hyderabad</p>
+          <p class="yr">Master of Technology</p>
+          <p class="logo-note">Official university logo replaces this mark on publication.</p>
+        </div>
+        <div class="card reveal">
+          <div class="seal">SSSUTMS</div>
+          <h3>PhD (pursuing) — ECE</h3>
+          <p class="inst">Sri Satya Sai University of Technology &amp; Medical Sciences, Sehore · since 2020</p>
+          <p class="yr">Doctoral Research · Medical Image Enhancement</p>
+          <p class="logo-note">Official university logo replaces this mark on publication.</p>
+        </div>
+      </div>
+      <figure class="scene reveal"><span class="lab"><b>Illustrative scene (pending VICSEE set):</b> focused study and research — the years between degrees.</span></figure>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey">
+    <div class="wrap chapter reveal">
+      <div class="chapter-head"><span class="chapter-no">Chapter II</span><h2>LFCD — where it began</h2>
+        <span style="flex:1"></span><span class="period">Riyadh · 2008 – 2011</span></div>
+      <div class="two-col">
+        <p class="body">Software Programmer at the Land Force Computer Directorate (LFCD). First professional years: real systems, real users, and the habit of careful, correct work.</p>
+        <figure class="scene" style="margin:0"><span class="lab"><b>Illustrative scene (pending):</b> early-career focus.</span></figure>
+      </div>
+    </div>
+
+    <div class="wrap chapter reveal">
+      <div class="chapter-head"><span class="chapter-no">Chapter III</span><h2>ESS Hyderabad — web years</h2>
+        <span style="flex:1"></span><span class="period">Hyderabad · 2011 – 2014</span></div>
+      <div class="two-col">
+        <p class="body">Web Application Developer at ESS Hyderabad — building for the modern web and carrying those patterns into everything that followed.</p>
+        <figure class="scene" style="margin:0"><span class="lab"><b>Illustrative scene (pending):</b> development work at ESS.</span></figure>
+      </div>
+    </div>
+
+    <div class="wrap chapter reveal">
+      <div class="chapter-head"><span class="chapter-no">Chapter IV</span><h2>Theeb Rent a Car</h2>
+        <span style="flex:1"></span><span class="period">Riyadh · Oct 2014 – Sep 2021</span></div>
+      <div class="two-col">
+        <div>
+          <p class="body">Seven years as Senior System Analyst — automating operations and building the reporting spine leadership ran on.</p>
+          <ul class="pts">
+            <li>Designed and deployed custom ASP.NET MVC applications, including Employee KPI tracking</li>
+            <li>Built ASP.NET RESTful middleware integrating third-party systems</li>
+            <li>Microsoft Dynamics 365 implementation and support</li>
+            <li>Executive reporting packs on SSRS, SQL Server and Power BI</li>
+            <li>Dashboards with drill-through, bookmarks and what-if analysis</li>
+          </ul>
+        </div>
+        <figure class="scene" style="margin:0"><span class="lab"><b>Illustrative scene (pending):</b> diligent work, elegant shirt &amp; trousers (white-shirt portrait as reference).</span></figure>
+      </div>
+    </div>
+
+    <div class="wrap chapter reveal">
+      <div class="chapter-head"><span class="chapter-no">Chapter V</span><h2>AJAR | Enterprise Rent a Car</h2>
+        <span style="flex:1"></span><span class="period">Riyadh · Oct 2021 – May 2026</span></div>
+      <div class="two-col">
+        <div>
+          <p class="body">Application Manager, leading a development and support team through five years of full-cycle enterprise delivery.</p>
+          <ul class="pts">
+            <li>Led development &amp; support team — full-cycle delivery, high service quality</li>
+            <li>Aligned Rentey and CarPro platforms with evolving business workflows across all branches</li>
+            <li>Microsoft Dynamics 365 implementation and integration oversight</li>
+            <li>C-suite performance visibility: reporting packs, dashboards, what-if scenarios</li>
+            <li>Mentorship, workflow procedures, stakeholder alignment</li>
+          </ul>
+        </div>
+        <figure class="scene" style="margin:0"><span class="lab"><b>Illustrative scene (pending):</b> focused, demanding work in a suit.</span></figure>
+      </div>
+    </div>
+
+    <div class="wrap chapter reveal">
+      <div class="chapter-head"><span class="chapter-no">Chapter VI</span><h2>AutoLead — the present chapter</h2>
+        <span style="flex:1"></span><span class="period">Riyadh · June 2026 – Present</span></div>
+      <div class="two-col">
+        <p class="body">IT Application Manager at AutoLead, continuing the same craft at a new scale: reliable enterprise applications, clear reporting for decision-makers, and teams that grow under patient, structured leadership.</p>
+        <figure class="scene" style="margin:0"><span class="lab"><b>Illustrative scene (pending):</b> suited, preparing ideas; management-meeting moment with colleagues respectfully out of focus.</span></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="chapter" id="research">
+    <div class="wrap">
+      <div class="chapter-head reveal"><span class="chapter-no">Chapter VII</span><h2>Doctoral research — since 2020</h2></div>
+      <p class="body reveal">At SSSUTMS, Sehore, my research develops algorithms that enhance low-resolution medical images — MRI, CT, ultrasound and PET — so that diagnosis rests on clearer evidence: edge-preserving interpolation, deep-learning super-resolution, attention-guided reconstruction, validated with PSNR and SSIM.</p>
+      <h3 class="reveal" style="margin:2rem 0 .4rem;font-size:1.35rem">Peer-reviewed publications <span style="color:var(--ink-soft);font-size:.85rem;font-family:var(--sans);font-weight:400">— each verified from the original documents</span></h3>
+      <div class="pub reveal">
+        <div class="when">June 2026</div>
+        <div><h3>Developing a Novel Algorithm for Better Interpolating Low Resolution Medical Images</h3>
+          <p class="venue">EUSRM — Engineering Universe for Scientific Research and Management · Vol. 18, Issue 6 · ISSN 2319-3069 <i>(with Dr. Alka Thakur)</i></p>
+          <span class="tag">Medical imaging</span><span class="tag">Attention-guided SR</span></div>
+      </div>
+      <div class="pub reveal">
+        <div class="when">May 2025</div>
+        <div><h3>A Novel Image Interpolation Technique for Quality Enhancement of Low-Resolution Medical Scans</h3>
+          <p class="venue">IJEASM — Int'l Journal of Engineering Applied Science and Management · Vol. 6, Issue 5 · ISSN 2582-6948 <i>(with Dr. Mukesh Tiwari)</i></p>
+          <span class="tag">Edge preservation</span><span class="tag">Residual learning</span></div>
+      </div>
+      <div class="pub reveal">
+        <div class="when">Dec 2021</div>
+        <div><h3>A Novel Algorithm for Better Interpolating Low Resolution Medical Images</h3>
+          <p class="venue">IJCIc — Int'l Journal of Computational Intelligence in Control · Vol. 13, No. 2 · ISSN 0974-8571 <i>(with Dr. Vijay Prakash Singh)</i></p>
+          <span class="tag">MRI</span><span class="tag">GAN super-resolution</span></div>
+      </div>
+      <div class="pub reveal">
+        <div class="when">Dec 2021</div>
+        <div><h3>Enhanced Resolution Techniques for Medical Image Processing</h3>
+          <p class="venue">IJCRT — Int'l Journal of Creative Research Thoughts · Vol. 9, Issue 12 · ISSN 2320-2882 <i>(with Dr. Vijay Prakash Singh)</i></p>
+          <span class="tag">CT reconstruction</span><span class="tag">Interpolation</span></div>
+      </div>
+      <figure class="scene reveal" style="margin-top:2rem"><span class="lab"><b>Illustrative scene (pending):</b> separate research moment per publication — the desk where each algorithm took shape.</span></figure>
+    </div>
+  </section>
+
+  <!-- PRESENT DAY -->
+  <section class="chapter">
+    <div class="wrap present">
+      <figure class="portrait-frame reveal"><img src="assets/photos/portrait-blue-suit.jpg" alt="Shams Tabrez, present day" style="border-radius:6px;width:100%;display:block"></figure>
+      <blockquote class="reveal">“I have spent my career making systems reliable for the people who run businesses — and images clear for the doctors who save lives. Both crafts reward the same virtues: patience, precision, and honest work.”</blockquote>
+    </div>
+    <div class="wrap" style="margin-top:.6rem"><p class="caption" style="padding-left:1.4rem">A composed reflection on the journey so far — written in Shams's own measured voice, reviewed before publication.</p></div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="chapter" id="skills">
+    <div class="wrap">
+      <div class="chapter-head reveal"><span class="chapter-no">Appendix</span><h2>Skills — the working toolkit</h2></div>
+      <div class="skills">
+        <div class="skill reveal"><b>Enterprise rental platforms</b><span>Rentey · Fleetzy · Garagey · CarPro</span></div>
+        <div class="skill reveal"><b>ERP / CRM</b><span>Microsoft Dynamics 365 implementation &amp; integration</span></div>
+        <div class="skill reveal"><b>Business intelligence</b><span>Power BI · SSRS · SSAS · DAX · MDX</span></div>
+        <div class="skill reveal"><b>Data engineering</b><span>SQL Server · T-SQL · Oracle · data modeling</span></div>
+        <div class="skill reveal"><b>Application development</b><span>ASP.NET MVC · C# · .NET Framework · WCF</span></div>
+        <div class="skill reveal"><b>Integration</b><span>RESTful middleware · SaaS integrations · vendor negotiation</span></div>
+        <div class="skill reveal"><b>Delivery leadership</b><span>Agile execution · team mentorship · stakeholder engagement</span></div>
+        <div class="skill reveal"><b>Research methods</b><span>Deep-learning super-resolution · PSNR/SSIM validation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <span class="kicker reveal">Professional contact</span>
+      <h2 class="reveal">Let's connect</h2>
+      <p class="reveal" style="color:var(--ink-soft);max-width:34rem;margin:0 auto">Open to professional conversations on enterprise applications, business intelligence, and applied research in medical image enhancement.</p>
+      <div class="row reveal">
+        <a class="btn solid" href="https://www.linkedin.com/in/shams2tabrez" target="_blank" rel="noopener">LinkedIn — shams2tabrez</a>
+        <a class="btn" href="mailto:shamstabrez@live.in">shamstabrez@live.in</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Shams Tabrez · Riyadh · Illustrated chapter scenes are editorial illustrations of the journey, not photographs — degrees, positions and publications are evidenced by original documents on file.</div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('in')), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

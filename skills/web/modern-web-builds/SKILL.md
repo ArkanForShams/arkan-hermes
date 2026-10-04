@@ -18,6 +18,7 @@ Class procedure for Shams's modern sites — personal brand, venture sites, prod
 ## When to Use
 - "Build me a website" with modern stack expectations (Next.js, Tailwind, shadcn-style components)
 - Editing or extending an existing Next.js build in `~/hermes-workspace/website/`
+- Personal career/CV profile sites carry a verify-everything gate and editorial-illustration rules — read references/personal-profile-sites.md before building such a site
 - Don't use for: python-generated marketing pages (ksa-web-builds), one-off HTML artifacts (frontend-design), QA itself (webpage-visual-qa)
 
 ## Procedure
@@ -37,10 +38,16 @@ Class procedure for Shams's modern sites — personal brand, venture sites, prod
 - **Theme tokens: fixed `onyx` for text-on-accent, `--line` for hairlines, `color-mix` for veils.** Hardcoded `text-ink` on a brass button resolves through the inverted ink token in light mode; hardcoded white/10 or navy rgba veils break exactly one theme.
 - **Never let one token serve as both a background and a text color across themes.** `--color-paper` used as both light-bg and light-text made light mode turn cream sections navy; split the roles into separate tokens instead.
 - **A theme DEFAULT and theme-adaptive tokens are two different decisions.** Wiring light as default (static `light` class + provider restore) does nothing for a section styled with light-identity tokens (paper/inktext) — it renders identically in both modes and the alternate theme silently dies on that surface. Surfaces that must re-theme use the flipping tokens (ink/ink-2/creamtext); surfaces fixed in one look use inline `style={{ ...: 'var(--color-x)' }}` styles, which flip nothing and never become no-op utility classes.
+- **When switching a theme DEFAULT, check every hero/section for light-identity token lock-in.** A rewrite made for one theme (e.g. restyling the hero for the light look with `bg-paper`/`text-inktext`) locks that surface out of the other theme permanently — restore the flipping-token versions from git rather than re-deriving them, then verify BOTH themes render the hero via the real toggle before trusting the surface.
+- **Utility-class names that don't map to registered `@theme` tokens silently render nothing** (`bg-inktext` on a token named `--color-inktext` that Tailwind 4 never materialized as a `bg-*` utility) — a 'missing section background' that shows a plain screenshot of the page beneath. When a fixed-color band must be guaranteed, use an inline `style` with the CSS variable instead of betting on the utility existing.
 - **Grep the compiled CSS in `out/` for any newly-used utility class before QA'ing its rendering** — an ungenerated class is a silent no-op surface (e.g. a background that resolves transparent), and screenshots under-read it as 'fine'.
 - **Test themes the real user path.** Click the toggle with playwright-core; injecting `class="light"` into served HTML creates a duplicate class attribute and races hydration, and the capture shows a phantom half-applied theme.
 - **Targeted edits go through `patch`, never full-file `write_file`** — one full-file write submitted with partial content in mind deleted an entire token system, and the symptom (every page unstyled) looked like a build bug for three QA passes. read_file first, patch second.
 - **QA scripts live in `<project>/scripts/`, not /tmp** — `require()` from /tmp cannot resolve project node_modules (MODULE_NOT_FOUND); copy the script into the project and run it there.
+
+## templates/nextjs-tailwind4-scaffold.md
+
+For the dark-default scaffold pattern. When Shams's site should be LIGHT-default (his standing 'Soft Light' stage), apply the default-mode wiring from references/theme-tokens.md ON TOP of this scaffold: static `light` class on `<html>`, `themeProvider` defaulting to light and restoring only a saved 'dark', `themeColor: #F7F2E9`.
 
 ## Verification
 - `npx next build` clean; static `out/` exists; First Load JS well under budget.
