@@ -9,3 +9,5 @@ auth.json
 __pycache__/
 *.pyc
 .DS_Store
+# private personal assets (CVs w/ phone) — local only, never in public repo
+private-assets/
