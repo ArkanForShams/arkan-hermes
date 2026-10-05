@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# builds
+.next/
+out/
+dist/
+
+# env & secrets
+.env
+.env*.local
+
+# databases (dev data + sqlite artifacts)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+prisma/dev.db*
+
+# backups
+backups/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log

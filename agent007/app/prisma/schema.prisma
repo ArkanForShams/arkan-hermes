@@ -1,0 +1,246 @@
+// Agent 007 — Prisma schema (specs/001-baseline/data-model.md, as-of 2026-10-05)
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  TEAM
+  VIEWER
+}
+
+enum IssueStage {
+  NEW
+  ANALYZING
+  WITH_VENDOR
+  FOLLOW_UP
+  RESOLVED
+  CLOSED
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum MeetingType {
+  STANDUP
+  VENDOR
+  ADHOC
+}
+
+enum DraftStatus {
+  PENDING
+  EDITED
+  HANDED_OFF
+  DISCARDED
+}
+
+enum FollowUpState {
+  PREPARED
+  SENT_BY_USER
+  REPLIED
+  CLOSED
+}
+
+model User {
+  id           String       @id @default(cuid())
+  username     String       @unique
+  displayName  String
+  email        String?
+  passwordHash String
+  role         Role         @default(TEAM)
+  locale       String       @default("en")
+  active       Boolean      @default(true)
+  createdAt    DateTime     @default(now())
+  issuesAsA    Issue[]      @relation("assignee")
+  activities   Activity[]
+  auditEvents  AuditEvent[]
+  memberships  ProjectMember[]
+  boardPrefs   BoardPref[]
+  meetingsCreated Meeting[] @relation("creator")
+}
+
+model Project {
+  id        String          @id @default(cuid())
+  key       String          @unique
+  nameEn    String
+  nameAr    String
+  descEn    String?
+  descAr    String?
+  colorTag  String          @default("#0E4C5C")
+  archived  Boolean         @default(false)
+  issues    Issue[]
+  meetings  Meeting[]
+  members   ProjectMember[]
+  createdAt DateTime        @default(now())
+}
+
+model ProjectMember {
+  id        String  @id @default(cuid())
+  projectId String
+  userId    String
+  role      Role    @default(TEAM)
+  project   Project @relation(fields: [projectId], references: [id])
+  user      User    @relation(fields: [userId], references: [id])
+  @@unique([projectId, userId])
+}
+
+model Vendor {
+  id              String        @id @default(cuid())
+  name            String        @unique
+  supportEmail    String?
+  escalationEmail String?
+  notesEn         String?
+  notesAr         String?
+  active          Boolean       @default(true)
+  applications    Application[]
+}
+
+model Application {
+  id          String  @id @default(cuid())
+  name        String  @unique
+  vendorId    String
+  vendor      Vendor  @relation(fields: [vendorId], references: [id])
+  contextEn   String?
+  contextAr   String?
+  issues      Issue[]
+}
+
+model Issue {
+  id              String      @id @default(cuid())
+  number          Int
+  code            String      @unique
+  projectId       String
+  project         Project     @relation(fields: [projectId], references: [id])
+  titleEn         String
+  titleAr         String?
+  descEn          String?
+  descAr          String?
+  stage           IssueStage  @default(NEW)
+  priority        Priority    @default(MEDIUM)
+  assigneeId      String?
+  assignee        User?       @relation("assignee", fields: [assigneeId], references: [id])
+  applicationId   String?
+  application     Application? @relation(fields: [applicationId], references: [id])
+  dueDate         DateTime?
+  source          String      @default("manual")
+  enteredVendorAt DateTime?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  activities      Activity[]
+  emails          EmailMessage[]
+  followUps       FollowUp[]
+  drafts          DraftVersion[]
+
+  @@index([projectId, stage])
+  @@index([stage, enteredVendorAt])
+}
+
+model Activity {
+  id        String   @id @default(cuid())
+  issueId   String
+  issue     Issue    @relation(fields: [issueId], references: [id])
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  type      String
+  payload   String   @default("{}")
+  createdAt DateTime @default(now())
+
+  @@index([issueId, createdAt])
+}
+
+model EmailMessage {
+  id                String  @id
+  issueId           String?
+  issue             Issue?  @relation(fields: [issueId], references: [id])
+  direction         String  @default("inbound")
+  fromAddr          String
+  subject           String
+  bodyPreview       String
+  receivedAt        DateTime
+  classified        Boolean @default(false)
+  suggestedAppId    String?
+  suggestedVendorId String?
+  suggestedPriority String?
+  aiVerdict         String?
+  createdAt         DateTime @default(now())
+
+  @@index([issueId, receivedAt])
+}
+
+model DraftVersion {
+  id          String      @id @default(cuid())
+  issueId     String
+  issue       Issue       @relation(fields: [issueId], references: [id])
+  kind        String      @default("vendor_email")
+  subject     String
+  body        String
+  status      DraftStatus @default(PENDING)
+  generatedBy String      @default("ai")
+  handedOffAt DateTime?
+  createdAt   DateTime    @default(now())
+
+  @@index([issueId, createdAt])
+}
+
+model FollowUp {
+  id        String        @id @default(cuid())
+  issueId   String
+  issue     Issue         @relation(fields: [issueId], references: [id])
+  state     FollowUpState @default(PREPARED)
+  draftId   String?
+  dueOn     DateTime
+  note      String?
+  createdAt DateTime      @default(now())
+
+  @@unique([issueId, dueOn])
+}
+
+model Meeting {
+  id            String      @id @default(cuid())
+  projectId     String?
+  project       Project?    @relation(fields: [projectId], references: [id])
+  title         String
+  type          MeetingType @default(STANDUP)
+  heldOn        DateTime
+  rawNotes      String?
+  summaryEn     String?
+  summaryAr     String?
+  decisions     String?
+  actions       String?
+  openQuestions String?
+  createdBy     String
+  creator       User        @relation("creator", fields: [createdBy], references: [id])
+  createdAt     DateTime    @default(now())
+}
+
+model AuditEvent {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  action    String
+  entity    String
+  detail    String?
+  ip        String?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model BoardPref {
+  id        String  @id @default(cuid())
+  userId    String
+  projectId String
+  view      String  @default("board")
+  user      User    @relation(fields: [userId], references: [id])
+
+  @@unique([userId, projectId])
+}

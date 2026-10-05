@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+/* Agent 007 — "Desert Formal" design tokens (specs/001-baseline/ui-design.md) */
+:root {
+  --ink: #14212b;
+  --ink-soft: #465866;
+  --paper: #f4f1ec;
+  --surface: #ffffff;
+  --line: #e3ddd3;
+  --petrol: #0e4c5c;
+  --petrol-deep: #093642;
+  --copper: #c4762c;
+  --gold: #d9a441;
+  --sage: #3e7c59;
+  --slate: #718096;
+  --crimson: #b3261e;
+
+  /* stage colors */
+  --stage-new: #5b7c99;
+  --stage-analyzing: #d9a441;
+  --stage-vendor: #0e4c5c;
+  --stage-follow-up: #c4762c;
+  --stage-resolved: #3e7c59;
+  --stage-closed: #718096;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-petrol: var(--petrol);
+  --color-petrol-deep: var(--petrol-deep);
+  --color-copper: var(--copper);
+  --color-gold: var(--gold);
+  --color-sage: var(--sage);
+  --color-slate: var(--slate);
+  --color-crimson: var(--crimson);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), "IBM Plex Sans Arabic", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+[dir="rtl"] body {
+  letter-spacing: 0;
+}
+
+/* Hairlines & cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.btn-primary {
+  background: var(--petrol);
+  color: #fff;
+  border-radius: 8px;
+  transition: background 0.15s ease;
+}
+.btn-primary:hover {
+  background: var(--petrol-deep);
+}
+.btn-ghost {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+}
+.btn-ghost:hover {
+  background: rgba(14, 76, 92, 0.06);
+}
+.chip {
+  border-radius: 999px;
+  font-size: 12px;
+  padding: 2px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 2px;
+}
+
+/* AI content marker (copper left border) */
+.ai-panel {
+  border-inline-start: 3px solid var(--copper);
+  background: linear-gradient(0deg, rgba(196, 118, 44, 0.04), rgba(196, 118, 44, 0.04)),
+    var(--surface);
+}
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
