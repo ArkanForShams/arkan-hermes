@@ -11,3 +11,15 @@ __pycache__/
 .DS_Store
 # private personal assets (CVs w/ phone) — local only, never in public repo
 private-assets/
+security/nango-triage/nango/
+security/nango-triage/nango/
+security/nango-triage/.claude_agents*
+security/nango-triage/docs_*
+security/nango-triage/dev_docker-compose*
+security/nango-triage/docker-compose*
+security/nango-triage/vite.*
+security/nango-triage/scripts_*
+# Bulk scan payloads: regenerable scanner output, contain verbatim third-party fixture strings.
+# Keep: TRIAGE-VERDICT.md files (human analysis). Drop: raw scan JSONs.
+security/reports/*-raw-payloads.json
+security/reports/medusa-scan-2*.json

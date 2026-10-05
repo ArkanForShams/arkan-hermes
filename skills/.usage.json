@@ -293,15 +293,15 @@
     "created_by": "learn",
     "first_seen_at": null,
     "last_patched_at": "2026-10-04T06:05:11.733143+00:00",
-    "last_reused_patch_generation": 0,
-    "last_used_at": "2026-10-04T06:00:34.652094+00:00",
-    "last_viewed_at": "2026-09-27T23:07:15.270099+00:00",
+    "last_reused_patch_generation": 1,
+    "last_used_at": "2026-10-05T14:08:35.124672+00:00",
+    "last_viewed_at": "2026-10-05T14:08:35.122140+00:00",
     "patch_count": 1,
     "patch_generation": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 11,
-    "view_count": 6
+    "use_count": 13,
+    "view_count": 8
   },
   "head-of-marketing": {
     "archived_at": null,
@@ -422,14 +422,14 @@
     "first_seen_at": null,
     "last_patched_at": "2026-09-27T23:18:23.313128+00:00",
     "last_reused_patch_generation": 6,
-    "last_used_at": "2026-10-03T12:10:56.225240+00:00",
-    "last_viewed_at": "2026-10-03T12:10:56.222586+00:00",
+    "last_used_at": "2026-10-05T13:25:51.237999+00:00",
+    "last_viewed_at": "2026-10-05T13:25:51.235711+00:00",
     "patch_count": 6,
     "patch_generation": 6,
     "pinned": false,
     "state": "active",
-    "use_count": 17,
-    "view_count": 17
+    "use_count": 18,
+    "view_count": 18
   },
   "memory-os-troubleshooting": {
     "archived_at": null,
@@ -646,14 +646,14 @@
     "first_seen_at": null,
     "last_patched_at": "2026-09-24T16:02:07.121024+00:00",
     "last_reused_patch_generation": 4,
-    "last_used_at": "2026-10-04T06:00:34.935990+00:00",
-    "last_viewed_at": "2026-10-03T23:01:47.987510+00:00",
+    "last_used_at": "2026-10-05T13:49:57.035613+00:00",
+    "last_viewed_at": "2026-10-05T13:49:57.032634+00:00",
     "patch_count": 4,
     "patch_generation": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 21,
-    "view_count": 16
+    "use_count": 22,
+    "view_count": 17
   },
   "shariah-screening": {
     "archived_at": null,
