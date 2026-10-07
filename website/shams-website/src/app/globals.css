@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Ink & Brass — Design System (source: DESIGN.md)
+   Tailwind 4 CSS-first tokens
+   ============================================================ */
+@theme {
+  --color-ink: #0B1524;
+  --color-ink-2: #101E32;
+  --color-ink-3: #16273E;
+  --color-paper: #F7F2E9;
+  --color-paper-2: #EFE7D8;
+  --color-brass: #C39A45;
+  --color-brass-bright: #E3B95C;
+  --color-brass-deep: #9A7830;
+  --color-lapis: #2E5E8C;
+  --color-inktext: #17263B;
+  --color-muted-light: #5A6B80;
+  --color-creamtext: #EDE6D6;
+  --color-onyx: #0B1524; /* fixed dark: text on brass in ANY theme */
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-manrope), "Segoe UI", sans-serif;
+  --font-mono: var(--font-plex-mono), "Courier New", monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+}
+
+/* Semantic aliases (dark = brand default) */
+:root {
+  --bg: var(--color-ink);
+  --bg-elev: var(--color-ink-2);
+  --fg: var(--color-creamtext);
+  --fg-muted: rgba(237, 230, 214, 0.66);
+  --accent: var(--color-brass);
+  --accent-hover: var(--color-brass-bright);
+  --accent-on-light: var(--color-brass-deep);
+  --line: rgba(237, 230, 214, 0.14);
+  --surface-text: var(--color-creamtext);
+}
+
+/* Light mode inverts ONLY the dark bands (ink/ink-2/ink-3 surfaces and
+   creamtext copy). Cream sections (About/Principles/Contact) keep their
+   identity: paper stays cream, inktext stays navy in both themes. */
+html.light {
+  --color-ink: #F7F2E9;
+  --color-ink-2: #FFFDF8;
+  --color-ink-3: #EFE7D8;
+  --color-creamtext: #17263B;
+  --color-brass: #9A7830;
+  --color-brass-bright: #B8923B;
+  --color-muted-light: #46586E;
+  --fg: #17263B;
+  --fg-muted: rgba(23, 38, 59, 0.66);
+  --accent: var(--color-brass-deep);
+  --accent-hover: var(--color-brass);
+  --accent-on-light: var(--color-brass);
+  --line: rgba(23, 38, 59, 0.14);
+  --surface-text: #17263B;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: rgba(195, 154, 69, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scroll-reveal — CSS scroll-driven animation (progressive enhancement).
+   Unsupported browsers / JS-off visitors see content immediately. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .rv {
+      animation: rv-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+@keyframes rv-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Brass keyline for eyebrow labels */
+.keyline::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+  vertical-align: middle;
+  margin-inline-end: 12px;
+}
+/* ============================================================
+   MOTION SYSTEM — "Candlelight Physics" (CREATIVE-DIRECTION.md)
+   ============================================================ */
+
+/* Grain — stone texture, kills banding, ~1KB */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.014;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='64' height='64' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+/* Lamp — the only glow in the system */
+.lamp {
+  position: absolute;
+  pointer-events: none;
+  background: radial-gradient(closest-side, rgba(227, 185, 92, 0.14), rgba(227, 185, 92, 0.05) 55%, transparent 75%);
+}
+
+/* Light-line spine — brass filament tracking scroll progress */
+.lightline {
+  position: fixed;
+  left: max(4px, 1vw);
+  top: 0;
+  width: 1px;
+  height: 100%;
+  z-index: 40;
+  pointer-events: none;
+}
+.lightline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--line);
+}
+.lightline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.5px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-brass-bright), var(--color-brass) 60%, transparent);
+  transform-origin: top;
+  transform: scaleY(0);
+}
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .lightline::after {
+      animation: lightline-grow linear both;
+      animation-timeline: scroll(root);
+    }
+    .scrollhint {
+      animation: scrollhint-fade linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 120px;
+    }
+  }
+}
+@keyframes lightline-grow { to { transform: scaleY(1); } }
+@keyframes scrollhint-fade { to { opacity: 0; } }
+
+/* Entrance grammar: structure stands, inscriptions rise */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .rise {
+      animation: rise-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+  }
+}
+
+/* Numeral glint — background sweep on card hover */
+.glint {
+  background: linear-gradient(100deg, currentColor 40%, rgba(255, 244, 214, 0.9) 50%, currentColor 60%);
+  background-size: 250% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.group:hover .glint {
+  background-position: 0% 0;
+}
+
+/* Principle underline draw on hover */
+.drawline {
+  position: relative;
+}
+.drawline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 100%;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .drawline::after {
+  transform: scaleX(1);
+}
+
+/* Attribution type-on — steps() ch trick */
+.typeon {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .typeon {
+      width: 0;
+      animation: type-on steps(11) 0.9s both;
+      animation-timeline: view();
+      animation-range: entry 20% entry 85%;
+    }
+  }
+}
+@keyframes type-on { to { width: 11ch; } }
+
+/* Scroll hint pulse */
+.scrollhint {
+  animation: hint-pulse 2.2s ease-in-out infinite;
+}
+@keyframes hint-pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+
+/* Cursor lamp — pointer-fine only, hero-scoped, GPU-cheap */
+@media (pointer: fine) {
+  .cursor-lamp {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 9999px;
+    pointer-events: none;
+    background: radial-gradient(closest-side, rgba(227, 185, 92, 0.08), transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease;
+    will-change: transform;
+  }
+}
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .cursor-lamp { display: none; }
+}

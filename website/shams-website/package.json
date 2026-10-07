@@ -1,0 +1,33 @@
+{
+  "name": "shams-tabrez-website",
+  "version": "1.0.0",
+  "private": true,
+  "overrides": {
+    "postcss": "8.5.28"
+  },
+  "description": "Personal website of Shams Tabrez — IT Application Manager building an AI-staffed department on the path to CTO/CAIO.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.545.0",
+    "next": "^15.5.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^24.6.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "playwright-core": "^1.63.0",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2"
+  }
+}
