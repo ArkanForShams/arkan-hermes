@@ -1,0 +1,98 @@
+
+ ███╗   ███╗ ███████╗ ██████╗  ██╗   ██╗ ███████╗  █████╗
+ ████╗ ████║ ██╔════╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██╔══██╗
+ ██╔████╔██║ █████╗   ██║  ██║ ██║   ██║ ███████╗ ███████║
+ ██║╚██╔╝██║ ██╔══╝   ██║  ██║ ██║   ██║ ╚════██║ ██╔══██║
+ ██║ ╚═╝ ██║ ███████╗ ██████╔╝ ╚██████╔╝ ███████║ ██║  ██║
+ ╚═╝     ╚═╝ ╚══════╝ ╚═════╝   ╚═════╝  ╚══════╝ ╚═╝  ╚═╝
+
+               v2026.7.0 - Security Scanner
+   79 Analyzers | 40,000+ Rules | AI Security Detection   
+
+
+🎯 Target: 
+/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-2026100
+7
+🔧 Mode: Full
+
+Analyzing repository...
+📊 Languages: typescript (1737), rust (546), javascript (27), css (21), markdown
+(17)
+🔧 Frameworks: anthropic_sdk, docker_compose, mcp_server, openai_sdk, react
+🤖 AI Patterns: MCP, RAG, Agents detected - AI security scanners enabled
+
+✓ Ready to scan: 19 scanners
+  28 scanners skipped (no Bash, Batch, Clojure, Csharp, +24 more files found)
+
+For best results, install 4 missing tool(s):
+  stylelint (CSS/SCSS linter)
+    npm install -g stylelint
+  taplo (TOML linter)
+    cargo install taplo-cli
+  xmllint (XML validator)
+    sudo apt install libxml2-utils
+  trivy (Container/IaC scanner)
+    sudo snap install trivy
+Non-interactive mode: continuing without optional tools.
+
+
+🐍 MEDUSA Parallel Scanner v1.1.0
+   Workers: 2 cores
+   Cache: enabled
+   Mode: full
+
+Found 2305 scannable files
+
+📊 Scanning 2305 files across 2 parallel workers (each file is checked by all applicable scanners)...
+
+🔍 Running GitLeaks batch scan on /home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007...
+  GitLeaks batch scan: 13 files, 16 findings in 1.4s
+  Scanning: 10%...20%...30%...40%...50%...60%...70%...80%...90%...100%... Done!
+
+            MEDUSA Scan Progress (2 workers, each file → multiple scanners)     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━
+┃ Scanner                    ┃  Status  ┃ Files Checked ┃ Issues ┃ Progress     
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━
+│ LLMGuardScanner            │  ✓ Done  │          1025 │    322 │ █████████████
+│ ExcessiveAgencyScanner     │  ✓ Done  │          1732 │    300 │ █████████████
+│ PostQuantumScanner         │  ✓ Done  │          1547 │    299 │ █████████████
+│ PluginSecurityScanner      │  ✓ Done  │          1732 │    204 │ █████████████
+│ MultiAgentScanner          │  ✓ Done  │          1732 │    180 │ █████████████
+│ PromptLeakageScanner       │  ✓ Done  │          1760 │     41 │ █████████████
+│ RustScanner                │  ✓ Done  │           536 │     30 │ █████████████
+│ SteganographyScanner       │  ✓ Done  │          1732 │     28 │ █████████████
+│ GitLeaksScanner            │  ✓ Done  │          2303 │     13 │ █████████████
+│ DockerComposeScanner       │  ✓ Done  │             1 │      9 │ █████████████
+│ ModelAttackScanner         │  ✓ Done  │          1732 │      8 │ █████████████
+│ OWASPLLMScanner            │  ✓ Done  │            48 │      7 │ █████████████
+│ RAGSecurityScanner         │  ✓ Done  │            27 │      7 │ █████████████
+│ AIAttackSignatureScanner   │  ✓ Done  │          1765 │      6 │ █████████████
+│ AIContextScanner           │  ✓ Done  │             1 │      6 │ █████████████
+│ DockerMCPScanner           │  ✓ Done  │             1 │      6 │ █████████████
+│ LLMOpsScanner              │  ✓ Done  │            14 │      4 │ █████████████
+│ JSONScanner                │  ✓ Done  │             5 │      2 │ █████████████
+│ AgentPlanningScanner       │  ✓ Done  │          1732 │      · │ █████████████
+│ AgentReflectionScanner     │  ✓ Done  │          1732 │      · │ █████████████
+│   +10 more scanners        │          │               │        │              
+├────────────────────────────┼──────────┼───────────────┼────────┼──────────────
+│ Overall                    │   100%   │     2305/2305 │   1472 │ █████████████
+└────────────────────────────┴──────────┴───────────────┴────────┴──────────────
+
+
+📊 Reports generated:
+   JSON       → hermes-workspace/security/reports/buzz-production-medusa-20261007/medusa-scan-20261007-192114.json
+
+────────────────────────────────────────────
+  🎯 SCAN COMPLETE
+────────────────────────────────────────────
+  Files scanned:       2305
+  Lines of code:       776,785
+  Issues found:        463
+  FPs filtered:        1009
+  FP reduction:        68.5%
+  Scanners used:       30
+  Total time:          254.22s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 844 issues at HIGH+ severity

@@ -128,6 +128,18 @@ messaging, cron). Get a go-ahead before updating when a used key is affected.
   local hermes-agent changes before updating.
 - **Fresh-session effect:** the running session keeps old code; new behavior
   shows up next session. Don't claim new features work in-session.
+- **Big-gap updates finish in two phases.** After an update spanning many
+  thousands of commits, re-run `hermes update --check`: it auto-resumes a
+  partially finished install and retries failed follow-ups (e.g. web UI build).
+- **A failed web UI build does not hurt the gateway.** Core rides on the
+  previous compatible deps; an upstream TypeScript test-file error blocks only
+  the build step (seen: ChatSessionList.test.tsx, fixed by retry later).
+- **"Token rejected" right after an update is usually pre-existing.** Hash-
+  compare the token against the pre-update snapshot, probe getMe with 3
+  retries (WSL DNS flakes), report the diagnosis, never print the token.
+- **Dirty-tree triage before updating:** package-lock.json churn from an npm
+  version difference is benign — `git checkout --` it. A carried local code
+  commit IS work — save its patch (`git show <sha> > patch file`) first.
 
 ## Verification
 

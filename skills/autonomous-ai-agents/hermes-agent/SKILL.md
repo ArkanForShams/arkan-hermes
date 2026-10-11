@@ -204,6 +204,29 @@ terminal(command="tmux new-session -d -s resumed 'hermes --resume 20260225_14305
 - **Ink TUI** (`hermes --tui` or `display.interface: tui`) — terminal UI with docked widget apps — `references/tui-widgets.md`.
 - **OpenAI-compatible proxy** (`hermes proxy`) — a local OpenAI API backed by whichever OAuth provider you're signed into. Point Codex CLI, Aider, Cline, or any script at it — no API key.
 
+## Dynamic Worker Profiles — proven workflow
+
+For on-demand project workers that share the default provider configuration but do not need separate messaging identities:
+
+1. Create each profile empty with `hermes profile create <name> --no-skills --no-alias --description "<role>"`; do not use `--clone` when the profile must have a generic soul and no inherited project skills.
+2. Write a generic `SOUL.md` and `USER.md` that state the worker has no permanent persona and receives a temporary role from a separately reviewed role catalog for each project.
+3. Do not copy messaging channels or create Telegram bot tokens. Verify the profile has no channel configuration before serving it through the local gateway.
+4. Keep external role repositories as quarantined data until their repo gate passes; load a selected role into a session on demand rather than installing hundreds of roles as permanent Hermes skills.
+5. Use one shared Buzz relay with a project-specific channel or namespace for collaboration. Keep worker profiles responsible for execution and ARKAN responsible for role selection, project sequencing, approvals, and final reporting.
+6. Keep the selected external role temporary: record the active role and project scope, then close out deliverables and return each worker to its generic standby state; do not rewrite the generic profile to make a project role permanent.
+7. Keep shared provider credentials only in the default Hermes secret store. Dynamic workers should not receive copied `.env` values, Telegram identities, or new API keys; verify credential presence using key names, permissions, and non-empty status only, never by printing file contents or shell-expanded values.
+
+### Buzz Workspace + Desktop Verification
+
+For a local Buzz integration, use this order:
+
+1. Run the repository security gate and review the setup boundary before executing repository bootstrap or Docker tasks.
+2. Generate the application `.env` from the repository example, then force development services to bind to localhost (`127.0.0.1`), not `0.0.0.0`, before starting anything.
+3. Build the relay/CLI and frontend separately. Run the native desktop target only after its Linux GUI prerequisites are present; on Debian/Ubuntu WSL, check `pkg-config` plus GTK/WebKit and ALSA development packages before treating a Rust `*-sys` failure as an application defect.
+4. Verify the native Tauri process and its listening Vite port. A browser-only Vite preview is useful for rendering checks but will produce `@tauri-apps/api`/`invoke` failures because the native bridge is absent; do not mistake that for a frontend build failure.
+5. Treat background watch notifications as signals, not proof of current state. Poll the owning process and verify the current PID, port, and HTTP/native health after every restart or retry.
+6. Keep standalone desktop mode separate from relay mode: standalone can prove the native UI, but collaboration, identity exchange, and project channels require the relay and its backing services.
+
 ## Profile Bot Wiring (Telegram) — proven workflow
 
 Creating a second agent with its own Telegram bot:

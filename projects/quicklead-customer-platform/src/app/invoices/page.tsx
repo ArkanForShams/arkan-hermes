@@ -1,0 +1,5 @@
+import Link from 'next/link';
+import { demoDashboard } from '../../lib/api/mock';
+import { PortalShell, PageHeader } from '../../components/PortalShell';
+
+export default function InvoicesPage() { return <PortalShell active="Invoices"><PageHeader eyebrow="FINANCIAL HISTORY" title="Invoices & receipts" description="A clear record of your Quicklead service spend." action={<Link className="secondary" href="/support/">Need an invoice? →</Link>} /><div className="invoice-list card">{demoDashboard.invoices.concat([{ id: 'INV-23841', date: '16 Jun 2026', vehicle: 'Toyota Land Cruiser', service: 'Air conditioning check', amount: 220, status: 'Paid' as const }]).map(inv => <Link className="invoice-row" href={`/invoices/${inv.id}/`} key={inv.id}><div className="invoice-icon">▤</div><div className="invoice-main"><strong>{inv.service}</strong><span>{inv.vehicle} · {inv.date}</span></div><span className="invoice-id">{inv.id}</span><strong>SAR {inv.amount}</strong><span className="status-pill green">{inv.status}</span><span className="row-arrow">→</span></Link>)}</div></PortalShell>; }

@@ -1,0 +1,190 @@
+
+=== crates/buzz-relay ===
+  FPs filtered:        43
+  FP reduction:        46.7%
+  Scanners used:       12
+  Total time:          6.27s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 35 issues at HIGH+ severity
+
+=== crates/buzz-agent ===
+  FPs filtered:        4
+  FP reduction:        57.1%
+  Scanners used:       11
+  Total time:          1.68s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 2 issues at HIGH+ severity
+
+=== crates/buzz-acp ===
+  FPs filtered:        7
+  FP reduction:        53.8%
+  Scanners used:       11
+  Total time:          2.20s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 8 issues at HIGH+ severity
+
+=== crates/buzz-cli ===
+
+=== crates/buzz-relay ===
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+✅ Scan complete!
+
+For fuller coverage, install missing linters and re-scan:
+  taplo, trivy
+  Run 'medusa install --check' for details
+
+=== crates/buzz-dev-mcp ===
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+✅ Scan complete!
+
+For fuller coverage, install missing linters and re-scan:
+  taplo, trivy
+  Run 'medusa install --check' for details
+
+=== desktop/src-tauri ===
+  FPs filtered:        43
+  FP reduction:        46.7%
+  Scanners used:       0
+  Total time:          0.01s
+  Cache hit rate:      100.0%
+────────────────────────────────────────────
+
+❌ Found 35 issues at HIGH+ severity
+
+=== crates/buzz-agent ===
+  FPs filtered:        4
+  FP reduction:        57.1%
+  Scanners used:       0
+  Total time:          0.00s
+  Cache hit rate:      100.0%
+────────────────────────────────────────────
+
+❌ Found 2 issues at HIGH+ severity
+
+=== crates/buzz-acp ===
+  FPs filtered:        38
+  FP reduction:        40.4%
+  Scanners used:       16
+  Total time:          9.99s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 42 issues at HIGH+ severity
+
+=== desktop/src ===
+  FPs filtered:        7
+  FP reduction:        53.8%
+  Scanners used:       0
+  Total time:          0.00s
+  Cache hit rate:      100.0%
+────────────────────────────────────────────
+
+❌ Found 8 issues at HIGH+ severity
+
+=== crates/buzz-cli ===
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+✅ Scan complete!
+
+For fuller coverage, install missing linters and re-scan:
+  taplo, trivy
+  Run 'medusa install --check' for details
+
+=== crates/buzz-dev-mcp ===
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+✅ Scan complete!
+
+For fuller coverage, install missing linters and re-scan:
+  taplo, trivy
+  Run 'medusa install --check' for details
+
+=== desktop/src-tauri ===
+  FPs filtered:        38
+  FP reduction:        40.4%
+  Scanners used:       16
+  Total time:          10.36s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 42 issues at HIGH+ severity
+
+=== desktop/src ===
+  FPs filtered:        932
+  FP reduction:        71.4%
+  Scanners used:       21
+  Total time:          264.81s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 780 issues at HIGH+ severity
+
+=== bin ===
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+✅ Scan complete!
+
+For fuller coverage, install missing linters and re-scan:
+  tflint
+  Run 'medusa install --check' for details
+
+=== docker-compose.yml ===
+Error: Target must be a directory, not a file
+   Got: docker-compose.yml
+   Tip: To scan a single file, specify its parent directory
+
+=== Justfile ===
+Error: Target must be a directory, not a file
+   Got: Justfile
+   Tip: To scan a single file, specify its parent directory
+
+Targeted scan complete. Reports: /home/shams/hermes-workspace/security/reports/buzz-runtime-medusa-20261007
+  FPs filtered:        932
+  FP reduction:        71.4%
+  Scanners used:       21
+  Total time:          248.49s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 780 issues at HIGH+ severity
+
+=== bin ===
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+✅ Scan complete!
+
+For fuller coverage, install missing linters and re-scan:
+  tflint
+  Run 'medusa install --check' for details
+
+=== docker-compose.yml ===
+Error: Target must be a directory, not a file
+   Got: docker-compose.yml
+   Tip: To scan a single file, specify its parent directory
+Error: Target must be a directory, not a file
+   Got: docker-compose.yml
+   Tip: To scan a single file, specify its parent directory
+
+=== Justfile ===
+Error: Target must be a directory, not a file
+   Got: Justfile
+   Tip: To scan a single file, specify its parent directory
+Error: Target must be a directory, not a file
+   Got: Justfile
+   Tip: To scan a single file, specify its parent directory
+
+Targeted scan complete. Reports: /home/shams/hermes-workspace/security/reports/buzz-runtime-medusa-20261007

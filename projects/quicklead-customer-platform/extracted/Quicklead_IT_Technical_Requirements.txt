@@ -1,0 +1,111 @@
+QUICKLEAD
+Digital Platform - Technical Requirements
+IT Brief | Customer App + B2B Fleet Portal + Integration with Quicklead Operations
+1. Purpose
+Build a secure digital platform that extends the existing Quicklead operational software to customers and 
+fleet clients. The existing operation system remains the system of record for repair orders, service status, 
+pricing, invoicing and workshop execution.
+2. Target Solution Architecture
+ B2C mobile application for individual customers (iOS / Android).
+ B2B web portal for fleet and corporate customers.
+ API / Integration Layer between digital channels and the current Quicklead operation software.
+ Central Identity & Access Management for customers, corporate users and roles.
+ Notification service for push notifications, SMS and email where required.
+ Payment gateway integration for B2C and future B2B payment use cases.
+ Analytics and event tracking layer for customer behavior, conversion and retention.
+3. Core B2C Functional Requirements
+Module Required Capability Primary Integration
+Authentication Mobile OTP login, profile, 
+language, consent and 
+notification preferences
+Identity / CRM
+My Garage Add multiple vehicles by 
+plate/VIN; vehicle profile, mileage 
+and ownership
+Vehicle master
+Booking Service, branch, date/time, 
+capacity-aware slots, 
+reschedule/cancel
+Workshop capacity / scheduling
+Service History Closed ROs, services, parts, 
+mileage, invoices and warranty 
+references
+RO / invoice history
+Live Service Status Booked, checked-in, RO opened, 
+in service, awaiting approval, 
+ready, closed
+RO status
+Digital Approval Estimate, photos/attachments, 
+price, approve/reject, audit trail
+RO estimate / approval
+Payments & Invoices Online payment, receipt, tax 
+invoice and downloadable 
+documents
+Finance / payment gateway
+Loyalty Points, tiers, coupons, referral 
+and campaign eligibility
+Loyalty / CRM
+Reminders Mileage/time-based service, CRM / notification engine
+
+battery, recommendations and 
+abandoned booking
+4. B2B Fleet Portal Requirements
+ Corporate account hierarchy: company, business unit, cost center, fleet, user and role.
+ Vehicle master with status, service history, open repair orders and spend history.
+ Dashboard for vehicles in workshop, pending approvals, completed jobs, downtime and expenditure.
+ Digital approval workflow with estimate details, attachments, comments and full audit history.
+ Configurable approval matrix by amount, user role, service category, vehicle or cost center.
+ Commercial controls: credit limit, PO requirement, allowed services, approved branches and vehicle-
+specific limits.
+ Finance area: invoices, credit notes, statements, outstanding balance, due dates, PDF download and 
+Excel export.
+ Reporting by vehicle, branch, service category, date period, fleet and cost center.
+ Future API capability for large fleet/rental customers to exchange vehicles, approvals, ROs and invoices.
+5. Integration & API Requirements
+ Use API-first integration; avoid direct mobile/web access to the operational database.
+ Define a canonical customer, vehicle, booking, repair order, estimate, approval and invoice model.
+ Support real-time or near-real-time status synchronization for customer-facing events.
+ Use idempotent APIs for booking, approval and payment actions to prevent duplicates.
+ Provide webhooks/event messages for RO status changes, estimate creation, invoice issuance and 
+booking updates.
+ Maintain correlation IDs and centralized logs across app, portal, API layer and operation system.
+ Version APIs and document them using OpenAPI/Swagger.
+6. Security, Compliance & Controls
+ Role-based access control (RBAC) and strict separation between B2C and corporate data.
+ OTP/MFA where appropriate; secure token lifecycle and session management.
+ Encryption in transit and at rest; secrets managed outside source code.
+ Audit logs for approvals, profile changes, invoice access and administrative actions.
+ Privacy-by-design: consent, data minimization, retention rules and account deletion workflow.
+ Apply Saudi PDPL and applicable cybersecurity/payment requirements; IT/legal teams to validate final 
+compliance scope.
+ Regular vulnerability scanning, penetration testing and secure SDLC controls.
+7. Non-Functional Requirements
+ High availability for booking, approvals and service-status functions.
+ Scalable architecture supporting branch expansion without redesign.
+ Performance targets to be agreed for API response time, page load and notification delivery.
+ Arabic and English support, including RTL/LTR behavior.
+ Monitoring, alerting, error tracking, backups and disaster recovery.
+ Separate development, UAT and production environments with controlled releases.
+
+8. Recommended Delivery Phases
+1. Phase 1 - MVP: authentication, vehicles, booking, branch/service selection, service history, live RO 
+status, invoices and notifications.
+2. Phase 2 - Customer Experience: loyalty, payments, digital approvals, offers, coupons, reminders, 
+pickup/delivery options.
+3. Phase 3 - B2B & Intelligence: fleet portal, approval matrix, credit/PO controls, statements, dashboards, 
+enterprise APIs and AI-driven recommendations.
+9. IT Discovery Items Before Development
+ Document the current operation software database, APIs and integration constraints.
+ Map every customer-facing status to an exact RO/system status.
+ Confirm booking capacity logic by branch, bay, technician and service type.
+ Define customer/vehicle identity matching and duplicate handling.
+ Confirm payment, VAT invoice, loyalty and CRM ownership systems.
+ Define B2B account hierarchy and approval rules with Operations/Finance.
+ Prepare API catalogue, data dictionary, integration sequence diagrams and UAT scenarios.
+10. Key Success Metrics
+ Digital booking conversion and share of total appointments.
+ Reduction in calls/messages asking for vehicle status.
+ Approval turnaround time for B2B and additional work.
+ Repeat visit rate and loyalty engagement.
+ Average invoice value and accepted recommended work.
+ B2B invoice/statement self-service adoption.

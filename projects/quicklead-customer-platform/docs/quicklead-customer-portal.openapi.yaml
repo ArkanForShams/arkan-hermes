@@ -1,0 +1,106 @@
+openapi: 3.1.0
+info:
+  title: Quicklead Customer Portal API
+  version: 1.0.0-draft
+  description: Canonical customer-facing contract. Existing-system adapters map upstream APIs to this boundary.
+servers:
+  - url: https://api.example.invalid
+    description: Placeholder only; replace after Operations API is supplied.
+security:
+  - bearerAuth: []
+paths:
+  /v1/customer/dashboard:
+    get:
+      operationId: getCustomerDashboard
+      summary: Get the customer dashboard projection
+      responses:
+        '200':
+          description: Dashboard projection
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Dashboard' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+  /v1/customer/bookings:
+    post:
+      operationId: createCustomerBooking
+      summary: Create a service booking
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateBookingRequest' }
+      responses:
+        '201':
+          description: Booking created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/BookingResult' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+components:
+  securitySchemes:
+    bearerAuth: { type: http, scheme: bearer, bearerFormat: JWT }
+  parameters:
+    IdempotencyKey: { name: Idempotency-Key, in: header, required: true, schema: { type: string, minLength: 16 } }
+    CorrelationId: { name: X-Correlation-Id, in: header, required: true, schema: { type: string } }
+  responses:
+    Unauthorized: { description: Authentication required }
+    Conflict: { description: Duplicate or conflicting command }
+    ValidationError: { description: Invalid request }
+  schemas:
+    Dashboard:
+      type: object
+      required: [customerName, activeService, vehicles, invoices, rewards, notifications]
+      properties:
+        customerName: { type: string }
+        activeService: { $ref: '#/components/schemas/ActiveService' }
+        vehicles: { type: array, items: { $ref: '#/components/schemas/Vehicle' } }
+        invoices: { type: array, items: { $ref: '#/components/schemas/Invoice' } }
+        rewards: { type: object, required: [points, tier, nextTier], properties: { points: { type: integer }, tier: { type: string }, nextTier: { type: integer } } }
+        notifications: { type: integer }
+    ActiveService:
+      type: object
+      required: [id, branch, service, status, estimate]
+      properties:
+        id: { type: string }
+        branch: { type: string }
+        service: { type: string }
+        status: { type: string, enum: [confirmed, checked-in, in-service, approval, final-check, ready, completed] }
+        estimate: { type: number, format: double }
+    Vehicle:
+      type: object
+      required: [id, name, plate, year, mileage]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        plate: { type: string }
+        year: { type: integer }
+        mileage: { type: integer }
+    Invoice:
+      type: object
+      required: [id, date, vehicle, service, amount, status]
+      properties:
+        id: { type: string }
+        date: { type: string }
+        vehicle: { type: string }
+        service: { type: string }
+        amount: { type: number }
+        status: { type: string, enum: [Paid, Due] }
+    CreateBookingRequest:
+      type: object
+      required: [vehicleId, serviceId, branchId, slot]
+      properties:
+        vehicleId: { type: string }
+        serviceId: { type: string }
+        branchId: { type: string }
+        slot: { type: string, format: date-time }
+    BookingResult:
+      type: object
+      required: [id, status, message]
+      properties:
+        id: { type: string }
+        status: { type: string, enum: [confirmed, pending] }
+        message: { type: string }

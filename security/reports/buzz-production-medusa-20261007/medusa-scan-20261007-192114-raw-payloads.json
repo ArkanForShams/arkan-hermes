@@ -1,0 +1,160 @@
+{
+  "warning": "RAW PAYLOADS - Contains unobfuscated attack content. For human review only.",
+  "generated": "2026-10-07T19:21:14.768494",
+  "payloads": {
+    "fa2b05e7c807": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-via-database-content",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/features/agents/AGENTS.md",
+      "line": 329,
+      "category": "Prompt Injection"
+    },
+    "8c3585c5f056": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/features/agents/ui/usePersonaActions.ts",
+      "line": 86,
+      "category": "Jailbreak Attempt"
+    },
+    "1123f345af79": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/features/agents/ui/usePersonaActions.ts",
+      "line": 87,
+      "category": "Jailbreak Attempt"
+    },
+    "9b6b2b60e972": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/features/agents/ui/usePersonaActions.ts",
+      "line": 90,
+      "category": "Jailbreak Attempt"
+    },
+    "ac48463cf07c": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/features/agents/ui/usePersonaActions.ts",
+      "line": 91,
+      "category": "Jailbreak Attempt"
+    },
+    "3156b1389322": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/features/agents/ui/usePersonaActions.ts",
+      "line": 288,
+      "category": "Jailbreak Attempt"
+    },
+    "a0220aa8c79d": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/features/agents/ui/usePersonaActions.ts",
+      "line": 326,
+      "category": "Jailbreak Attempt"
+    },
+    "e533d9ab0042": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/features/agents/useAgentManagement.ts",
+      "line": 43,
+      "category": "Jailbreak Attempt"
+    },
+    "b1424d370a77": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/features/agents/useAgentManagement.ts",
+      "line": 44,
+      "category": "Jailbreak Attempt"
+    },
+    "ba1c0826ce81": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 2690,
+      "category": "Jailbreak Attempt"
+    },
+    "8c55a7d4d87a": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 2709,
+      "category": "Jailbreak Attempt"
+    },
+    "b41d877fd9f9": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 9056,
+      "category": "Jailbreak Attempt"
+    },
+    "96085d947d7e": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 9168,
+      "category": "Jailbreak Attempt"
+    },
+    "78952f4c10d2": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 9356,
+      "category": "Jailbreak Attempt"
+    },
+    "fa474020ec76": {
+      "original_code": "",
+      "original_issue": "Detected: persona-jailbreak-genetic-evolver",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 13931,
+      "category": "Jailbreak Attempt"
+    },
+    "2f1385bf9532": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-via-database-content",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 14203,
+      "category": "Prompt Injection"
+    },
+    "761113b266e2": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 1732,
+      "category": "Prompt Injection"
+    },
+    "a098f39a4b86": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 1756,
+      "category": "Prompt Injection"
+    },
+    "0dd1730aa009": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 4007,
+      "category": "Prompt Injection"
+    },
+    "7f00fff903b1": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 9340,
+      "category": "Prompt Injection"
+    },
+    "dc96fb1f9f7e": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 14886,
+      "category": "Prompt Injection"
+    },
+    "cdcf91192398": {
+      "original_code": "",
+      "original_issue": "Security issue detected: prompt-injection-m-gcg-adversarial-suffix-pattern",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-20261007/desktop/src/testing/e2eBridge.ts",
+      "line": 15011,
+      "category": "Prompt Injection"
+    }
+  }
+}

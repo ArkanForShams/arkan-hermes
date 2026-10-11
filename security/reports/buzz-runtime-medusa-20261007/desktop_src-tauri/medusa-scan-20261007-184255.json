@@ -1,0 +1,3942 @@
+{
+  "timestamp": "2026-10-07T18:42:55.537697",
+  "medusa_version": "2026.7.0",
+  "scanner": {
+    "name": "MEDUSA",
+    "version": "2026.7.0",
+    "analyzers": 79,
+    "rules": "40,000+",
+    "url": "https://medusa-security.dev"
+  },
+  "scan_summary": {
+    "total_issues": 56,
+    "files_scanned": 504,
+    "lines_scanned": 214852,
+    "security_score": 0,
+    "risk_level": "CRITICAL",
+    "false_positives_filtered": 38,
+    "missing_linters": [
+      "taplo",
+      "xmllint",
+      "trivy"
+    ]
+  },
+  "severity_breakdown": {
+    "CRITICAL": 1,
+    "HIGH": 32,
+    "MEDIUM": 23,
+    "LOW": 0,
+    "UNDEFINED": 0
+  },
+  "findings": [
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+      "line": 378,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Rust: process argument built via format!() (.arg(format!(...))) \u2014 verify input is not attacker-controlled",
+      "rule_id": "MEDUSA-RUST-SCAN-011",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+      "line": 77,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+      "rule_id": "MEDUSA-RUST-SCAN-012",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+      "line": 377,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+      "rule_id": "MEDUSA-RUST-SCAN-012",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+      "line": 488,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+      "rule_id": "MEDUSA-RUST-SCAN-012",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/admin/client.rs",
+      "line": 113,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+      "rule_id": "MEDUSA-RUST-SCAN-061",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_auth.rs",
+      "line": 422,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+      "rule_id": "MEDUSA-RUST-SCAN-010",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_config_tests.rs",
+      "line": 615,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_exec.rs",
+      "line": 654,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+      "rule_id": "MEDUSA-RUST-SCAN-012",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "GitLeaksScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+      "line": 205,
+      "severity": "CRITICAL",
+      "confidence": "HIGH",
+      "issue": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.: private-key",
+      "rule_id": "GL-private-key",
+      "cwe": null,
+      "code": "...-----BEGIN PRIVATE KEY-----lowerkey\".to_string(),\n...",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "GitLeaksScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+      "line": 26,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+      "rule_id": "GL-generic-api-key",
+      "cwe": null,
+      "code": "...secret = \"0e8f31c5a4b7d296e5f1a\"...",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "GitLeaksScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+      "line": 307,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+      "rule_id": "GL-generic-api-key",
+      "cwe": null,
+      "code": "...auth = \"YnVpbGRlcjpodW50ZXIycGFzcw==\"...",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+      "line": 26,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: hardcoded key/iv/nonce/secret literal \u2014 load secrets from a vault/env at runtime",
+      "rule_id": "MEDUSA-RUST-SCAN-052",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery.rs",
+      "line": 1574,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "GitLeaksScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_models_tests.rs",
+      "line": 812,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+      "rule_id": "GL-generic-api-key",
+      "cwe": null,
+      "code": "...OPENROUTER_API_KEY\", \"sk-or-v1-secret-key-12345\"...",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_models_update_tests.rs",
+      "line": 354,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "GitLeaksScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agents_tests.rs",
+      "line": 582,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+      "rule_id": "GL-generic-api-key",
+      "cwe": null,
+      "code": "...private_key_nsec\": \"nsec1vl029mgpspedva04g90vltkh6...",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview.rs",
+      "line": 235,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+      "rule_id": "MEDUSA-RUST-SCAN-061",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+      "line": 33,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: reqwest::get with a format!()-built URL \u2014 SSRF if the URL is influenced by input",
+      "rule_id": "MEDUSA-RUST-SCAN-060",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+      "line": 179,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+      "rule_id": "MEDUSA-RUST-SCAN-061",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+      "line": 194,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+      "rule_id": "MEDUSA-RUST-SCAN-061",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_youtube.rs",
+      "line": 168,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: reqwest::get with a format!()-built URL \u2014 SSRF if the URL is influenced by input",
+      "rule_id": "MEDUSA-RUST-SCAN-060",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_youtube.rs",
+      "line": 36,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_download.rs",
+      "line": 946,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+      "rule_id": "MEDUSA-RUST-SCAN-061",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_snapshot_png.rs",
+      "line": 40,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_snapshot_png.rs",
+      "line": 120,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "GitLeaksScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/personas/inbound/inbound_tests.rs",
+      "line": 265,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+      "rule_id": "GL-generic-api-key",
+      "cwe": null,
+      "code": "...private_key_nsec\": \"nsec1INJECTEDSECRET\"...",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/personas/inbound/inbound_tests.rs",
+      "line": 834,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/project_repo_paths.rs",
+      "line": 92,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/project_terminal.rs",
+      "line": 96,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+      "rule_id": "MEDUSA-RUST-SCAN-010",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/deep_link.rs",
+      "line": 483,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/huddle/models_tests.rs",
+      "line": 23,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: set_len() can expose uninitialized memory \u2014 ensure elements are initialized first",
+      "rule_id": "MEDUSA-RUST-SCAN-042",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/huddle/models_tests.rs",
+      "line": 75,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: set_len() can expose uninitialized memory \u2014 ensure elements are initialized first",
+      "rule_id": "MEDUSA-RUST-SCAN-042",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "GitLeaksScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/agent_events.rs",
+      "line": 172,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+      "rule_id": "GL-generic-api-key",
+      "cwe": null,
+      "code": "...private_key_nsec: \"nsec1secretdonotpublish\"...",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "GitLeaksScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+      "line": 14,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+      "rule_id": "GL-generic-api-key",
+      "cwe": null,
+      "code": "...token\":\"sprt_tok_xyz789\"...",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+      "line": 26,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: hardcoded key/iv/nonce/secret literal \u2014 load secrets from a vault/env at runtime",
+      "rule_id": "MEDUSA-RUST-SCAN-052",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+      "line": 28,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+      "line": 97,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+      "line": 226,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+      "rule_id": "MEDUSA-RUST-SCAN-010",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+      "line": 335,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+      "rule_id": "MEDUSA-RUST-SCAN-010",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+      "line": 94,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/goose.rs",
+      "line": 20,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Rust: serde_yaml deserialization of input \u2014 validate schema and source",
+      "rule_id": "MEDUSA-RUST-SCAN-021",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/reader_tests.rs",
+      "line": 519,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/discovery/bounded_command.rs",
+      "line": 889,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+      "rule_id": "MEDUSA-RUST-SCAN-010",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/discovery/bounded_command.rs",
+      "line": 970,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+      "rule_id": "MEDUSA-RUST-SCAN-010",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/persona_avatars.rs",
+      "line": 4,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/readiness.rs",
+      "line": 1625,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/runtime/cli_tests.rs",
+      "line": 37,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/runtime/tests.rs",
+      "line": 594,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/storage.rs",
+      "line": 485,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/team_catalog/tests.rs",
+      "line": 84,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/migration/fold.rs",
+      "line": 200,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/migration/fold.rs",
+      "line": 217,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/observed_unread.rs",
+      "line": 655,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/relay/profile_avatar.rs",
+      "line": 222,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/relay/tests.rs",
+      "line": 239,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+      "rule_id": "MEDUSA-RUST-SCAN-061",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/webkit_rendering.rs",
+      "line": 148,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    }
+  ],
+  "aggregations": {
+    "by_severity": {
+      "HIGH": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 378,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: process argument built via format!() (.arg(format!(...))) \u2014 verify input is not attacker-controlled",
+          "rule_id": "MEDUSA-RUST-SCAN-011",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_auth.rs",
+          "line": 422,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_config_tests.rs",
+          "line": 615,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 26,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...secret = \"0e8f31c5a4b7d296e5f1a\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 307,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...auth = \"YnVpbGRlcjpodW50ZXIycGFzcw==\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery.rs",
+          "line": 1574,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_models_tests.rs",
+          "line": 812,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...OPENROUTER_API_KEY\", \"sk-or-v1-secret-key-12345\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_models_update_tests.rs",
+          "line": 354,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agents_tests.rs",
+          "line": 582,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...private_key_nsec\": \"nsec1vl029mgpspedva04g90vltkh6...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_youtube.rs",
+          "line": 36,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_snapshot_png.rs",
+          "line": 120,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/personas/inbound/inbound_tests.rs",
+          "line": 265,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...private_key_nsec\": \"nsec1INJECTEDSECRET\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/personas/inbound/inbound_tests.rs",
+          "line": 834,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/project_repo_paths.rs",
+          "line": 92,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/project_terminal.rs",
+          "line": 96,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/deep_link.rs",
+          "line": 483,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/agent_events.rs",
+          "line": 172,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...private_key_nsec: \"nsec1secretdonotpublish\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 14,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...token\":\"sprt_tok_xyz789\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 97,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+          "line": 226,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+          "line": 335,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+          "line": 94,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/goose.rs",
+          "line": 20,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: serde_yaml deserialization of input \u2014 validate schema and source",
+          "rule_id": "MEDUSA-RUST-SCAN-021",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/reader_tests.rs",
+          "line": 519,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/discovery/bounded_command.rs",
+          "line": 889,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/discovery/bounded_command.rs",
+          "line": 970,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/readiness.rs",
+          "line": 1625,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/runtime/cli_tests.rs",
+          "line": 37,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/runtime/tests.rs",
+          "line": 594,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/storage.rs",
+          "line": 485,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/migration/fold.rs",
+          "line": 217,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/webkit_rendering.rs",
+          "line": 148,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "MEDIUM": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 77,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 377,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 488,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/admin/client.rs",
+          "line": 113,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_exec.rs",
+          "line": 654,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 26,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: hardcoded key/iv/nonce/secret literal \u2014 load secrets from a vault/env at runtime",
+          "rule_id": "MEDUSA-RUST-SCAN-052",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview.rs",
+          "line": 235,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+          "line": 33,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: reqwest::get with a format!()-built URL \u2014 SSRF if the URL is influenced by input",
+          "rule_id": "MEDUSA-RUST-SCAN-060",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+          "line": 179,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+          "line": 194,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_youtube.rs",
+          "line": 168,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: reqwest::get with a format!()-built URL \u2014 SSRF if the URL is influenced by input",
+          "rule_id": "MEDUSA-RUST-SCAN-060",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_download.rs",
+          "line": 946,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_snapshot_png.rs",
+          "line": 40,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/huddle/models_tests.rs",
+          "line": 23,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: set_len() can expose uninitialized memory \u2014 ensure elements are initialized first",
+          "rule_id": "MEDUSA-RUST-SCAN-042",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/huddle/models_tests.rs",
+          "line": 75,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: set_len() can expose uninitialized memory \u2014 ensure elements are initialized first",
+          "rule_id": "MEDUSA-RUST-SCAN-042",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 26,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: hardcoded key/iv/nonce/secret literal \u2014 load secrets from a vault/env at runtime",
+          "rule_id": "MEDUSA-RUST-SCAN-052",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 28,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/persona_avatars.rs",
+          "line": 4,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/team_catalog/tests.rs",
+          "line": 84,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/migration/fold.rs",
+          "line": 200,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/observed_unread.rs",
+          "line": 655,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/relay/profile_avatar.rs",
+          "line": 222,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/relay/tests.rs",
+          "line": 239,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "CRITICAL": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 205,
+          "severity": "CRITICAL",
+          "confidence": "HIGH",
+          "issue": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.: private-key",
+          "rule_id": "GL-private-key",
+          "cwe": null,
+          "code": "...-----BEGIN PRIVATE KEY-----lowerkey\".to_string(),\n...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ]
+    },
+    "by_file": {
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 378,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: process argument built via format!() (.arg(format!(...))) \u2014 verify input is not attacker-controlled",
+          "rule_id": "MEDUSA-RUST-SCAN-011",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 77,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 377,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 488,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/admin/client.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/admin/client.rs",
+          "line": 113,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_auth.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_auth.rs",
+          "line": 422,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_config_tests.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_config_tests.rs",
+          "line": 615,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_exec.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_exec.rs",
+          "line": 654,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 205,
+          "severity": "CRITICAL",
+          "confidence": "HIGH",
+          "issue": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.: private-key",
+          "rule_id": "GL-private-key",
+          "cwe": null,
+          "code": "...-----BEGIN PRIVATE KEY-----lowerkey\".to_string(),\n...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 26,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...secret = \"0e8f31c5a4b7d296e5f1a\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 307,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...auth = \"YnVpbGRlcjpodW50ZXIycGFzcw==\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 26,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: hardcoded key/iv/nonce/secret literal \u2014 load secrets from a vault/env at runtime",
+          "rule_id": "MEDUSA-RUST-SCAN-052",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery.rs",
+          "line": 1574,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_models_tests.rs": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_models_tests.rs",
+          "line": 812,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...OPENROUTER_API_KEY\", \"sk-or-v1-secret-key-12345\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_models_update_tests.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_models_update_tests.rs",
+          "line": 354,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agents_tests.rs": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agents_tests.rs",
+          "line": 582,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...private_key_nsec\": \"nsec1vl029mgpspedva04g90vltkh6...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview.rs",
+          "line": 235,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+          "line": 33,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: reqwest::get with a format!()-built URL \u2014 SSRF if the URL is influenced by input",
+          "rule_id": "MEDUSA-RUST-SCAN-060",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+          "line": 179,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+          "line": 194,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_youtube.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_youtube.rs",
+          "line": 168,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: reqwest::get with a format!()-built URL \u2014 SSRF if the URL is influenced by input",
+          "rule_id": "MEDUSA-RUST-SCAN-060",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_youtube.rs",
+          "line": 36,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_download.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_download.rs",
+          "line": 946,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_snapshot_png.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_snapshot_png.rs",
+          "line": 40,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_snapshot_png.rs",
+          "line": 120,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/personas/inbound/inbound_tests.rs": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/personas/inbound/inbound_tests.rs",
+          "line": 265,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...private_key_nsec\": \"nsec1INJECTEDSECRET\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/personas/inbound/inbound_tests.rs",
+          "line": 834,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/project_repo_paths.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/project_repo_paths.rs",
+          "line": 92,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/project_terminal.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/project_terminal.rs",
+          "line": 96,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/deep_link.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/deep_link.rs",
+          "line": 483,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/huddle/models_tests.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/huddle/models_tests.rs",
+          "line": 23,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: set_len() can expose uninitialized memory \u2014 ensure elements are initialized first",
+          "rule_id": "MEDUSA-RUST-SCAN-042",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/huddle/models_tests.rs",
+          "line": 75,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: set_len() can expose uninitialized memory \u2014 ensure elements are initialized first",
+          "rule_id": "MEDUSA-RUST-SCAN-042",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/agent_events.rs": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/agent_events.rs",
+          "line": 172,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...private_key_nsec: \"nsec1secretdonotpublish\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 14,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...token\":\"sprt_tok_xyz789\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 26,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: hardcoded key/iv/nonce/secret literal \u2014 load secrets from a vault/env at runtime",
+          "rule_id": "MEDUSA-RUST-SCAN-052",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 28,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 97,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+          "line": 226,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+          "line": 335,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+          "line": 94,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/goose.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/goose.rs",
+          "line": 20,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: serde_yaml deserialization of input \u2014 validate schema and source",
+          "rule_id": "MEDUSA-RUST-SCAN-021",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/reader_tests.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/reader_tests.rs",
+          "line": 519,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/discovery/bounded_command.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/discovery/bounded_command.rs",
+          "line": 889,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/discovery/bounded_command.rs",
+          "line": 970,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/persona_avatars.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/persona_avatars.rs",
+          "line": 4,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/readiness.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/readiness.rs",
+          "line": 1625,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/runtime/cli_tests.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/runtime/cli_tests.rs",
+          "line": 37,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/runtime/tests.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/runtime/tests.rs",
+          "line": 594,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/storage.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/storage.rs",
+          "line": 485,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/team_catalog/tests.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/team_catalog/tests.rs",
+          "line": 84,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/migration/fold.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/migration/fold.rs",
+          "line": 200,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/migration/fold.rs",
+          "line": 217,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/observed_unread.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/observed_unread.rs",
+          "line": 655,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/relay/profile_avatar.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/relay/profile_avatar.rs",
+          "line": 222,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/relay/tests.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/relay/tests.rs",
+          "line": 239,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/webkit_rendering.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/webkit_rendering.rs",
+          "line": 148,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ]
+    },
+    "by_scanner": {
+      "RustScanner": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 378,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: process argument built via format!() (.arg(format!(...))) \u2014 verify input is not attacker-controlled",
+          "rule_id": "MEDUSA-RUST-SCAN-011",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 77,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 377,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/crates/buzz-terminal/src/lifecycle_tests.rs",
+          "line": 488,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/admin/client.rs",
+          "line": 113,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_auth.rs",
+          "line": 422,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_exec.rs",
+          "line": 654,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 26,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: hardcoded key/iv/nonce/secret literal \u2014 load secrets from a vault/env at runtime",
+          "rule_id": "MEDUSA-RUST-SCAN-052",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview.rs",
+          "line": 235,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+          "line": 33,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: reqwest::get with a format!()-built URL \u2014 SSRF if the URL is influenced by input",
+          "rule_id": "MEDUSA-RUST-SCAN-060",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+          "line": 179,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_tests.rs",
+          "line": 194,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_youtube.rs",
+          "line": 168,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: reqwest::get with a format!()-built URL \u2014 SSRF if the URL is influenced by input",
+          "rule_id": "MEDUSA-RUST-SCAN-060",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_download.rs",
+          "line": 946,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/project_terminal.rs",
+          "line": 96,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/huddle/models_tests.rs",
+          "line": 23,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: set_len() can expose uninitialized memory \u2014 ensure elements are initialized first",
+          "rule_id": "MEDUSA-RUST-SCAN-042",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/huddle/models_tests.rs",
+          "line": 75,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: set_len() can expose uninitialized memory \u2014 ensure elements are initialized first",
+          "rule_id": "MEDUSA-RUST-SCAN-042",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 26,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: hardcoded key/iv/nonce/secret literal \u2014 load secrets from a vault/env at runtime",
+          "rule_id": "MEDUSA-RUST-SCAN-052",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+          "line": 226,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+          "line": 335,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/goose.rs",
+          "line": 20,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: serde_yaml deserialization of input \u2014 validate schema and source",
+          "rule_id": "MEDUSA-RUST-SCAN-021",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/discovery/bounded_command.rs",
+          "line": 889,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/discovery/bounded_command.rs",
+          "line": 970,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/relay/tests.rs",
+          "line": 239,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: HTTP client URL interpolated via format!() \u2014 SSRF if host/path is attacker-influenced",
+          "rule_id": "MEDUSA-RUST-SCAN-061",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "PostQuantumScanner": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_config_tests.rs",
+          "line": 615,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery.rs",
+          "line": 1574,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_models_update_tests.rs",
+          "line": 354,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/link_preview_youtube.rs",
+          "line": 36,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_snapshot_png.rs",
+          "line": 40,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/media_snapshot_png.rs",
+          "line": 120,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/personas/inbound/inbound_tests.rs",
+          "line": 834,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/project_repo_paths.rs",
+          "line": 92,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/deep_link.rs",
+          "line": 483,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 28,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 97,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/effort_cmd_tests.rs",
+          "line": 94,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/config_bridge/reader_tests.rs",
+          "line": 519,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/persona_avatars.rs",
+          "line": 4,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/readiness.rs",
+          "line": 1625,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/runtime/cli_tests.rs",
+          "line": 37,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/runtime/tests.rs",
+          "line": 594,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/storage.rs",
+          "line": 485,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/team_catalog/tests.rs",
+          "line": 84,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/migration/fold.rs",
+          "line": 200,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/migration/fold.rs",
+          "line": 217,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/observed_unread.rs",
+          "line": 655,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/relay/profile_avatar.rs",
+          "line": 222,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/webkit_rendering.rs",
+          "line": 148,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "GitLeaksScanner": [
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 205,
+          "severity": "CRITICAL",
+          "confidence": "HIGH",
+          "issue": "Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.: private-key",
+          "rule_id": "GL-private-key",
+          "cwe": null,
+          "code": "...-----BEGIN PRIVATE KEY-----lowerkey\".to_string(),\n...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 26,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...secret = \"0e8f31c5a4b7d296e5f1a\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_discovery/install_report_redaction_tests.rs",
+          "line": 307,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...auth = \"YnVpbGRlcjpodW50ZXIycGFzcw==\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agent_models_tests.rs",
+          "line": 812,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...OPENROUTER_API_KEY\", \"sk-or-v1-secret-key-12345\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/agents_tests.rs",
+          "line": 582,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...private_key_nsec\": \"nsec1vl029mgpspedva04g90vltkh6...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/commands/personas/inbound/inbound_tests.rs",
+          "line": 265,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...private_key_nsec\": \"nsec1INJECTEDSECRET\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/agent_events.rs",
+          "line": 172,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...private_key_nsec: \"nsec1secretdonotpublish\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "GitLeaksScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src-tauri/src/managed_agents/backend_tests.rs",
+          "line": 14,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.: generic-api-key",
+          "rule_id": "GL-generic-api-key",
+          "cwe": null,
+          "code": "...token\":\"sprt_tok_xyz789\"...",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ]
+    }
+  },
+  "fp_stats": {
+    "total_findings": 94,
+    "likely_fps": 38,
+    "retained": 56,
+    "fp_rate": 40.42553191489361
+  },
+  "ai_safe_mode": true
+}

@@ -1,0 +1,164 @@
+
+ ███╗   ███╗ ███████╗ ██████╗  ██╗   ██╗ ███████╗  █████╗
+ ████╗ ████║ ██╔════╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██╔══██╗
+ ██╔████╔██║ █████╗   ██║  ██║ ██║   ██║ ███████╗ ███████║
+ ██║╚██╔╝██║ ██╔══╝   ██║  ██║ ██║   ██║ ╚════██║ ██╔══██║
+ ██║ ╚═╝ ██║ ███████╗ ██████╔╝ ╚██████╔╝ ███████║ ██║  ██║
+ ╚═╝     ╚═╝ ╚══════╝ ╚═════╝   ╚═════╝  ╚══════╝ ╚═╝  ╚═╝
+
+               v2026.7.0 - Security Scanner
+   79 Analyzers | 40,000+ Rules | AI Security Detection   
+
+
+🎯 Target: crates/buzz-relay
+🔧 Mode: Full
+
+Analyzing repository...
+📊 Languages: rust (115), markdown (1), toml (1)
+🔧 Frameworks: docker_compose
+🤖 AI Patterns: Agents detected - AI security scanners enabled
+
+✓ Ready to scan: 16 scanners
+  34 scanners skipped (no Bash, Batch, Clojure, Csharp, +30 more files found)
+
+For best results, install 2 missing tool(s):
+  taplo (TOML linter)
+    cargo install taplo-cli
+  trivy (Container/IaC scanner)
+    sudo snap install trivy
+Non-interactive mode: continuing without optional tools.
+
+
+🐍 MEDUSA Parallel Scanner v1.1.0
+   Workers: 2 cores
+   Cache: enabled
+   Mode: full
+
+Found 116 scannable files
+
+📊 Scanning 116 files across 2 parallel workers (each file is checked by all applicable scanners)...
+
+🔍 Running GitLeaks batch scan on /home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-relay...
+  GitLeaks batch scan: 7 files, 11 findings in 0.5s
+  Scanning: 10%...20%...30%...40%...50%...60%...70%...80%...90%...100%... Done!
+
+            MEDUSA Scan Progress (2 workers, each file → multiple scanners)     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━
+┃ Scanner                    ┃  Status  ┃ Files Checked ┃ Issues ┃ Progress     
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━
+│ PostQuantumScanner         │  ✓ Done  │           114 │     66 │ █████████████
+│ RustScanner                │  ✓ Done  │           114 │     15 │ █████████████
+│ GitLeaksScanner            │  ✓ Done  │           116 │     11 │ █████████████
+│ AIAttackSignatureScanner   │  ✓ Done  │             2 │      · │ █████████████
+│ PromptLeakageScanner       │  ✓ Done  │             2 │      · │ █████████████
+│ RAGSecurityScanner         │  ✓ Done  │             2 │      · │ █████████████
+│ CriticalCVEScanner         │  ✓ Done  │             1 │      · │ █████████████
+│ HyperparameterScanner      │  ✓ Done  │             1 │      · │ █████████████
+│ LLMGuardScanner            │  ✓ Done  │             1 │      · │ █████████████
+│ LLMOpsScanner              │  ✓ Done  │             1 │      · │ █████████████
+│ MarkdownScanner            │  ✓ Done  │             1 │      · │ █████████████
+│ VectorDBScanner            │  ✓ Done  │             1 │      · │ █████████████
+├────────────────────────────┼──────────┼───────────────┼────────┼──────────────
+│ Overall                    │   100%   │       116/116 │     92 │ █████████████
+└────────────────────────────┴──────────┴───────────────┴────────┴──────────────
+
+
+📊 Reports generated:
+   JSON       → ../../../reports/buzz-runtime-medusa-20261007/crates_buzz-relay/medusa-scan-20261007-183528.json
+
+────────────────────────────────────────────
+  🎯 SCAN COMPLETE
+────────────────────────────────────────────
+  Files scanned:       116
+  Lines of code:       154,471
+  Issues found:        49
+  FPs filtered:        43
+  FP reduction:        46.7%
+  Scanners used:       12
+  Total time:          6.27s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 35 issues at HIGH+ severity
+
+ ███╗   ███╗ ███████╗ ██████╗  ██╗   ██╗ ███████╗  █████╗
+ ████╗ ████║ ██╔════╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██╔══██╗
+ ██╔████╔██║ █████╗   ██║  ██║ ██║   ██║ ███████╗ ███████║
+ ██║╚██╔╝██║ ██╔══╝   ██║  ██║ ██║   ██║ ╚════██║ ██╔══██║
+ ██║ ╚═╝ ██║ ███████╗ ██████╔╝ ╚██████╔╝ ███████║ ██║  ██║
+ ╚═╝     ╚═╝ ╚══════╝ ╚═════╝   ╚═════╝  ╚══════╝ ╚═╝  ╚═╝
+
+               v2026.7.0 - Security Scanner
+   79 Analyzers | 40,000+ Rules | AI Security Detection   
+
+
+🎯 Target: crates/buzz-relay
+🔧 Mode: Full
+
+Analyzing repository...
+📊 Languages: rust (115), markdown (1), toml (1)
+🔧 Frameworks: docker_compose
+🤖 AI Patterns: Agents detected - AI security scanners enabled
+
+✓ Ready to scan: 16 scanners
+  34 scanners skipped (no Bash, Batch, Clojure, Csharp, +30 more files found)
+
+For best results, install 2 missing tool(s):
+  taplo (TOML linter)
+    cargo install taplo-cli
+  trivy (Container/IaC scanner)
+    sudo snap install trivy
+Non-interactive mode: continuing without optional tools.
+
+
+🐍 MEDUSA Parallel Scanner v1.1.0
+   Workers: 2 cores
+   Cache: enabled
+   Mode: full
+
+Found 116 scannable files
+
+📊 Scanning 116 files across 2 parallel workers (each file is checked by all applicable scanners)...
+
+🔍 Running GitLeaks batch scan on /home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-relay...
+  GitLeaks batch scan: 7 files, 11 findings in 0.5s
+  Scanning: 10%...20%...30%...40%...50%...60%...70%...80%...90%...100%... Done!
+
+            MEDUSA Scan Progress (2 workers, each file → multiple scanners)     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━
+┃ Scanner                    ┃  Status  ┃ Files Checked ┃ Issues ┃ Progress     
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━
+│ AIAttackSignatureScanner   │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ CriticalCVEScanner         │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ GitLeaksScanner            │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ HyperparameterScanner      │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ LLMGuardScanner            │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ LLMOpsScanner              │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ MarkdownScanner            │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ PostQuantumScanner         │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ PromptLeakageScanner       │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ RAGSecurityScanner         │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ RustScanner                │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+│ VectorDBScanner            │ ◦ Queued │             0 │      · │ ░░░░░░░░░░░░░
+├────────────────────────────┼──────────┼───────────────┼────────┼──────────────
+│ Overall                    │   100%   │       116/116 │      0 │ █████████████
+└────────────────────────────┴──────────┴───────────────┴────────┴──────────────
+
+
+📊 Reports generated:
+   JSON       → ../../../reports/buzz-runtime-medusa-20261007/crates_buzz-relay/medusa-scan-20261007-184045.json
+
+────────────────────────────────────────────
+  🎯 SCAN COMPLETE
+────────────────────────────────────────────
+  Files scanned:       0
+  Lines of code:       0
+  Issues found:        49
+  FPs filtered:        43
+  FP reduction:        46.7%
+  Scanners used:       0
+  Total time:          0.01s
+  Cache hit rate:      100.0%
+────────────────────────────────────────────
+
+❌ Found 35 issues at HIGH+ severity

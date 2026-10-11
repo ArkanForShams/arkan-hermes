@@ -1,0 +1,1211 @@
+{
+  "skill": {
+    "name": "unknown",
+    "source": "/home/shams/hermes-workspace/security/nango-triage/nango/.agents/skills",
+    "scanned_at": "2026-10-05T14:14:19.657076+00:00"
+  },
+  "risk_assessment": {
+    "score": 99,
+    "severity": "CRITICAL",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "HIGH"
+  },
+  "components": [
+    {
+      "path": "adding-audit-events/SKILL.md",
+      "type": "markdown",
+      "lines": 79,
+      "executable": false,
+      "size_bytes": 4392,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "agent-builder-skill/EXAMPLES.md",
+      "type": "markdown",
+      "lines": 922,
+      "executable": false,
+      "size_bytes": 19600,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "agent-builder-skill/SKILL.md",
+      "type": "markdown",
+      "lines": 920,
+      "executable": false,
+      "size_bytes": 20865,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "building-and-verifying/SKILL.md",
+      "type": "markdown",
+      "lines": 85,
+      "executable": false,
+      "size_bytes": 3623,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "creating-database-migrations/SKILL.md",
+      "type": "markdown",
+      "lines": 43,
+      "executable": false,
+      "size_bytes": 1794,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "creating-integration-docs/SKILL.md",
+      "type": "markdown",
+      "lines": 291,
+      "executable": false,
+      "size_bytes": 10754,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "creating-skills-skill/SKILL.md",
+      "type": "markdown",
+      "lines": 482,
+      "executable": false,
+      "size_bytes": 13895,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "running-and-testing-locally/SKILL.md",
+      "type": "markdown",
+      "lines": 314,
+      "executable": false,
+      "size_bytes": 15160,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "running-tests/SKILL.md",
+      "type": "markdown",
+      "lines": 94,
+      "executable": false,
+      "size_bytes": 3515,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "ui-visual-debugging/SKILL.md",
+      "type": "markdown",
+      "lines": 127,
+      "executable": false,
+      "size_bytes": 5128,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "PE3",
+      "finding_id": "finding-4c82b714425a46109928e7ca8141ebf1",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "agent-builder-skill/EXAMPLES.md",
+        "start_line": 191,
+        "end_line": null,
+        "start_column": 34
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "**A05:2021 \u2013 Security Misconfiguration**\n```bash\n# Check for debug modes\ngrep -r \"DEBUG.*true\" --include=\"*.env\"\ngrep -r \"NODE_ENV.*development\" --include=\"*.js\"\n```\n- Production configs secure?",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "agent-builder-skill/EXAMPLES.md",
+          "start_line": 191,
+          "end_line": null,
+          "start_column": 34
+        }
+      ]
+    },
+    {
+      "id": "MP3",
+      "finding_id": "finding-59fe195b2cf746189573e4b38a788f89",
+      "category": "Memory Poisoning",
+      "pattern": "Memory Manipulation",
+      "severity": "HIGH",
+      "confidence": 0.8,
+      "location": {
+        "file": "agent-builder-skill/EXAMPLES.md",
+        "start_line": 760,
+        "end_line": null,
+        "start_column": 7
+      },
+      "finding": "Reset state",
+      "explanation": "Skill manipulates agent memory, state, or stored context. Memory corruption can alter personality, override safety rules, or cause unpredictable behavior.",
+      "remediation": "Protect agent memory and state from modification by untrusted content. Use read-only memory for critical instructions and validate all state changes.",
+      "code_snippet": "describe('[Component/Function Name]', () => {\n  // Setup\n  beforeEach(() => {\n    // Reset state\n    // Create test fixtures\n  })\n",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5c17c6fcab1d2c097bdd17902df205d38bd84f57cf06ac3bdf440a9330b1b9c6",
+      "occurrences": [
+        {
+          "file": "agent-builder-skill/EXAMPLES.md",
+          "start_line": 760,
+          "end_line": null,
+          "start_column": 7
+        }
+      ]
+    },
+    {
+      "id": "E4",
+      "finding_id": "finding-b832b05cc14b4278af470a62986e91b9",
+      "category": "Data Exfiltration",
+      "pattern": "Context Leakage",
+      "severity": "HIGH",
+      "confidence": 0.75,
+      "location": {
+        "file": "agent-builder-skill/SKILL.md",
+        "start_line": 378,
+        "end_line": null,
+        "start_column": 7
+      },
+      "finding": "Capture Context",
+      "explanation": "Code or instructions that leak agent conversation context to external services, potentially exposing sensitive user interactions.",
+      "remediation": "Remove any code that sends prompts, responses, or session data externally. Preserve user privacy; never exfiltrate conversation content.",
+      "code_snippet": "\n## Debugging Process\n\n### 1. Capture Context\n- What error/unexpected behavior occurred?\n- Error messages and stack traces\n- Steps to reproduce",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "8e3be0962a669235bebd210278d21fd1be88589d10eff7e1934f9c5d3a224d6d",
+      "occurrences": [
+        {
+          "file": "agent-builder-skill/SKILL.md",
+          "start_line": 378,
+          "end_line": null,
+          "start_column": 7
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-ee63e557e4b04aa6b8305fbdfc398207",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "running-and-testing-locally/SKILL.md",
+        "start_line": 40,
+        "end_line": null,
+        "start_column": 35
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "# 1. Install dependencies (always after branch switch or pull)\nnpm install\n\n# 2. Set up environment \u2014 check if .env exists first\n#    If .env already exists, skip this step to avoid overwriting user customizations.\n#    Only create it if missing.\nif [ ! -f .env ]; then",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "running-and-testing-locally/SKILL.md",
+          "start_line": 40,
+          "end_line": null,
+          "start_column": 35
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-ee63e557e4b04aa6b8305fbdfc398207",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "running-and-testing-locally/SKILL.md",
+        "start_line": 41,
+        "end_line": null,
+        "start_column": 8
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "# 1. Install dependencies (always after branch switch or pull)\nnpm install\n\n# 2. Set up environment \u2014 check if .env exists first\n#    If .env already exists, skip this step to avoid overwriting user customizations.\n#    Only create it if missing.\nif [ ! -f .env ]; then",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "running-and-testing-locally/SKILL.md",
+          "start_line": 41,
+          "end_line": null,
+          "start_column": 8
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-ee63e557e4b04aa6b8305fbdfc398207",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "running-and-testing-locally/SKILL.md",
+        "start_line": 43,
+        "end_line": null,
+        "start_column": 10
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "# 1. Install dependencies (always after branch switch or pull)\nnpm install\n\n# 2. Set up environment \u2014 check if .env exists first\n#    If .env already exists, skip this step to avoid overwriting user customizations.\n#    Only create it if missing.\nif [ ! -f .env ]; then",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "running-and-testing-locally/SKILL.md",
+          "start_line": 43,
+          "end_line": null,
+          "start_column": 10
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-ee63e557e4b04aa6b8305fbdfc398207",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "running-and-testing-locally/SKILL.md",
+        "start_line": 44,
+        "end_line": null,
+        "start_column": 18
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "# 1. Install dependencies (always after branch switch or pull)\nnpm install\n\n# 2. Set up environment \u2014 check if .env exists first\n#    If .env already exists, skip this step to avoid overwriting user customizations.\n#    Only create it if missing.\nif [ ! -f .env ]; then",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "running-and-testing-locally/SKILL.md",
+          "start_line": 44,
+          "end_line": null,
+          "start_column": 18
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-ee63e557e4b04aa6b8305fbdfc398207",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "running-and-testing-locally/SKILL.md",
+        "start_line": 46,
+        "end_line": null,
+        "start_column": 60
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "# 1. Install dependencies (always after branch switch or pull)\nnpm install\n\n# 2. Set up environment \u2014 check if .env exists first\n#    If .env already exists, skip this step to avoid overwriting user customizations.\n#    Only create it if missing.\nif [ ! -f .env ]; then",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "running-and-testing-locally/SKILL.md",
+          "start_line": 46,
+          "end_line": null,
+          "start_column": 60
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-ee63e557e4b04aa6b8305fbdfc398207",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "running-and-testing-locally/SKILL.md",
+        "start_line": 48,
+        "end_line": null,
+        "start_column": 35
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "# 1. Install dependencies (always after branch switch or pull)\nnpm install\n\n# 2. Set up environment \u2014 check if .env exists first\n#    If .env already exists, skip this step to avoid overwriting user customizations.\n#    Only create it if missing.\nif [ ! -f .env ]; then",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "running-and-testing-locally/SKILL.md",
+          "start_line": 48,
+          "end_line": null,
+          "start_column": 35
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-ee63e557e4b04aa6b8305fbdfc398207",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "running-and-testing-locally/SKILL.md",
+        "start_line": 50,
+        "end_line": null,
+        "start_column": 41
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "# 1. Install dependencies (always after branch switch or pull)\nnpm install\n\n# 2. Set up environment \u2014 check if .env exists first\n#    If .env already exists, skip this step to avoid overwriting user customizations.\n#    Only create it if missing.\nif [ ! -f .env ]; then",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "running-and-testing-locally/SKILL.md",
+          "start_line": 50,
+          "end_line": null,
+          "start_column": 41
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-e60255aaba81457e9f1d0357cb458891",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "running-and-testing-locally/SKILL.md",
+        "start_line": 147,
+        "end_line": null,
+        "start_column": 48
+      },
+      "finding": ".env'",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "pid, fd = pty.fork()\nif pid == 0:\n    os.chdir('packages/server')\n    os.environ['DOTENV_CONFIG_PATH'] = './../../.env'\n    os.execvp('npx', ['npx', 'tsx', '--watch', '-r', 'dotenv/config', 'lib/server.ts'])\nelse:\n    with open('/tmp/nango-srv.log', 'wb') as f:",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "1d7505be6268307507c320128a1d61ae0b567925073d352885b24399720f99c3",
+      "occurrences": [
+        {
+          "file": "running-and-testing-locally/SKILL.md",
+          "start_line": 147,
+          "end_line": null,
+          "start_column": 48
+        }
+      ]
+    },
+    {
+      "id": "RA2",
+      "finding_id": "finding-39858e2558a042afaf1064e10955a075",
+      "category": "Rogue Agent",
+      "pattern": "Session Persistence",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "agent-builder-skill/SKILL.md",
+        "start_line": 18,
+        "end_line": null,
+        "start_column": 15
+      },
+      "finding": "create a new subagent\n- User wants to improve an existing agent\n- User needs help with agent configuration or tool access\n- User is troubleshooting agent invocation issues\n- User wants to understand w",
+      "explanation": "Skill establishes unauthorized persistence across sessions via cron jobs, startup scripts, or state files. Session persistence allows an attacker to maintain access beyond the current interaction.",
+      "remediation": "Remove any persistence mechanisms (cron jobs, startup scripts, state files). Skills should not maintain state across sessions without explicit user consent.",
+      "code_snippet": "## When to Use This Skill\n\nActivate this skill when:\n- User asks to create a new subagent\n- User wants to improve an existing agent\n- User needs help with agent configuration or tool access\n- User is troubleshooting agent invocation issues",
+      "intent": null,
+      "tags": [
+        "Rogue Agent"
+      ],
+      "evidence": {},
+      "match_fingerprint": "03d894615793e5c6fc0820282be2979ef58d0b961fadd4f902319d1109cdbfbf",
+      "occurrences": [
+        {
+          "file": "agent-builder-skill/SKILL.md",
+          "start_line": 18,
+          "end_line": null,
+          "start_column": 15
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4547358d617c481b8b15e92ed6fb0ee0",
+      "category": "MCP Rug Pull",
+      "pattern": null,
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "building-and-verifying/SKILL.md",
+        "start_line": 17,
+        "end_line": null
+      },
+      "finding": null,
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f93ea7c95b3acfc2d072d9bd41d1947e36b5c69f5c5a0609a4b25ab8c668b10a",
+      "occurrences": [
+        {
+          "file": "building-and-verifying/SKILL.md",
+          "start_line": 17,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4547358d617c481b8b15e92ed6fb0ee0",
+      "category": "MCP Rug Pull",
+      "pattern": null,
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "building-and-verifying/SKILL.md",
+        "start_line": 51,
+        "end_line": null
+      },
+      "finding": null,
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f93ea7c95b3acfc2d072d9bd41d1947e36b5c69f5c5a0609a4b25ab8c668b10a",
+      "occurrences": [
+        {
+          "file": "building-and-verifying/SKILL.md",
+          "start_line": 51,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4547358d617c481b8b15e92ed6fb0ee0",
+      "category": "MCP Rug Pull",
+      "pattern": null,
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "building-and-verifying/SKILL.md",
+        "start_line": 54,
+        "end_line": null
+      },
+      "finding": null,
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f93ea7c95b3acfc2d072d9bd41d1947e36b5c69f5c5a0609a4b25ab8c668b10a",
+      "occurrences": [
+        {
+          "file": "building-and-verifying/SKILL.md",
+          "start_line": 54,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4547358d617c481b8b15e92ed6fb0ee0",
+      "category": "MCP Rug Pull",
+      "pattern": null,
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "building-and-verifying/SKILL.md",
+        "start_line": 65,
+        "end_line": null
+      },
+      "finding": null,
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f93ea7c95b3acfc2d072d9bd41d1947e36b5c69f5c5a0609a4b25ab8c668b10a",
+      "occurrences": [
+        {
+          "file": "building-and-verifying/SKILL.md",
+          "start_line": 65,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-aed582b2ffdc428c9923f189cc3d6e18",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.5,
+      "location": {
+        "file": "creating-integration-docs/SKILL.md",
+        "start_line": 84,
+        "end_line": null,
+        "start_column": 18
+      },
+      "finding": "https://api.nango.dev/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "        <Tab title=\"cURL\">\n\n            ```bash\n            curl \"https://api.nango.dev/proxy/[example-endpoint]\" \\\n              -H \"Authorization: Bearer <NANGO-API-KEY>\" \\\n              -H \"Provider-Config-Key: <INTEGRATION-ID>\" \\\n              -H \"Connection-Id: <CONNECTION-ID>\"",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "021f833a4ca240f9b85aba563673a430c5dbd3f0323fcff827b0ea14158f96ff",
+      "occurrences": [
+        {
+          "file": "creating-integration-docs/SKILL.md",
+          "start_line": 84,
+          "end_line": null,
+          "start_column": 18
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-aed582b2ffdc428c9923f189cc3d6e18",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.5,
+      "location": {
+        "file": "creating-integration-docs/SKILL.md",
+        "start_line": 169,
+        "end_line": null,
+        "start_column": 36
+      },
+      "finding": "https://api.nango.dev/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "        <Tab title=\"cURL\">\n\n            ```bash\n            curl \"https://api.nango.dev/proxy/[example-endpoint]\" \\\n              -H \"Authorization: Bearer <NANGO-API-KEY>\" \\\n              -H \"Provider-Config-Key: <INTEGRATION-ID>\" \\\n              -H \"Connection-Id: <CONNECTION-ID>\"",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "021f833a4ca240f9b85aba563673a430c5dbd3f0323fcff827b0ea14158f96ff",
+      "occurrences": [
+        {
+          "file": "creating-integration-docs/SKILL.md",
+          "start_line": 169,
+          "end_line": null,
+          "start_column": 36
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-aed582b2ffdc428c9923f189cc3d6e18",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.5,
+      "location": {
+        "file": "creating-integration-docs/SKILL.md",
+        "start_line": 261,
+        "end_line": null,
+        "start_column": 25
+      },
+      "finding": "https://api.nango.dev/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "        <Tab title=\"cURL\">\n\n            ```bash\n            curl \"https://api.nango.dev/proxy/[example-endpoint]\" \\\n              -H \"Authorization: Bearer <NANGO-API-KEY>\" \\\n              -H \"Provider-Config-Key: <INTEGRATION-ID>\" \\\n              -H \"Connection-Id: <CONNECTION-ID>\"",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "021f833a4ca240f9b85aba563673a430c5dbd3f0323fcff827b0ea14158f96ff",
+      "occurrences": [
+        {
+          "file": "creating-integration-docs/SKILL.md",
+          "start_line": 261,
+          "end_line": null,
+          "start_column": 25
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-89898df24846418e9605c356a90e5ba1",
+      "category": "MCP Rug Pull",
+      "pattern": null,
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "ui-visual-debugging/SKILL.md",
+        "start_line": 52,
+        "end_line": null
+      },
+      "finding": null,
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d1e71786bcce07e288b1b7488d594b4d051d0f6efefb2c50641987706a012da",
+      "occurrences": [
+        {
+          "file": "ui-visual-debugging/SKILL.md",
+          "start_line": 52,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "EA2",
+      "finding_id": "finding-7efe4c015908460a8670dad4ab749029",
+      "category": "Excessive Agency",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "confidence": 0.75,
+      "location": {
+        "file": "ui-visual-debugging/SKILL.md",
+        "start_line": 82,
+        "end_line": null,
+        "start_column": 320
+      },
+      "finding": "without confirmation",
+      "explanation": "Skill enables autonomous high-impact decisions without human-in-the-loop verification. Critical operations (destructive commands, financial transactions, data deletion) should require explicit user confirmation.",
+      "remediation": "Add human-in-the-loop confirmation for destructive, irreversible, or high-impact operations. Never auto-execute commands that modify files, send data, or alter system state.",
+      "code_snippet": "\n## Startup Troubleshooting\n\nIf server startup fails with a Knex error like `The migration directory is corrupt, the following files are missing`, the local database has migrations from another branch (see **Migration mismatch** in `running-and-testing-locally` to tell a branch behind master from an unmerged one). Do not reset the user's database without confirmation. For visual validation only, use a temporary database:\n\n```bash\ndocker exec nango-db psql -U nango -d postgres -c \"DROP DATABASE IF EXISTS nango_ui_skill_validation WITH (FORCE)\"",
+      "intent": null,
+      "tags": [
+        "Excessive Agency"
+      ],
+      "evidence": {},
+      "match_fingerprint": "185d22f157da5a84d02dff9686fa7f147180d794b4c7e43df099ae9daa3d598e",
+      "occurrences": [
+        {
+          "file": "ui-visual-debugging/SKILL.md",
+          "start_line": 82,
+          "end_line": null,
+          "start_column": 320
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": false,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "nv_build",
+        "resolved_adapter": "nv_build",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "not_applicable",
+          "api_version": null,
+          "api_version_source": "not_applicable"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.2",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "c7958a3268d9498644b22edb75d0f051bbc8cbfc",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": true,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 10,
+    "scanned_components": 10,
+    "coverage_percent": 100.0,
+    "is_complete": true,
+    "status": "complete",
+    "execution_successful": true,
+    "fully_inspected_files": 10,
+    "partially_inspected_files": 0,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [],
+    "scope_exclusions": [],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "manifest_absent",
+        "message": "No compatible manifest was present for this analyzer."
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "manifest_absent",
+        "message": "No compatible manifest was present for this analyzer."
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 10,
+        "completed": 10,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [],
+    "limitations": [],
+    "findings_before_filtering": 22,
+    "findings_after_filtering": 22
+  }
+}

@@ -1,0 +1,178 @@
+
+ ███╗   ███╗ ███████╗ ██████╗  ██╗   ██╗ ███████╗  █████╗
+ ████╗ ████║ ██╔════╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██╔══██╗
+ ██╔████╔██║ █████╗   ██║  ██║ ██║   ██║ ███████╗ ███████║
+ ██║╚██╔╝██║ ██╔══╝   ██║  ██║ ██║   ██║ ╚════██║ ██╔══██║
+ ██║ ╚═╝ ██║ ███████╗ ██████╔╝ ╚██████╔╝ ███████║ ██║  ██║
+ ╚═╝     ╚═╝ ╚══════╝ ╚═════╝   ╚═════╝  ╚══════╝ ╚═╝  ╚═╝
+
+               v2026.7.0 - Security Scanner
+   79 Analyzers | 40,000+ Rules | AI Security Detection   
+
+
+🎯 Target: desktop/src
+🔧 Mode: Full
+
+Analyzing repository...
+📊 Languages: typescript (1737), javascript (735), css (21), markdown (1)
+🔧 Frameworks: mcp_server, react
+🤖 AI Patterns: MCP, RAG, Agents detected - AI security scanners enabled
+
+✓ Ready to scan: 17 scanners
+  33 scanners skipped (no Bash, Batch, Clojure, Csharp, +29 more files found)
+
+For best results, install 1 missing tool(s):
+  stylelint (CSS/SCSS linter)
+    npm install -g stylelint
+Non-interactive mode: continuing without optional tools.
+
+
+🐍 MEDUSA Parallel Scanner v1.1.0
+   Workers: 2 cores
+   Cache: enabled
+   Mode: full
+
+Found 1733 scannable files
+
+📊 Scanning 1733 files across 2 parallel workers (each file is checked by all applicable scanners)...
+
+🔍 Running GitLeaks batch scan on /home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src...
+  GitLeaks batch scan: 2 files, 3 findings in 1.0s
+  Scanning: 10%...20%...30%...
+ ███╗   ███╗ ███████╗ ██████╗  ██╗   ██╗ ███████╗  █████╗
+ ████╗ ████║ ██╔════╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██╔══██╗
+ ██╔████╔██║ █████╗   ██║  ██║ ██║   ██║ ███████╗ ███████║
+ ██║╚██╔╝██║ ██╔══╝   ██║  ██║ ██║   ██║ ╚════██║ ██╔══██║
+ ██║ ╚═╝ ██║ ███████╗ ██████╔╝ ╚██████╔╝ ███████║ ██║  ██║
+ ╚═╝     ╚═╝ ╚══════╝ ╚═════╝   ╚═════╝  ╚══════╝ ╚═╝  ╚═╝
+
+               v2026.7.0 - Security Scanner
+   79 Analyzers | 40,000+ Rules | AI Security Detection   
+
+
+🎯 Target: desktop/src
+🔧 Mode: Full
+
+Analyzing repository...
+📊 Languages: typescript (1737), javascript (735), css (21), markdown (1)
+🔧 Frameworks: mcp_server, react
+🤖 AI Patterns: MCP, RAG, Agents detected - AI security scanners enabled
+
+✓ Ready to scan: 17 scanners
+  33 scanners skipped (no Bash, Batch, Clojure, Csharp, +29 more files found)
+
+For best results, install 1 missing tool(s):
+  stylelint (CSS/SCSS linter)
+    npm install -g stylelint
+Non-interactive mode: continuing without optional tools.
+
+
+🐍 MEDUSA Parallel Scanner v1.1.0
+   Workers: 2 cores
+   Cache: enabled
+   Mode: full
+
+Found 1733 scannable files
+
+📊 Scanning 1733 files across 2 parallel workers (each file is checked by all applicable scanners)...
+
+40%...50%...🔍 Running GitLeaks batch scan on /home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/desktop/src...
+  GitLeaks batch scan: 2 files, 3 findings in 1.1s
+  Scanning: 60%...10%...70%...20%...80%...30%...90%...40%...100%... Done!
+
+            MEDUSA Scan Progress (2 workers, each file → multiple scanners)     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━
+┃ Scanner                    ┃  Status  ┃ Files Checked ┃ Issues ┃ Progress     
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━
+│ LLMGuardScanner            │  ✓ Done  │          1011 │    322 │ █████████████
+│ ExcessiveAgencyScanner     │  ✓ Done  │          1732 │    300 │ █████████████
+│ PluginSecurityScanner      │  ✓ Done  │          1732 │    204 │ █████████████
+│ PostQuantumScanner         │  ✓ Done  │          1011 │    198 │ █████████████
+│ MultiAgentScanner          │  ✓ Done  │          1732 │    180 │ █████████████
+│ PromptLeakageScanner       │  ✓ Done  │          1733 │     39 │ █████████████
+│ SteganographyScanner       │  ✓ Done  │          1732 │     28 │ █████████████
+│ ModelAttackScanner         │  ✓ Done  │          1732 │      8 │ █████████████
+│ OWASPLLMScanner            │  ✓ Done  │            48 │      7 │ █████████████
+│ RAGSecurityScanner         │  ✓ Done  │            21 │      7 │ █████████████
+│ AIAttackSignatureScanner   │  ✓ Done  │          1733 │      6 │ █████████████
+│ AIContextScanner           │  ✓ Done  │             1 │      6 │ █████████████
+│ GitLeaksScanner            │  ✓ Done  │          1733 │      1 │ █████████████
+│ AgentPlanningScanner       │  ✓ Done  │          1732 │      · │ █████████████
+│ AgentReflectionScanner     │  ✓ Done  │          1732 │      · │ █████████████
+│ JavaScriptScanner          │  ✓ Done  │          1732 │      · │ █████████████
+│ TypeScriptScanner          │  ✓ Done  │          1732 │      · │ █████████████
+│ VectorDBScanner            │  ✓ Done  │          1011 │      · │ █████████████
+│ ToolCallbackScanner        │  ✓ Done  │            14 │      · │ █████████████
+│ AgentMemoryScanner         │  ✓ Done  │             3 │      · │ █████████████
+│   +1 more scanners         │          │               │        │              
+├────────────────────────────┼──────────┼───────────────┼────────┼──────────────
+│ Overall                    │   100%   │     1733/1733 │   1306 │ █████████████
+└────────────────────────────┴──────────┴───────────────┴────────┴──────────────
+
+
+📊 Reports generated:
+   JSON       → ../../../reports/buzz-runtime-medusa-20261007/desktop_src/medusa-scan-20261007-185606.json
+
+────────────────────────────────────────────
+  🎯 SCAN COMPLETE
+────────────────────────────────────────────
+  Files scanned:       1733
+  Lines of code:       346,312
+  Issues found:        374
+  FPs filtered:        932
+  FP reduction:        71.4%
+  Scanners used:       21
+  Total time:          264.81s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 780 issues at HIGH+ severity
+50%...60%...70%...80%...90%...100%... Done!
+
+            MEDUSA Scan Progress (2 workers, each file → multiple scanners)     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━
+┃ Scanner                    ┃  Status  ┃ Files Checked ┃ Issues ┃ Progress     
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━
+│ LLMGuardScanner            │  ✓ Done  │          1011 │    322 │ █████████████
+│ ExcessiveAgencyScanner     │  ✓ Done  │          1732 │    300 │ █████████████
+│ PluginSecurityScanner      │  ✓ Done  │          1732 │    204 │ █████████████
+│ PostQuantumScanner         │  ✓ Done  │          1011 │    198 │ █████████████
+│ MultiAgentScanner          │  ✓ Done  │          1732 │    180 │ █████████████
+│ PromptLeakageScanner       │  ✓ Done  │          1733 │     39 │ █████████████
+│ SteganographyScanner       │  ✓ Done  │          1732 │     28 │ █████████████
+│ ModelAttackScanner         │  ✓ Done  │          1732 │      8 │ █████████████
+│ OWASPLLMScanner            │  ✓ Done  │            48 │      7 │ █████████████
+│ RAGSecurityScanner         │  ✓ Done  │            21 │      7 │ █████████████
+│ AIAttackSignatureScanner   │  ✓ Done  │          1733 │      6 │ █████████████
+│ AIContextScanner           │  ✓ Done  │             1 │      6 │ █████████████
+│ GitLeaksScanner            │  ✓ Done  │          1733 │      1 │ █████████████
+│ AgentPlanningScanner       │  ✓ Done  │          1732 │      · │ █████████████
+│ AgentReflectionScanner     │  ✓ Done  │          1732 │      · │ █████████████
+│ JavaScriptScanner          │  ✓ Done  │          1732 │      · │ █████████████
+│ TypeScriptScanner          │  ✓ Done  │          1732 │      · │ █████████████
+│ VectorDBScanner            │  ✓ Done  │          1011 │      · │ █████████████
+│ ToolCallbackScanner        │  ✓ Done  │            14 │      · │ █████████████
+│ AgentMemoryScanner         │  ✓ Done  │             3 │      · │ █████████████
+│   +1 more scanners         │          │               │        │              
+├────────────────────────────┼──────────┼───────────────┼────────┼──────────────
+│ Overall                    │   100%   │     1733/1733 │   1306 │ █████████████
+└────────────────────────────┴──────────┴───────────────┴────────┴──────────────
+
+
+📊 Reports generated:
+   JSON       → ../../../reports/buzz-runtime-medusa-20261007/desktop_src/medusa-scan-20261007-190142.json
+
+────────────────────────────────────────────
+  🎯 SCAN COMPLETE
+────────────────────────────────────────────
+  Files scanned:       1733
+  Lines of code:       346,312
+  Issues found:        374
+  FPs filtered:        932
+  FP reduction:        71.4%
+  Scanners used:       21
+  Total time:          248.49s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+❌ Found 780 issues at HIGH+ severity

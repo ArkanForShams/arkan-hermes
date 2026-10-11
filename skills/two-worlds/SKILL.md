@@ -33,6 +33,12 @@ project kickoff), follow this procedure exactly.
 2. **Produce the Two-Worlds Plan** (§3 template) BEFORE writing code. Present, wait for approval.
 3. **Build order:** shared core → agent surface → human surface → recognition middleware. Never build either surface by hacking the other.
 
+## 2A. Enterprise product kickoff gate
+
+For a new enterprise application, treat supplied briefs, PDFs, wireframes, diagrams, and screenshots as discovery evidence, not implementation authority. Inventory and preserve the source package, extract requirements with provenance, identify brand/domain ambiguities, and write the Two-Worlds Plan plus an explicit discovery backlog before code. Do not begin production implementation until the sponsor approves the product boundary, MVP, source-system ownership, launch market, and major unresolved integration assumptions.
+
+Run discovery as sequenced gates when later decisions depend on earlier evidence: sponsor framing → operations-system/API discovery → canonical data model → bilingual UX/service blueprint → security/privacy/compliance → target architecture/ADRs → delivery plan → prototype validation → build readiness. Keep unknown owners, dates, APIs, capacity rules, and data mappings unresolved rather than inventing them.
+
 ## 3. Plan template (deliver exactly these sections)
 
 | Section | Must define |

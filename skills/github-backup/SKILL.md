@@ -64,6 +64,21 @@ Triage protocol, in order:
    turn-lease tokens. Benign.
 5. Anything else is a REAL signal → full triage per browse-safe §5.
 
+## Never push third-party vendor payloads or raw scan output
+2026-10-05 lesson: a parallel session cloned the 523 MB Nango repo into
+workspace/security/nango-triage/ for gate triage; the backup auto-staged the
+entire clone. Gate rule now: **vendor code clones and raw scanner outputs stay
+OUT of the archive** (re-fetchable upstream; regenerable evidence). Push ONLY:
+TRIAGE-VERDICT.md / AGENTS.md (the human analysis + method).
+Recovery procedure when it happens (proven): `git rm -r --cached <clone>`
+(may silently fail on dirs — verify with `git status --short`; fall back to
+`git reset -q HEAD -- <dir>`), append precise .gitignore globs per file class
+(`security/nango-triage/nango/`, `security/reports/medusa-scan-*.json`), then
+re-run `gitleaks protect --staged --config ~/hermes-workspace/security/gitleaks.config.toml`
+(exit 0 = clean) before committing. Raw scan JSONs matched gitleaks on a
+third-party test-fixture string (NANGO_ENCRYPTION_KEY sample from their public
+docs) — redact-by-exclusion, triage knowledge preserved.
+
 ## Never push personal documents
 
 Resumes/CVs/IDs under any synced path are a leak vector: a CV PDF can carry a

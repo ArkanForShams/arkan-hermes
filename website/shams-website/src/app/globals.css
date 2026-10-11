@@ -146,7 +146,9 @@ body {
   background: radial-gradient(closest-side, rgba(227, 185, 92, 0.14), rgba(227, 185, 92, 0.05) 55%, transparent 75%);
 }
 
-/* Light-line spine — brass filament tracking scroll progress */
+/* Light-line spine — brass filament tracking scroll progress.
+   v11 "Manuscript": the filament hangs like a plumb line at the left margin;
+   a small bob appears once the visitor is underway (scroll > ~400px via animation range). */
 .lightline {
   position: fixed;
   left: max(4px, 1vw);
@@ -188,6 +190,17 @@ body {
 }
 @keyframes lightline-grow { to { transform: scaleY(1); } }
 @keyframes scrollhint-fade { to { opacity: 0; } }
+
+/* v11 Manuscript additions ----------------------------------------------- */
+
+/* Chapter-opening hairline under the first display heading group */
+.h-underline {
+  background-image: linear-gradient(90deg, var(--accent) 0 56px, transparent 56px);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 1px;
+  padding-bottom: 10px;
+}
 
 /* Entrance grammar: structure stands, inscriptions rise */
 @keyframes rise-in {

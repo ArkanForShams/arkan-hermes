@@ -1,0 +1,148 @@
+
+ ███╗   ███╗ ███████╗ ██████╗  ██╗   ██╗ ███████╗  █████╗
+ ████╗ ████║ ██╔════╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██╔══██╗
+ ██╔████╔██║ █████╗   ██║  ██║ ██║   ██║ ███████╗ ███████║
+ ██║╚██╔╝██║ ██╔══╝   ██║  ██║ ██║   ██║ ╚════██║ ██╔══██║
+ ██║ ╚═╝ ██║ ███████╗ ██████╔╝ ╚██████╔╝ ███████║ ██║  ██║
+ ╚═╝     ╚═╝ ╚══════╝ ╚═════╝   ╚═════╝  ╚══════╝ ╚═╝  ╚═╝
+
+               v2026.7.0 - Security Scanner
+   79 Analyzers | 40,000+ Rules | AI Security Detection   
+
+
+🎯 Target: bin
+🔧 Mode: Full
+
+Analyzing repository...
+📊 Languages: terraform (1), markdown (1)
+
+✓ Ready to scan: 3 scanners
+  35 scanners skipped (no Bash, Batch, Clojure, Csharp, +31 more files found)
+
+For best results, install 1 missing tool(s):
+  tflint (Terraform linter)
+    curl -s 
+https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.
+sh | bash
+Non-interactive mode: continuing without optional tools.
+
+
+🐍 MEDUSA Parallel Scanner v1.1.0
+   Workers: 2 cores
+   Cache: enabled
+   Mode: full
+
+Found 1 scannable files
+
+📊 Scanning 1 files across 2 parallel workers (each file is checked by all applicable scanners)...
+
+🔍 Running GitLeaks batch scan on /home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/bin...
+  GitLeaks batch scan: 0 files, 0 findings in 0.3s
+  Scanning: 100%... Done!
+
+            MEDUSA Scan Progress (2 workers, each file → multiple scanners)     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━
+┃ Scanner                    ┃  Status  ┃ Files Checked ┃ Issues ┃ Progress     
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━
+│ AIAttackSignatureScanner   │  ✓ Done  │             1 │      · │ █████████████
+│ GitLeaksScanner            │  ✓ Done  │             1 │      · │ █████████████
+│ MarkdownScanner            │  ✓ Done  │             1 │      · │ █████████████
+│ PromptLeakageScanner       │  ✓ Done  │             1 │      · │ █████████████
+├────────────────────────────┼──────────┼───────────────┼────────┼──────────────
+│ Overall                    │   100%   │           1/1 │      0 │ █████████████
+└────────────────────────────┴──────────┴───────────────┴────────┴──────────────
+
+
+📊 Reports generated:
+   JSON       → ../../../reports/buzz-runtime-medusa-20261007/bin/medusa-scan-20261007-185726.json
+
+────────────────────────────────────────────
+  🎯 SCAN COMPLETE
+────────────────────────────────────────────
+  Files scanned:       1
+  Lines of code:       8
+  Issues found:        0
+  Scanners used:       4
+  Total time:          0.01s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+✅ Scan complete!
+
+For fuller coverage, install missing linters and re-scan:
+  tflint
+  Run 'medusa install --check' for details
+
+ ███╗   ███╗ ███████╗ ██████╗  ██╗   ██╗ ███████╗  █████╗
+ ████╗ ████║ ██╔════╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██╔══██╗
+ ██╔████╔██║ █████╗   ██║  ██║ ██║   ██║ ███████╗ ███████║
+ ██║╚██╔╝██║ ██╔══╝   ██║  ██║ ██║   ██║ ╚════██║ ██╔══██║
+ ██║ ╚═╝ ██║ ███████╗ ██████╔╝ ╚██████╔╝ ███████║ ██║  ██║
+ ╚═╝     ╚═╝ ╚══════╝ ╚═════╝   ╚═════╝  ╚══════╝ ╚═╝  ╚═╝
+
+               v2026.7.0 - Security Scanner
+   79 Analyzers | 40,000+ Rules | AI Security Detection   
+
+
+🎯 Target: bin
+🔧 Mode: Full
+
+Analyzing repository...
+📊 Languages: terraform (1), markdown (1)
+
+✓ Ready to scan: 3 scanners
+  35 scanners skipped (no Bash, Batch, Clojure, Csharp, +31 more files found)
+
+For best results, install 1 missing tool(s):
+  tflint (Terraform linter)
+    curl -s 
+https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.
+sh | bash
+Non-interactive mode: continuing without optional tools.
+
+
+🐍 MEDUSA Parallel Scanner v1.1.0
+   Workers: 2 cores
+   Cache: enabled
+   Mode: full
+
+Found 1 scannable files
+
+📊 Scanning 1 files across 2 parallel workers (each file is checked by all applicable scanners)...
+
+🔍 Running GitLeaks batch scan on /home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/bin...
+  GitLeaks batch scan: 0 files, 0 findings in 0.3s
+  Scanning: 100%... Done!
+
+            MEDUSA Scan Progress (2 workers, each file → multiple scanners)     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━
+┃ Scanner                    ┃  Status  ┃ Files Checked ┃ Issues ┃ Progress     
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━
+│ AIAttackSignatureScanner   │  ✓ Done  │             1 │      · │ █████████████
+│ GitLeaksScanner            │  ✓ Done  │             1 │      · │ █████████████
+│ MarkdownScanner            │  ✓ Done  │             1 │      · │ █████████████
+│ PromptLeakageScanner       │  ✓ Done  │             1 │      · │ █████████████
+├────────────────────────────┼──────────┼───────────────┼────────┼──────────────
+│ Overall                    │   100%   │           1/1 │      0 │ █████████████
+└────────────────────────────┴──────────┴───────────────┴────────┴──────────────
+
+
+📊 Reports generated:
+   JSON       → ../../../reports/buzz-runtime-medusa-20261007/bin/medusa-scan-20261007-190257.json
+
+────────────────────────────────────────────
+  🎯 SCAN COMPLETE
+────────────────────────────────────────────
+  Files scanned:       1
+  Lines of code:       8
+  Issues found:        0
+  Scanners used:       4
+  Total time:          0.01s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+✅ Scan complete!
+
+For fuller coverage, install missing linters and re-scan:
+  tflint
+  Run 'medusa install --check' for details

@@ -1,0 +1,469 @@
+{
+  "timestamp": "2026-10-07T18:38:06.978719",
+  "medusa_version": "2026.7.0",
+  "scanner": {
+    "name": "MEDUSA",
+    "version": "2026.7.0",
+    "analyzers": 79,
+    "rules": "40,000+",
+    "url": "https://medusa-security.dev"
+  },
+  "scan_summary": {
+    "total_issues": 6,
+    "files_scanned": 44,
+    "lines_scanned": 61847,
+    "security_score": 76,
+    "risk_level": "MODERATE",
+    "false_positives_filtered": 7,
+    "missing_linters": [
+      "taplo",
+      "trivy"
+    ]
+  },
+  "severity_breakdown": {
+    "CRITICAL": 0,
+    "HIGH": 4,
+    "MEDIUM": 2,
+    "LOW": 0,
+    "UNDEFINED": 0
+  },
+  "findings": [
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+      "line": 3839,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+      "rule_id": "MEDUSA-RUST-SCAN-010",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+      "line": 3841,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Rust: process argument built via format!() (.arg(format!(...))) \u2014 verify input is not attacker-controlled",
+      "rule_id": "MEDUSA-RUST-SCAN-011",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "RustScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+      "line": 3840,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+      "rule_id": "MEDUSA-RUST-SCAN-012",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+      "line": 541,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/lib.rs",
+      "line": 10275,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    },
+    {
+      "scanner": "PostQuantumScanner",
+      "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/tests/run_task.rs",
+      "line": 406,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+      "rule_id": "PQC007",
+      "cwe": null,
+      "code": "",
+      "fp_analysis": {
+        "is_likely_fp": false,
+        "confidence": 0.0,
+        "reason": null,
+        "explanation": ""
+      }
+    }
+  ],
+  "aggregations": {
+    "by_severity": {
+      "HIGH": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 3839,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 3841,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: process argument built via format!() (.arg(format!(...))) \u2014 verify input is not attacker-controlled",
+          "rule_id": "MEDUSA-RUST-SCAN-011",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 541,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/lib.rs",
+          "line": 10275,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "MEDIUM": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 3840,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/tests/run_task.rs",
+          "line": 406,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ]
+    },
+    "by_file": {
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 3839,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 3841,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: process argument built via format!() (.arg(format!(...))) \u2014 verify input is not attacker-controlled",
+          "rule_id": "MEDUSA-RUST-SCAN-011",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 3840,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 541,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/lib.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/lib.rs",
+          "line": 10275,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/tests/run_task.rs": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/tests/run_task.rs",
+          "line": 406,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ]
+    },
+    "by_scanner": {
+      "RustScanner": [
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 3839,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: spawning a shell interpreter (Command::new(\"sh\"/\"bash\"/...)) \u2014 command injection risk if args are tainted",
+          "rule_id": "MEDUSA-RUST-SCAN-010",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 3841,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Rust: process argument built via format!() (.arg(format!(...))) \u2014 verify input is not attacker-controlled",
+          "rule_id": "MEDUSA-RUST-SCAN-011",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "RustScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 3840,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Rust: passing -c to a process (shell command string execution) \u2014 ensure the command is not built from input",
+          "rule_id": "MEDUSA-RUST-SCAN-012",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ],
+      "PostQuantumScanner": [
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/acp.rs",
+          "line": 541,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/src/lib.rs",
+          "line": 10275,
+          "severity": "HIGH",
+          "confidence": "HIGH",
+          "issue": "Direct secret comparison (use constant-time compare) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        },
+        {
+          "scanner": "PostQuantumScanner",
+          "file": "/home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-acp/tests/run_task.rs",
+          "line": 406,
+          "severity": "MEDIUM",
+          "confidence": "HIGH",
+          "issue": "Secret-dependent array index (cache attack risk) - migrate to NIST PQC standards (ML-KEM, ML-DSA)",
+          "rule_id": "PQC007",
+          "cwe": null,
+          "code": "",
+          "fp_analysis": {
+            "is_likely_fp": false,
+            "confidence": 0.0,
+            "reason": null,
+            "explanation": ""
+          }
+        }
+      ]
+    }
+  },
+  "fp_stats": {
+    "total_findings": 13,
+    "likely_fps": 7,
+    "retained": 6,
+    "fp_rate": 53.84615384615385
+  },
+  "ai_safe_mode": true
+}

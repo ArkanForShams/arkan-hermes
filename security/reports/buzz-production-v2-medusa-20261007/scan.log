@@ -1,0 +1,50 @@
+
+ ███╗   ███╗ ███████╗ ██████╗  ██╗   ██╗ ███████╗  █████╗
+ ████╗ ████║ ██╔════╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██╔══██╗
+ ██╔████╔██║ █████╗   ██║  ██║ ██║   ██║ ███████╗ ███████║
+ ██║╚██╔╝██║ ██╔══╝   ██║  ██║ ██║   ██║ ╚════██║ ██╔══██║
+ ██║ ╚═╝ ██║ ███████╗ ██████╔╝ ╚██████╔╝ ███████║ ██║  ██║
+ ╚═╝     ╚═╝ ╚══════╝ ╚═════╝   ╚═════╝  ╚══════╝ ╚═╝  ╚═╝
+
+               v2026.7.0 - Security Scanner
+   79 Analyzers | 40,000+ Rules | AI Security Detection   
+
+
+🎯 Target: 
+/home/shams/hermes-workspace/security/quarantine/buzz-production-surface-v2-2026
+1007
+🔧 Mode: Full
+
+Analyzing repository...
+📊 Languages: typescript (1737), rust (546), javascript (27), css (21), markdown
+(17)
+🔧 Frameworks: anthropic_sdk, docker_compose, mcp_server, openai_sdk, react
+🤖 AI Patterns: MCP, RAG, Agents detected - AI security scanners enabled
+
+✓ Ready to scan: 19 scanners
+  28 scanners skipped (no Bash, Batch, Clojure, Csharp, +24 more files found)
+
+For best results, install 4 missing tool(s):
+  stylelint (CSS/SCSS linter)
+    npm install -g stylelint
+  taplo (TOML linter)
+    cargo install taplo-cli
+  xmllint (XML validator)
+    sudo apt install libxml2-utils
+  trivy (Container/IaC scanner)
+    sudo snap install trivy
+Non-interactive mode: continuing without optional tools.
+
+
+🐍 MEDUSA Parallel Scanner v1.1.0
+   Workers: 2 cores
+   Cache: enabled
+   Mode: full
+
+Found 2305 scannable files
+
+📊 Scanning 2305 files across 2 parallel workers (each file is checked by all applicable scanners)...
+
+🔍 Running GitLeaks batch scan on /home/shams/hermes-workspace/security/quarantine/buzz-production-surface-v2-20261007...
+  GitLeaks batch scan: 13 files, 16 findings in 1.4s
+  Scanning: 10%...20%...30%...40%...50%...60%...70%...80%...90%...

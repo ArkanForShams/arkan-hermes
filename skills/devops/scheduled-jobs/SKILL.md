@@ -37,12 +37,12 @@ category: devops
 
 ## Self-terminating watcher jobs
 
-- Shape: `--no-agent` script that checks its trigger each tick. Idle/waiting → exit 0 with empty stdout (nothing delivered). Trigger met → do the work, report once. Done → self-delete with a LITERAL `hermes cron delete <job_id>` inside the script (variable substitution is blocked in cron shells, so hardcode the job id — you created the job and know its id).
+- Shape: `--no-agent` script that checks its trigger each tick. Idle/waiting → exit 0 with empty stdout (nothing delivered). Trigger met → do the work, report once. Done → self-delete with a LITERAL `hermes cron delete <job_id>` inside the script (variable substitution is blocked in cron shells, so hardcode the job id — you created the job and know its id). Cross-check the hardcoded id against `hermes cron list`/jobs.json BEFORE trusting the watcher: an id inherited from an abandoned earlier create attempt is stale, the delete silently no-ops, and the watcher then never self-terminates.
 - Keep per-target marker/state files in `~/.hermes/cache/scratch/`; append success lines to a per-target results file and re-check before each create so a partially-failed deploy retries the remainder without duplicating what already succeeded.
 - Cap notifications at one per condition: a pending-toggle watcher must not alert every cycle — set an expiry marker so an abandoned watcher files exactly one notice for its whole lifetime.
 - Poll cadence sets response latency: a watcher waiting on a toggle the user will flip soon should run ≤10m (30m reads as 'nothing is happening' to a user who acts fast); re-create at the tighter interval instead of waiting out the old cadence.
 - A no-agent watcher must re-check its trigger EVERY cycle (fresh request + re-read state), never trust a cached first observation — the trigger lands anytime between ticks.
-- When the same trigger is also actionable by a live session (e.g. a 'go' message arrives mid-watch), deploy immediately on manual check and reconcile against the watcher's marker files first — whoever acts first, the other must idempotently skip, or the deployable duplicates.
+- When the same trigger is also actionable by a live session (e.g. a 'go' message arrives mid-watch), deploy immediately on manual check and reconcile against the watcher's marker files first — whoever acts first, the other must idempotently skip, or the deploy duplicates. If a manual session completes one of the watcher's conditions, touch that condition's done-marker; and when a watched target becomes permanently unreachable (group superseded, toggle obsolete), pre-mark it dead — the self-termination condition must stay reachable or the watcher ticks forever.
 
 ## Pitfalls
 

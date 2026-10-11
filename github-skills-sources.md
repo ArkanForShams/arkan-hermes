@@ -34,4 +34,9 @@ Source: scan of all 158 SKILL.md files in ~/.hermes/skills + GitHub API verifica
 ## Upgrade lineage for NF ARKAN
 - https://github.com/<NF-org>/NFARKAN — Shams's second agent build (create this; clone from ArkanForShams/arkan-hermes skills/ + new SOUL.md).
 
+## Daily batch — 2026-10-05 (gated + triaged, see security/reports + *-triage/TRIAGE-VERDICT.md)
+- https://github.com/github/spec-kit — spec-driven dev toolkit (MIT, ★140k). Cloned ~/hermes-workspace/speckit; CLI installed: specify 1.0.13 (uv tool). Medusa 2669 findings → all FPs (prompt-kit/test-noise class; src triaged line-by-line).
+- https://github.com/GorvGoyl/Clone-Wars — 100+ site clones list (MIT). Cloned ~/website-arsenal/clone-wars. Medusa clean: score 100.
+- https://github.com/NangoHQ/nango — 1000+ API integration platform (Elastic License 2.0). Cloned ~/hermes-workspace/security/nango-triage/nango (source-reference only; .agents/skills = DO_NOT_INSTALL, never load). CLI installed: nango 0.71.12 (npm nango; @nangohq/cli name unpublished). Medusa 44 findings → all FPs (test fixtures + docs).
+
 Export bundles on disk: ~/arkan-claude-bundle/ (folder), ~/arkan-chatgpt-bundle(.zip), ~/arkan-desktop-bundle(.zip). Secrets never shipped — verify before redistributing.

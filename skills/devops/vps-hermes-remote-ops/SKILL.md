@@ -25,6 +25,11 @@ Reaching and setting up a remote Hermes host (Hostinger or any VPS) over SSH, wh
 
 ### Phase 3 — Inspect before install (a "fresh" VPS may already run Hermes)
 - Probe HTTP first if a URL was given: `curl -sI <url>` then the body — a Hermes dashboard title (`Sign in — Hermes Agent`, uvicorn) means Hermes is ALREADY installed: inventory it (`ls ~/.hermes`, `hermes --version`) instead of reinstalling; seed souls/config on top.
+- A `Sign in` title means an AUTH GATE is active, not that access is lost: Hermes
+  engages its gate on non-loopback/public binds; a loopback-bound dashboard serves
+  with no credentials. Before hunting credentials, check how the panel is reached
+  and run `hermes dashboard --status` on the target — bind address decides whether
+  sign-in is required at all.
 - Identify the OS via the SSH banner (`/dev/tcp` probe or `ssh -v`) — install commands differ (Ubuntu apt path for git, build tools).
 
 ### Phase 4 — Harden only after the key path is proven

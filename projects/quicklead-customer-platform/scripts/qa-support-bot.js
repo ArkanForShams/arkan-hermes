@@ -1,0 +1,27 @@
+const { chromium } = require('playwright-core');
+(async () => {
+  const browser = await chromium.launch({ executablePath: '/home/shams/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome', args: ['--no-sandbox', '--disable-gpu'] });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  const errors = [];
+  page.on('console', msg => { if (msg.type() === 'error') errors.push(`console: ${msg.text()}`); });
+  page.on('response', response => { if (response.status() >= 400) errors.push(`http ${response.status()}: ${response.url()}`); });
+  await page.goto('http://127.0.0.1:3100/support/?qa=1', { waitUntil: 'networkidle' });
+  console.log('loaded', await page.title(), 'buttons', await page.locator('button').count(), 'inputs', await page.locator('input').count());
+  await page.getByRole('button', { name: 'Latest invoice' }).click();
+  await page.waitForTimeout(200);
+  console.log('after_latest', (await page.locator('.support-chat').innerText()).slice(-500));
+  const input = page.getByRole('textbox', { name: 'Support bot question' });
+  await input.fill('Show booking BK-10482');
+  await page.getByRole('button', { name: 'Send' }).click();
+  await page.waitForTimeout(200);
+  console.log('after_booking', (await page.locator('.support-chat').innerText()).slice(-500));
+  await input.fill('Change station for BK-10482');
+  await page.getByRole('button', { name: 'Send' }).click();
+  await page.waitForTimeout(100);
+  console.log('branch_options', await page.locator('.bot-actions button').allTextContents());
+  await page.getByRole('button', { name: 'Start voice input' }).click();
+  await page.waitForTimeout(200);
+  console.log('voice_notice', await page.locator('.voice-notice').innerText());
+  console.log('errors', JSON.stringify(errors));
+  await browser.close();
+})();

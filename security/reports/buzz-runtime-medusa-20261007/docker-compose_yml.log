@@ -1,0 +1,6 @@
+Error: Target must be a directory, not a file
+   Got: docker-compose.yml
+   Tip: To scan a single file, specify its parent directory
+Error: Target must be a directory, not a file
+   Got: docker-compose.yml
+   Tip: To scan a single file, specify its parent directory

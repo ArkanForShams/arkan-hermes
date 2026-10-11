@@ -1,0 +1,11 @@
+Phase 1 adversarial security/PDPL handoff
+
+Reviewed: PROJECT-CHARTER.md, 01-discovery-product.md, 02-architecture-baseline.md, and source BRD v1.0.
+
+Readiness: NOT READY for production build approval or PDPL/NCA/compliance claims.
+
+P0 blockers: unresolved scope and B2B/B2C identity boundary; approved tenant/authorization and privileged-access matrix; data inventory/lawful-purpose/rights workflow and qualified Saudi counsel/compliance review; conflicting retention/erasure/legal-hold rules; provider API/security/residency/DPA evidence; offline e-check trust model and tamper/replay tests; financial/source-of-truth/idempotency invariants; security architecture/NCA applicability evidence; independent security testing and incident/DR readiness.
+
+Key mitigations: deny-by-default server/API/DB tenant enforcement with negative tests; phishing-resistant MFA/step-up and JIT/PAM; strict API schemas, signed callbacks, idempotency and explicit pending/unknown states; private scoped media storage with malware scanning, immutable manifests and lifecycle/hold controls; constrained capture-only offline sessions with encrypted local storage, signed manifests, replay protection and conflict queues; minimized/redacted immutable audit evidence; approved PDPL inventory, retention matrix, DSR/erasure workflow and vendor controls.
+
+Phase 1 can continue only as controlled discovery/design or synthetic-data spikes. The full review is saved at /home/shams/hermes-workspace/projects/corporate-customer-portal/03-security-pdpl-review.md. No secrets or personal data included.

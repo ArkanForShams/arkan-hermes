@@ -23,6 +23,7 @@ Solution-level architecture procedures: requirements-to-design translation, comp
 - Don't use for: enterprise landscape strategy (technology-portfolio-advisor), cloud landing zones (azure-architect)
 
 ## Procedure
+0. **Intake and evidence baseline.** Inventory the supplied source package (requirements, designs, diagrams, screenshots, existing code, and integration material), preserve originals, extract with file/page provenance, record ambiguities and conflicting brands/terms, and write a discovery backlog. Treat the current system of record and its integration constraints as unknown until verified; do not start implementation from a UX brief alone.
 1. **Requirements decomposition.** Functional requirements traceable to components; NFRs quantified (availability %, latency budgets, RPO/RTO, security posture) - unquantified NFRs are decoration. Completion criterion: requirements traceability matrix; NFRs with numbers.
 2. **Component design.** Bounded components with owned data; interfaces explicit; coupling map drawn. Completion criterion: component diagram with data ownership marked.
 3. **ADR per significant decision.** Context / options / decision / consequences / review trigger - decisions without ADRs get re-litigated forever. Completion criterion: ADRs in repo, linked from design doc.

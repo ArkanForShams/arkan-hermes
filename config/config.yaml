@@ -1,7 +1,12 @@
 model:
-  default: glm-5.3-flash
-  provider: ollama-cloud
-  base_url: https://ollama.com/v1
+  default: gpt-5.6-luna
+  provider: openai-codex
+  base_url: https://chatgpt.com/backend-api/codex
+  api_mode: codex_responses
+  aliases:
+    plan: ollama-cloud/glm-5.3-flash
+    work: ollama-cloud/deepseek-v4.1-flash
+    deep: openai-codex/gpt-5.6-luna
 database:
   journal_mode: wal
 runtime:
@@ -46,7 +51,6 @@ compression:
   checkpoint_required: false
   progress_notices: false
   threshold: 0.5
-  threshold_tokens: 256000
   target_ratio: 0.2
   protect_last_n: 20
   min_tail_user_messages: 1
@@ -99,6 +103,7 @@ skills:
   creation_nudge_interval: 15
 plugins:
   enabled:
+    - homeassistant
     - icarus
   disabled: []
 auth:
@@ -162,6 +167,7 @@ telemetry:
   shared_metrics:
     enabled: false
     send: false
+    offer_version: 2
 updates:
   check: true
   pre_update_backup: false
@@ -169,7 +175,7 @@ updates:
   non_interactive_local_changes: stash
 computer_use:
   backend: cua
-_config_version: 45
+_config_version: 50
 group_sessions_per_user: true
 platform_toolsets:
   cli:
@@ -232,10 +238,16 @@ image_gen:
 known_plugin_toolsets:
   cli:
     - a2a
+    - homeassistant
     - spotify
   telegram:
     - a2a
+    - homeassistant
     - spotify
+  acp:
+    - homeassistant
+  webhook:
+    - homeassistant
 known_builtin_toolsets:
   cli:
     - browser
@@ -304,3 +316,9 @@ mcp_servers:
     url: https://mcp.vercel.com
     auth: oauth
     enabled: true
+_left_core_scoped:
+  - homeassistant
+_left_core_installed:
+  - homeassistant
+command_allowlist:
+  - script execution via -e/-c flag

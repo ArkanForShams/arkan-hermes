@@ -1,0 +1,28 @@
+[
+  {
+    "timestamp": "2026-10-07T18:38:06.978719",
+    "security_score": 76,
+    "risk_level": "MODERATE",
+    "total_issues": 6,
+    "severity_breakdown": {
+      "CRITICAL": 0,
+      "HIGH": 4,
+      "MEDIUM": 2,
+      "LOW": 0,
+      "UNDEFINED": 0
+    }
+  },
+  {
+    "timestamp": "2026-10-07T18:43:25.480994",
+    "security_score": 76,
+    "risk_level": "MODERATE",
+    "total_issues": 6,
+    "severity_breakdown": {
+      "CRITICAL": 0,
+      "HIGH": 4,
+      "MEDIUM": 2,
+      "LOW": 0,
+      "UNDEFINED": 0
+    }
+  }
+]

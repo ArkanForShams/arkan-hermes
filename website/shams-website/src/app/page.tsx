@@ -33,42 +33,45 @@ export default function Home() {
 
 function Hero() {
   return (
-    <section aria-label="Introduction" className="grain relative flex min-h-[92vh] items-end overflow-hidden bg-ink">
-      {/* Night atmosphere + colonnade — decorative layer */}
+    <section aria-label="Introduction" className="grain relative flex min-h-[92vh] items-end overflow-hidden bg-paper">
+      {/* Cover atmosphere + colonnade — decorative layer (v11: lighter, 3 pillars visible) */}
       <div aria-hidden className="absolute inset-0">
         {/* Lamp glow behind the colonnade */}
-        <div className="lamp h-[64%] w-[46%] bottom-0 right-[-4%]" />
-        {/* Colonnade: anchored at 58%, bleeds off the right edge */}
-        <div className="absolute bottom-0 flex h-[64%] items-end gap-[4vw]" style={{ left: "58%" }}>
-          {[62, 84, 100, 88, 72, 54].map((h, i) => (
+        <div className="lamp h-[56%] w-[42%] bottom-0 right-[-2%]" />
+        {/* Colonnade: anchored at 62%, bleeds off the right edge */}
+        <div className="absolute bottom-0 flex h-[56%] items-end gap-[4vw]" style={{ left: "62%" }}>
+          {[70, 100, 78].map((h, i) => (
             <div
               key={i}
-              className={`w-[7vw] max-w-[92px] shrink-0 rounded-t-[3px] bg-gradient-to-b ${
-                i === 2 ? "from-brass-bright via-brass/80 to-ink" : "from-ink-3 via-ink-2 to-ink"
+              className={`relative w-[8vw] max-w-[96px] shrink-0 rounded-t-[3px] bg-gradient-to-b ${
+                i === 1 ? "from-brass-bright via-brass/80 to-brass/10" : "from-brass/35 via-brass/15 to-transparent"
               }`}
-              style={{ height: `${h}%`, opacity: i === 2 ? 0.85 : 0.42 + i * 0.04 }}
-            />
+              style={{ height: `${h}%`, opacity: i === 1 ? 0.75 : 0.55 }}
+            >
+              {/* crisp capital edge so faint pillars read as architecture, not smears */}
+              {i !== 1 && <span className="absolute -top-px left-0 right-0 h-[3px] rounded-t-[3px] bg-brass/35" />}
+            </div>
           ))}
         </div>
         <CursorLamp />
-        {/* Text veil: opaque over text zone (0–44%), released over pillars (78%+) */}
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-ink)_0%,var(--color-ink)_44%,color-mix(in_srgb,var(--color-ink)_85%,transparent)_58%,transparent_78%)]" />
-        {/* Brass hairline at the hall's floor line */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brass/60 to-transparent" />
+        {/* Text veil: gentle — paper never needs a hard veil, only a soft wash towards pillars */}
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,transparent_55%,rgba(247,242,233,0.72)_75%,rgba(247,242,233,0.9)_100%)]" />
+        {/* Brass foil hairline at the cover's floor line */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-brass/70 via-brass/40 to-transparent" />
       </div>
 
       {/* Content — z-10, above the veil */}
       <div className="relative z-10 mx-auto w-full max-w-5xl px-6 pb-20 pt-36">
-        <p className="keyline font-mono text-xs uppercase tracking-[0.18em] text-brass">
+        <p className="keyline font-mono text-xs uppercase tracking-[0.18em] text-brass-deep">
           IT Application Manager · AlMajdouie Group · Riyadh
         </p>
-        <h1 className="mt-4 font-display text-[clamp(3rem,8vw,5rem)] font-medium leading-[1.05] tracking-tight text-creamtext">
+        <h1 className="h-underline mt-4 inline-block font-display text-[clamp(3rem,8vw,5rem)] font-medium leading-[1.05] tracking-tight text-inktext">
           Shams Tabrez
         </h1>
-        <p className="mt-4 max-w-[34rem] font-display text-[clamp(1.25rem,2.6vw,1.7rem)] leading-snug text-brass-bright">
+        <p className="mt-4 max-w-[34rem] font-display text-[clamp(1.25rem,2.6vw,1.7rem)] leading-snug text-brass-deep">
           I build the systems — and now the AI team — that turn technology into business value.
         </p>
-        <p className="mt-4 max-w-[30rem] text-[17px] text-creamtext/85">
+        <p className="mt-4 max-w-[30rem] text-[17px] text-muted-light">
           Engineer by training. IT leader by practice. On a deliberate three-year path to CTO / CAIO.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
@@ -79,16 +82,17 @@ function Hero() {
             See the department
             <ArrowRight size={17} className="transition-transform group-hover:translate-x-0.5" aria-hidden />
           </a>
-          {/* TODO(shams): replace href with LinkedIn profile URL before launch */}
           <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-3.5 font-medium text-creamtext transition-all hover:-translate-y-0.5 hover:border-brass hover:text-brass-bright"
+            href="https://linkedin.com/in/shams2tabrez"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-[rgba(23,38,59,0.25)] px-7 py-3.5 font-medium text-inktext transition-all hover:-translate-y-0.5 hover:border-brass-deep hover:text-brass-deep"
           >
             <Linkedin size={17} aria-hidden />
             Connect on LinkedIn
           </a>
         </div>
-        <p className="scrollhint mt-16 font-mono text-[10px] uppercase tracking-[0.22em] text-creamtext/50">
+        <p className="scrollhint mt-16 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-light">
           Scroll · ↓
         </p>
       </div>
@@ -104,7 +108,7 @@ function About() {
           <p className="keyline font-mono text-xs uppercase tracking-[0.18em] text-brass-deep">02 / Passage · About</p>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="mt-4 max-w-2xl font-display text-[clamp(1.9rem,4vw,2.6rem)] font-medium text-inktext">
+          <h2 className="h-underline mt-4 inline-block font-display text-[clamp(1.9rem,4vw,2.6rem)] font-medium text-inktext">
             Steady hands for complex systems.
           </h2>
         </Reveal>
@@ -176,7 +180,7 @@ function Research() {
               <p className="mt-2 text-[15px] text-muted-light">
                 Shams Tabrez · Dr. Vijay Prakash Singh
               </p>
-              <p className="mt-2 font-mono text-[12px] uppercase tracking-[0.12em] text-muted-light">
+              <p className="mt-2 font-mono text-[12px] uppercase tracking-[0.12em] text-lapis">
                 IJCRT — Int. Journal of Creative Research Thoughts · ISSN 2320-2882 · Vol. 9 · Issue 12 · pp. f377–f384 · December 2021
               </p>
               <p className="mt-3 max-w-3xl text-[14.5px] leading-relaxed text-muted-light">
@@ -361,17 +365,17 @@ function Contact() {
         </Reveal>
         <Reveal delay={240}>
           <div className="mt-9 flex flex-wrap gap-4">
-            {/* TODO(shams): replace # with LinkedIn profile URL before launch */}
             <a
-              href="#"
+              href="https://linkedin.com/in/shams2tabrez"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-brass px-7 py-3.5 font-semibold text-onyx transition-all hover:-translate-y-0.5 hover:bg-brass-bright hover:shadow-[0_6px_24px_rgba(195,154,69,0.35)]"
             >
               <Linkedin size={17} aria-hidden />
               Connect on LinkedIn
             </a>
-            {/* TODO(shams): replace # with mailto:you@example.com before launch */}
             <a
-              href="#"
+              href="mailto:Shams090484@gmail.com"
               className="inline-flex items-center gap-2 rounded-full border border-[rgba(23,38,59,0.2)] px-7 py-3.5 font-medium text-inktext transition-all hover:-translate-y-0.5 hover:border-brass-deep hover:text-brass-deep"
             >
               <Mail size={17} aria-hidden />

@@ -1,0 +1,319 @@
+# Install Manifest — gate-cleared clone skills (2026-10-07)
+
+- **autonomous-ai-agents/agent-doc-discipline** ← Yeachan-Heo-oh-my-claudecode (score 7) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/agent-doc-discipline]
+- **autonomous-ai-agents/ai-slop-cleaner** ← Yeachan-Heo-oh-my-claudecode (score 8) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/ai-slop-cleaner]
+- **autonomous-ai-agents/architecture-survey** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/architecture-survey]
+- **autonomous-ai-agents/ask-navigator** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/ask-navigator]
+- **autonomous-ai-agents/ask** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/ask]
+- **autonomous-ai-agents/autopilot** ← Yeachan-Heo-oh-my-claudecode (score 21) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/autopilot]
+- **autonomous-ai-agents/autoresearch** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/autoresearch]
+- **autonomous-ai-agents/cancel** ← Yeachan-Heo-oh-my-claudecode (score 27) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/cancel]
+- **autonomous-ai-agents/configure-notifications** ← Yeachan-Heo-oh-my-claudecode (score 21) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/configure-notifications]
+- **software-development/debug** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/debug]
+- **autonomous-ai-agents/deep-interview** ← Yeachan-Heo-oh-my-claudecode (score 46) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/deep-interview]
+- **autonomous-ai-agents/deepinit** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/deepinit]
+- **autonomous-ai-agents/diagram** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/diagram]
+- **autonomous-ai-agents/drydock** ← Yeachan-Heo-oh-my-claudecode (score 30) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/drydock]
+- **autonomous-ai-agents/execute** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/execute]
+- **autonomous-ai-agents/external-context** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/external-context]
+- **autonomous-ai-agents/graph** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/graph]
+- **autonomous-ai-agents/harbor** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/harbor]
+- **autonomous-ai-agents/hud** ← Yeachan-Heo-oh-my-claudecode (score 48) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/hud]
+- **autonomous-ai-agents/intent** ← Yeachan-Heo-oh-my-claudecode (score 7) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/intent]
+- **marketing/launch** ← Yeachan-Heo-oh-my-claudecode (score 11) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/launch]
+- **autonomous-ai-agents/loft** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/loft]
+- **autonomous-ai-agents/map** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/map]
+- **autonomous-ai-agents/minimal-code-discipline** ← Yeachan-Heo-oh-my-claudecode (score 3) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/minimal-code-discipline]
+- **autonomous-ai-agents/minimal-prose-discipline** ← Yeachan-Heo-oh-my-claudecode (score 20) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/minimal-prose-discipline]
+- **software-development/omc-plan** ← Yeachan-Heo-oh-my-claudecode (score 26) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/plan]
+- **autonomous-ai-agents/pr** ← Yeachan-Heo-oh-my-claudecode (score 8) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/pr]
+- **autonomous-ai-agents/project-session-manager** ← Yeachan-Heo-oh-my-claudecode (score 44) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/project-session-manager]
+- **autonomous-ai-agents/ralph** ← Yeachan-Heo-oh-my-claudecode (score 6) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/ralph]
+- **software-development/ralplan** ← Yeachan-Heo-oh-my-claudecode (score 7) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/ralplan]
+- **autonomous-ai-agents/refit** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/refit]
+- **autonomous-ai-agents/release** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/release]
+- **autonomous-ai-agents/remember** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/remember]
+- **autonomous-ai-agents/research** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/research]
+- **software-development/omc-review** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/review]
+- **autonomous-ai-agents/skill** ← Yeachan-Heo-oh-my-claudecode (score 31) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/skill]
+- **autonomous-ai-agents/skillify** ← Yeachan-Heo-oh-my-claudecode (score 6) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/skillify]
+- **software-development/tdd** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/tdd]
+- **software-development/trace** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/trace]
+- **autonomous-ai-agents/ultragoal** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/ultragoal]
+- **software-development/verify** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/verify]
+- **autonomous-ai-agents/visual-verdict** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/visual-verdict]
+- **autonomous-ai-agents/wiki** ← Yeachan-Heo-oh-my-claudecode (score 0) [src: /home/shams/hermes-workspace/security/clones/Yeachan-Heo-oh-my-claudecode/skills/wiki]
+- **software-development/humanizer-blad** ← blader-humanizer (score 49) [src: /home/shams/hermes-workspace/security/clones/blader-humanizer]
+- **creative/3d-asset-generation** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/3d-asset-generation]
+- **media/acestep** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/acestep]
+- **media/ai-video-gen** ← calesthio-OpenMontage (score 18) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/ai-video-gen]
+- **media/atlas-cloud** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/atlas-cloud]
+- **media/azure-speech-to-text** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/azure-speech-to-text]
+- **media/azure-text-to-speech** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/azure-text-to-speech]
+- **autonomous-ai-agents/character-animation-qa** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/character-animation-qa]
+- **media/comfyui** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/comfyui]
+- **creative/d3-viz** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/d3-viz]
+- **media/dashscope** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/dashscope]
+- **media/doubao-tts** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/doubao-tts]
+- **media/elevenlabs** ← calesthio-OpenMontage (score 7) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/elevenlabs]
+- **autonomous-ai-agents/faceswap** ← calesthio-OpenMontage (score 10) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/faceswap]
+- **autonomous-ai-agents/ffmpeg** ← calesthio-OpenMontage (score 21) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/ffmpeg]
+- **media/fish-audio-tts** ← calesthio-OpenMontage (score 5) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/fish-audio-tts]
+- **autonomous-ai-agents/flux-best-practices** ← calesthio-OpenMontage (score 37) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/flux-best-practices]
+- **creative/framer-motion** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/framer-motion]
+- **autonomous-ai-agents/gemini-omni** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/gemini-omni]
+- **media/grok-media** ← calesthio-OpenMontage (score 5) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/grok-media]
+- **creative/gsap-core** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/gsap-core]
+- **creative/gsap-frameworks** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/gsap-frameworks]
+- **creative/gsap-performance** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/gsap-performance]
+- **creative/gsap-plugins** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/gsap-plugins]
+- **creative/gsap-react** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/gsap-react]
+- **creative/gsap-scrolltrigger** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/gsap-scrolltrigger]
+- **creative/gsap-timeline** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/gsap-timeline]
+- **creative/gsap-utils** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/gsap-utils]
+- **autonomous-ai-agents/hyperframes-registry** ← calesthio-OpenMontage (score 32) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/hyperframes-registry]
+- **autonomous-ai-agents/hyperframes** ← calesthio-OpenMontage (score 45) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/hyperframes]
+- **media/kling-official** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/kling-official]
+- **creative/lottie-bodymovin** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/lottie-bodymovin]
+- **autonomous-ai-agents/ltx2** ← calesthio-OpenMontage (score 22) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/ltx2]
+- **media/lyria** ← calesthio-OpenMontage (score 25) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/lyria]
+- **media/manim-composer** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/manim-composer]
+- **media/manimce-best-practices** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/manimce-best-practices]
+- **media/minimax-h3** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/minimax-h3]
+- **media/music** ← calesthio-OpenMontage (score 9) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/music]
+- **media/playwright-recording** ← calesthio-OpenMontage (score 41) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/playwright-recording]
+- **autonomous-ai-agents/pose-library-design** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/pose-library-design]
+- **media/remotion** ← calesthio-OpenMontage (score 46) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/remotion]
+- **media/seedance-2-0** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/seedance-2-0]
+- **media/seedance-2-5** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/seedance-2-5]
+- **autonomous-ai-agents/setup-api-key** ← calesthio-OpenMontage (score 22) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/setup-api-key]
+- **media/sound-effects** ← calesthio-OpenMontage (score 18) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/sound-effects]
+- **creative/svg-character-animation** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/svg-character-animation]
+- **media/synthetic-screen-recording** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/synthetic-screen-recording]
+- **creative/tailwind-design-system** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/tailwind-design-system]
+- **media/text-to-speech** ← calesthio-OpenMontage (score 11) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/text-to-speech]
+- **creative/threejs-animation** ← calesthio-OpenMontage (score 7) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-animation]
+- **creative/threejs-fundamentals** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-fundamentals]
+- **creative/threejs-geometry** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-geometry]
+- **creative/threejs-interaction** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-interaction]
+- **creative/threejs-lighting** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-lighting]
+- **creative/threejs-loaders** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-loaders]
+- **creative/threejs-materials** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-materials]
+- **creative/threejs-postprocessing** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-postprocessing]
+- **creative/threejs-shaders** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-shaders]
+- **creative/threejs-textures** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-textures]
+- **creative/threejs-world-generation** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/threejs-world-generation]
+- **autonomous-ai-agents/vercel-composition-patterns** ← calesthio-OpenMontage (score 45) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/vercel-composition-patterns]
+- **media/video-download** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/video-download]
+- **media/video-edit** ← calesthio-OpenMontage (score 36) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/video-edit]
+- **media/video-toolkit** ← calesthio-OpenMontage (score 34) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/video-toolkit]
+- **media/video-translate** ← calesthio-OpenMontage (score 11) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/video-translate]
+- **media/video-understand** ← calesthio-OpenMontage (score 20) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/video-understand]
+- **autonomous-ai-agents/visual-style** ← calesthio-OpenMontage (score 25) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/visual-style]
+- **creative/web-design-guidelines** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.agents/skills/web-design-guidelines]
+- **media/acestep-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/acestep]
+- **media/ai-video-gen-om** ← calesthio-OpenMontage (score 18) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/ai-video-gen]
+- **media/azure-speech-to-text-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/azure-speech-to-text]
+- **media/azure-text-to-speech-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/azure-text-to-speech]
+- **creative/d3-viz-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/d3-viz]
+- **media/elevenlabs-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/elevenlabs]
+- **autonomous-ai-agents/faceswap-om** ← calesthio-OpenMontage (score 10) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/faceswap]
+- **autonomous-ai-agents/ffmpeg-om** ← calesthio-OpenMontage (score 21) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/ffmpeg]
+- **autonomous-ai-agents/flux-best-practices-om** ← calesthio-OpenMontage (score 37) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/flux-best-practices]
+- **creative/framer-motion-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/framer-motion]
+- **creative/lottie-bodymovin-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/lottie-bodymovin]
+- **autonomous-ai-agents/ltx2-om** ← calesthio-OpenMontage (score 22) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/ltx2]
+- **media/manim-composer-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/manim-composer]
+- **media/manimce-best-practices-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/manimce-best-practices]
+- **media/music-om** ← calesthio-OpenMontage (score 9) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/music]
+- **media/playwright-recording-om** ← calesthio-OpenMontage (score 41) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/playwright-recording]
+- **media/remotion-om** ← calesthio-OpenMontage (score 46) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/remotion]
+- **autonomous-ai-agents/setup-api-key-om** ← calesthio-OpenMontage (score 22) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/setup-api-key]
+- **media/sound-effects-om** ← calesthio-OpenMontage (score 18) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/sound-effects]
+- **creative/tailwind-design-system-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/tailwind-design-system]
+- **media/text-to-speech-om** ← calesthio-OpenMontage (score 11) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/text-to-speech]
+- **creative/threejs-animation-om** ← calesthio-OpenMontage (score 7) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/threejs-animation]
+- **creative/threejs-fundamentals-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/threejs-fundamentals]
+- **creative/threejs-geometry-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/threejs-geometry]
+- **creative/threejs-interaction-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/threejs-interaction]
+- **creative/threejs-lighting-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/threejs-lighting]
+- **creative/threejs-loaders-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/threejs-loaders]
+- **creative/threejs-materials-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/threejs-materials]
+- **creative/threejs-postprocessing-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/threejs-postprocessing]
+- **creative/threejs-shaders-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/threejs-shaders]
+- **creative/threejs-textures-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/threejs-textures]
+- **autonomous-ai-agents/vercel-composition-patterns-om** ← calesthio-OpenMontage (score 45) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/vercel-composition-patterns]
+- **media/video-download-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/video-download]
+- **media/video-edit-om** ← calesthio-OpenMontage (score 36) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/video-edit]
+- **media/video-translate-om** ← calesthio-OpenMontage (score 11) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/video-translate]
+- **media/video-understand-om** ← calesthio-OpenMontage (score 20) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/video-understand]
+- **media/video-toolkit-om** ← calesthio-OpenMontage (score 34) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/video_toolkit]
+- **autonomous-ai-agents/visual-style-om** ← calesthio-OpenMontage (score 25) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/visual-style]
+- **creative/web-design-guidelines-om** ← calesthio-OpenMontage (score 0) [src: /home/shams/hermes-workspace/security/clones/calesthio-OpenMontage/.claude/skills/web-design-guidelines]
+- **autonomous-ai-agents/bug-fixing** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/bug-fixing]
+- **autonomous-ai-agents/cli-command** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/cli-command]
+- **autonomous-ai-agents/cli-e2e** ← composiohq-composio (score 21) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/cli-e2e]
+- **autonomous-ai-agents/cli-release** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/cli-release]
+- **autonomous-ai-agents/cross-sdk-parity** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/cross-sdk-parity]
+- **software-development/docs-decisions** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/docs-decisions]
+- **autonomous-ai-agents/effect-v4** ← composiohq-composio (score 44) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/effect-v4]
+- **autonomous-ai-agents/eve** ← composiohq-composio (score 10) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/eve]
+- **software-development/good-docs-audit** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/good-docs-audit]
+- **software-development/good-docs-writing** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/good-docs-writing]
+- **autonomous-ai-agents/python-providers** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/python-providers]
+- **autonomous-ai-agents/python-release** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/python-release]
+- **autonomous-ai-agents/python-sdk** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/python-sdk]
+- **software-development/python-testing** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/python-testing]
+- **autonomous-ai-agents/repo-guidance** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/repo-guidance]
+- **autonomous-ai-agents/skill-maintenance** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/skill-maintenance]
+- **autonomous-ai-agents/typescript-providers** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/typescript-providers]
+- **autonomous-ai-agents/typescript-sdk** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/typescript-sdk]
+- **software-development/typescript-testing** ← composiohq-composio (score 0) [src: /home/shams/hermes-workspace/security/clones/composiohq-composio/.agents/skills/typescript-testing]
+- **marketing/ab-testing** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/ab-testing]
+- **marketing/ai-seo** ← coreyhaines31-marketingskills (score 12) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/ai-seo]
+- **marketing/analytics** ← coreyhaines31-marketingskills (score 6) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/analytics]
+- **marketing/aso** ← coreyhaines31-marketingskills (score 12) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/aso]
+- **marketing/churn-prevention** ← coreyhaines31-marketingskills (score 7) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/churn-prevention]
+- **marketing/co-marketing** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/co-marketing]
+- **marketing/cold-email** ← coreyhaines31-marketingskills (score 17) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/cold-email]
+- **marketing/community-marketing** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/community-marketing]
+- **marketing/competitor-profiling** ← coreyhaines31-marketingskills (score 7) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/competitor-profiling]
+- **marketing/competitors** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/competitors]
+- **marketing/content-strategy** ← coreyhaines31-marketingskills (score 17) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/content-strategy]
+- **marketing/copy-editing** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/copy-editing]
+- **marketing/copywriting** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/copywriting]
+- **marketing/cro** ← coreyhaines31-marketingskills (score 7) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/cro]
+- **marketing/customer-research** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/customer-research]
+- **marketing/directory-submissions** ← coreyhaines31-marketingskills (score 38) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/directory-submissions]
+- **marketing/emails** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/emails]
+- **marketing/events** ← coreyhaines31-marketingskills (score 28) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/events]
+- **marketing/free-tools** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/free-tools]
+- **marketing/image** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/image]
+- **marketing/influencer-marketing** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/influencer-marketing]
+- **marketing/launch-mkts** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/launch]
+- **marketing/lead-magnets** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/lead-magnets]
+- **marketing/marketing-council** ← coreyhaines31-marketingskills (score 3) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/marketing-council]
+- **marketing/marketing-ideas** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/marketing-ideas]
+- **marketing/marketing-loops** ← coreyhaines31-marketingskills (score 50) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/marketing-loops]
+- **marketing/marketing-psychology** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/marketing-psychology]
+- **marketing/offers** ← coreyhaines31-marketingskills (score 25) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/offers]
+- **marketing/onboarding** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/onboarding]
+- **marketing/paywalls** ← coreyhaines31-marketingskills (score 21) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/paywalls]
+- **marketing/popups** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/popups]
+- **marketing/pricing** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/pricing]
+- **marketing/product-marketing** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/product-marketing]
+- **marketing/programmatic-seo** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/programmatic-seo]
+- **marketing/prospecting** ← coreyhaines31-marketingskills (score 27) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/prospecting]
+- **marketing/public-relations** ← coreyhaines31-marketingskills (score 20) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/public-relations]
+- **marketing/referrals** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/referrals]
+- **marketing/revops** ← coreyhaines31-marketingskills (score 20) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/revops]
+- **marketing/sales-enablement** ← coreyhaines31-marketingskills (score 7) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/sales-enablement]
+- **marketing/schema** ← coreyhaines31-marketingskills (score 16) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/schema]
+- **marketing/seo-audit** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/seo-audit]
+- **marketing/signup** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/signup]
+- **marketing/site-architecture** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/site-architecture]
+- **marketing/sms** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/sms]
+- **marketing/social** ← coreyhaines31-marketingskills (score 0) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/social]
+- **media/video** ← coreyhaines31-marketingskills (score 7) [src: /home/shams/hermes-workspace/security/clones/coreyhaines31-marketingskills/skills/video]
+- **autonomous-ai-agents/cavecrew** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/plugins/caveman/skills/cavecrew]
+- **autonomous-ai-agents/caveman-stats** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/plugins/caveman/skills/caveman-stats]
+- **autonomous-ai-agents/caveman** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/plugins/caveman/skills/caveman]
+- **autonomous-ai-agents/cavecrew-cvm** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/cavecrew]
+- **autonomous-ai-agents/caveman-commit** ← juliusbrussee-caveman (score 7) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-commit]
+- **autonomous-ai-agents/caveman-discover** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-discover]
+- **software-development/caveman-evidence-review** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-evidence-review]
+- **autonomous-ai-agents/caveman-explore** ← juliusbrussee-caveman (score 9) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-explore]
+- **autonomous-ai-agents/caveman-help** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-help]
+- **autonomous-ai-agents/caveman-learn** ← juliusbrussee-caveman (score 32) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-learn]
+- **autonomous-ai-agents/caveman-manage** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-manage]
+- **autonomous-ai-agents/caveman-optimize** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-optimize]
+- **software-development/caveman-review** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-review]
+- **autonomous-ai-agents/caveman-setup** ← juliusbrussee-caveman (score 6) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-setup]
+- **autonomous-ai-agents/caveman-stats-cvm** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman-stats]
+- **autonomous-ai-agents/caveman-cvm** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/caveman]
+- **autonomous-ai-agents/investigate-first** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/investigate-first]
+- **autonomous-ai-agents/lean-build** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/lean-build]
+- **autonomous-ai-agents/migration** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/migration]
+- **software-development/safe-refactor** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/safe-refactor]
+- **autonomous-ai-agents/surgical-patch** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/surgical-patch]
+- **software-development/verify-and-stop** ← juliusbrussee-caveman (score 0) [src: /home/shams/hermes-workspace/security/clones/juliusbrussee-caveman/skills/verify-and-stop]
+- **note-taking/defuddle** ← kepano-obsidian-skills (score 0) [src: /home/shams/hermes-workspace/security/clones/kepano-obsidian-skills/skills/defuddle]
+- **note-taking/json-canvas** ← kepano-obsidian-skills (score 0) [src: /home/shams/hermes-workspace/security/clones/kepano-obsidian-skills/skills/json-canvas]
+- **note-taking/knap** ← kepano-obsidian-skills (score 7) [src: /home/shams/hermes-workspace/security/clones/kepano-obsidian-skills/skills/knap]
+- **note-taking/obsidian-bases** ← kepano-obsidian-skills (score 37) [src: /home/shams/hermes-workspace/security/clones/kepano-obsidian-skills/skills/obsidian-bases]
+- **note-taking/obsidian-cli** ← kepano-obsidian-skills (score 0) [src: /home/shams/hermes-workspace/security/clones/kepano-obsidian-skills/skills/obsidian-cli]
+- **note-taking/obsidian-markdown** ← kepano-obsidian-skills (score 0) [src: /home/shams/hermes-workspace/security/clones/kepano-obsidian-skills/skills/obsidian-markdown]
+- **autonomous-ai-agents/dispatching-parallel-agents** ← obra-superpowers (score 0) [src: /home/shams/hermes-workspace/security/clones/obra-superpowers/skills/dispatching-parallel-agents]
+- **autonomous-ai-agents/finishing-a-development-branch** ← obra-superpowers (score 17) [src: /home/shams/hermes-workspace/security/clones/obra-superpowers/skills/finishing-a-development-branch]
+- **software-development/receiving-code-review** ← obra-superpowers (score 0) [src: /home/shams/hermes-workspace/security/clones/obra-superpowers/skills/receiving-code-review]
+- **software-development/requesting-code-review-spw** ← obra-superpowers (score 7) [src: /home/shams/hermes-workspace/security/clones/obra-superpowers/skills/requesting-code-review]
+- **autonomous-ai-agents/test-driven-development-spw** ← obra-superpowers (score 0) [src: /home/shams/hermes-workspace/security/clones/obra-superpowers/skills/test-driven-development]
+- **autonomous-ai-agents/verification-before-completion** ← obra-superpowers (score 7) [src: /home/shams/hermes-workspace/security/clones/obra-superpowers/skills/verification-before-completion]
+- **software-development/writing-plans** ← obra-superpowers (score 0) [src: /home/shams/hermes-workspace/security/clones/obra-superpowers/skills/writing-plans]
+
+## Held back (HIGH/CRITICAL) — NOT installed, pending Shams's review
+
+- Yeachan-Heo-oh-my-claudecode :: omc-doctor — CRITICAL (92), issues 12
+- Yeachan-Heo-oh-my-claudecode :: omc-setup — CRITICAL (100), issues 12
+- Yeachan-Heo-oh-my-claudecode :: self-improve — HIGH (68), issues 5
+- Yeachan-Heo-oh-my-claudecode :: team — HIGH (52), issues 13
+- calesthio-OpenMontage :: agents — HIGH (53), issues 19
+- calesthio-OpenMontage :: avatar-video — CRITICAL (100), issues 138
+- calesthio-OpenMontage :: beautiful-mermaid — HIGH (57), issues 9
+- calesthio-OpenMontage :: bfl-api — HIGH (68), issues 40
+- calesthio-OpenMontage :: create-video — CRITICAL (100), issues 54
+- calesthio-OpenMontage :: heygen — CRITICAL (100), issues 155
+- calesthio-OpenMontage :: hyperframes-animation — CRITICAL (100), issues 58
+- calesthio-OpenMontage :: hyperframes-cli — HIGH (61), issues 186
+- calesthio-OpenMontage :: hyperframes-core — CRITICAL (91), issues 34
+- calesthio-OpenMontage :: hyperframes-creative — CRITICAL (100), issues 63
+- calesthio-OpenMontage :: hyperframes-media — CRITICAL (100), issues 81
+- calesthio-OpenMontage :: manimgl-best-practices — HIGH (66), issues 10
+- calesthio-OpenMontage :: media-use — CRITICAL (83), issues 4
+- calesthio-OpenMontage :: motion-graphics — CRITICAL (100), issues 62
+- calesthio-OpenMontage :: music-to-video — CRITICAL (100), issues 19
+- calesthio-OpenMontage :: remotion-best-practices — CRITICAL (100), issues 33
+- calesthio-OpenMontage :: remotion-to-hyperframes — CRITICAL (96), issues 48
+- calesthio-OpenMontage :: speech-to-text — HIGH (54), issues 6
+- calesthio-OpenMontage :: vercel-react-best-practices — HIGH (78), issues 7
+- calesthio-OpenMontage :: website-to-video — CRITICAL (100), issues 147
+- calesthio-OpenMontage :: agents — HIGH (53), issues 19
+- calesthio-OpenMontage :: avatar-video — CRITICAL (100), issues 138
+- calesthio-OpenMontage :: beautiful-mermaid — HIGH (57), issues 9
+- calesthio-OpenMontage :: bfl-api — HIGH (68), issues 40
+- calesthio-OpenMontage :: create-video — CRITICAL (100), issues 54
+- calesthio-OpenMontage :: heygen — CRITICAL (100), issues 155
+- calesthio-OpenMontage :: manimgl-best-practices — HIGH (66), issues 10
+- calesthio-OpenMontage :: remotion-best-practices — CRITICAL (100), issues 33
+- calesthio-OpenMontage :: speech-to-text — HIGH (54), issues 6
+- calesthio-OpenMontage :: vercel-react-best-practices — HIGH (78), issues 7
+- composiohq-composio :: composio — HIGH (60), issues 4
+- coreyhaines31-marketingskills :: ad-creative — CRITICAL (100), issues 18
+- coreyhaines31-marketingskills :: ads — CRITICAL (100), issues 10
+- coreyhaines31-marketingskills :: attribution — HIGH (63), issues 4
+- coreyhaines31-marketingskills :: marketing-plan — HIGH (72), issues 8
+- juliusbrussee-caveman :: caveman-compress — HIGH (64), issues 8
+- juliusbrussee-caveman :: caveman-compress — HIGH (64), issues 8
+- obra-superpowers :: brainstorming — CRITICAL (85), issues 10
+- obra-superpowers :: subagent-driven-development — HIGH (67), issues 8
+- obra-superpowers :: systematic-debugging — HIGH (77), issues 5
+- obra-superpowers :: using-superpowers — HIGH (58), issues 5
+- obra-superpowers :: writing-skills — CRITICAL (100), issues 24
+
+## MEDUSA repo-layer layer (whole-clone scans, 2026-10-07)
+
+Installs were gated at SKILL level by SkillSpector (292 individual verdicts).
+MEDUSA repo-layer triage: obra-superpowers exemplar hand-verified 7/7 FP (bootstrap banner EXTREMELY_IMPORTANT = host-adaptation prose; EXA/AIC = tool-mapping + AGENTS.md dev-docs classes; JB-676 = test code) — same classes as spec-kit/memory-os/nango verdicts on file.
+Repo severity mass (OpenMontage/composio/Yeachan/DeusData/caveman CRITICAL-heavy) lives in APP CODE + vendored trees + plugin bootstraps, not in the LOW-scored skills that were installed. CRITICAL-skilled items (heygen, hyperframes, omc-setup etc.) are in the held-back list, not installed.
+
+- kepano-obsidian-skills: score 100.0, EXCELLENT, 0 issues {}
+- sharbelxyz-nova-youtube-agent: score 100.0, EXCELLENT, 0 issues {}
+- obra-superpowers: score 74, MODERATE, 7 issues {'CRITICAL': 1, 'HIGH': 2, 'MEDIUM': 3}
+- blader-humanizer: score 65, CONCERNING, 5 issues {'CRITICAL': 2, 'HIGH': 3}
+- coreyhaines31-marketingskills: score 35, CRITICAL, 13 issues {'HIGH': 13}
+- DeusData-codebase-memory-mcp: score 0, CRITICAL, 389 issues {'CRITICAL': 48, 'HIGH': 88, 'MEDIUM': 151, 'LOW': 102}
+- Yeachan-Heo-oh-my-claudecode: score 0, CRITICAL, 1254 issues {'CRITICAL': 355, 'HIGH': 313, 'MEDIUM': 507, 'LOW': 62}
+- calesthio-OpenMontage: score 0, CRITICAL, 1513 issues {'CRITICAL': 186, 'HIGH': 640, 'MEDIUM': 522, 'LOW': 159}
+- composiohq-composio: score 0, CRITICAL, 1039 issues {'CRITICAL': 52, 'HIGH': 609, 'MEDIUM': 245, 'LOW': 92}
+- juliusbrussee-caveman: score 0, CRITICAL, 384 issues {'CRITICAL': 72, 'HIGH': 131, 'MEDIUM': 96, 'LOW': 81}
+- sharbelxyz-hermes-agent-mission-control: score 0, CRITICAL, 28 issues {'CRITICAL': 5, 'HIGH': 11, 'MEDIUM': 8, 'LOW': 2}

@@ -23,3 +23,26 @@ security/nango-triage/scripts_*
 # Keep: TRIAGE-VERDICT.md files (human analysis). Drop: raw scan JSONs.
 security/reports/*-raw-payloads.json
 security/reports/medusa-scan-2*.json
+
+# chrome/lighthouse temp dirs accidentally created in site project
+website/shams-website/C:*
+
+# Local build/install artifacts — regenerate; never archive in the public repo
+**/node_modules/
+**/.next/
+**/dist/
+**/build/
+**/out/
+security/quarantine/
+
+# Cloned repositories and triage payloads — retain only human verdicts
+security/clones/
+security/speckit-triage/*
+!security/speckit-triage/TRIAGE-VERDICT.md
+!security/speckit-triage/BLOCK-ROOT-CAUSE-ANALYSIS.md
+agent007/
+pizza-scrollytelling/
+speckit/
+pre-update-carried-commit-*.patch
+skills/.hub/index-cache/
+

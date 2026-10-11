@@ -1,0 +1,162 @@
+QUICKLEAD
+Customer App & B2B Portal - UX/UI Brief
+Design Brief | Information Architecture, Screens, Journeys and Visual Direction
+1. Design Objective
+Create a fast, premium and simple automotive service experience. The customer should be able to 
+understand the condition of each vehicle, book service in a few steps, follow the job without calling the 
+branch, approve additional work and access invoices/rewards. The B2B portal should prioritize fleet visibility, 
+approvals and financial control.
+2. Design Principles
+ Fast: the most common actions should require minimal taps.
+ Vehicle-first: organize the experience around the customer's cars, not internal workshop terminology.
+ Transparent: show status, price, recommendations and approvals clearly.
+ Trustworthy: use real photos, clear service descriptions, invoice visibility and approval history.
+ Bilingual: Arabic-first quality with full English support and correct RTL/LTR layouts.
+ Consistent: one design system across mobile app and B2B portal.
+3. Recommended B2C Navigation
+Suggested bottom navigation: Home | My Garage | Book | Rewards | Account
+ Home: next service, active booking/RO, quick booking, offers and reminders.
+ My Garage: all vehicles, vehicle health, mileage, service history, recommendations and documents.
+ Book: select vehicle, service, branch, slot, extras and confirmation.
+ Rewards: points balance, tier, available rewards, coupons and referral.
+ Account: profile, saved information, notifications, language, support and settings.
+4. Core Mobile Screens
+# / Screen Purpose Key Content
+01 - Splash / Onboarding Brand promise, language 
+selection, concise value 
+proposition.
+Primary CTA must be visually 
+dominant.
+02 - Login / OTP Mobile number, OTP, terms and 
+consent.
+Primary CTA must be visually 
+dominant.
+03 - Home Active job card, upcoming 
+service, quick actions, offers, 
+points.
+Primary CTA must be visually 
+dominant.
+04 - My Garage Vehicle cards with image, 
+plate/model, mileage, next 
+service.
+Primary CTA must be visually 
+dominant.
+05 - Vehicle Details Health summary, service history, Primary CTA must be visually 
+
+recommendations, invoices, 
+warranty.
+dominant.
+06 - Book Service - Vehicle Choose one of the saved 
+vehicles or add a vehicle.
+Primary CTA must be visually 
+dominant.
+07 - Book Service - Services Oil, periodic maintenance, battery 
+and other eligible quick services.
+Primary CTA must be visually 
+dominant.
+08 - Branch Selection Nearby/available branches, 
+distance, hours and earliest slot.
+Primary CTA must be visually 
+dominant.
+09 - Date & Time Capacity-based appointment 
+slots with clear availability.
+Primary CTA must be visually 
+dominant.
+10 - Booking Summary Vehicle, services, branch, time, 
+estimated price and confirmation.
+Primary CTA must be visually 
+dominant.
+11 - Active Service / Tracker Timeline: check-in, RO open, in 
+service, approval, ready, closed.
+Primary CTA must be visually 
+dominant.
+12 - Additional Work Approval Issue, recommendation, photo, 
+price, approve/reject.
+Primary CTA must be visually 
+dominant.
+13 - Payment Amount, payment method, status 
+and receipt.
+Primary CTA must be visually 
+dominant.
+14 - Invoice Tax invoice view/download and 
+service details.
+Primary CTA must be visually 
+dominant.
+15 - Rewards Points, tier progress, rewards, 
+coupons and referral.
+Primary CTA must be visually 
+dominant.
+16 - Notifications Booking, service status, 
+approvals, reminders and offers.
+Primary CTA must be visually 
+dominant.
+17 - Support / Feedback Call/chat options, branch contact, 
+rating and complaint/feedback.
+Primary CTA must be visually 
+dominant.
+5. Main Customer Journeys
+1. New customer: Onboarding -> OTP -> Add Vehicle -> Home -> Book Service.
+2. Returning customer: Home -> Vehicle -> Book -> Branch -> Slot -> Confirm.
+3. Active repair: Push notification -> Service Tracker -> View status -> Ready notification -> 
+Payment/Invoice.
+4. Additional work: Push notification -> Estimate -> Photo/details -> Approve/Reject -> Updated service 
+tracker.
+5. Retention: Service reminder -> Vehicle details -> Recommended service -> Booking -> Reward earned.
+6. Vehicle Card / My Garage Concept
+Each vehicle card should immediately answer: Which car is this? What is its current service status? What 
+should I do next? Recommended elements: vehicle image/illustration, make/model/year, plate, mileage, last 
+service, next service, open recommendation and a clear Book Service CTA.
+Optional future concept: Vehicle Health Score (e.g., 87/100), supported by transparent factors rather than a 
+unexplained score.
+7. Service Tracker Concept
+Use a visual timeline rather than internal RO codes:
+ Appointment Confirmed
+ Vehicle Checked In
+
+ Repair Order Opened
+ Service in Progress
+ Waiting for Your Approval (when applicable)
+ Final Check
+ Vehicle Ready
+ Completed
+8. B2B Portal Information Architecture
+Suggested left navigation: Dashboard | Vehicles | Work Orders | Approvals | Invoices | Statements | Reports 
+| Users & Settings
+ Dashboard: KPIs, vehicles currently in workshop, pending approvals, overdue items and spend trend.
+ Vehicles: searchable fleet table with vehicle profile and complete maintenance history.
+ Work Orders: open/closed ROs, status, branch, dates and cost.
+ Approvals: prioritized queue with amount, vehicle, requested work, SLA/age and decision controls.
+ Invoices & Statements: filters, status, due date, PO reference, download/export.
+ Reports: spend by vehicle/branch/service, downtime, frequency and exceptions.
+ Users & Settings: roles, approval limits, cost centers and notification rules.
+9. Visual Direction
+ Modern automotive look: clean surfaces, strong typography, generous spacing and high-contrast CTAs.
+ Use Quicklead brand colors as the base; create a documented color, typography, icon and component 
+system.
+ Photography/illustration should focus on vehicles, technicians, quick service and trust - avoid generic 
+corporate stock imagery.
+ Status colors/icons must remain accessible and never rely on color alone.
+ Cards should surface the next action rather than overload users with technical data.
+ Design mobile screens first, then responsive B2B desktop/tablet layouts.
+10. Components to Design
+ Buttons, inputs, OTP, search, filters, dropdowns and date/time selectors.
+ Vehicle cards, service cards, branch cards and offer/reward cards.
+ Status chips, progress timeline, alerts and notification cards.
+ Price/estimate component with VAT and total.
+ Approval component with photos, comments and approve/reject actions.
+ Tables, pagination, KPI cards, charts and export controls for B2B.
+ Empty states, loading states, errors, offline/retry and success confirmations.
+11. Required Design Deliverables
+ User flows for B2C and B2B.
+ Information architecture / sitemap.
+ Low-fidelity wireframes.
+ High-fidelity Arabic and English screens.
+ Clickable prototype for booking, active service, approval and B2B approval flows.
+
+ Responsive B2B portal designs.
+ Design system and reusable component library.
+ Developer handoff with states, spacing, assets and interaction notes.
+12. Priority Prototype Scope
+For the first design review, prototype these four journeys end-to-end: (1) login and add vehicle, (2) book a 
+periodic service, (3) follow an active service and approve additional work, (4) B2B fleet manager reviews 
+and approves a work request.

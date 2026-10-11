@@ -1,0 +1,164 @@
+
+ ███╗   ███╗ ███████╗ ██████╗  ██╗   ██╗ ███████╗  █████╗
+ ████╗ ████║ ██╔════╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██╔══██╗
+ ██╔████╔██║ █████╗   ██║  ██║ ██║   ██║ ███████╗ ███████║
+ ██║╚██╔╝██║ ██╔══╝   ██║  ██║ ██║   ██║ ╚════██║ ██╔══██║
+ ██║ ╚═╝ ██║ ███████╗ ██████╔╝ ╚██████╔╝ ███████║ ██║  ██║
+ ╚═╝     ╚═╝ ╚══════╝ ╚═════╝   ╚═════╝  ╚══════╝ ╚═╝  ╚═╝
+
+               v2026.7.0 - Security Scanner
+   79 Analyzers | 40,000+ Rules | AI Security Detection   
+
+
+🎯 Target: crates/buzz-dev-mcp
+🔧 Mode: Full
+
+Analyzing repository...
+📊 Languages: rust (12), toml (1)
+🔧 Frameworks: mcp_server
+🤖 AI Patterns: MCP, RAG, Agents detected - AI security scanners enabled
+
+✓ Ready to scan: 15 scanners
+  35 scanners skipped (no Bash, Batch, Clojure, Csharp, +31 more files found)
+
+For best results, install 2 missing tool(s):
+  taplo (TOML linter)
+    cargo install taplo-cli
+  trivy (Container/IaC scanner)
+    sudo snap install trivy
+Non-interactive mode: continuing without optional tools.
+
+
+🐍 MEDUSA Parallel Scanner v1.1.0
+   Workers: 2 cores
+   Cache: enabled
+   Mode: full
+
+Found 13 scannable files
+
+📊 Scanning 13 files across 2 parallel workers (each file is checked by all applicable scanners)...
+
+🔍 Running GitLeaks batch scan on /home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-dev-mcp...
+  GitLeaks batch scan: 0 files, 0 findings in 0.3s
+  Scanning: 15%...30%...46%...61%...76%...92%... Done!
+
+            MEDUSA Scan Progress (2 workers, each file → multiple scanners)     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━
+┃ Scanner                    ┃  Status  ┃ Files Checked ┃ Issues ┃ Progress     
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━
+│ GitLeaksScanner            │  ✓ Done  │            13 │      · │ █████████████
+│ PostQuantumScanner         │  ✓ Done  │            12 │      · │ █████████████
+│ RustScanner                │  ✓ Done  │            12 │      · │ █████████████
+│ AIAttackSignatureScanner   │  ✓ Done  │             1 │      · │ █████████████
+│ CriticalCVEScanner         │  ✓ Done  │             1 │      · │ █████████████
+│ HyperparameterScanner      │  ✓ Done  │             1 │      · │ █████████████
+│ LLMGuardScanner            │  ✓ Done  │             1 │      · │ █████████████
+│ LLMOpsScanner              │  ✓ Done  │             1 │      · │ █████████████
+│ PromptLeakageScanner       │  ✓ Done  │             1 │      · │ █████████████
+│ VectorDBScanner            │  ✓ Done  │             1 │      · │ █████████████
+├────────────────────────────┼──────────┼───────────────┼────────┼──────────────
+│ Overall                    │   100%   │         13/13 │      0 │ █████████████
+└────────────────────────────┴──────────┴───────────────┴────────┴──────────────
+
+
+📊 Reports generated:
+   JSON       → ../../../reports/buzz-runtime-medusa-20261007/crates_buzz-dev-mcp/medusa-scan-20261007-184044.json
+
+────────────────────────────────────────────
+  🎯 SCAN COMPLETE
+────────────────────────────────────────────
+  Files scanned:       13
+  Lines of code:       5,439
+  Issues found:        0
+  Scanners used:       10
+  Total time:          0.27s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+✅ Scan complete!
+
+For fuller coverage, install missing linters and re-scan:
+  taplo, trivy
+  Run 'medusa install --check' for details
+
+ ███╗   ███╗ ███████╗ ██████╗  ██╗   ██╗ ███████╗  █████╗
+ ████╗ ████║ ██╔════╝ ██╔══██╗ ██║   ██║ ██╔════╝ ██╔══██╗
+ ██╔████╔██║ █████╗   ██║  ██║ ██║   ██║ ███████╗ ███████║
+ ██║╚██╔╝██║ ██╔══╝   ██║  ██║ ██║   ██║ ╚════██║ ██╔══██║
+ ██║ ╚═╝ ██║ ███████╗ ██████╔╝ ╚██████╔╝ ███████║ ██║  ██║
+ ╚═╝     ╚═╝ ╚══════╝ ╚═════╝   ╚═════╝  ╚══════╝ ╚═╝  ╚═╝
+
+               v2026.7.0 - Security Scanner
+   79 Analyzers | 40,000+ Rules | AI Security Detection   
+
+
+🎯 Target: crates/buzz-dev-mcp
+🔧 Mode: Full
+
+Analyzing repository...
+📊 Languages: rust (12), toml (1)
+🔧 Frameworks: mcp_server
+🤖 AI Patterns: MCP, RAG, Agents detected - AI security scanners enabled
+
+✓ Ready to scan: 15 scanners
+  35 scanners skipped (no Bash, Batch, Clojure, Csharp, +31 more files found)
+
+For best results, install 2 missing tool(s):
+  taplo (TOML linter)
+    cargo install taplo-cli
+  trivy (Container/IaC scanner)
+    sudo snap install trivy
+Non-interactive mode: continuing without optional tools.
+
+
+🐍 MEDUSA Parallel Scanner v1.1.0
+   Workers: 2 cores
+   Cache: enabled
+   Mode: full
+
+Found 13 scannable files
+
+📊 Scanning 13 files across 2 parallel workers (each file is checked by all applicable scanners)...
+
+🔍 Running GitLeaks batch scan on /home/shams/hermes-workspace/security/quarantine/buzz-runtime-review-20261007/source/crates/buzz-dev-mcp...
+  GitLeaks batch scan: 0 files, 0 findings in 0.3s
+  Scanning: 15%...30%...46%...61%...76%...92%... Done!
+
+            MEDUSA Scan Progress (2 workers, each file → multiple scanners)     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━
+┃ Scanner                    ┃  Status  ┃ Files Checked ┃ Issues ┃ Progress     
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━
+│ GitLeaksScanner            │  ✓ Done  │            13 │      · │ █████████████
+│ PostQuantumScanner         │  ✓ Done  │            12 │      · │ █████████████
+│ RustScanner                │  ✓ Done  │            12 │      · │ █████████████
+│ AIAttackSignatureScanner   │  ✓ Done  │             1 │      · │ █████████████
+│ CriticalCVEScanner         │  ✓ Done  │             1 │      · │ █████████████
+│ HyperparameterScanner      │  ✓ Done  │             1 │      · │ █████████████
+│ LLMGuardScanner            │  ✓ Done  │             1 │      · │ █████████████
+│ LLMOpsScanner              │  ✓ Done  │             1 │      · │ █████████████
+│ PromptLeakageScanner       │  ✓ Done  │             1 │      · │ █████████████
+│ VectorDBScanner            │  ✓ Done  │             1 │      · │ █████████████
+├────────────────────────────┼──────────┼───────────────┼────────┼──────────────
+│ Overall                    │   100%   │         13/13 │      0 │ █████████████
+└────────────────────────────┴──────────┴───────────────┴────────┴──────────────
+
+
+📊 Reports generated:
+   JSON       → ../../../reports/buzz-runtime-medusa-20261007/crates_buzz-dev-mcp/medusa-scan-20261007-184606.json
+
+────────────────────────────────────────────
+  🎯 SCAN COMPLETE
+────────────────────────────────────────────
+  Files scanned:       13
+  Lines of code:       5,439
+  Issues found:        0
+  Scanners used:       10
+  Total time:          0.27s
+  Cache hit rate:      0.0%
+────────────────────────────────────────────
+
+✅ Scan complete!
+
+For fuller coverage, install missing linters and re-scan:
+  taplo, trivy
+  Run 'medusa install --check' for details
