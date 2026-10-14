@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Meeting Assistant</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;padding:40px;background:#0d1117;color:#e6edf3;line-height:1.6}
+main{max-width:720px;margin:0 auto}
+h1{font-size:28px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px;margin:16px 0}
+a{color:#58a6ff}
+.meta{color:#8b949e;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<h1>AI Meeting Assistant</h1>
+<p>A personal, local-first assistant that helps Shams turn meeting discussions into structured, actionable records.</p>
+<div class="card"><h2 style="font-size:18px">What the app does</h2>
+<ul>
+<li>Imports meeting transcripts (Google Meet, Microsoft Teams, Zoom export formats)</li>
+<li>Detects language per segment: English, Arabic, Urdu/Hindi, and mixed speech</li>
+<li>Generates summaries, minutes of meeting (MoM), decisions, risks, and action items</li>
+<li>Links every claim to its transcript segment as evidence</li>
+<li>Stores everything locally on the owner's machine with encryption at rest</li>
+</ul></div>
+<div class="card"><h2 style="font-size:18px">Why this app requests Meet access</h2>
+<p>The app uses the read-only scope <code>meetings.space.readonly</code> to fetch <strong>Shams's own meeting transcripts and metadata</strong> from his Google account, so he no longer has to export them by hand. Nothing is uploaded anywhere; processed data never leaves his machine.</p>
+</div>
+<div class="card"><h2 style="font-size:18px">Contact</h2>
+<p>Owner: Shams Tabrez — <a href="mailto:Shams090484@gmail.com">Shams090484@gmail.com</a></p>
+<p class="meta">This app is for personal use (single user). It is not distributed publicly and does not collect data from other users.</p>
+</div>
+</main>
+</body>
+</html>
