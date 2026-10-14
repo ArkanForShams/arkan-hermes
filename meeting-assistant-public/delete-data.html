@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Deletion Instructions — AI Meeting Assistant</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;padding:40px;background:#0d1117;color:#e6edf3;line-height:1.6}
+main{max-width:720px;margin:0 auto}
+h1{font-size:26px}h2{font-size:19px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px;margin:16px 0}
+ol{padding-left:20px}li{margin:8px 0}
+a{color:#58a6ff}
+.meta{color:#8b949e;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<h1>Data Deletion Instructions — AI Meeting Assistant</h1>
+<p class="meta">Owner: Shams Tabrez · Contact: <a href="mailto:Shams090484@gmail.com">Shams090484@gmail.com</a></p>
+<div class="card"><h2>Remove Google account access (revoke the app)</h2>
+<ol>
+<li>Go to <a href="https://myaccount.google.com/permissions" rel="noopener">https://myaccount.google.com/permissions</a></li>
+<li>Select <strong>AI Meeting Assistant</strong></li>
+<li>Click <strong>Remove access</strong> — this revokes the app's read-only token immediately</li>
+</ol></div>
+<div class="card"><h2>Delete stored meeting data</h2>
+<ol>
+<li>Open the local application interface (the assistant dashboard on the owner's machine)</li>
+<li>Navigate to the meeting, then click <strong>Delete meeting + everything derived</strong> — this cascade removes the transcript, generated summaries, diagrams, and index entries</li>
+<li>For full removal: delete the local database file <code>meetings.db</code> and the <code>inbox/</code> artifacts — all meeting content lives only in these two locations</li>
+</ol></div>
+<div class="card"><h2>What exists on Google's side after revocation</h2>
+<p>Revoking access stops all future fetching. Google's own platform artifacts (recordings/transcripts Google made during meetings) remain under Google's retention rules and are managed from the Google account/Drive — the app does not control platform-side copies.</p></div>
+<div class="card"><h2>Questions or confirmation of deletion</h2>
+<p>Email <a href="mailto:Shams090484@gmail.com">Shams090484@gmail.com</a> — the owner responds by exporting or certifying deletion of all stored records.</p></div>
+</main>
+</body>
+</html>
